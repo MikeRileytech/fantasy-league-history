@@ -45,16 +45,28 @@ with tab_alltime:
         "Grouped by real manager (not ESPN team), using manager_mapping.csv. "
         "Sorted by championships, then win percentage."
     )
-    col_po_at, col_cons_at = st.columns(2)
-    with col_po_at:
-        at_playoffs = st.checkbox("Include playoff games", value=True, key="at_po")
-    with col_cons_at:
+    col1, col2 = st.columns(2)
+    with col1:
+        view_mode = st.radio(
+            "View",
+            ["Regular + Playoff", "Playoff Games Only", "Regular Games Only"],
+            horizontal=True,
+            key="career_view_mode"
+        )
+    with col2:
         at_consolation = st.checkbox("Include consolation games", value=False, key="at_cons")
-    at_game_types = ["regular"]
-    if at_playoffs:
-        at_game_types.append("playoff")
+
+    # Set game types based on selected view
+    if view_mode == "Regular + Playoff":
+        at_game_types = ["regular", "playoff"]
+    elif view_mode == "Playoff Games Only":
+        at_game_types = ["playoff"]
+    else:  # Regular Games Only
+        at_game_types = ["regular"]
+
     if at_consolation:
         at_game_types.append("consolation")
+
     career = league_data.manager_career_standings(teams, matchups, game_types=at_game_types)
     st.dataframe(
         career,
