@@ -109,6 +109,7 @@ with tab_trophies:
             "championships": "🏆 Championships",
             "regular_season_titles": "🎖️ Reg. Season Titles",
             "points_titles": "🔥 Points Titles",
+            "weekly_highs": "⚡ Weekly Highs",
             "total": "Total",
         },
     )
@@ -118,6 +119,7 @@ with tab_trophies:
     st.caption(
         "🏆 Champion: won the playoff bracket. 🎖️ Regular Season Winner: best "
         "regular season record. 🔥 Points Leader: most total points in the "
+        "regular season. ⚡ Weekly High: biggest single-week score of the "
         "regular season."
     )
     st.dataframe(
@@ -132,6 +134,9 @@ with tab_trophies:
             "regular_season_record": "Record",
             "points_leader": "🔥 Points Leader",
             "points": st.column_config.NumberColumn("Points", format="%.1f"),
+            "weekly_high": "⚡ Weekly High",
+            "weekly_high_score": st.column_config.NumberColumn("Score", format="%.1f"),
+            "weekly_high_week": st.column_config.NumberColumn("Week", format="%d"),
         },
     )
 

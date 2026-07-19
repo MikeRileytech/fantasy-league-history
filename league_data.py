@@ -313,6 +313,7 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
     champion             - final_standing 1 (playoff bracket winner)
     regular_season_winner - regular_season_standing 1
     points_leader        - most total points in regular season games only
+    weekly_high          - most points in a single regular season week
     """
     reg = matchups[matchups["game_type"] == "regular"]
     points = (
@@ -326,6 +327,8 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
         reg_winner = one[one["regular_season_standing"] == 1].iloc[0]
         season_pts = points[points["season"] == season]
         leader = season_pts.loc[season_pts["team_score"].idxmax()]
+        season_games = reg[reg["season"] == season]
+        big_week = season_games.loc[season_games["team_score"].idxmax()]
         rows.append(
             {
                 "season": season,
@@ -336,6 +339,9 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
                 + (f"-{reg_winner['ties']}" if reg_winner["ties"] else ""),
                 "points_leader": leader["manager"],
                 "points": round(leader["team_score"], 1),
+                "weekly_high": big_week["manager"],
+                "weekly_high_score": round(big_week["team_score"], 1),
+                "weekly_high_week": int(big_week["week"]),
             }
         )
     return pd.DataFrame(rows)
@@ -347,6 +353,7 @@ def trophy_case(trophies: pd.DataFrame) -> pd.DataFrame:
         set(trophies["champion"])
         | set(trophies["regular_season_winner"])
         | set(trophies["points_leader"])
+        | set(trophies["weekly_high"])
     )
     rows = []
     for manager in managers:
@@ -358,6 +365,7 @@ def trophy_case(trophies: pd.DataFrame) -> pd.DataFrame:
                     (trophies["regular_season_winner"] == manager).sum()
                 ),
                 "points_titles": int((trophies["points_leader"] == manager).sum()),
+                "weekly_highs": int((trophies["weekly_high"] == manager).sum()),
             }
         )
     result = pd.DataFrame(rows)
@@ -365,6 +373,7 @@ def trophy_case(trophies: pd.DataFrame) -> pd.DataFrame:
         result["championships"]
         + result["regular_season_titles"]
         + result["points_titles"]
+        + result["weekly_highs"]
     )
     return result.sort_values(
         ["championships", "total"], ascending=False
