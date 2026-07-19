@@ -155,11 +155,19 @@ with tab_ask:
         "head-to-head trivia. Answers come from the imported data only."
     )
 
+    # Local runs read the key from .env; the hosted app reads it from
+    # Streamlit Community Cloud's Secrets settings.
     api_key = os.getenv("ANTHROPIC_API_KEY")
     if not api_key:
+        try:
+            api_key = st.secrets.get("ANTHROPIC_API_KEY")
+        except FileNotFoundError:
+            api_key = None
+    if not api_key:
         st.warning(
-            "No ANTHROPIC_API_KEY found. Add it to your .env file "
-            "(see README.md, 'Setting up Ask the League') and restart the app."
+            "No ANTHROPIC_API_KEY found. Locally: add it to your .env file "
+            "(see README.md, 'Setting up Ask the League'). On Streamlit "
+            "Community Cloud: add it under the app's Settings > Secrets."
         )
         st.stop()
 
