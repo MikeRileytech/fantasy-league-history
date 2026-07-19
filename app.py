@@ -16,9 +16,12 @@ load_dotenv()
 
 st.set_page_config(page_title="League History", page_icon="🏈", layout="wide")
 
+# Force Streamlit to reload all cached data and UI
+if "app_version" not in st.session_state:
+    st.session_state.app_version = "v5"
 
-@st.cache_data
-def load_all(_cache_version="v4"):
+@st.cache_data(show_spinner="Loading league data...")
+def load_all(_cache_version="v5"):
     """Load all league data. _cache_version forces cache invalidation on data logic changes."""
     teams = league_data.load_teams()
     matchups = league_data.load_matchups()
