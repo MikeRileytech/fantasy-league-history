@@ -1,9 +1,13 @@
-# ESPN Fantasy Football History Importer
+# Fantasy League History Dashboard
 
-This is Stage 1 of a fantasy football league history project. It does **not**
-build a dashboard yet — it just connects to your ESPN league, downloads one
-historical season, and saves the data to files on your computer so we can
-build a dashboard from it later.
+A complete history dashboard for our ESPN fantasy football league (2014–present):
+all-time standings by real manager, season-by-season results, head-to-head
+records, 12 years of draft picks, and an AI chat historian that answers
+league trivia. Built with Python and Streamlit.
+
+The data comes from ESPN via an importer script, with a manual
+manager-mapping layer so records follow the real people — not ESPN team
+slots, which changed hands over the years.
 
 This guide assumes you have never used Python, a terminal, or GitHub before.
 Follow the steps in order.

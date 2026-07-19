@@ -1,0 +1,2113 @@
+season,round,pick_in_round,overall_pick,player_name,manager,team_name,is_keeper
+2014,1,1,1,LeSean McCoy,Brian Balonis,Baltimore Hail Marys,False
+2014,1,2,2,Adrian Peterson,Joe Marcellino,Team Beats by Ray,False
+2014,1,3,3,Jamaal Charles,Bill Schwartz,The  Commish,False
+2014,1,4,4,Matt Forte,Brady Reid,Team Flatcheese,False
+2014,1,5,5,Calvin Johnson,Kevin Schwartz,De Marc O Da Beast,False
+2014,1,6,6,Peyton Manning,Kyle Schwartz,Team YB,False
+2014,1,7,7,Jimmy Graham,Ken Schwartz,Team Bibendum,False
+2014,1,8,8,Eddie Lacy,Brian Schwartz,3rd Down For What,False
+2014,1,9,9,Drew Brees,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,1,10,10,Marshawn Lynch,Rob Bell,In Your Face,False
+2014,1,11,11,Arian Foster,Ryan Keyser,Team Keyser,False
+2014,1,12,12,Doug Martin,Zach Schwartz,Ridley Me This,False
+2014,2,1,13,Demaryius Thomas,Zach Schwartz,Ridley Me This,False
+2014,2,2,14,Aaron Rodgers,Ryan Keyser,Team Keyser,False
+2014,2,3,15,A.J. Green,Rob Bell,In Your Face,False
+2014,2,4,16,Alfred Morris,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,2,5,17,Dez Bryant,Brian Schwartz,3rd Down For What,False
+2014,2,6,18,Julius Thomas,Ken Schwartz,Team Bibendum,False
+2014,2,7,19,DeMarco Murray,Kyle Schwartz,Team YB,False
+2014,2,8,20,Zac Stacy,Kevin Schwartz,De Marc O Da Beast,False
+2014,2,9,21,Montee Ball,Brady Reid,Team Flatcheese,False
+2014,2,10,22,Brandon Marshall,Bill Schwartz,The  Commish,False
+2014,2,11,23,Giovani Bernard,Joe Marcellino,Team Beats by Ray,False
+2014,2,12,24,Le'Veon Bell,Brian Balonis,Baltimore Hail Marys,False
+2014,3,1,25,Julio Jones,Brian Balonis,Baltimore Hail Marys,False
+2014,3,2,26,Antonio Brown,Joe Marcellino,Team Beats by Ray,False
+2014,3,3,27,Jordy Nelson,Bill Schwartz,The  Commish,False
+2014,3,4,28,Alshon Jeffery,Brady Reid,Team Flatcheese,False
+2014,3,5,29,Reggie Bush,Kevin Schwartz,De Marc O Da Beast,False
+2014,3,6,30,Randall Cobb,Kyle Schwartz,Team YB,False
+2014,3,7,31,Ryan Mathews,Ken Schwartz,Team Bibendum,False
+2014,3,8,32,Rob Gronkowski,Brian Schwartz,3rd Down For What,False
+2014,3,9,33,Victor Cruz,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,3,10,34,Andrew Luck,Rob Bell,In Your Face,False
+2014,3,11,35,Andre Johnson,Ryan Keyser,Team Keyser,False
+2014,3,12,36,Ben Tate,Zach Schwartz,Ridley Me This,False
+2014,4,1,37,Larry Fitzgerald,Zach Schwartz,Ridley Me This,False
+2014,4,2,38,Vincent Jackson,Ryan Keyser,Team Keyser,False
+2014,4,3,39,Frank Gore,Rob Bell,In Your Face,False
+2014,4,4,40,Matthew Stafford,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,4,5,41,Andre Ellington,Brian Schwartz,3rd Down For What,False
+2014,4,6,42,DeSean Jackson,Ken Schwartz,Team Bibendum,False
+2014,4,7,43,Vernon Davis,Kyle Schwartz,Team YB,False
+2014,4,8,44,Pierre Garcon,Kevin Schwartz,De Marc O Da Beast,False
+2014,4,9,45,Keenan Allen,Brady Reid,Team Flatcheese,False
+2014,4,10,46,Ray Rice,Bill Schwartz,The  Commish,False
+2014,4,11,47,Torrey Smith,Joe Marcellino,Team Beats by Ray,False
+2014,4,12,48,C.J. Spiller,Brian Balonis,Baltimore Hail Marys,False
+2014,5,1,49,Michael Crabtree,Brian Balonis,Baltimore Hail Marys,False
+2014,5,2,50,Cordarrelle Patterson,Joe Marcellino,Team Beats by Ray,False
+2014,5,3,51,Chris Johnson,Bill Schwartz,The  Commish,False
+2014,5,4,52,Percy Harvin,Brady Reid,Team Flatcheese,False
+2014,5,5,53,Roddy White,Kevin Schwartz,De Marc O Da Beast,False
+2014,5,6,54,Maurice Jones-Drew,Kyle Schwartz,Team YB,False
+2014,5,7,55,Matt Ryan,Ken Schwartz,Team Bibendum,False
+2014,5,8,56,Rashad Jennings,Brian Schwartz,3rd Down For What,False
+2014,5,9,57,Eric Decker,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,5,10,58,Julian Edelman,Rob Bell,In Your Face,False
+2014,5,11,59,Trent Richardson,Ryan Keyser,Team Keyser,False
+2014,5,12,60,Nick Foles,Zach Schwartz,Ridley Me This,False
+2014,6,1,61,Jason Witten,Zach Schwartz,Ridley Me This,False
+2014,6,2,62,Toby Gerhart,Ryan Keyser,Team Keyser,False
+2014,6,3,63,Reggie Wayne,Rob Bell,In Your Face,False
+2014,6,4,64,Joique Bell,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,6,5,65,Emmanuel Sanders,Brian Schwartz,3rd Down For What,False
+2014,6,6,66,Shane Vereen,Ken Schwartz,Team Bibendum,False
+2014,6,7,67,Golden Tate,Kyle Schwartz,Team YB,False
+2014,6,8,68,Jeremy Maclin,Kevin Schwartz,De Marc O Da Beast,False
+2014,6,9,69,Russell Wilson,Brady Reid,Team Flatcheese,False
+2014,6,10,70,Marques Colston,Bill Schwartz,The  Commish,False
+2014,6,11,71,Bishop Sankey,Joe Marcellino,Team Beats by Ray,False
+2014,6,12,72,Tony Romo,Brian Balonis,Baltimore Hail Marys,False
+2014,7,1,73,T.Y. Hilton,Brian Balonis,Baltimore Hail Marys,False
+2014,7,2,74,Mike Wallace,Joe Marcellino,Team Beats by Ray,False
+2014,7,3,75,Dennis Pitta,Bill Schwartz,The  Commish,False
+2014,7,4,76,Jordan Cameron,Brady Reid,Team Flatcheese,False
+2014,7,5,77,Steven Jackson,Kevin Schwartz,De Marc O Da Beast,False
+2014,7,6,78,Anquan Boldin,Kyle Schwartz,Team YB,False
+2014,7,7,79,Michael Floyd,Ken Schwartz,Team Bibendum,False
+2014,7,8,80,Wes Welker,Brian Schwartz,3rd Down For What,False
+2014,7,9,81,Dwayne Allen,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,7,10,82,Sammy Watkins,Rob Bell,In Your Face,False
+2014,7,11,83,Cam Newton,Ryan Keyser,Team Keyser,False
+2014,7,12,84,Stevan Ridley,Zach Schwartz,Ridley Me This,False
+2014,8,1,85,Kendall Wright,Zach Schwartz,Ridley Me This,False
+2014,8,2,86,Robert Griffin,Ryan Keyser,Team Keyser,False
+2014,8,3,87,Pierre Thomas,Rob Bell,In Your Face,False
+2014,8,4,88,Hakeem Nicks,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,8,5,89,Terrance Williams,Brian Schwartz,3rd Down For What,False
+2014,8,6,90,Tom Brady,Ken Schwartz,Team Bibendum,False
+2014,8,7,91,Darren Sproles,Kyle Schwartz,Team YB,False
+2014,8,8,92,Colin Kaepernick,Kevin Schwartz,De Marc O Da Beast,False
+2014,8,9,93,DeAngelo Williams,Brady Reid,Team Flatcheese,False
+2014,8,10,94,Fred Jackson,Bill Schwartz,The  Commish,False
+2014,8,11,95,Greg Olsen,Joe Marcellino,Team Beats by Ray,False
+2014,8,12,96,Jay Cutler,Brian Balonis,Baltimore Hail Marys,False
+2014,9,1,97,Kyle Rudolph,Brian Balonis,Baltimore Hail Marys,False
+2014,9,2,98,Philip Rivers,Joe Marcellino,Team Beats by Ray,False
+2014,9,3,99,Danny Woodhead,Bill Schwartz,The  Commish,False
+2014,9,4,100,Riley Cooper,Brady Reid,Team Flatcheese,False
+2014,9,5,101,Seahawks D/ST,Kevin Schwartz,De Marc O Da Beast,False
+2014,9,6,102,Steve Smith Sr.,Kyle Schwartz,Team YB,False
+2014,9,7,103,Cecil Shorts III,Ken Schwartz,Team Bibendum,False
+2014,9,8,104,Khiry Robinson,Brian Schwartz,3rd Down For What,False
+2014,9,9,105,Eli Manning,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,9,10,106,Andy Dalton,Rob Bell,In Your Face,False
+2014,9,11,107,Lamar Miller,Ryan Keyser,Team Keyser,False
+2014,9,12,108,Knowshon Moreno,Zach Schwartz,Ridley Me This,False
+2014,10,1,109,Panthers D/ST,Zach Schwartz,Ridley Me This,False
+2014,10,2,110,DeAndre Hopkins,Ryan Keyser,Team Keyser,False
+2014,10,3,111,49ers D/ST,Rob Bell,In Your Face,False
+2014,10,4,112,Rueben Randle,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,10,5,113,Ben Roethlisberger,Brian Schwartz,3rd Down For What,False
+2014,10,6,114,Darren McFadden,Ken Schwartz,Team Bibendum,False
+2014,10,7,115,LeGarrette Blount,Kyle Schwartz,Team YB,False
+2014,10,8,116,Bernard Pierce,Kevin Schwartz,De Marc O Da Beast,False
+2014,10,9,117,Broncos D/ST,Brady Reid,Team Flatcheese,False
+2014,10,10,118,Joe Flacco,Bill Schwartz,The  Commish,False
+2014,10,11,119,Dwayne Bowe,Joe Marcellino,Team Beats by Ray,False
+2014,10,12,120,Terrance West,Brian Balonis,Baltimore Hail Marys,False
+2014,11,1,121,Zach Ertz,Brian Balonis,Baltimore Hail Marys,False
+2014,11,2,122,Andre Williams,Joe Marcellino,Team Beats by Ray,False
+2014,11,3,123,Brandin Cooks,Bill Schwartz,The  Commish,False
+2014,11,4,124,Danny Amendola,Brady Reid,Team Flatcheese,False
+2014,11,5,125,Greg Jennings,Kevin Schwartz,De Marc O Da Beast,False
+2014,11,6,126,Mark Ingram,Kyle Schwartz,Team YB,False
+2014,11,7,127,Josh Gordon,Ken Schwartz,Team Bibendum,False
+2014,11,8,128,Kelvin Benjamin,Brian Schwartz,3rd Down For What,False
+2014,11,9,129,Chris Ivory,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,11,10,130,James Starks,Rob Bell,In Your Face,False
+2014,11,11,131,Shonn Greene,Ryan Keyser,Team Keyser,False
+2014,11,12,132,Justin Hunter,Zach Schwartz,Ridley Me This,False
+2014,12,1,133,Jonathan Stewart,Zach Schwartz,Ridley Me This,False
+2014,12,2,134,Christine Michael,Ryan Keyser,Team Keyser,False
+2014,12,3,135,Justin Tucker,Rob Bell,In Your Face,False
+2014,12,4,136,Martellus Bennett,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,12,5,137,Donald Brown,Brian Schwartz,3rd Down For What,False
+2014,12,6,138,Jeremy Hill,Ken Schwartz,Team Bibendum,False
+2014,12,7,139,Mike Evans,Kyle Schwartz,Team YB,False
+2014,12,8,140,Carlos Hyde,Kevin Schwartz,De Marc O Da Beast,False
+2014,12,9,141,Ryan Tannehill,Brady Reid,Team Flatcheese,False
+2014,12,10,142,Antonio Gates,Bill Schwartz,The  Commish,False
+2014,12,11,143,Markus Wheaton,Joe Marcellino,Team Beats by Ray,False
+2014,12,12,144,Cardinals D/ST,Brian Balonis,Baltimore Hail Marys,False
+2014,13,1,145,Tavon Austin,Brian Balonis,Baltimore Hail Marys,False
+2014,13,2,146,Rams D/ST,Joe Marcellino,Team Beats by Ray,False
+2014,13,3,147,Chiefs D/ST,Bill Schwartz,The  Commish,False
+2014,13,4,148,Stephen Gostkowski,Brady Reid,Team Flatcheese,False
+2014,13,5,149,Patriots D/ST,Kevin Schwartz,De Marc O Da Beast,False
+2014,13,6,150,Bengals D/ST,Kyle Schwartz,Team YB,False
+2014,13,7,151,Johnny Manziel,Ken Schwartz,Team Bibendum,False
+2014,13,8,152,Jordan Reed,Brian Schwartz,3rd Down For What,False
+2014,13,9,153,Texans D/ST,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,13,10,154,Tyler Eifert,Rob Bell,In Your Face,False
+2014,13,11,155,Knile Davis,Ryan Keyser,Team Keyser,False
+2014,13,12,156,Carson Palmer,Zach Schwartz,Ridley Me This,False
+2014,14,1,157,Steven Hauschka,Zach Schwartz,Ridley Me This,False
+2014,14,2,158,Bills D/ST,Ryan Keyser,Team Keyser,False
+2014,14,3,159,BenJarvus Green-Ellis,Rob Bell,In Your Face,False
+2014,14,4,160,Giants D/ST,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,14,5,161,C.J. Anderson,Brian Schwartz,3rd Down For What,False
+2014,14,6,162,Ravens D/ST,Ken Schwartz,Team Bibendum,False
+2014,14,7,163,Phil Dawson,Kyle Schwartz,Team YB,False
+2014,14,8,164,Ahmad Bradshaw,Kevin Schwartz,De Marc O Da Beast,False
+2014,14,9,165,Roy Helu,Brady Reid,Team Flatcheese,False
+2014,14,10,166,Mason Crosby,Bill Schwartz,The  Commish,False
+2014,14,11,167,Stevie Johnson,Joe Marcellino,Team Beats by Ray,False
+2014,14,12,168,Nick Folk,Brian Balonis,Baltimore Hail Marys,False
+2014,15,1,169,Devonta Freeman,Brian Balonis,Baltimore Hail Marys,False
+2014,15,2,170,Andrew Hawkins,Joe Marcellino,Team Beats by Ray,False
+2014,15,3,171,Kenny Stills,Bill Schwartz,The  Commish,False
+2014,15,4,172,Jarrett Boykin,Brady Reid,Team Flatcheese,False
+2014,15,5,173,Heath Miller,Kevin Schwartz,De Marc O Da Beast,False
+2014,15,6,174,Doug Baldwin,Kyle Schwartz,Team YB,False
+2014,15,7,175,Dan Bailey,Ken Schwartz,Team Bibendum,False
+2014,15,8,176,Saints D/ST,Brian Schwartz,3rd Down For What,False
+2014,15,9,177,James Jones,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,15,10,178,Dexter McCluster,Rob Bell,In Your Face,False
+2014,15,11,179,Nick Novak,Ryan Keyser,Team Keyser,False
+2014,15,12,180,Denarius Moore,Zach Schwartz,Ridley Me This,False
+2014,16,1,181,Latavius Murray,Zach Schwartz,Ridley Me This,False
+2014,16,2,182,Delanie Walker,Ryan Keyser,Team Keyser,False
+2014,16,3,183,Eric Ebron,Rob Bell,In Your Face,False
+2014,16,4,184,Adam Vinatieri,Larry Schwartz,New Yawk Bklyn's Best,False
+2014,16,5,185,Blair Walsh,Brian Schwartz,3rd Down For What,False
+2014,16,6,186,Matt Asiata,Ken Schwartz,Team Bibendum,False
+2014,16,7,187,Brandon LaFell,Kyle Schwartz,Team YB,False
+2014,16,8,188,Robbie Gould,Kevin Schwartz,De Marc O Da Beast,False
+2014,16,9,189,Charles Clay,Brady Reid,Team Flatcheese,False
+2014,16,10,190,Jordan Todman,Bill Schwartz,The  Commish,False
+2014,16,11,191,Matt Bryant,Joe Marcellino,Team Beats by Ray,False
+2014,16,12,192,Brian Hartline,Brian Balonis,Baltimore Hail Marys,False
+2015,1,1,1,Antonio Brown,Brady Reid,Team Flatcheese,False
+2015,1,2,2,Dez Bryant,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,1,3,3,Jamaal Charles,Zach Schwartz,Cntrl Alt Delete,False
+2015,1,4,4,Adrian Peterson,Bill Schwartz,The  Commish,False
+2015,1,5,5,Demaryius Thomas,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,1,6,6,Drew Brees,Brian Balonis,Baltimore Hail Marys,False
+2015,1,7,7,C.J. Anderson,Ryan Keyser,Abdullah Oblangada ,False
+2015,1,8,8,Matt Forte,Joe Marcellino,Team Beats by Ray,False
+2015,1,9,9,Le'Veon Bell,Rob Bell,In Your Face,False
+2015,1,10,10,Rob Gronkowski,Kyle Schwartz,Straight out of Gronkton!,False
+2015,1,11,11,Matt Bryant,Mike Riley,Team Riley,False
+2015,1,12,12,Marshawn Lynch,Brian Schwartz,3rd Down For What,False
+2015,2,1,13,LeSean McCoy,Brian Schwartz,3rd Down For What,False
+2015,2,2,14,Zach Ertz,Mike Riley,Team Riley,False
+2015,2,3,15,DeMarco Murray,Kyle Schwartz,Straight out of Gronkton!,False
+2015,2,4,16,Frank Gore,Rob Bell,In Your Face,False
+2015,2,5,17,Alfred Morris,Joe Marcellino,Team Beats by Ray,False
+2015,2,6,18,Julio Jones,Ryan Keyser,Abdullah Oblangada ,False
+2015,2,7,19,Reggie Bush,Brian Balonis,Baltimore Hail Marys,False
+2015,2,8,20,Odell Beckham Jr.,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,2,9,21,A.J. Green,Bill Schwartz,The  Commish,False
+2015,2,10,22,Randall Cobb,Zach Schwartz,Cntrl Alt Delete,False
+2015,2,11,23,Chris Ivory,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,2,12,24,Mike Evans,Brady Reid,Team Flatcheese,False
+2015,3,1,25,Mark Ingram,Brady Reid,Team Flatcheese,False
+2015,3,2,26,Calvin Johnson,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,3,3,27,Teddy Bridgewater,Zach Schwartz,Cntrl Alt Delete,False
+2015,3,4,28,Alshon Jeffery,Bill Schwartz,The  Commish,False
+2015,3,5,29,Emmanuel Sanders,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,3,6,30,Larry Fitzgerald,Brian Balonis,Baltimore Hail Marys,False
+2015,3,7,31,DeAndre Hopkins,Ryan Keyser,Abdullah Oblangada ,False
+2015,3,8,32,Brandin Cooks,Joe Marcellino,Team Beats by Ray,False
+2015,3,9,33,Aaron Rodgers,Rob Bell,In Your Face,False
+2015,3,10,34,Julian Edelman,Kyle Schwartz,Straight out of Gronkton!,False
+2015,3,11,35,Daniel Herron,Mike Riley,Team Riley,False
+2015,3,12,36,Peyton Manning,Brian Schwartz,3rd Down For What,False
+2015,4,1,37,Jordan Matthews,Brian Schwartz,3rd Down For What,False
+2015,4,2,38,Donte Moncrief,Mike Riley,Team Riley,False
+2015,4,3,39,Golden Tate,Kyle Schwartz,Straight out of Gronkton!,False
+2015,4,4,40,Andre Ellington,Rob Bell,In Your Face,False
+2015,4,5,41,Latavius Murray,Joe Marcellino,Team Beats by Ray,False
+2015,4,6,42,Todd Gurley,Ryan Keyser,Abdullah Oblangada ,False
+2015,4,7,43,Jeremy Hill,Brian Balonis,Baltimore Hail Marys,False
+2015,4,8,44,Carlos Hyde,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,4,9,45,Arian Foster,Bill Schwartz,The  Commish,False
+2015,4,10,46,Melvin Gordon,Zach Schwartz,Cntrl Alt Delete,False
+2015,4,11,47,Rashad Jennings,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,4,12,48,Ben Roethlisberger,Brady Reid,Team Flatcheese,False
+2015,5,1,49,Joique Bell,Brady Reid,Team Flatcheese,False
+2015,5,2,50,Jimmy Graham,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,5,3,51,Charles Johnson,Zach Schwartz,Cntrl Alt Delete,False
+2015,5,4,52,Alfred Blue,Bill Schwartz,The  Commish,False
+2015,5,5,53,Brandon Marshall,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,5,6,54,Eddie Lacy,Brian Balonis,Baltimore Hail Marys,False
+2015,5,7,55,Andre Johnson,Ryan Keyser,Abdullah Oblangada ,False
+2015,5,8,56,Jarvis Landry,Joe Marcellino,Team Beats by Ray,False
+2015,5,9,57,Keenan Allen,Rob Bell,In Your Face,False
+2015,5,10,58,DeSean Jackson,Kyle Schwartz,Straight out of Gronkton!,False
+2015,5,11,59,DeVante Parker,Mike Riley,Team Riley,False
+2015,5,12,60,T.J. Yeldon,Brian Schwartz,3rd Down For What,False
+2015,6,1,61,Riley Cooper,Brian Schwartz,3rd Down For What,False
+2015,6,2,62,Andrew Luck,Mike Riley,Team Riley,False
+2015,6,3,63,C.J. Spiller,Kyle Schwartz,Straight out of Gronkton!,False
+2015,6,4,64,Allen Robinson,Rob Bell,In Your Face,False
+2015,6,5,65,Russell Wilson,Joe Marcellino,Team Beats by Ray,False
+2015,6,6,66,Isaiah Crowell,Ryan Keyser,Abdullah Oblangada ,False
+2015,6,7,67,T.Y. Hilton,Brian Balonis,Baltimore Hail Marys,False
+2015,6,8,68,LeGarrette Blount,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,6,9,69,Giovani Bernard,Bill Schwartz,The  Commish,False
+2015,6,10,70,Jordan Cameron,Zach Schwartz,Cntrl Alt Delete,False
+2015,6,11,71,Eli Manning,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,6,12,72,Greg Olsen,Brady Reid,Team Flatcheese,False
+2015,7,1,73,Nelson Agholor,Brady Reid,Team Flatcheese,False
+2015,7,2,74,Jason Witten,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,7,3,75,Ryan Tannehill,Zach Schwartz,Cntrl Alt Delete,False
+2015,7,4,76,Matt Ryan,Bill Schwartz,The  Commish,False
+2015,7,5,77,Tre Mason,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,7,6,78,Marques Colston,Brian Balonis,Baltimore Hail Marys,False
+2015,7,7,79,Travis Kelce,Ryan Keyser,Abdullah Oblangada ,False
+2015,7,8,80,Martavis Bryant,Joe Marcellino,Team Beats by Ray,False
+2015,7,9,81,Martellus Bennett,Rob Bell,In Your Face,False
+2015,7,10,82,Eric Decker,Kyle Schwartz,Straight out of Gronkton!,False
+2015,7,11,83,Justin Forsett,Mike Riley,Team Riley,False
+2015,7,12,84,Tom Brady,Brian Schwartz,3rd Down For What,False
+2015,8,1,85,John Brown,Brian Schwartz,3rd Down For What,False
+2015,8,2,86,Jeremy Maclin,Mike Riley,Team Riley,False
+2015,8,3,87,Bishop Sankey,Kyle Schwartz,Straight out of Gronkton!,False
+2015,8,4,88,Anquan Boldin,Rob Bell,In Your Face,False
+2015,8,5,89,Delanie Walker,Joe Marcellino,Team Beats by Ray,False
+2015,8,6,90,Ameer Abdullah,Ryan Keyser,Abdullah Oblangada ,False
+2015,8,7,91,Austin Seferian-Jenkins,Brian Balonis,Baltimore Hail Marys,False
+2015,8,8,92,Darren McFadden,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,8,9,93,Devonta Freeman,Bill Schwartz,The  Commish,False
+2015,8,10,94,Zac Stacy,Zach Schwartz,Cntrl Alt Delete,False
+2015,8,11,95,Tony Romo,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,8,12,96,Ryan Mathews,Brady Reid,Team Flatcheese,False
+2015,9,1,97,Cody Latimer,Brady Reid,Team Flatcheese,False
+2015,9,2,98,Seahawks D/ST,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,9,3,99,Joseph Randle,Zach Schwartz,Cntrl Alt Delete,False
+2015,9,4,100,Sam Bradford,Bill Schwartz,The  Commish,False
+2015,9,5,101,Roddy White,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,9,6,102,Jonathan Stewart,Brian Balonis,Baltimore Hail Marys,False
+2015,9,7,103,Philip Rivers,Ryan Keyser,Abdullah Oblangada ,False
+2015,9,8,104,Danny Woodhead,Joe Marcellino,Team Beats by Ray,False
+2015,9,9,105,Kendall Wright,Rob Bell,In Your Face,False
+2015,9,10,106,Cam Newton,Kyle Schwartz,Straight out of Gronkton!,False
+2015,9,11,107,Vincent Jackson,Mike Riley,Team Riley,False
+2015,9,12,108,Eddie Royal,Brian Schwartz,3rd Down For What,False
+2015,10,1,109,Shane Vereen,Brian Schwartz,3rd Down For What,False
+2015,10,2,110,Doug Martin,Mike Riley,Team Riley,False
+2015,10,3,111,Jonas Gray,Kyle Schwartz,Straight out of Gronkton!,False
+2015,10,4,112,Tevin Coleman,Rob Bell,In Your Face,False
+2015,10,5,113,Devin Funchess,Joe Marcellino,Team Beats by Ray,False
+2015,10,6,114,Bills D/ST,Ryan Keyser,Abdullah Oblangada ,False
+2015,10,7,115,Brian Quick,Brian Balonis,Baltimore Hail Marys,False
+2015,10,8,116,Broncos D/ST,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,10,9,117,Pierre Garcon,Bill Schwartz,The  Commish,False
+2015,10,10,118,Sammy Watkins,Zach Schwartz,Cntrl Alt Delete,False
+2015,10,11,119,Victor Cruz,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,10,12,120,Jerick McKinnon,Brady Reid,Team Flatcheese,False
+2015,11,1,121,Montee Ball,Brady Reid,Team Flatcheese,False
+2015,11,2,122,Charles Sims,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,11,3,123,Michael Floyd,Zach Schwartz,Cntrl Alt Delete,False
+2015,11,4,124,Ravens D/ST,Bill Schwartz,The  Commish,False
+2015,11,5,125,Owen Daniels,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,11,6,126,Tyler Eifert,Brian Balonis,Baltimore Hail Marys,False
+2015,11,7,127,Julius Thomas,Ryan Keyser,Abdullah Oblangada ,False
+2015,11,8,128,Duke Johnson Jr.,Joe Marcellino,Team Beats by Ray,False
+2015,11,9,129,Stephen Gostkowski,Rob Bell,In Your Face,False
+2015,11,10,130,Texans D/ST,Kyle Schwartz,Straight out of Gronkton!,False
+2015,11,11,131,Torrey Smith,Mike Riley,Team Riley,False
+2015,11,12,132,Dwayne Allen,Brian Schwartz,3rd Down For What,False
+2015,12,1,133,Marvin Jones,Brian Schwartz,3rd Down For What,False
+2015,12,2,134,Lorenzo Taliaferro,Mike Riley,Team Riley,False
+2015,12,3,135,Stevie Johnson,Kyle Schwartz,Straight out of Gronkton!,False
+2015,12,4,136,Joe Flacco,Rob Bell,In Your Face,False
+2015,12,5,137,Doug Baldwin,Joe Marcellino,Team Beats by Ray,False
+2015,12,6,138,Dorial Green-Beckham,Ryan Keyser,Abdullah Oblangada ,False
+2015,12,7,139,Adam Vinatieri,Brian Balonis,Baltimore Hail Marys,False
+2015,12,8,140,DeAngelo Williams,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,12,9,141,Vernon Davis,Bill Schwartz,The  Commish,False
+2015,12,10,142,Cardinals D/ST,Zach Schwartz,Cntrl Alt Delete,False
+2015,12,11,143,Justin Tucker,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,12,12,144,Ty Montgomery,Brady Reid,Team Flatcheese,False
+2015,13,1,145,Nick Foles,Brady Reid,Team Flatcheese,False
+2015,13,2,146,Michael Crabtree,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,13,3,147,Breshad Perriman,Zach Schwartz,Cntrl Alt Delete,False
+2015,13,4,148,Dan Bailey,Bill Schwartz,The  Commish,False
+2015,13,5,149,Colin Kaepernick,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,13,6,150,Patriots D/ST,Brian Balonis,Baltimore Hail Marys,False
+2015,13,7,151,Jameis Winston,Ryan Keyser,Abdullah Oblangada ,False
+2015,13,8,152,Mason Crosby,Joe Marcellino,Team Beats by Ray,False
+2015,13,9,153,Kenny Stills,Rob Bell,In Your Face,False
+2015,13,10,154,Steven Hauschka,Kyle Schwartz,Straight out of Gronkton!,False
+2015,13,11,155,Bengals D/ST,Mike Riley,Team Riley,False
+2015,13,12,156,Brandon McManus,Brian Schwartz,3rd Down For What,False
+2015,14,1,157,Jets D/ST,Brian Schwartz,3rd Down For What,False
+2015,14,2,158,Markus Wheaton,Mike Riley,Team Riley,False
+2015,14,3,159,Darren Sproles,Kyle Schwartz,Straight out of Gronkton!,False
+2015,14,4,160,Terrance Williams,Rob Bell,In Your Face,False
+2015,14,5,161,Matt Jones,Joe Marcellino,Team Beats by Ray,False
+2015,14,6,162,Sebastian Janikowski,Ryan Keyser,Abdullah Oblangada ,False
+2015,14,7,163,Matthew Stafford,Brian Balonis,Baltimore Hail Marys,False
+2015,14,8,164,Chandler Catanzaro,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,14,9,165,Kyle Rudolph,Bill Schwartz,The  Commish,False
+2015,14,10,166,Andre Williams,Zach Schwartz,Cntrl Alt Delete,False
+2015,14,11,167,Percy Harvin,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,14,12,168,Matt Prater,Brady Reid,Team Flatcheese,False
+2015,15,1,169,Rams D/ST,Brady Reid,Team Flatcheese,False
+2015,15,2,170,Reggie Wayne,Larry Schwartz,New Yawk Bklyn's Best,False
+2015,15,3,171,Cody Parkey,Zach Schwartz,Cntrl Alt Delete,False
+2015,15,4,172,Davante Adams,Bill Schwartz,The  Commish,False
+2015,15,5,173,Derek Carr,Kevin Schwartz,Hyde Yo Kids Hyde Yo Wife,False
+2015,15,6,174,Mike Wallace,Brian Balonis,Baltimore Hail Marys,False
+2015,15,7,175,Javorius Allen,Ryan Keyser,Abdullah Oblangada ,False
+2015,15,8,176,Dolphins D/ST,Joe Marcellino,Team Beats by Ray,False
+2015,15,9,177,Giants D/ST,Rob Bell,In Your Face,False
+2015,15,10,178,Devin Smith,Kyle Schwartz,Straight out of Gronkton!,False
+2015,15,11,179,Lamar Miller,Mike Riley,Team Riley,False
+2015,15,12,180,Steve Smith Sr.,Brian Schwartz,3rd Down For What,False
+2016,1,1,1,David Johnson,Kyle Schwartz,CJ 2k16,False
+2016,1,2,2,Antonio Brown,Joe Marcellino,From Worst to Worst,False
+2016,1,3,3,Odell Beckham Jr.,Kevin Schwartz,Delegate Odell Watkins,False
+2016,1,4,4,Julio Jones,Max Daniller,Fat Eddie Lacy,False
+2016,1,5,5,Adrian Peterson,Ryan Keyser,Make Fantasy Great Again,False
+2016,1,6,6,Todd Gurley,Bill Schwartz,The  Commish,False
+2016,1,7,7,Ezekiel Elliott,Rob Bell,In Your Face,False
+2016,1,8,8,Devonta Freeman,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,1,9,9,DeAndre Hopkins,Mike Riley,Team Riley,False
+2016,1,10,10,Doug Martin,Brady Reid,Team Flatcheese,False
+2016,1,11,11,A.J. Green,George,Cntrl Alt Delete,False
+2016,1,12,12,Lamar Miller,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,2,1,13,Allen Robinson,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,2,2,14,Dez Bryant,George,Cntrl Alt Delete,False
+2016,2,3,15,Rob Gronkowski,Brady Reid,Team Flatcheese,False
+2016,2,4,16,Jordy Nelson,Mike Riley,Team Riley,False
+2016,2,5,17,Brandon Marshall,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,2,6,18,LeSean McCoy,Rob Bell,In Your Face,False
+2016,2,7,19,Le'Veon Bell,Bill Schwartz,The  Commish,False
+2016,2,8,20,Alshon Jeffery,Ryan Keyser,Make Fantasy Great Again,False
+2016,2,9,21,Eddie Lacy,Max Daniller,Fat Eddie Lacy,False
+2016,2,10,22,Mark Ingram,Kevin Schwartz,Delegate Odell Watkins,False
+2016,2,11,23,Brandin Cooks,Joe Marcellino,From Worst to Worst,False
+2016,2,12,24,Mike Evans,Kyle Schwartz,CJ 2k16,False
+2016,3,1,25,Keenan Allen,Kyle Schwartz,CJ 2k16,False
+2016,3,2,26,Jordan Reed,Joe Marcellino,From Worst to Worst,False
+2016,3,3,27,Sammy Watkins,Kevin Schwartz,Delegate Odell Watkins,False
+2016,3,4,28,T.Y. Hilton,Max Daniller,Fat Eddie Lacy,False
+2016,3,5,29,Amari Cooper,Ryan Keyser,Make Fantasy Great Again,False
+2016,3,6,30,Randall Cobb,Bill Schwartz,The  Commish,False
+2016,3,7,31,Cam Newton,Rob Bell,In Your Face,False
+2016,3,8,32,Golden Tate,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,3,9,33,Jarvis Landry,Mike Riley,Team Riley,False
+2016,3,10,34,Doug Baldwin,Brady Reid,Team Flatcheese,False
+2016,3,11,35,Carlos Hyde,George,Cntrl Alt Delete,False
+2016,3,12,36,Demaryius Thomas,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,4,1,37,Jamaal Charles,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,4,2,38,C.J. Anderson,George,Cntrl Alt Delete,False
+2016,4,3,39,Jonathan Stewart,Brady Reid,Team Flatcheese,False
+2016,4,4,40,Donte Moncrief,Mike Riley,Team Riley,False
+2016,4,5,41,Michael Floyd,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,4,6,42,Thomas Rawls,Rob Bell,In Your Face,False
+2016,4,7,43,Eric Decker,Bill Schwartz,The  Commish,False
+2016,4,8,44,Matt Forte,Ryan Keyser,Make Fantasy Great Again,False
+2016,4,9,45,Latavius Murray,Max Daniller,Fat Eddie Lacy,False
+2016,4,10,46,Julian Edelman,Kevin Schwartz,Delegate Odell Watkins,False
+2016,4,11,47,Jeremy Hill,Joe Marcellino,From Worst to Worst,False
+2016,4,12,48,DeMarco Murray,Kyle Schwartz,CJ 2k16,False
+2016,5,1,49,Emmanuel Sanders,Kyle Schwartz,CJ 2k16,False
+2016,5,2,50,Aaron Rodgers,Joe Marcellino,From Worst to Worst,False
+2016,5,3,51,Greg Olsen,Kevin Schwartz,Delegate Odell Watkins,False
+2016,5,4,52,Josh Gordon,Max Daniller,Fat Eddie Lacy,False
+2016,5,5,53,Kelvin Benjamin,Ryan Keyser,Make Fantasy Great Again,False
+2016,5,6,54,Jeremy Maclin,Bill Schwartz,The  Commish,False
+2016,5,7,55,John Brown,Rob Bell,In Your Face,False
+2016,5,8,56,Chris Ivory,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,5,9,57,Melvin Gordon,Mike Riley,Team Riley,False
+2016,5,10,58,Marvin Jones,Brady Reid,Team Flatcheese,False
+2016,5,11,59,Jeremy Langford,George,Cntrl Alt Delete,False
+2016,5,12,60,Delanie Walker,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,6,1,61,Russell Wilson,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,6,2,62,Andrew Luck,George,Cntrl Alt Delete,False
+2016,6,3,63,Drew Brees,Brady Reid,Team Flatcheese,False
+2016,6,4,64,Ryan Mathews,Mike Riley,Team Riley,False
+2016,6,5,65,Travis Kelce,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,6,6,66,DeSean Jackson,Rob Bell,In Your Face,False
+2016,6,7,67,Ben Roethlisberger,Bill Schwartz,The  Commish,False
+2016,6,8,68,Rashad Jennings,Ryan Keyser,Make Fantasy Great Again,False
+2016,6,9,69,Matt Jones,Max Daniller,Fat Eddie Lacy,False
+2016,6,10,70,Arian Foster,Kevin Schwartz,Delegate Odell Watkins,False
+2016,6,11,71,Frank Gore,Joe Marcellino,From Worst to Worst,False
+2016,6,12,72,Ameer Abdullah,Kyle Schwartz,CJ 2k16,False
+2016,7,1,73,Carson Palmer,Kyle Schwartz,CJ 2k16,False
+2016,7,2,74,DeAngelo Williams,Joe Marcellino,From Worst to Worst,False
+2016,7,3,75,Tom Brady,Kevin Schwartz,Delegate Odell Watkins,False
+2016,7,4,76,Philip Rivers,Max Daniller,Fat Eddie Lacy,False
+2016,7,5,77,Blake Bortles,Ryan Keyser,Make Fantasy Great Again,False
+2016,7,6,78,Larry Fitzgerald,Bill Schwartz,The  Commish,False
+2016,7,7,79,Jordan Matthews,Rob Bell,In Your Face,False
+2016,7,8,80,Sterling Shepard,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,7,9,81,Derrick Henry,Mike Riley,Team Riley,False
+2016,7,10,82,Allen Hurns,Brady Reid,Team Flatcheese,False
+2016,7,11,83,Duke Johnson Jr.,George,Cntrl Alt Delete,False
+2016,7,12,84,Giovani Bernard,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,8,1,85,Tyler Lockett,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,8,2,86,T.J. Yeldon,George,Cntrl Alt Delete,False
+2016,8,3,87,Danny Woodhead,Brady Reid,Team Flatcheese,False
+2016,8,4,88,Jay Ajayi,Mike Riley,Team Riley,False
+2016,8,5,89,Andy Dalton,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,8,6,90,Coby Fleener,Rob Bell,In Your Face,False
+2016,8,7,91,Torrey Smith,Bill Schwartz,The  Commish,False
+2016,8,8,92,Tavon Austin,Ryan Keyser,Make Fantasy Great Again,False
+2016,8,9,93,Stefon Diggs,Max Daniller,Fat Eddie Lacy,False
+2016,8,10,94,Michael Crabtree,Kevin Schwartz,Delegate Odell Watkins,False
+2016,8,11,95,DeVante Parker,Joe Marcellino,From Worst to Worst,False
+2016,8,12,96,Gary Barnidge,Kyle Schwartz,CJ 2k16,False
+2016,9,1,97,Broncos D/ST,Kyle Schwartz,CJ 2k16,False
+2016,9,2,98,Spencer Ware,Joe Marcellino,From Worst to Worst,False
+2016,9,3,99,Seahawks D/ST,Kevin Schwartz,Delegate Odell Watkins,False
+2016,9,4,100,Charles Sims,Max Daniller,Fat Eddie Lacy,False
+2016,9,5,101,Eli Manning,Ryan Keyser,Make Fantasy Great Again,False
+2016,9,6,102,LeGarrette Blount,Bill Schwartz,The  Commish,False
+2016,9,7,103,Bengals D/ST,Rob Bell,In Your Face,False
+2016,9,8,104,Zach Ertz,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,9,9,105,Julius Thomas,Mike Riley,Team Riley,False
+2016,9,10,106,Kevin White,Brady Reid,Team Flatcheese,False
+2016,9,11,107,Tyler Eifert,George,Cntrl Alt Delete,False
+2016,9,12,108,Willie Snead,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,10,1,109,Devin Funchess,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,10,2,110,Bilal Powell,George,Cntrl Alt Delete,False
+2016,10,3,111,Isaiah Crowell,Brady Reid,Team Flatcheese,False
+2016,10,4,112,Travis Benjamin,Mike Riley,Team Riley,False
+2016,10,5,113,Panthers D/ST,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,10,6,114,Mohamed Sanu,Rob Bell,In Your Face,False
+2016,10,7,115,James Starks,Bill Schwartz,The  Commish,False
+2016,10,8,116,Corey Coleman,Ryan Keyser,Make Fantasy Great Again,False
+2016,10,9,117,Steve Smith Sr.,Max Daniller,Fat Eddie Lacy,False
+2016,10,10,118,Vincent Jackson,Kevin Schwartz,Delegate Odell Watkins,False
+2016,10,11,119,Will Fuller V,Joe Marcellino,From Worst to Worst,False
+2016,10,12,120,Terrance West,Kyle Schwartz,CJ 2k16,False
+2016,11,1,121,Markus Wheaton,Kyle Schwartz,CJ 2k16,False
+2016,11,2,122,Theo Riddick,Joe Marcellino,From Worst to Worst,False
+2016,11,3,123,Antonio Gates,Kevin Schwartz,Delegate Odell Watkins,False
+2016,11,4,124,Chris Hogan,Max Daniller,Fat Eddie Lacy,False
+2016,11,5,125,Zach Miller,Ryan Keyser,Make Fantasy Great Again,False
+2016,11,6,126,Tevin Coleman,Bill Schwartz,The  Commish,False
+2016,11,7,127,Mike Wallace,Rob Bell,In Your Face,False
+2016,11,8,128,Matthew Stafford,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,11,9,129,Derek Carr,Mike Riley,Team Riley,False
+2016,11,10,130,Jason Witten,Brady Reid,Team Flatcheese,False
+2016,11,11,131,Michael Thomas,George,Cntrl Alt Delete,False
+2016,11,12,132,Christine Michael,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,12,1,133,Justin Forsett,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,12,2,134,Cardinals D/ST,George,Cntrl Alt Delete,False
+2016,12,3,135,Texans D/ST,Brady Reid,Team Flatcheese,False
+2016,12,4,136,Jets D/ST,Mike Riley,Team Riley,False
+2016,12,5,137,Justin Tucker,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,12,6,138,Kenny Stills,Rob Bell,In Your Face,False
+2016,12,7,139,Kyle Rudolph,Bill Schwartz,The  Commish,False
+2016,12,8,140,Devontae Booker,Ryan Keyser,Make Fantasy Great Again,False
+2016,12,9,141,Jerick McKinnon,Max Daniller,Fat Eddie Lacy,False
+2016,12,10,142,Tajae Sharpe,Kevin Schwartz,Delegate Odell Watkins,False
+2016,12,11,143,Chiefs D/ST,Joe Marcellino,From Worst to Worst,False
+2016,12,12,144,Pierre Garcon,Kyle Schwartz,CJ 2k16,False
+2016,13,1,145,Chris Johnson,Kyle Schwartz,CJ 2k16,False
+2016,13,2,146,Martellus Bennett,Joe Marcellino,From Worst to Worst,False
+2016,13,3,147,Phillip Dorsett,Kevin Schwartz,Delegate Odell Watkins,False
+2016,13,4,148,Eric Ebron,Max Daniller,Fat Eddie Lacy,False
+2016,13,5,149,Vikings D/ST,Ryan Keyser,Make Fantasy Great Again,False
+2016,13,6,150,Packers D/ST,Bill Schwartz,The  Commish,False
+2016,13,7,151,Kirk Cousins,Rob Bell,In Your Face,False
+2016,13,8,152,Tyler Boyd,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,13,9,153,Stephen Gostkowski,Mike Riley,Team Riley,False
+2016,13,10,154,Steven Hauschka,Brady Reid,Team Flatcheese,False
+2016,13,11,155,Darren Sproles,George,Cntrl Alt Delete,False
+2016,13,12,156,Kamar Aiken,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,14,1,157,Patriots D/ST,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2016,14,2,158,James White,George,Cntrl Alt Delete,False
+2016,14,3,159,Tyrod Taylor,Brady Reid,Team Flatcheese,False
+2016,14,4,160,Rishard Matthews,Mike Riley,Team Riley,False
+2016,14,5,161,Shane Vereen,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,14,6,162,Adam Vinatieri,Rob Bell,In Your Face,False
+2016,14,7,163,Kenneth Dixon,Bill Schwartz,The  Commish,False
+2016,14,8,164,Breshad Perriman,Ryan Keyser,Make Fantasy Great Again,False
+2016,14,9,165,Graham Gano,Max Daniller,Fat Eddie Lacy,False
+2016,14,10,166,Dan Bailey,Kevin Schwartz,Delegate Odell Watkins,False
+2016,14,11,167,DeAndre Washington,Joe Marcellino,From Worst to Worst,False
+2016,14,12,168,Mason Crosby,Kyle Schwartz,CJ 2k16,False
+2016,15,1,169,Marcus Mariota,Kyle Schwartz,CJ 2k16,False
+2016,15,2,170,Blair Walsh,Joe Marcellino,From Worst to Worst,False
+2016,15,3,171,Jimmy Graham,Kevin Schwartz,Delegate Odell Watkins,False
+2016,15,4,172,Raiders D/ST,Max Daniller,Fat Eddie Lacy,False
+2016,15,5,173,Roberto Aguayo,Ryan Keyser,Make Fantasy Great Again,False
+2016,15,6,174,Chandler Catanzaro,Bill Schwartz,The  Commish,False
+2016,15,7,175,Shaun Draughn,Rob Bell,In Your Face,False
+2016,15,8,176,Dwayne Allen,Larry Schwartz,New Yawk Bklyn's Best,False
+2016,15,9,177,Ted Ginn Jr.,Mike Riley,Team Riley,False
+2016,15,10,178,Alfred Morris,Brady Reid,Team Flatcheese,False
+2016,15,11,179,Matt Prater,George,Cntrl Alt Delete,False
+2016,15,12,180,Chris Boswell,Brian Schwartz,Wilson!!!!!!!   Wilson!!!!!!,False
+2017,1,1,1,David Johnson,Mike Riley,Team Riley,False
+2017,1,2,2,Le'Veon Bell,Kevin Schwartz,Tevin Schwartz,False
+2017,1,3,3,Antonio Brown,George,Cntrl Alt Delete,False
+2017,1,4,4,Julio Jones,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,1,5,5,Mike Evans,Zach Schwartz,Curious George,False
+2017,1,6,6,LeSean McCoy,Brady Reid,Team Flatcheese,False
+2017,1,7,7,Odell Beckham Jr.,Max Daniller,Zeke's One-Two Punch,False
+2017,1,8,8,Devonta Freeman,Joe Marcellino,From Worst to Worst,False
+2017,1,9,9,Jordy Nelson,Brian Schwartz,The Redemption Squad,False
+2017,1,10,10,Melvin Gordon,Rob Bell,In Your Face,False
+2017,1,11,11,A.J. Green,Bill Schwartz,The  Commish,False
+2017,1,12,12,Jay Ajayi,Unknown,CJ 2k16,False
+2017,2,1,13,Jordan Howard,Unknown,CJ 2k16,False
+2017,2,2,14,DeMarco Murray,Bill Schwartz,The  Commish,False
+2017,2,3,15,Leonard Fournette,Rob Bell,In Your Face,False
+2017,2,4,16,Todd Gurley II,Brian Schwartz,The Redemption Squad,False
+2017,2,5,17,Michael Thomas,Joe Marcellino,From Worst to Worst,False
+2017,2,6,18,Amari Cooper,Max Daniller,Zeke's One-Two Punch,False
+2017,2,7,19,Brandin Cooks,Brady Reid,Team Flatcheese,False
+2017,2,8,20,Doug Baldwin,Zach Schwartz,Curious George,False
+2017,2,9,21,Rob Gronkowski,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,2,10,22,T.Y. Hilton,George,Cntrl Alt Delete,False
+2017,2,11,23,Dez Bryant,Kevin Schwartz,Tevin Schwartz,False
+2017,2,12,24,Carlos Hyde,Mike Riley,Team Riley,False
+2017,3,1,25,Terrelle Pryor Sr.,Mike Riley,Team Riley,False
+2017,3,2,26,Lamar Miller,Kevin Schwartz,Tevin Schwartz,False
+2017,3,3,27,Demaryius Thomas,George,Cntrl Alt Delete,False
+2017,3,4,28,Tom Brady,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,3,5,29,Isaiah Crowell,Zach Schwartz,Curious George,False
+2017,3,6,30,Alshon Jeffery,Brady Reid,Team Flatcheese,False
+2017,3,7,31,Ezekiel Elliott,Max Daniller,Zeke's One-Two Punch,False
+2017,3,8,32,Keenan Allen,Joe Marcellino,From Worst to Worst,False
+2017,3,9,33,DeAndre Hopkins,Brian Schwartz,The Redemption Squad,False
+2017,3,10,34,Aaron Rodgers,Rob Bell,In Your Face,False
+2017,3,11,35,Dalvin Cook,Bill Schwartz,The  Commish,False
+2017,3,12,36,Marshawn Lynch,Unknown,CJ 2k16,False
+2017,4,1,37,Larry Fitzgerald,Unknown,CJ 2k16,False
+2017,4,2,38,Kareem Hunt,Bill Schwartz,The  Commish,False
+2017,4,3,39,Emmanuel Sanders,Rob Bell,In Your Face,False
+2017,4,4,40,Golden Tate,Brian Schwartz,The Redemption Squad,False
+2017,4,5,41,Drew Brees,Joe Marcellino,From Worst to Worst,False
+2017,4,6,42,Christian McCaffrey,Max Daniller,Zeke's One-Two Punch,False
+2017,4,7,43,Ty Montgomery,Brady Reid,Team Flatcheese,False
+2017,4,8,44,Joe Mixon,Zach Schwartz,Curious George,False
+2017,4,9,45,Adrian Peterson,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,4,10,46,Jordan Reed,George,Cntrl Alt Delete,False
+2017,4,11,47,Michael Crabtree,Kevin Schwartz,Tevin Schwartz,False
+2017,4,12,48,Martavis Bryant,Mike Riley,Team Riley,False
+2017,5,1,49,Travis Kelce,Mike Riley,Team Riley,False
+2017,5,2,50,Davante Adams,Kevin Schwartz,Tevin Schwartz,False
+2017,5,3,51,Bilal Powell,George,Cntrl Alt Delete,False
+2017,5,4,52,Allen Robinson,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,5,5,53,Kelvin Benjamin,Zach Schwartz,Curious George,False
+2017,5,6,54,Greg Olsen,Brady Reid,Team Flatcheese,False
+2017,5,7,55,Sammy Watkins,Max Daniller,Zeke's One-Two Punch,False
+2017,5,8,56,Frank Gore,Joe Marcellino,From Worst to Worst,False
+2017,5,9,57,Brandon Marshall,Brian Schwartz,The Redemption Squad,False
+2017,5,10,58,Jarvis Landry,Rob Bell,In Your Face,False
+2017,5,11,59,Jamison Crowder,Bill Schwartz,The  Commish,False
+2017,5,12,60,Stefon Diggs,Unknown,CJ 2k16,False
+2017,6,1,61,Jimmy Graham,Unknown,CJ 2k16,False
+2017,6,2,62,Delanie Walker,Bill Schwartz,The  Commish,False
+2017,6,3,63,Mark Ingram,Rob Bell,In Your Face,False
+2017,6,4,64,Theo Riddick,Brian Schwartz,The Redemption Squad,False
+2017,6,5,65,DeVante Parker,Joe Marcellino,From Worst to Worst,False
+2017,6,6,66,Mike Gillislee,Max Daniller,Zeke's One-Two Punch,False
+2017,6,7,67,Matt Ryan,Brady Reid,Team Flatcheese,False
+2017,6,8,68,Paul Perkins,Zach Schwartz,Curious George,False
+2017,6,9,69,Pierre Garcon,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,6,10,70,Danny Woodhead,George,Cntrl Alt Delete,False
+2017,6,11,71,Tyreek Hill,Kevin Schwartz,Tevin Schwartz,False
+2017,6,12,72,Terrance West,Mike Riley,Team Riley,False
+2017,7,1,73,Cam Newton,Mike Riley,Team Riley,False
+2017,7,2,74,DeSean Jackson,Kevin Schwartz,Tevin Schwartz,False
+2017,7,3,75,Russell Wilson,George,Cntrl Alt Delete,False
+2017,7,4,76,Darren McFadden,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,7,5,77,Jeremy Maclin,Zach Schwartz,Curious George,False
+2017,7,6,78,LeGarrette Blount,Brady Reid,Team Flatcheese,False
+2017,7,7,79,C.J. Anderson,Max Daniller,Zeke's One-Two Punch,False
+2017,7,8,80,Rob Kelley,Joe Marcellino,From Worst to Worst,False
+2017,7,9,81,Eddie Lacy,Brian Schwartz,The Redemption Squad,False
+2017,7,10,82,Ameer Abdullah,Rob Bell,In Your Face,False
+2017,7,11,83,Mike Wallace,Bill Schwartz,The  Commish,False
+2017,7,12,84,Willie Snead,Unknown,CJ 2k16,False
+2017,8,1,85,Randall Cobb,Unknown,CJ 2k16,False
+2017,8,2,86,Eric Decker,Bill Schwartz,The  Commish,False
+2017,8,3,87,Adam Thielen,Rob Bell,In Your Face,False
+2017,8,4,88,Doug Martin,Brian Schwartz,The Redemption Squad,False
+2017,8,5,89,Matt Forte,Joe Marcellino,From Worst to Worst,False
+2017,8,6,90,Kenny Britt,Max Daniller,Zeke's One-Two Punch,False
+2017,8,7,91,Kevin White,Brady Reid,Team Flatcheese,False
+2017,8,8,92,Tyrell Williams,Zach Schwartz,Curious George,False
+2017,8,9,93,Jameis Winston,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,8,10,94,Duke Johnson Jr.,George,Cntrl Alt Delete,False
+2017,8,11,95,Tevin Coleman,Kevin Schwartz,Tevin Schwartz,False
+2017,8,12,96,Jonathan Stewart,Mike Riley,Team Riley,False
+2017,9,1,97,Donte Moncrief,Mike Riley,Team Riley,False
+2017,9,2,98,Kyle Rudolph,Kevin Schwartz,Tevin Schwartz,False
+2017,9,3,99,James White,George,Cntrl Alt Delete,False
+2017,9,4,100,Martellus Bennett,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,9,5,101,Thomas Rawls,Zach Schwartz,Curious George,False
+2017,9,6,102,Rishard Matthews,Brady Reid,Team Flatcheese,False
+2017,9,7,103,Tyler Eifert,Max Daniller,Zeke's One-Two Punch,False
+2017,9,8,104,Zach Ertz,Joe Marcellino,From Worst to Worst,False
+2017,9,9,105,Marcus Mariota,Brian Schwartz,The Redemption Squad,False
+2017,9,10,106,Chris Hogan,Rob Bell,In Your Face,False
+2017,9,11,107,Kirk Cousins,Bill Schwartz,The  Commish,False
+2017,9,12,108,Dak Prescott,Unknown,CJ 2k16,False
+2017,10,1,109,Darren Sproles,Unknown,CJ 2k16,False
+2017,10,2,110,Andrew Luck,Bill Schwartz,The  Commish,False
+2017,10,3,111,Jason Witten,Rob Bell,In Your Face,False
+2017,10,4,112,Jacquizz Rodgers,Brian Schwartz,The Redemption Squad,False
+2017,10,5,113,John Brown,Joe Marcellino,From Worst to Worst,False
+2017,10,6,114,Derek Carr,Max Daniller,Zeke's One-Two Punch,False
+2017,10,7,115,Derrick Henry,Brady Reid,Team Flatcheese,False
+2017,10,8,116,Hunter Henry,Zach Schwartz,Curious George,False
+2017,10,9,117,Jamaal Charles,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,10,10,118,Giovani Bernard,George,Cntrl Alt Delete,False
+2017,10,11,119,Matthew Stafford,Kevin Schwartz,Tevin Schwartz,False
+2017,10,12,120,Ted Ginn Jr.,Mike Riley,Team Riley,False
+2017,11,1,121,Rex Burkhead,Mike Riley,Team Riley,False
+2017,11,2,122,Broncos D/ST,Kevin Schwartz,Tevin Schwartz,False
+2017,11,3,123,Jordan Matthews,George,Cntrl Alt Delete,False
+2017,11,4,124,Matt Bryant,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,11,5,125,Philip Rivers,Zach Schwartz,Curious George,False
+2017,11,6,126,Zay Jones,Brady Reid,Team Flatcheese,False
+2017,11,7,127,Corey Coleman,Max Daniller,Zeke's One-Two Punch,False
+2017,11,8,128,Seahawks D/ST,Joe Marcellino,From Worst to Worst,False
+2017,11,9,129,Justin Tucker,Brian Schwartz,The Redemption Squad,False
+2017,11,10,130,Ravens D/ST,Rob Bell,In Your Face,False
+2017,11,11,131,Chiefs D/ST,Bill Schwartz,The  Commish,False
+2017,11,12,132,Ben Roethlisberger,Unknown,CJ 2k16,False
+2017,12,1,133,Stephen Gostkowski,Unknown,CJ 2k16,False
+2017,12,2,134,Latavius Murray,Bill Schwartz,The  Commish,False
+2017,12,3,135,Corey Davis,Rob Bell,In Your Face,False
+2017,12,4,136,Marvin Jones Jr.,Brian Schwartz,The Redemption Squad,False
+2017,12,5,137,Torrey Smith,Joe Marcellino,From Worst to Worst,False
+2017,12,6,138,C.J. Prosise,Max Daniller,Zeke's One-Two Punch,False
+2017,12,7,139,Texans D/ST,Brady Reid,Team Flatcheese,False
+2017,12,8,140,Chris Thompson,Zach Schwartz,Curious George,False
+2017,12,9,141,Sterling Shepard,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,12,10,142,Shane Vereen,George,Cntrl Alt Delete,False
+2017,12,11,143,Tyrod Taylor,Kevin Schwartz,Tevin Schwartz,False
+2017,12,12,144,Kenny Stills,Mike Riley,Team Riley,False
+2017,13,1,145,Mohamed Sanu,Mike Riley,Team Riley,False
+2017,13,2,146,Adam Vinatieri,Kevin Schwartz,Tevin Schwartz,False
+2017,13,3,147,Vikings D/ST,George,Cntrl Alt Delete,False
+2017,13,4,148,Jaguars D/ST,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,13,5,149,Cardinals D/ST,Zach Schwartz,Curious George,False
+2017,13,6,150,Dan Bailey,Brady Reid,Team Flatcheese,False
+2017,13,7,151,Danny Amendola,Max Daniller,Zeke's One-Two Punch,False
+2017,13,8,152,Charcandrick West,Joe Marcellino,From Worst to Worst,False
+2017,13,9,153,Patriots D/ST,Brian Schwartz,The Redemption Squad,False
+2017,13,10,154,Carson Wentz,Rob Bell,In Your Face,False
+2017,13,11,155,Josh Doctson,Bill Schwartz,The  Commish,False
+2017,13,12,156,Dion Lewis,Unknown,CJ 2k16,False
+2017,14,1,157,Cole Beasley,Unknown,CJ 2k16,False
+2017,14,2,158,Mason Crosby,Bill Schwartz,The  Commish,False
+2017,14,3,159,Chris Boswell,Rob Bell,In Your Face,False
+2017,14,4,160,Jack Doyle,Brian Schwartz,The Redemption Squad,False
+2017,14,5,161,Matt Prater,Joe Marcellino,From Worst to Worst,False
+2017,14,6,162,Panthers D/ST,Max Daniller,Zeke's One-Two Punch,False
+2017,14,7,163,Austin Hooper,Brady Reid,Team Flatcheese,False
+2017,14,8,164,Cairo Santos,Zach Schwartz,Curious George,False
+2017,14,9,165,Evan Engram,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,14,10,166,Dustin Hopkins,George,Cntrl Alt Delete,False
+2017,14,11,167,Andy Dalton,Kevin Schwartz,Tevin Schwartz,False
+2017,14,12,168,Rams D/ST,Mike Riley,Team Riley,False
+2017,15,1,169,Wil Lutz,Mike Riley,Team Riley,False
+2017,15,2,170,Carson Palmer,Kevin Schwartz,Tevin Schwartz,False
+2017,15,3,171,Alvin Kamara,George,Cntrl Alt Delete,False
+2017,15,4,172,Marqise Lee,Larry Schwartz,New Yawk Bklyn's Best,False
+2017,15,5,173,Laquon Treadwell,Zach Schwartz,Curious George,False
+2017,15,6,174,Eli Manning,Brady Reid,Team Flatcheese,False
+2017,15,7,175,Caleb Sturgis,Max Daniller,Zeke's One-Two Punch,False
+2017,15,8,176,James Conner,Joe Marcellino,From Worst to Worst,False
+2017,15,9,177,Charles Sims,Brian Schwartz,The Redemption Squad,False
+2017,15,10,178,Breshad Perriman,Rob Bell,In Your Face,False
+2017,15,11,179,Antonio Gates,Bill Schwartz,The  Commish,False
+2017,15,12,180,Steelers D/ST,Unknown,CJ 2k16,False
+2018,1,1,1,Le'Veon Bell,George,Cntrl Alt Delete,False
+2018,1,2,2,Todd Gurley II,Zach Schwartz,Curious George,False
+2018,1,3,3,David Johnson,Bill Schwartz,The  Commish,False
+2018,1,4,4,Ezekiel Elliott,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,1,5,5,Antonio Brown,Mike Riley,bread BREAD,False
+2018,1,6,6,Alvin Kamara,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,1,7,7,Odell Beckham Jr.,Brady Reid,Team Flatcheese,False
+2018,1,8,8,Saquon Barkley,Rob Bell,In Your Face,False
+2018,1,9,9,Melvin Gordon,Brian Schwartz,My Little  Cooper Kupp,False
+2018,1,10,10,Kareem Hunt,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,1,11,11,Julio Jones,Joe Marcellino,From Worst to Worst,False
+2018,1,12,12,DeAndre Hopkins,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,2,1,13,Dalvin Cook,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,2,2,14,Christian McCaffrey,Joe Marcellino,From Worst to Worst,False
+2018,2,3,15,Keenan Allen,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,2,4,16,Michael Thomas,Brian Schwartz,My Little  Cooper Kupp,False
+2018,2,5,17,Leonard Fournette,Rob Bell,In Your Face,False
+2018,2,6,18,LeSean McCoy,Brady Reid,Team Flatcheese,False
+2018,2,7,19,A.J. Green,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,2,8,20,Devonta Freeman,Mike Riley,bread BREAD,False
+2018,2,9,21,Larry Fitzgerald,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,2,10,22,Davante Adams,Bill Schwartz,The  Commish,False
+2018,2,11,23,Jerick McKinnon,Zach Schwartz,Curious George,False
+2018,2,12,24,Joe Mixon,George,Cntrl Alt Delete,False
+2018,3,1,25,Mike Evans,George,Cntrl Alt Delete,False
+2018,3,2,26,Rob Gronkowski,Zach Schwartz,Curious George,False
+2018,3,3,27,Jordan Howard,Bill Schwartz,The  Commish,False
+2018,3,4,28,Royce Freeman,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,3,5,29,Adam Thielen,Mike Riley,bread BREAD,False
+2018,3,6,30,Stefon Diggs,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,3,7,31,Travis Kelce,Brady Reid,Team Flatcheese,False
+2018,3,8,32,Tyreek Hill,Rob Bell,In Your Face,False
+2018,3,9,33,Amari Cooper,Brian Schwartz,My Little  Cooper Kupp,False
+2018,3,10,34,Jarvis Landry,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,3,11,35,Zach Ertz,Joe Marcellino,From Worst to Worst,False
+2018,3,12,36,Golden Tate,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,4,1,37,T.Y. Hilton,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,4,2,38,Doug Baldwin,Joe Marcellino,From Worst to Worst,False
+2018,4,3,39,Kenyan Drake,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,4,4,40,Josh Gordon,Brian Schwartz,My Little  Cooper Kupp,False
+2018,4,5,41,Aaron Rodgers,Rob Bell,In Your Face,False
+2018,4,6,42,Demaryius Thomas,Brady Reid,Team Flatcheese,False
+2018,4,7,43,Allen Robinson,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,4,8,44,Alex Collins,Mike Riley,bread BREAD,False
+2018,4,9,45,Lamar Miller,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,4,10,46,Brandin Cooks,Bill Schwartz,The  Commish,False
+2018,4,11,47,Marvin Jones Jr.,Zach Schwartz,Curious George,False
+2018,4,12,48,Mark Ingram II,George,Cntrl Alt Delete,False
+2018,5,1,49,JuJu Smith-Schuster,George,Cntrl Alt Delete,False
+2018,5,2,50,Robert Woods,Zach Schwartz,Curious George,False
+2018,5,3,51,Greg Olsen,Bill Schwartz,The  Commish,False
+2018,5,4,52,Chris Hogan,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,5,5,53,Marshawn Lynch,Mike Riley,bread BREAD,False
+2018,5,6,54,Tom Brady,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,5,7,55,Derrick Henry,Brady Reid,Team Flatcheese,False
+2018,5,8,56,Emmanuel Sanders,Rob Bell,In Your Face,False
+2018,5,9,57,Dion Lewis,Brian Schwartz,My Little  Cooper Kupp,False
+2018,5,10,58,Corey Davis,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,5,11,59,Devin Funchess,Joe Marcellino,From Worst to Worst,False
+2018,5,12,60,Deshaun Watson,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,6,1,61,Carlos Hyde,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,6,2,62,Jay Ajayi,Joe Marcellino,From Worst to Worst,False
+2018,6,3,63,Jimmy Graham,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,6,4,64,Rex Burkhead,Brian Schwartz,My Little  Cooper Kupp,False
+2018,6,5,65,Pierre Garcon,Rob Bell,In Your Face,False
+2018,6,6,66,Cam Newton,Brady Reid,Team Flatcheese,False
+2018,6,7,67,Duke Johnson Jr.,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,6,8,68,Michael Crabtree,Mike Riley,bread BREAD,False
+2018,6,9,69,Marquise Goodwin,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,6,10,70,Alshon Jeffery,Bill Schwartz,The  Commish,False
+2018,6,11,71,Tevin Coleman,Zach Schwartz,Curious George,False
+2018,6,12,72,Evan Engram,George,Cntrl Alt Delete,False
+2018,7,1,73,Chris Thompson,George,Cntrl Alt Delete,False
+2018,7,2,74,Sammy Watkins,Zach Schwartz,Curious George,False
+2018,7,3,75,Kerryon Johnson,Bill Schwartz,The  Commish,False
+2018,7,4,76,Peyton Barber,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,7,5,77,Robby Anderson,Mike Riley,bread BREAD,False
+2018,7,6,78,Russell Wilson,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,7,7,79,Isaiah Crowell,Brady Reid,Team Flatcheese,False
+2018,7,8,80,Tarik Cohen,Rob Bell,In Your Face,False
+2018,7,9,81,Cooper Kupp,Brian Schwartz,My Little  Cooper Kupp,False
+2018,7,10,82,Jamison Crowder,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,7,11,83,Randall Cobb,Joe Marcellino,From Worst to Worst,False
+2018,7,12,84,Carson Wentz,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,8,1,85,Delanie Walker,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,8,2,86,Sterling Shepard,Joe Marcellino,From Worst to Worst,False
+2018,8,3,87,Rashaad Penny,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,8,4,88,Chris Carson,Brian Schwartz,My Little  Cooper Kupp,False
+2018,8,5,89,Jordan Reed,Rob Bell,In Your Face,False
+2018,8,6,90,Josh Doctson,Brady Reid,Team Flatcheese,False
+2018,8,7,91,Ronald Jones,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,8,8,92,Nelson Agholor,Mike Riley,bread BREAD,False
+2018,8,9,93,Mohamed Sanu,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,8,10,94,Jamaal Williams,Bill Schwartz,The  Commish,False
+2018,8,11,95,Will Fuller V,Zach Schwartz,Curious George,False
+2018,8,12,96,Kirk Cousins,George,Cntrl Alt Delete,False
+2018,9,1,97,Kelvin Benjamin,George,Cntrl Alt Delete,False
+2018,9,2,98,Sony Michel,Zach Schwartz,Curious George,False
+2018,9,3,99,Adrian Peterson,Bill Schwartz,The  Commish,False
+2018,9,4,100,Julian Edelman,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,9,5,101,Latavius Murray,Mike Riley,bread BREAD,False
+2018,9,6,102,Kyle Rudolph,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,9,7,103,DeVante Parker,Brady Reid,Team Flatcheese,False
+2018,9,8,104,Kenny Stills,Rob Bell,In Your Face,False
+2018,9,9,105,Jaguars D/ST,Brian Schwartz,My Little  Cooper Kupp,False
+2018,9,10,106,Andrew Luck,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,9,11,107,Marlon Mack,Joe Marcellino,From Worst to Worst,False
+2018,9,12,108,Jordy Nelson,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,10,1,109,Rams D/ST,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,10,2,110,Matthew Stafford,Joe Marcellino,From Worst to Worst,False
+2018,10,3,111,James White,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,10,4,112,Jack Doyle,Brian Schwartz,My Little  Cooper Kupp,False
+2018,10,5,113,Justin Tucker,Rob Bell,In Your Face,False
+2018,10,6,114,Theo Riddick,Brady Reid,Team Flatcheese,False
+2018,10,7,115,Allen Hurns,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,10,8,116,Trey Burton,Mike Riley,bread BREAD,False
+2018,10,9,117,David Njoku,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,10,10,118,Drew Brees,Bill Schwartz,The  Commish,False
+2018,10,11,119,Keelan Cole,Zach Schwartz,Curious George,False
+2018,10,12,120,Paul Richardson,George,Cntrl Alt Delete,False
+2018,11,1,121,Kenny Golladay,George,Cntrl Alt Delete,False
+2018,11,2,122,Patrick Mahomes,Zach Schwartz,Curious George,False
+2018,11,3,123,Ty Montgomery,Bill Schwartz,The  Commish,False
+2018,11,4,124,Jared Goff,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,11,5,125,Matt Ryan,Mike Riley,bread BREAD,False
+2018,11,6,126,John Brown,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,11,7,127,Charles Clay,Brady Reid,Team Flatcheese,False
+2018,11,8,128,Doug Martin,Rob Bell,In Your Face,False
+2018,11,9,129,Philip Rivers,Brian Schwartz,My Little  Cooper Kupp,False
+2018,11,10,130,Cameron Meredith,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,11,11,131,Calvin Ridley,Joe Marcellino,From Worst to Worst,False
+2018,11,12,132,Giovani Bernard,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,12,1,133,Danny Amendola,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,12,2,134,Bilal Powell,Joe Marcellino,From Worst to Worst,False
+2018,12,3,135,Tyler Lockett,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,12,4,136,Aaron Jones,Brian Schwartz,My Little  Cooper Kupp,False
+2018,12,5,137,Eagles D/ST,Rob Bell,In Your Face,False
+2018,12,6,138,Ravens D/ST,Brady Reid,Team Flatcheese,False
+2018,12,7,139,Vikings D/ST,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,12,8,140,Chargers D/ST,Mike Riley,bread BREAD,False
+2018,12,9,141,DeSean Jackson,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,12,10,142,Jordan Wilkins,Bill Schwartz,The  Commish,False
+2018,12,11,143,Texans D/ST,Zach Schwartz,Curious George,False
+2018,12,12,144,Michael Gallup,George,Cntrl Alt Delete,False
+2018,13,1,145,Rishard Matthews,George,Cntrl Alt Delete,False
+2018,13,2,146,DJ Moore,Zach Schwartz,Curious George,False
+2018,13,3,147,Saints D/ST,Bill Schwartz,The  Commish,False
+2018,13,4,148,Corey Clement,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,13,5,149,John Ross,Mike Riley,bread BREAD,False
+2018,13,6,150,Javorius Allen,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,13,7,151,Greg Zuerlein,Brady Reid,Team Flatcheese,False
+2018,13,8,152,Jimmy Garoppolo,Rob Bell,In Your Face,False
+2018,13,9,153,Stephen Gostkowski,Brian Schwartz,My Little  Cooper Kupp,False
+2018,13,10,154,Ben Roethlisberger,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,13,11,155,C.J. Anderson,Joe Marcellino,From Worst to Worst,False
+2018,13,12,156,Matt Bryant,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,14,1,157,Kevin White,Ryan Keyser,Dalvin and the  Chipmunks,False
+2018,14,2,158,Patriots D/ST,Joe Marcellino,From Worst to Worst,False
+2018,14,3,159,Broncos D/ST,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,14,4,160,Dez Bryant,Brian Schwartz,My Little  Cooper Kupp,False
+2018,14,5,161,Anthony Miller,Rob Bell,In Your Face,False
+2018,14,6,162,Dak Prescott,Brady Reid,Team Flatcheese,False
+2018,14,7,163,Donte Moncrief,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,14,8,164,Nick Chubb,Mike Riley,bread BREAD,False
+2018,14,9,165,Cardinals D/ST,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,14,10,166,Alex Smith,Bill Schwartz,The  Commish,False
+2018,14,11,167,Tyler Eifert,Zach Schwartz,Curious George,False
+2018,14,12,168,Titans D/ST,George,Cntrl Alt Delete,False
+2018,15,1,169,Wil Lutz,George,Cntrl Alt Delete,False
+2018,15,2,170,Jake Elliott,Zach Schwartz,Curious George,False
+2018,15,3,171,Chris Boswell,Bill Schwartz,The  Commish,False
+2018,15,4,172,Harrison Butker,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2018,15,5,173,Matt Prater,Mike Riley,bread BREAD,False
+2018,15,6,174,Robbie Gould,Kevin Schwartz,Say Cheeeez For The Kamara,False
+2018,15,7,175,Chris Godwin,Brady Reid,Team Flatcheese,False
+2018,15,8,176,Hayden Hurst,Rob Bell,In Your Face,False
+2018,15,9,177,Devontae Booker,Brian Schwartz,My Little  Cooper Kupp,False
+2018,15,10,178,Adam Vinatieri,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2018,15,11,179,Graham Gano,Joe Marcellino,From Worst to Worst,False
+2018,15,12,180,O.J. Howard,Ryan Keyser,Dalvin and the  Chipmunks,False
+2019,1,1,1,Saquon Barkley,Kevin Schwartz,Gnarls Barkley,False
+2019,1,2,2,Christian McCaffrey,Bill Schwartz,The  Commish,False
+2019,1,3,3,Alvin Kamara,Mike Riley,DENVER BREAD,False
+2019,1,4,4,David Johnson,Rob Bell,In Your Face,False
+2019,1,5,5,Ezekiel Elliott,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,1,6,6,DeAndre Hopkins,Brady Reid,Team Flatcheese,False
+2019,1,7,7,Le'Veon Bell,Brian Schwartz,Diggin Them TD's,False
+2019,1,8,8,Davante Adams,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,1,9,9,Michael Thomas,Ryan Keyser,Juicy Smuyet,False
+2019,1,10,10,Julio Jones,Joe Marcellino,Maybe This Year,False
+2019,1,11,11,Tyreek Hill,George,Curious George,False
+2019,1,12,12,JuJu Smith-Schuster,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,2,1,13,Dalvin Cook,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,2,2,14,Odell Beckham Jr.,George,Curious George,False
+2019,2,3,15,James Conner,Joe Marcellino,Maybe This Year,False
+2019,2,4,16,Todd Gurley II,Ryan Keyser,Juicy Smuyet,False
+2019,2,5,17,Antonio Brown,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,2,6,18,Joe Mixon,Brian Schwartz,Diggin Them TD's,False
+2019,2,7,19,Travis Kelce,Brady Reid,Team Flatcheese,False
+2019,2,8,20,Keenan Allen,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,2,9,21,Mike Evans,Rob Bell,In Your Face,False
+2019,2,10,22,Nick Chubb,Mike Riley,DENVER BREAD,False
+2019,2,11,23,Amari Cooper,Bill Schwartz,The  Commish,False
+2019,2,12,24,Leonard Fournette,Kevin Schwartz,Gnarls Barkley,False
+2019,3,1,25,Zach Ertz,Kevin Schwartz,Gnarls Barkley,False
+2019,3,2,26,Chris Carson,Bill Schwartz,The  Commish,False
+2019,3,3,27,Adam Thielen,Mike Riley,DENVER BREAD,False
+2019,3,4,28,Patrick Mahomes,Rob Bell,In Your Face,False
+2019,3,5,29,Devonta Freeman,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,3,6,30,Derrick Henry,Brady Reid,Team Flatcheese,False
+2019,3,7,31,Julian Edelman,Brian Schwartz,Diggin Them TD's,False
+2019,3,8,32,Josh Jacobs,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,3,9,33,George Kittle,Ryan Keyser,Juicy Smuyet,False
+2019,3,10,34,Damien Williams,Joe Marcellino,Maybe This Year,False
+2019,3,11,35,Kerryon Johnson,George,Curious George,False
+2019,3,12,36,Melvin Gordon,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,4,1,37,Calvin Ridley,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,4,2,38,Aaron Jones,George,Curious George,False
+2019,4,3,39,Brandin Cooks,Joe Marcellino,Maybe This Year,False
+2019,4,4,40,David Montgomery,Ryan Keyser,Juicy Smuyet,False
+2019,4,5,41,Tyler Lockett,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,4,6,42,Stefon Diggs,Brian Schwartz,Diggin Them TD's,False
+2019,4,7,43,Kenyan Drake,Brady Reid,Team Flatcheese,False
+2019,4,8,44,Robert Woods,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,4,9,45,Mark Ingram II,Rob Bell,In Your Face,False
+2019,4,10,46,Chris Godwin,Mike Riley,DENVER BREAD,False
+2019,4,11,47,Kenny Golladay,Bill Schwartz,The  Commish,False
+2019,4,12,48,Cooper Kupp,Kevin Schwartz,Gnarls Barkley,False
+2019,5,1,49,Tyler Boyd,Kevin Schwartz,Gnarls Barkley,False
+2019,5,2,50,T.Y. Hilton,Bill Schwartz,The  Commish,False
+2019,5,3,51,Marlon Mack,Mike Riley,DENVER BREAD,False
+2019,5,4,52,Alshon Jeffery,Rob Bell,In Your Face,False
+2019,5,5,53,Sony Michel,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,5,6,54,DJ Moore,Brady Reid,Team Flatcheese,False
+2019,5,7,55,James White,Brian Schwartz,Diggin Them TD's,False
+2019,5,8,56,Duke Johnson,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,5,9,57,Mike Williams,Ryan Keyser,Juicy Smuyet,False
+2019,5,10,58,Sterling Shepard,Joe Marcellino,Maybe This Year,False
+2019,5,11,59,Phillip Lindsay,George,Curious George,False
+2019,5,12,60,Dede Westbrook,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,6,1,61,Derrius Guice,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,6,2,62,Aaron Rodgers,George,Curious George,False
+2019,6,3,63,Evan Engram,Joe Marcellino,Maybe This Year,False
+2019,6,4,64,Deshaun Watson,Ryan Keyser,Juicy Smuyet,False
+2019,6,5,65,Miles Sanders,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,6,6,66,Tarik Cohen,Brian Schwartz,Diggin Them TD's,False
+2019,6,7,67,Josh Gordon,Brady Reid,Team Flatcheese,False
+2019,6,8,68,Matt Ryan,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,6,9,69,Allen Robinson II,Rob Bell,In Your Face,False
+2019,6,10,70,Tevin Coleman,Mike Riley,DENVER BREAD,False
+2019,6,11,71,Hunter Henry,Bill Schwartz,The  Commish,False
+2019,6,12,72,Robby Anderson,Kevin Schwartz,Gnarls Barkley,False
+2019,7,1,73,Jarvis Landry,Kevin Schwartz,Gnarls Barkley,False
+2019,7,2,74,Rashaad Penny,Bill Schwartz,The  Commish,False
+2019,7,3,75,Curtis Samuel,Mike Riley,DENVER BREAD,False
+2019,7,4,76,A.J. Green,Rob Bell,In Your Face,False
+2019,7,5,77,O.J. Howard,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,7,6,78,Sammy Watkins,Brady Reid,Team Flatcheese,False
+2019,7,7,79,Baker Mayfield,Brian Schwartz,Diggin Them TD's,False
+2019,7,8,80,Austin Ekeler,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,7,9,81,Emmanuel Sanders,Ryan Keyser,Juicy Smuyet,False
+2019,7,10,82,Matt Breida,Joe Marcellino,Maybe This Year,False
+2019,7,11,83,Jared Cook,George,Curious George,False
+2019,7,12,84,Jared Goff,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,8,1,85,Darrell Henderson Jr.,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,8,2,86,James Washington,George,Curious George,False
+2019,8,3,87,Carson Wentz,Joe Marcellino,Maybe This Year,False
+2019,8,4,88,Christian Kirk,Ryan Keyser,Juicy Smuyet,False
+2019,8,5,89,Cam Newton,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,8,6,90,Marvin Jones Jr.,Brian Schwartz,Diggin Them TD's,False
+2019,8,7,91,Dak Prescott,Brady Reid,Team Flatcheese,False
+2019,8,8,92,Corey Davis,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,8,9,93,Devin Singletary,Rob Bell,In Your Face,False
+2019,8,10,94,Vance McDonald,Mike Riley,DENVER BREAD,False
+2019,8,11,95,Royce Freeman,Bill Schwartz,The  Commish,False
+2019,8,12,96,Larry Fitzgerald,Kevin Schwartz,Gnarls Barkley,False
+2019,9,1,97,Latavius Murray,Kevin Schwartz,Gnarls Barkley,False
+2019,9,2,98,Bears D/ST,Bill Schwartz,The  Commish,False
+2019,9,3,99,Will Fuller V,Mike Riley,DENVER BREAD,False
+2019,9,4,100,David Njoku,Rob Bell,In Your Face,False
+2019,9,5,101,Marquez Valdes-Scantling,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,9,6,102,LeSean McCoy,Brady Reid,Team Flatcheese,False
+2019,9,7,103,Courtland Sutton,Brian Schwartz,Diggin Them TD's,False
+2019,9,8,104,Delanie Walker,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,9,9,105,Michael Gallup,Ryan Keyser,Juicy Smuyet,False
+2019,9,10,106,Tony Pollard,Joe Marcellino,Maybe This Year,False
+2019,9,11,107,Jordan Howard,George,Curious George,False
+2019,9,12,108,Kyler Murray,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,10,1,109,Eric Ebron,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,10,2,110,DeSean Jackson,George,Curious George,False
+2019,10,3,111,Jaguars D/ST,Joe Marcellino,Maybe This Year,False
+2019,10,4,112,Drew Brees,Ryan Keyser,Juicy Smuyet,False
+2019,10,5,113,Tyrell Williams,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,10,6,114,Peyton Barber,Brian Schwartz,Diggin Them TD's,False
+2019,10,7,115,Donte Moncrief,Brady Reid,Team Flatcheese,False
+2019,10,8,116,Darwin Thompson,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,10,9,117,Jamison Crowder,Rob Bell,In Your Face,False
+2019,10,10,118,Dante Pettis,Mike Riley,DENVER BREAD,False
+2019,10,11,119,Russell Wilson,Bill Schwartz,The  Commish,False
+2019,10,12,120,Ben Roethlisberger,Kevin Schwartz,Gnarls Barkley,False
+2019,11,1,121,Mohamed Sanu Sr.,Kevin Schwartz,Gnarls Barkley,False
+2019,11,2,122,Carlos Hyde,Bill Schwartz,The  Commish,False
+2019,11,3,123,Lamar Jackson,Mike Riley,DENVER BREAD,False
+2019,11,4,124,Eagles D/ST,Rob Bell,In Your Face,False
+2019,11,5,125,Tom Brady,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,11,6,126,Paul Richardson Jr.,Brady Reid,Team Flatcheese,False
+2019,11,7,127,Geronimo Allison,Brian Schwartz,Diggin Them TD's,False
+2019,11,8,128,Nyheim Hines,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,11,9,129,Jalen Richard,Ryan Keyser,Juicy Smuyet,False
+2019,11,10,130,DK Metcalf,Joe Marcellino,Maybe This Year,False
+2019,11,11,131,Trey Burton,George,Curious George,False
+2019,11,12,132,Golden Tate,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,12,1,133,Chase Edmonds,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,12,2,134,Justin Tucker,George,Curious George,False
+2019,12,3,135,Jordan Reed,Joe Marcellino,Maybe This Year,False
+2019,12,4,136,Keke Coutee,Ryan Keyser,Juicy Smuyet,False
+2019,12,5,137,Rams D/ST,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,12,6,138,Austin Hooper,Brian Schwartz,Diggin Them TD's,False
+2019,12,7,139,Frank Gore,Brady Reid,Team Flatcheese,False
+2019,12,8,140,Vikings D/ST,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,12,9,141,John Brown,Rob Bell,In Your Face,False
+2019,12,10,142,Adam Humphries,Mike Riley,DENVER BREAD,False
+2019,12,11,143,DeVante Parker,Bill Schwartz,The  Commish,False
+2019,12,12,144,Greg Zuerlein,Kevin Schwartz,Gnarls Barkley,False
+2019,13,1,145,Saints D/ST,Kevin Schwartz,Gnarls Barkley,False
+2019,13,2,146,Kirk Cousins,Bill Schwartz,The  Commish,False
+2019,13,3,147,Justin Jackson,Mike Riley,DENVER BREAD,False
+2019,13,4,148,Wil Lutz,Rob Bell,In Your Face,False
+2019,13,5,149,Mark Andrews,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,13,6,150,Patriots D/ST,Brady Reid,Team Flatcheese,False
+2019,13,7,151,Dion Lewis,Brian Schwartz,Diggin Them TD's,False
+2019,13,8,152,Harrison Butker,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,13,9,153,Chargers D/ST,Ryan Keyser,Juicy Smuyet,False
+2019,13,10,154,Kalen Ballage,Joe Marcellino,Maybe This Year,False
+2019,13,11,155,Jameis Winston,George,Curious George,False
+2019,13,12,156,Alexander Mattison,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,14,1,157,Colts D/ST,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2019,14,2,158,Anthony Miller,George,Curious George,False
+2019,14,3,159,Philip Rivers,Joe Marcellino,Maybe This Year,False
+2019,14,4,160,Ka'imi Fairbairn,Ryan Keyser,Juicy Smuyet,False
+2019,14,5,161,Darren Waller,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,14,6,162,Ravens D/ST,Brian Schwartz,Diggin Them TD's,False
+2019,14,7,163,Stephen Gostkowski,Brady Reid,Team Flatcheese,False
+2019,14,8,164,Robbie Gould,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,14,9,165,Mitchell Trubisky,Rob Bell,In Your Face,False
+2019,14,10,166,Broncos D/ST,Mike Riley,DENVER BREAD,False
+2019,14,11,167,Michael Badgley,Bill Schwartz,The  Commish,False
+2019,14,12,168,Marquise Brown,Kevin Schwartz,Gnarls Barkley,False
+2019,15,1,169,Matthew Stafford,Kevin Schwartz,Gnarls Barkley,False
+2019,15,2,170,DaeSean Hamilton,Bill Schwartz,The  Commish,False
+2019,15,3,171,Jake Elliott,Mike Riley,DENVER BREAD,False
+2019,15,4,172,Kareem Hunt,Rob Bell,In Your Face,False
+2019,15,5,173,Justice Hill,Zach Schwartz,The Man With  The Yellow Hat ,False
+2019,15,6,174,Jacoby Brissett,Brady Reid,Team Flatcheese,False
+2019,15,7,175,Matt Bryant,Brian Schwartz,Diggin Them TD's,False
+2019,15,8,176,Jaylen Samuels,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2019,15,9,177,Jack Doyle,Ryan Keyser,Juicy Smuyet,False
+2019,15,10,178,Jason Sanders,Joe Marcellino,Maybe This Year,False
+2019,15,11,179,Browns D/ST,George,Curious George,False
+2019,15,12,180,Brett Maher,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,1,1,1,Christian McCaffrey,Brian Schwartz,Fantasy Football Team,False
+2020,1,2,2,Ezekiel Elliott,Joe Marcellino,Maybe This Year,False
+2020,1,3,3,Saquon Barkley,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,1,4,4,Alvin Kamara,Rob Bell,In Your Face,False
+2020,1,5,5,Dalvin Cook,Ryan Keyser,Juicy Smuyet,False
+2020,1,6,6,Clyde Edwards-Helaire,Mike Riley,DENVER BREAD,False
+2020,1,7,7,Miles Sanders,Zach Schwartz,The  Lazard King,False
+2020,1,8,8,Michael Thomas,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,1,9,9,Josh Jacobs,Brady Reid,Team Flatcheese,False
+2020,1,10,10,Derrick Henry,George,Curious George,False
+2020,1,11,11,Aaron Jones,Bill Schwartz,The  Commish,False
+2020,1,12,12,Nick Chubb,Kevin Schwartz,The Autodraft Allstars,False
+2020,2,1,13,DJ Moore,Kevin Schwartz,The Autodraft Allstars,False
+2020,2,2,14,Joe Mixon,Bill Schwartz,The  Commish,False
+2020,2,3,15,Kenyan Drake,George,Curious George,False
+2020,2,4,16,DeAndre Hopkins,Brady Reid,Team Flatcheese,False
+2020,2,5,17,Julio Jones,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,2,6,18,Austin Ekeler,Zach Schwartz,The  Lazard King,False
+2020,2,7,19,Davante Adams,Mike Riley,DENVER BREAD,False
+2020,2,8,20,Tyreek Hill,Ryan Keyser,Juicy Smuyet,False
+2020,2,9,21,Chris Godwin,Rob Bell,In Your Face,False
+2020,2,10,22,Travis Kelce,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,2,11,23,Mike Evans,Joe Marcellino,Maybe This Year,False
+2020,2,12,24,Lamar Jackson,Brian Schwartz,Fantasy Football Team,False
+2020,3,1,25,Chris Carson,Brian Schwartz,Fantasy Football Team,False
+2020,3,2,26,George Kittle,Joe Marcellino,Maybe This Year,False
+2020,3,3,27,Kenny Golladay,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,3,4,28,Patrick Mahomes,Rob Bell,In Your Face,False
+2020,3,5,29,Allen Robinson II,Ryan Keyser,Juicy Smuyet,False
+2020,3,6,30,David Johnson,Mike Riley,DENVER BREAD,False
+2020,3,7,31,Adam Thielen,Zach Schwartz,The  Lazard King,False
+2020,3,8,32,Odell Beckham Jr.,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,3,9,33,Amari Cooper,Brady Reid,Team Flatcheese,False
+2020,3,10,34,Zach Ertz,George,Curious George,False
+2020,3,11,35,James Conner,Bill Schwartz,The  Commish,False
+2020,3,12,36,JuJu Smith-Schuster,Kevin Schwartz,The Autodraft Allstars,False
+2020,4,1,37,Courtland Sutton,Kevin Schwartz,The Autodraft Allstars,False
+2020,4,2,38,A.J. Brown,Bill Schwartz,The  Commish,False
+2020,4,3,39,Todd Gurley II,George,Curious George,False
+2020,4,4,40,Devin Singletary,Brady Reid,Team Flatcheese,False
+2020,4,5,41,Le'Veon Bell,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,4,6,42,Robert Woods,Zach Schwartz,The  Lazard King,False
+2020,4,7,43,Melvin Gordon III,Mike Riley,DENVER BREAD,False
+2020,4,8,44,Mark Andrews,Ryan Keyser,Juicy Smuyet,False
+2020,4,9,45,Cooper Kupp,Rob Bell,In Your Face,False
+2020,4,10,46,Calvin Ridley,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,4,11,47,Tyler Lockett,Joe Marcellino,Maybe This Year,False
+2020,4,12,48,Keenan Allen,Brian Schwartz,Fantasy Football Team,False
+2020,5,1,49,DK Metcalf,Brian Schwartz,Fantasy Football Team,False
+2020,5,2,50,Jonathan Taylor,Joe Marcellino,Maybe This Year,False
+2020,5,3,51,Cam Akers,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,5,4,52,Raheem Mostert,Rob Bell,In Your Face,False
+2020,5,5,53,T.Y. Hilton,Ryan Keyser,Juicy Smuyet,False
+2020,5,6,54,Jarvis Landry,Mike Riley,DENVER BREAD,False
+2020,5,7,55,A.J. Green,Zach Schwartz,The  Lazard King,False
+2020,5,8,56,David Montgomery,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,5,9,57,Stefon Diggs,Brady Reid,Team Flatcheese,False
+2020,5,10,58,Terry McLaurin,George,Curious George,False
+2020,5,11,59,DJ Chark Jr.,Bill Schwartz,The  Commish,False
+2020,5,12,60,Kareem Hunt,Kevin Schwartz,The Autodraft Allstars,False
+2020,6,1,61,D'Andre Swift,Kevin Schwartz,The Autodraft Allstars,False
+2020,6,2,62,Leonard Fournette,Bill Schwartz,The  Commish,False
+2020,6,3,63,DeVante Parker,George,Curious George,False
+2020,6,4,64,Marquise Brown,Brady Reid,Team Flatcheese,False
+2020,6,5,65,Darren Waller,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,6,6,66,Dak Prescott,Zach Schwartz,The  Lazard King,False
+2020,6,7,67,Michael Gallup,Mike Riley,DENVER BREAD,False
+2020,6,8,68,Kyler Murray,Ryan Keyser,Juicy Smuyet,False
+2020,6,9,69,Mark Ingram II,Rob Bell,In Your Face,False
+2020,6,10,70,Tyler Boyd,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,6,11,71,Deshaun Watson,Joe Marcellino,Maybe This Year,False
+2020,6,12,72,Deebo Samuel,Brian Schwartz,Fantasy Football Team,False
+2020,7,1,73,Julian Edelman,Brian Schwartz,Fantasy Football Team,False
+2020,7,2,74,Sterling Shepard,Joe Marcellino,Maybe This Year,False
+2020,7,3,75,Will Fuller V,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,7,4,76,Marvin Jones Jr.,Rob Bell,In Your Face,False
+2020,7,5,77,Tarik Cohen,Ryan Keyser,Juicy Smuyet,False
+2020,7,6,78,Tyler Higbee,Mike Riley,DENVER BREAD,False
+2020,7,7,79,J.K. Dobbins,Zach Schwartz,The  Lazard King,False
+2020,7,8,80,Russell Wilson,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,7,9,81,James White,Brady Reid,Team Flatcheese,False
+2020,7,10,82,Kerryon Johnson,George,Curious George,False
+2020,7,11,83,Matt Ryan,Bill Schwartz,The  Commish,False
+2020,7,12,84,Evan Engram,Kevin Schwartz,The Autodraft Allstars,False
+2020,8,1,85,Brandin Cooks,Kevin Schwartz,The Autodraft Allstars,False
+2020,8,2,86,Tom Brady,Bill Schwartz,The  Commish,False
+2020,8,3,87,DeSean Jackson,George,Curious George,False
+2020,8,4,88,Hayden Hurst,Brady Reid,Team Flatcheese,False
+2020,8,5,89,Jordan Howard,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,8,6,90,Noah Fant,Zach Schwartz,The  Lazard King,False
+2020,8,7,91,Jamison Crowder,Mike Riley,DENVER BREAD,False
+2020,8,8,92,Diontae Johnson,Ryan Keyser,Juicy Smuyet,False
+2020,8,9,93,Ronald Jones II,Rob Bell,In Your Face,False
+2020,8,10,94,Phillip Lindsay,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,8,11,95,Preston Williams,Joe Marcellino,Maybe This Year,False
+2020,8,12,96,Matt Breida,Brian Schwartz,Fantasy Football Team,False
+2020,9,1,97,Christian Kirk,Brian Schwartz,Fantasy Football Team,False
+2020,9,2,98,John Brown,Joe Marcellino,Maybe This Year,False
+2020,9,3,99,Darrell Henderson Jr.,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,9,4,100,Jared Cook,Rob Bell,In Your Face,False
+2020,9,5,101,Zack Moss,Ryan Keyser,Juicy Smuyet,False
+2020,9,6,102,Josh Allen,Mike Riley,DENVER BREAD,False
+2020,9,7,103,Tevin Coleman,Zach Schwartz,The  Lazard King,False
+2020,9,8,104,Henry Ruggs III,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,9,9,105,Matthew Stafford,Brady Reid,Team Flatcheese,False
+2020,9,10,106,Rob Gronkowski,George,Curious George,False
+2020,9,11,107,Hunter Henry,Bill Schwartz,The  Commish,False
+2020,9,12,108,Alexander Mattison,Kevin Schwartz,The Autodraft Allstars,False
+2020,10,1,109,Golden Tate,Kevin Schwartz,The Autodraft Allstars,False
+2020,10,2,110,Austin Hooper,Bill Schwartz,The  Commish,False
+2020,10,3,111,Carson Wentz,George,Curious George,False
+2020,10,4,112,Latavius Murray,Brady Reid,Team Flatcheese,False
+2020,10,5,113,Marlon Mack,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,10,6,114,Jerry Jeudy,Zach Schwartz,The  Lazard King,False
+2020,10,7,115,Chris Thompson,Mike Riley,DENVER BREAD,False
+2020,10,8,116,Robby Anderson,Ryan Keyser,Juicy Smuyet,False
+2020,10,9,117,Emmanuel Sanders,Rob Bell,In Your Face,False
+2020,10,10,118,Darius Slayton,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,10,11,119,Tony Pollard,Joe Marcellino,Maybe This Year,False
+2020,10,12,120,CeeDee Lamb,Brian Schwartz,Fantasy Football Team,False
+2020,11,1,121,Sony Michel,Brian Schwartz,Fantasy Football Team,False
+2020,11,2,122,Mecole Hardman,Joe Marcellino,Maybe This Year,False
+2020,11,3,123,Drew Brees,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,11,4,124,Larry Fitzgerald,Rob Bell,In Your Face,False
+2020,11,5,125,Breshad Perriman,Ryan Keyser,Juicy Smuyet,False
+2020,11,6,126,Mike Williams,Mike Riley,DENVER BREAD,False
+2020,11,7,127,T.J. Hockenson,Zach Schwartz,The  Lazard King,False
+2020,11,8,128,Aaron Rodgers,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,11,9,129,Justin Jefferson,Brady Reid,Team Flatcheese,False
+2020,11,10,130,Curtis Samuel,George,Curious George,False
+2020,11,11,131,Cam Newton,Bill Schwartz,The  Commish,False
+2020,11,12,132,Daniel Jones,Kevin Schwartz,The Autodraft Allstars,False
+2020,12,1,133,Anthony Miller,Kevin Schwartz,The Autodraft Allstars,False
+2020,12,2,134,N'Keal Harry,Bill Schwartz,The  Commish,False
+2020,12,3,135,Duke Johnson,George,Curious George,False
+2020,12,4,136,Chase Edmonds,Brady Reid,Team Flatcheese,False
+2020,12,5,137,Ryquell Armstead,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,12,6,138,Allen Lazard,Zach Schwartz,The  Lazard King,False
+2020,12,7,139,Justin Jackson,Mike Riley,DENVER BREAD,False
+2020,12,8,140,Antonio Gibson,Ryan Keyser,Juicy Smuyet,False
+2020,12,9,141,49ers D/ST,Rob Bell,In Your Face,False
+2020,12,10,142,Nyheim Hines,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,12,11,143,Mike Gesicki,Joe Marcellino,Maybe This Year,False
+2020,12,12,144,Chris Herndon,Brian Schwartz,Fantasy Football Team,False
+2020,13,1,145,Ben Roethlisberger,Brian Schwartz,Fantasy Football Team,False
+2020,13,2,146,Darrel Williams,Joe Marcellino,Maybe This Year,False
+2020,13,3,147,Devine Ozigbo,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,13,4,148,Sammy Watkins,Rob Bell,In Your Face,False
+2020,13,5,149,Damien Harris,Ryan Keyser,Juicy Smuyet,False
+2020,13,6,150,Steelers D/ST,Mike Riley,DENVER BREAD,False
+2020,13,7,151,Ravens D/ST,Zach Schwartz,The  Lazard King,False
+2020,13,8,152,Bills D/ST,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,13,9,153,Dallas Goedert,Brady Reid,Team Flatcheese,False
+2020,13,10,154,Buccaneers D/ST,George,Curious George,False
+2020,13,11,155,Patriots D/ST,Bill Schwartz,The  Commish,False
+2020,13,12,156,Parris Campbell,Kevin Schwartz,The Autodraft Allstars,False
+2020,14,1,157,Brandon Aiyuk,Kevin Schwartz,The Autodraft Allstars,False
+2020,14,2,158,Miles Boykin,Bill Schwartz,The  Commish,False
+2020,14,3,159,Adrian Peterson,George,Curious George,False
+2020,14,4,160,Bears D/ST,Brady Reid,Team Flatcheese,False
+2020,14,5,161,Eric Ebron,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,14,6,162,Benny Snell Jr.,Zach Schwartz,The  Lazard King,False
+2020,14,7,163,Boston Scott,Mike Riley,DENVER BREAD,False
+2020,14,8,164,Randall Cobb,Ryan Keyser,Juicy Smuyet,False
+2020,14,9,165,Jared Goff,Rob Bell,In Your Face,False
+2020,14,10,166,Joe Burrow,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,14,11,167,Tee Higgins,Joe Marcellino,Maybe This Year,False
+2020,14,12,168,Alshon Jeffery,Brian Schwartz,Fantasy Football Team,False
+2020,15,1,169,Colts D/ST,Brian Schwartz,Fantasy Football Team,False
+2020,15,2,170,Saints D/ST,Joe Marcellino,Maybe This Year,False
+2020,15,3,171,Broncos D/ST,Scott Flett,99 Problems but L. Fitz ain't 1,False
+2020,15,4,172,LeSean McCoy,Rob Bell,In Your Face,False
+2020,15,5,173,Vikings D/ST,Ryan Keyser,Juicy Smuyet,False
+2020,15,6,174,Jack Doyle,Mike Riley,DENVER BREAD,False
+2020,15,7,175,Drew Lock,Zach Schwartz,The  Lazard King,False
+2020,15,8,176,Michael Pittman Jr.,Sulaimon,LOCKETT LIKE I  TALK IT,False
+2020,15,9,177,Ryan Tannehill,Brady Reid,Team Flatcheese,False
+2020,15,10,178,Baker Mayfield,George,Curious George,False
+2020,15,11,179,Josh Reynolds,Bill Schwartz,The  Commish,False
+2020,15,12,180,Chargers D/ST,Kevin Schwartz,The Autodraft Allstars,False
+2021,1,1,1,Christian McCaffrey,George,Curious George,False
+2021,1,2,2,Dalvin Cook,Bill Schwartz,The  Commish,False
+2021,1,3,3,Alvin Kamara,Kevin Schwartz,The Road To Speedo Town,False
+2021,1,4,4,Derrick Henry,Joe Marcellino,Maybe This Year,False
+2021,1,5,5,Davante Adams,Ryan Keyser,I'm Ryan  Keyser,False
+2021,1,6,6,Najee Harris,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,1,7,7,Tyreek Hill,Kyle Schwartz,AW YouMISSEDme,False
+2021,1,8,8,Saquon Barkley,Brady Reid,Saquon CeeDee's Nutz,False
+2021,1,9,9,Ezekiel Elliott,Brian Schwartz,Fantasy Football Team,False
+2021,1,10,10,Austin Ekeler,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,1,11,11,Travis Kelce,Rob Bell,In Your Face,False
+2021,1,12,12,Aaron Jones,Mike Riley,DENVER BREAD,False
+2021,2,1,13,Nick Chubb,Mike Riley,DENVER BREAD,False
+2021,2,2,14,Jonathan Taylor,Rob Bell,In Your Face,False
+2021,2,3,15,Stefon Diggs,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,2,4,16,DeAndre Hopkins,Brian Schwartz,Fantasy Football Team,False
+2021,2,5,17,Antonio Gibson,Brady Reid,Saquon CeeDee's Nutz,False
+2021,2,6,18,Joe Mixon,Kyle Schwartz,AW YouMISSEDme,False
+2021,2,7,19,A.J. Brown,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,2,8,20,DK Metcalf,Ryan Keyser,I'm Ryan  Keyser,False
+2021,2,9,21,Clyde Edwards-Helaire,Joe Marcellino,Maybe This Year,False
+2021,2,10,22,Calvin Ridley,Kevin Schwartz,The Road To Speedo Town,False
+2021,2,11,23,Justin Jefferson,Bill Schwartz,The  Commish,False
+2021,2,12,24,Darren Waller,George,Curious George,False
+2021,3,1,25,Keenan Allen,George,Curious George,False
+2021,3,2,26,Terry McLaurin,Bill Schwartz,The  Commish,False
+2021,3,3,27,Allen Robinson II,Kevin Schwartz,The Road To Speedo Town,False
+2021,3,4,28,George Kittle,Joe Marcellino,Maybe This Year,False
+2021,3,5,29,David Montgomery,Ryan Keyser,I'm Ryan  Keyser,False
+2021,3,6,30,James Robinson,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,3,7,31,Mike Evans,Kyle Schwartz,AW YouMISSEDme,False
+2021,3,8,32,CeeDee Lamb,Brady Reid,Saquon CeeDee's Nutz,False
+2021,3,9,33,Chris Carson,Brian Schwartz,Fantasy Football Team,False
+2021,3,10,34,Miles Sanders,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,3,11,35,Robert Woods,Rob Bell,In Your Face,False
+2021,3,12,36,Diontae Johnson,Mike Riley,DENVER BREAD,False
+2021,4,1,37,Cooper Kupp,Mike Riley,DENVER BREAD,False
+2021,4,2,38,D'Andre Swift,Rob Bell,In Your Face,False
+2021,4,3,39,Amari Cooper,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,4,4,40,Adam Thielen,Brian Schwartz,Fantasy Football Team,False
+2021,4,5,41,Tyler Lockett,Brady Reid,Saquon CeeDee's Nutz,False
+2021,4,6,42,Patrick Mahomes,Kyle Schwartz,AW YouMISSEDme,False
+2021,4,7,43,Javonte Williams,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,4,8,44,Chris Godwin,Ryan Keyser,I'm Ryan  Keyser,False
+2021,4,9,45,Tee Higgins,Joe Marcellino,Maybe This Year,False
+2021,4,10,46,DJ Moore,Kevin Schwartz,The Road To Speedo Town,False
+2021,4,11,47,Gus Edwards,Bill Schwartz,The  Commish,False
+2021,4,12,48,Julio Jones,George,Curious George,False
+2021,5,1,49,Josh Jacobs,George,Curious George,False
+2021,5,2,50,Josh Allen,Bill Schwartz,The  Commish,False
+2021,5,3,51,Kareem Hunt,Kevin Schwartz,The Road To Speedo Town,False
+2021,5,4,52,Myles Gaskin,Joe Marcellino,Maybe This Year,False
+2021,5,5,53,Kyler Murray,Ryan Keyser,I'm Ryan  Keyser,False
+2021,5,6,54,Jerry Jeudy,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,5,7,55,Mark Andrews,Kyle Schwartz,AW YouMISSEDme,False
+2021,5,8,56,Brandon Aiyuk,Brady Reid,Saquon CeeDee's Nutz,False
+2021,5,9,57,Lamar Jackson,Brian Schwartz,Fantasy Football Team,False
+2021,5,10,58,Courtland Sutton,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,5,11,59,JuJu Smith-Schuster,Rob Bell,In Your Face,False
+2021,5,12,60,Mike Davis,Mike Riley,DENVER BREAD,False
+2021,6,1,61,Darrell Henderson Jr.,Mike Riley,DENVER BREAD,False
+2021,6,2,62,Aaron Rodgers,Rob Bell,In Your Face,False
+2021,6,3,63,Dak Prescott,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,6,4,64,Kenny Golladay,Brian Schwartz,Fantasy Football Team,False
+2021,6,5,65,T.J. Hockenson,Brady Reid,Saquon CeeDee's Nutz,False
+2021,6,6,66,Robby Anderson,Kyle Schwartz,AW YouMISSEDme,False
+2021,6,7,67,Chase Edmonds,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,6,8,68,Kyle Pitts,Ryan Keyser,I'm Ryan  Keyser,False
+2021,6,9,69,Russell Wilson,Joe Marcellino,Maybe This Year,False
+2021,6,10,70,Laviska Shenault Jr.,Kevin Schwartz,The Road To Speedo Town,False
+2021,6,11,71,Odell Beckham Jr.,Bill Schwartz,The  Commish,False
+2021,6,12,72,Damien Harris,George,Curious George,False
+2021,7,1,73,Chase Claypool,George,Curious George,False
+2021,7,2,74,Brandin Cooks,Bill Schwartz,The  Commish,False
+2021,7,3,75,Logan Thomas,Kevin Schwartz,The Road To Speedo Town,False
+2021,7,4,76,DeVonta Smith,Joe Marcellino,Maybe This Year,False
+2021,7,5,77,Ja'Marr Chase,Ryan Keyser,I'm Ryan  Keyser,False
+2021,7,6,78,Noah Fant,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,7,7,79,Tyler Boyd,Kyle Schwartz,AW YouMISSEDme,False
+2021,7,8,80,Justin Herbert,Brady Reid,Saquon CeeDee's Nutz,False
+2021,7,9,81,Raheem Mostert,Brian Schwartz,Fantasy Football Team,False
+2021,7,10,82,Michael Thomas,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,7,11,83,Marquise Brown,Rob Bell,In Your Face,False
+2021,7,12,84,Ryan Tannehill,Mike Riley,DENVER BREAD,False
+2021,8,1,85,Dallas Goedert,Mike Riley,DENVER BREAD,False
+2021,8,2,86,Corey Davis,Rob Bell,In Your Face,False
+2021,8,3,87,Antonio Brown,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,8,4,88,William Fuller V,Brian Schwartz,Fantasy Football Team,False
+2021,8,5,89,Sony Michel,Brady Reid,Saquon CeeDee's Nutz,False
+2021,8,6,90,Kenyan Drake,Kyle Schwartz,AW YouMISSEDme,False
+2021,8,7,91,Matthew Stafford,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,8,8,92,Leonard Fournette,Ryan Keyser,I'm Ryan  Keyser,False
+2021,8,9,93,Henry Ruggs III,Joe Marcellino,Maybe This Year,False
+2021,8,10,94,Tom Brady,Kevin Schwartz,The Road To Speedo Town,False
+2021,8,11,95,Melvin Gordon III,Bill Schwartz,The  Commish,False
+2021,8,12,96,Jalen Hurts,George,Curious George,False
+2021,9,1,97,Deebo Samuel,George,Curious George,False
+2021,9,2,98,James Conner,Bill Schwartz,The  Commish,False
+2021,9,3,99,Joe Burrow,Kevin Schwartz,The Road To Speedo Town,False
+2021,9,4,100,Jaylen Waddle,Joe Marcellino,Maybe This Year,False
+2021,9,5,101,Ronald Jones II,Ryan Keyser,I'm Ryan  Keyser,False
+2021,9,6,102,Michael Pittman Jr.,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,9,7,103,Cole Beasley,Kyle Schwartz,AW YouMISSEDme,False
+2021,9,8,104,DJ Chark Jr.,Brady Reid,Saquon CeeDee's Nutz,False
+2021,9,9,105,Devin Singletary,Brian Schwartz,Fantasy Football Team,False
+2021,9,10,106,AJ Dillon,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,9,11,107,Zack Moss,Rob Bell,In Your Face,False
+2021,9,12,108,Curtis Samuel,Mike Riley,DENVER BREAD,False
+2021,10,1,109,David Johnson,Mike Riley,DENVER BREAD,False
+2021,10,2,110,Marvin Jones Jr.,Rob Bell,In Your Face,False
+2021,10,3,111,Jonnu Smith,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,10,4,112,Marquez Callaway,Brian Schwartz,Fantasy Football Team,False
+2021,10,5,113,Mike Williams,Brady Reid,Saquon CeeDee's Nutz,False
+2021,10,6,114,Jamaal Williams,Kyle Schwartz,AW YouMISSEDme,False
+2021,10,7,115,Jakobi Meyers,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,10,8,116,Jarvis Landry,Ryan Keyser,I'm Ryan  Keyser,False
+2021,10,9,117,Darnell Mooney,Joe Marcellino,Maybe This Year,False
+2021,10,10,118,Michael Gallup,Kevin Schwartz,The Road To Speedo Town,False
+2021,10,11,119,DeVante Parker,Bill Schwartz,The  Commish,False
+2021,10,12,120,Trey Sermon,George,Curious George,False
+2021,11,1,121,Jalen Reagor,George,Curious George,False
+2021,11,2,122,Tyler Higbee,Bill Schwartz,The  Commish,False
+2021,11,3,123,Nyheim Hines,Kevin Schwartz,The Road To Speedo Town,False
+2021,11,4,124,Michael Carter,Joe Marcellino,Maybe This Year,False
+2021,11,5,125,Robert Tonyan,Ryan Keyser,I'm Ryan  Keyser,False
+2021,11,6,126,Bryan Edwards,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,11,7,127,Rob Gronkowski,Kyle Schwartz,AW YouMISSEDme,False
+2021,11,8,128,James White,Brady Reid,Saquon CeeDee's Nutz,False
+2021,11,9,129,Buccaneers D/ST,Brian Schwartz,Fantasy Football Team,False
+2021,11,10,130,Mecole Hardman,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,11,11,131,Nelson Agholor,Rob Bell,In Your Face,False
+2021,11,12,132,Ravens D/ST,Mike Riley,DENVER BREAD,False
+2021,12,1,133,Gabriel Davis,Mike Riley,DENVER BREAD,False
+2021,12,2,134,Steelers D/ST,Rob Bell,In Your Face,False
+2021,12,3,135,49ers D/ST,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,12,4,136,Mike Gesicki,Brian Schwartz,Fantasy Football Team,False
+2021,12,5,137,Tony Pollard,Brady Reid,Saquon CeeDee's Nutz,False
+2021,12,6,138,Baker Mayfield,Kyle Schwartz,AW YouMISSEDme,False
+2021,12,7,139,Justin Fields,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,12,8,140,Commanders D/ST,Ryan Keyser,I'm Ryan  Keyser,False
+2021,12,9,141,Cole Kmet,Joe Marcellino,Maybe This Year,False
+2021,12,10,142,Alexander Mattison,Kevin Schwartz,The Road To Speedo Town,False
+2021,12,11,143,Rams D/ST,Bill Schwartz,The  Commish,False
+2021,12,12,144,Matt Ryan,George,Curious George,False
+2021,13,1,145,Elijah Moore,George,Curious George,False
+2021,13,2,146,Austin Hooper,Bill Schwartz,The  Commish,False
+2021,13,3,147,Ty'Son Williams,Kevin Schwartz,The Road To Speedo Town,False
+2021,13,4,148,Rondale Moore,Joe Marcellino,Maybe This Year,False
+2021,13,5,149,Trevor Lawrence,Ryan Keyser,I'm Ryan  Keyser,False
+2021,13,6,150,Broncos D/ST,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,13,7,151,Sterling Shepard,Kyle Schwartz,AW YouMISSEDme,False
+2021,13,8,152,Bills D/ST,Brady Reid,Saquon CeeDee's Nutz,False
+2021,13,9,153,Russell Gage,Brian Schwartz,Fantasy Football Team,False
+2021,13,10,154,Chuba Hubbard,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,13,11,155,Trey Lance,Rob Bell,In Your Face,False
+2021,13,12,156,Rhamondre Stevenson,Mike Riley,DENVER BREAD,False
+2021,14,1,157,Phillip Lindsay,Mike Riley,DENVER BREAD,False
+2021,14,2,158,Randall Cobb,Rob Bell,In Your Face,False
+2021,14,3,159,Hunter Henry,Zach Schwartz,"Wu Tang Sports Ventures, Inc.",False
+2021,14,4,160,Tevin Coleman,Brian Schwartz,Fantasy Football Team,False
+2021,14,5,161,Tua Tagovailoa,Brady Reid,Saquon CeeDee's Nutz,False
+2021,14,6,162,Browns D/ST,Kyle Schwartz,AW YouMISSEDme,False
+2021,14,7,163,Gerald Everett,Scott Flett,What R U Doin  Step Bro?!?!,False
+2021,14,8,164,J.D. McKissic,Ryan Keyser,I'm Ryan  Keyser,False
+2021,14,9,165,Colts D/ST,Joe Marcellino,Maybe This Year,False
+2021,14,10,166,Patriots D/ST,Kevin Schwartz,The Road To Speedo Town,False
+2021,14,11,167,Rashod Bateman,Bill Schwartz,The  Commish,False
+2021,14,12,168,Packers D/ST,George,Curious George,False
+2022,1,1,1,Jonathan Taylor,Brady Reid,Team  Vengeance,False
+2022,1,2,2,Derrick Henry,Rob Bell,In Your Face,False
+2022,1,3,3,Christian McCaffrey,Ryan Keyser,I'm Ryan  Keyser,False
+2022,1,4,4,Austin Ekeler,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,1,5,5,Najee Harris,Bill Schwartz,The  Commish,False
+2022,1,6,6,Cooper Kupp,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,1,7,7,Justin Jefferson,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,1,8,8,Dalvin Cook,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,1,9,9,Ja'Marr Chase,George,Quads Are us,False
+2022,1,10,10,D'Andre Swift,Mike Riley,DENVER RILEY,False
+2022,1,11,11,Alvin Kamara,Kyle Schwartz,Team YB,False
+2022,1,12,12,Stefon Diggs,Joe Marcellino,Maybe This Year,False
+2022,2,1,13,Joe Mixon,Joe Marcellino,Maybe This Year,False
+2022,2,2,14,Davante Adams,Kyle Schwartz,Team YB,False
+2022,2,3,15,Leonard Fournette,Mike Riley,DENVER RILEY,False
+2022,2,4,16,Saquon Barkley,George,Quads Are us,False
+2022,2,5,17,Deebo Samuel,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,2,6,18,Javonte Williams,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,2,7,19,Michael Pittman Jr.,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,2,8,20,Tyreek Hill,Bill Schwartz,The  Commish,False
+2022,2,9,21,Aaron Jones,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,2,10,22,CeeDee Lamb,Ryan Keyser,I'm Ryan  Keyser,False
+2022,2,11,23,James Conner,Rob Bell,In Your Face,False
+2022,2,12,24,Travis Kelce,Brady Reid,Team  Vengeance,False
+2022,3,1,25,Keenan Allen,Brady Reid,Team  Vengeance,False
+2022,3,2,26,Mark Andrews,Rob Bell,In Your Face,False
+2022,3,3,27,A.J. Brown,Ryan Keyser,I'm Ryan  Keyser,False
+2022,3,4,28,Nick Chubb,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,3,5,29,Mike Evans,Bill Schwartz,The  Commish,False
+2022,3,6,30,Travis Etienne Jr.,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,3,7,31,Tee Higgins,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,3,8,32,DJ Moore,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,3,9,33,Kyle Pitts,George,Quads Are us,False
+2022,3,10,34,Marquise Brown,Mike Riley,DENVER RILEY,False
+2022,3,11,35,David Montgomery,Kyle Schwartz,Team YB,False
+2022,3,12,36,Jaylen Waddle,Joe Marcellino,Maybe This Year,False
+2022,4,1,37,Cam Akers,Joe Marcellino,Maybe This Year,False
+2022,4,2,38,Terry McLaurin,Kyle Schwartz,Team YB,False
+2022,4,3,39,Diontae Johnson,Mike Riley,DENVER RILEY,False
+2022,4,4,40,Josh Allen,George,Quads Are us,False
+2022,4,5,41,J.K. Dobbins,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,4,6,42,Ezekiel Elliott,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,4,7,43,Courtland Sutton,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,4,8,44,Mike Williams,Bill Schwartz,The  Commish,False
+2022,4,9,45,DK Metcalf,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,4,10,46,Jerry Jeudy,Ryan Keyser,I'm Ryan  Keyser,False
+2022,4,11,47,Brandin Cooks,Rob Bell,In Your Face,False
+2022,4,12,48,Breece Hall,Brady Reid,Team  Vengeance,False
+2022,5,1,49,Amon-Ra St. Brown,Brady Reid,Team  Vengeance,False
+2022,5,2,50,Josh Jacobs,Rob Bell,In Your Face,False
+2022,5,3,51,Patrick Mahomes,Ryan Keyser,I'm Ryan  Keyser,False
+2022,5,4,52,Allen Robinson II,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,5,5,53,Justin Herbert,Bill Schwartz,The  Commish,False
+2022,5,6,54,Chris Godwin,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,5,7,55,Lamar Jackson,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,5,8,56,Darnell Mooney,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,5,9,57,Gabe Davis,George,Quads Are us,False
+2022,5,10,58,JuJu Smith-Schuster,Mike Riley,DENVER RILEY,False
+2022,5,11,59,Darren Waller,Kyle Schwartz,Team YB,False
+2022,5,12,60,Hunter Renfrow,Joe Marcellino,Maybe This Year,False
+2022,6,1,61,Devin Singletary,Joe Marcellino,Maybe This Year,False
+2022,6,2,62,Kyler Murray,Kyle Schwartz,Team YB,False
+2022,6,3,63,Jalen Hurts,Mike Riley,DENVER RILEY,False
+2022,6,4,64,Elijah Mitchell,George,Quads Are us,False
+2022,6,5,65,Miles Sanders,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,6,6,66,Michael Thomas,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,6,7,67,Dameon Pierce,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,6,8,68,George Kittle,Bill Schwartz,The  Commish,False
+2022,6,9,69,Rashod Bateman,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,6,10,70,Clyde Edwards-Helaire,Ryan Keyser,I'm Ryan  Keyser,False
+2022,6,11,71,Tyler Lockett,Rob Bell,In Your Face,False
+2022,6,12,72,Elijah Moore,Brady Reid,Team  Vengeance,False
+2022,7,1,73,Christian Kirk,Brady Reid,Team  Vengeance,False
+2022,7,2,74,Adam Thielen,Rob Bell,In Your Face,False
+2022,7,3,75,Dalton Schultz,Ryan Keyser,I'm Ryan  Keyser,False
+2022,7,4,76,Chase Edmonds,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,7,5,77,Antonio Gibson,Bill Schwartz,The  Commish,False
+2022,7,6,78,Chris Olave,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,7,7,79,T.J. Hockenson,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,7,8,80,Tony Pollard,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,7,9,81,AJ Dillon,George,Quads Are us,False
+2022,7,10,82,Kareem Hunt,Mike Riley,DENVER RILEY,False
+2022,7,11,83,Amari Cooper,Kyle Schwartz,Team YB,False
+2022,7,12,84,Damien Harris,Joe Marcellino,Maybe This Year,False
+2022,8,1,85,Kadarius Toney,Joe Marcellino,Maybe This Year,False
+2022,8,2,86,Drake London,Kyle Schwartz,Team YB,False
+2022,8,3,87,Rashaad Penny,Mike Riley,DENVER RILEY,False
+2022,8,4,88,DeVonta Smith,George,Quads Are us,False
+2022,8,5,89,Tom Brady,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,8,6,90,Brandon Aiyuk,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,8,7,91,Rhamondre Stevenson,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,8,8,92,Melvin Gordon III,Bill Schwartz,The  Commish,False
+2022,8,9,93,Russell Wilson,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,8,10,94,Cordarrelle Patterson,Ryan Keyser,I'm Ryan  Keyser,False
+2022,8,11,95,DeAndre Hopkins,Rob Bell,In Your Face,False
+2022,8,12,96,Kenneth Walker III,Brady Reid,Team  Vengeance,False
+2022,9,1,97,Joe Burrow,Brady Reid,Team  Vengeance,False
+2022,9,2,98,Matthew Stafford,Rob Bell,In Your Face,False
+2022,9,3,99,Allen Lazard,Ryan Keyser,I'm Ryan  Keyser,False
+2022,9,4,100,Zach Ertz,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,9,5,101,James Robinson,Bill Schwartz,The  Commish,False
+2022,9,6,102,Brian Robinson Jr.,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,9,7,103,Michael Carter,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,9,8,104,Robert Woods,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,9,9,105,Dallas Goedert,George,Quads Are us,False
+2022,9,10,106,Jakobi Meyers,Mike Riley,DENVER RILEY,False
+2022,9,11,107,Dak Prescott,Kyle Schwartz,Team YB,False
+2022,9,12,108,Marquez Valdes-Scantling,Joe Marcellino,Maybe This Year,False
+2022,10,1,109,Cole Kmet,Joe Marcellino,Maybe This Year,False
+2022,10,2,110,Aaron Rodgers,Kyle Schwartz,Team YB,False
+2022,10,3,111,Darrell Henderson Jr.,Mike Riley,DENVER RILEY,False
+2022,10,4,112,James Cook,George,Quads Are us,False
+2022,10,5,113,Skyy Moore,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,10,6,114,Nyheim Hines,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,10,7,115,Kirk Cousins,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,10,8,116,Treylon Burks,Bill Schwartz,The  Commish,False
+2022,10,9,117,Alexander Mattison,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,10,10,118,Garrett Wilson,Ryan Keyser,I'm Ryan  Keyser,False
+2022,10,11,119,Tyler Boyd,Rob Bell,In Your Face,False
+2022,10,12,120,Raheem Mostert,Brady Reid,Team  Vengeance,False
+2022,11,1,121,Chase Claypool,Brady Reid,Team  Vengeance,False
+2022,11,2,122,Jarvis Landry,Rob Bell,In Your Face,False
+2022,11,3,123,Packers D/ST,Ryan Keyser,I'm Ryan  Keyser,False
+2022,11,4,124,Trey Lance,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,11,5,125,Bills D/ST,Bill Schwartz,The  Commish,False
+2022,11,6,126,Romeo Doubs,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,11,7,127,Russell Gage,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,11,8,128,Pat Freiermuth,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,11,9,129,Michael Gallup,George,Quads Are us,False
+2022,11,10,130,Dawson Knox,Mike Riley,DENVER RILEY,False
+2022,11,11,131,DJ Chark,Kyle Schwartz,Team YB,False
+2022,11,12,132,Tua Tagovailoa,Joe Marcellino,Maybe This Year,False
+2022,12,1,133,DeVante Parker,Joe Marcellino,Maybe This Year,False
+2022,12,2,134,Derek Carr,Kyle Schwartz,Team YB,False
+2022,12,3,135,Tyler Allgeier,Mike Riley,DENVER RILEY,False
+2022,12,4,136,Julio Jones,George,Quads Are us,False
+2022,12,5,137,Saints D/ST,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,12,6,138,Buccaneers D/ST,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,12,7,139,Hunter Henry,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,12,8,140,Jerick McKinnon,Bill Schwartz,The  Commish,False
+2022,12,9,141,Robbie Anderson,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,12,10,142,Mike Gesicki,Ryan Keyser,I'm Ryan  Keyser,False
+2022,12,11,143,J.D. McKissic,Rob Bell,In Your Face,False
+2022,12,12,144,49ers D/ST,Brady Reid,Team  Vengeance,False
+2022,13,1,145,Trevor Lawrence,Brady Reid,Team  Vengeance,False
+2022,13,2,146,Ravens D/ST,Rob Bell,In Your Face,False
+2022,13,3,147,Kenneth Gainwell,Ryan Keyser,I'm Ryan  Keyser,False
+2022,13,4,148,Colts D/ST,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,13,5,149,Mecole Hardman,Bill Schwartz,The  Commish,False
+2022,13,6,150,Rondale Moore,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,13,7,151,George Pickens,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,13,8,152,Justin Fields,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,13,9,153,Cowboys D/ST,George,Quads Are us,False
+2022,13,10,154,Browns D/ST,Mike Riley,DENVER RILEY,False
+2022,13,11,155,Steelers D/ST,Kyle Schwartz,Team YB,False
+2022,13,12,156,Isiah Pacheco,Joe Marcellino,Maybe This Year,False
+2022,14,1,157,Chargers D/ST,Joe Marcellino,Maybe This Year,False
+2022,14,2,158,David Njoku,Kyle Schwartz,Team YB,False
+2022,14,3,159,K.J. Osborn,Mike Riley,DENVER RILEY,False
+2022,14,4,160,Jamaal Williams,George,Quads Are us,False
+2022,14,5,161,Khalil Herbert,Kevin Schwartz,Cookin With Colonel Sanders,False
+2022,14,6,162,Irv Smith Jr.,Zach Schwartz,Wu Tang Sports Ventures ,False
+2022,14,7,163,Dolphins D/ST,Scott Flett,What R U Doin  Step Bro?!?!,False
+2022,14,8,164,Jahan Dotson,Bill Schwartz,The  Commish,False
+2022,14,9,165,Gus Edwards,Brian Schwartz,I. AM. (NOT) BATEMAN! ,False
+2022,14,10,166,Mike Davis,Ryan Keyser,I'm Ryan  Keyser,False
+2022,14,11,167,Marvin Jones Jr.,Rob Bell,In Your Face,False
+2022,14,12,168,Noah Fant,Brady Reid,Team  Vengeance,False
+2023,1,1,1,Justin Jefferson,Brady Reid,Lets Ride,False
+2023,1,2,2,Ja'Marr Chase,Scott Flett,Rookie Squad,False
+2023,1,3,3,Austin Ekeler,Rob Bell,In Your Face,False
+2023,1,4,4,Christian McCaffrey,Ryan Keyser,Juicy Smuyet ,False
+2023,1,5,5,Travis Kelce,George,Never cutting charbs,False
+2023,1,6,6,Tyreek Hill,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,1,7,7,Saquon Barkley,Bill Schwartz,The  Commish,False
+2023,1,8,8,Bijan Robinson,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,1,9,9,Davante Adams,Kyle Schwartz,Team AutoDraft,False
+2023,1,10,10,Derrick Henry,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,1,11,11,Tony Pollard,Joe Marcellino,Maybe This Year,False
+2023,1,12,12,Amon-Ra St. Brown,Mike Riley,Mike Riley,False
+2023,2,1,13,CeeDee Lamb,Mike Riley,Mike Riley,False
+2023,2,2,14,Garrett Wilson,Joe Marcellino,Maybe This Year,False
+2023,2,3,15,Nick Chubb,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,2,4,16,Josh Jacobs,Kyle Schwartz,Team AutoDraft,False
+2023,2,5,17,Stefon Diggs,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,2,6,18,Cooper Kupp,Bill Schwartz,The  Commish,False
+2023,2,7,19,A.J. Brown,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,2,8,20,Joe Mixon,George,Never cutting charbs,False
+2023,2,9,21,Jaylen Waddle,Ryan Keyser,Juicy Smuyet ,False
+2023,2,10,22,DK Metcalf,Rob Bell,In Your Face,False
+2023,2,11,23,Chris Olave,Scott Flett,Rookie Squad,False
+2023,2,12,24,Travis Etienne Jr.,Brady Reid,Lets Ride,False
+2023,3,1,25,Jahmyr Gibbs,Brady Reid,Lets Ride,False
+2023,3,2,26,Calvin Ridley,Scott Flett,Rookie Squad,False
+2023,3,3,27,Josh Allen,Rob Bell,In Your Face,False
+2023,3,4,28,Patrick Mahomes,Ryan Keyser,Juicy Smuyet ,False
+2023,3,5,29,Tee Higgins,George,Never cutting charbs,False
+2023,3,6,30,Jalen Hurts,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,3,7,31,Keenan Allen,Bill Schwartz,The  Commish,False
+2023,3,8,32,DeVonta Smith,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,3,9,33,Aaron Jones,Kyle Schwartz,Team AutoDraft,False
+2023,3,10,34,Lamar Jackson,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,3,11,35,Dameon Pierce,Joe Marcellino,Maybe This Year,False
+2023,3,12,36,Rhamondre Stevenson,Mike Riley,Mike Riley,False
+2023,4,1,37,Diontae Johnson,Mike Riley,Mike Riley,False
+2023,4,2,38,Amari Cooper,Joe Marcellino,Maybe This Year,False
+2023,4,3,39,Mark Andrews,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,4,4,40,Rachaad White,Kyle Schwartz,Team AutoDraft,False
+2023,4,5,41,Deebo Samuel,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,4,6,42,Joe Burrow,Bill Schwartz,The  Commish,False
+2023,4,7,43,DeAndre Hopkins,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,4,8,44,Najee Harris,George,Never cutting charbs,False
+2023,4,9,45,Christian Watson,Ryan Keyser,Juicy Smuyet ,False
+2023,4,10,46,Chris Godwin,Rob Bell,In Your Face,False
+2023,4,11,47,Javonte Williams,Scott Flett,Rookie Squad,False
+2023,4,12,48,Darren Waller,Brady Reid,Lets Ride,False
+2023,5,1,49,Mike Williams,Brady Reid,Lets Ride,False
+2023,5,2,50,Cam Akers,Scott Flett,Rookie Squad,False
+2023,5,3,51,Miles Sanders,Rob Bell,In Your Face,False
+2023,5,4,52,Kenneth Walker III,Ryan Keyser,Juicy Smuyet ,False
+2023,5,5,53,Breece Hall,George,Never cutting charbs,False
+2023,5,6,54,Alexander Mattison,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,5,7,55,James Conner,Bill Schwartz,The  Commish,False
+2023,5,8,56,James Cook,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,5,9,57,Mike Evans,Kyle Schwartz,Team AutoDraft,False
+2023,5,10,58,Terry McLaurin,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,5,11,59,Justin Fields,Joe Marcellino,Maybe This Year,False
+2023,5,12,60,Trevor Lawrence,Mike Riley,Mike Riley,False
+2023,6,1,61,Brandon Aiyuk,Mike Riley,Mike Riley,False
+2023,6,2,62,Dallas Goedert,Joe Marcellino,Maybe This Year,False
+2023,6,3,63,Drake London,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,6,4,64,Alvin Kamara,Kyle Schwartz,Team AutoDraft,False
+2023,6,5,65,T.J. Hockenson,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,6,6,66,Kyle Pitts,Bill Schwartz,The  Commish,False
+2023,6,7,67,DJ Moore,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,6,8,68,Justin Herbert,George,Never cutting charbs,False
+2023,6,9,69,George Kittle,Ryan Keyser,Juicy Smuyet ,False
+2023,6,10,70,Jerry Jeudy,Rob Bell,In Your Face,False
+2023,6,11,71,Jordan Addison,Scott Flett,Rookie Squad,False
+2023,6,12,72,Dak Prescott,Brady Reid,Lets Ride,False
+2023,7,1,73,Tyler Lockett,Brady Reid,Lets Ride,False
+2023,7,2,74,Deshaun Watson,Scott Flett,Rookie Squad,False
+2023,7,3,75,J.K. Dobbins,Rob Bell,In Your Face,False
+2023,7,4,76,Christian Kirk,Ryan Keyser,Juicy Smuyet ,False
+2023,7,5,77,Michael Pittman Jr.,George,Never cutting charbs,False
+2023,7,6,78,Dalvin Cook,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,7,7,79,Marquise Brown,Bill Schwartz,The  Commish,False
+2023,7,8,80,Jahan Dotson,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,7,9,81,Brandin Cooks,Kyle Schwartz,Team AutoDraft,False
+2023,7,10,82,George Pickens,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,7,11,83,Michael Thomas,Joe Marcellino,Maybe This Year,False
+2023,7,12,84,Antonio Gibson,Mike Riley,Mike Riley,False
+2023,8,1,85,Jonathan Taylor,Mike Riley,Mike Riley,False
+2023,8,2,86,Isiah Pacheco,Joe Marcellino,Maybe This Year,False
+2023,8,3,87,David Montgomery,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,8,4,88,Pat Freiermuth,Kyle Schwartz,Team AutoDraft,False
+2023,8,5,89,Courtland Sutton,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,8,6,90,Brian Robinson Jr.,Bill Schwartz,The  Commish,False
+2023,8,7,91,Khalil Herbert,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,8,8,92,D'Andre Swift,George,Never cutting charbs,False
+2023,8,9,93,Skyy Moore,Ryan Keyser,Juicy Smuyet ,False
+2023,8,10,94,Treylon Burks,Rob Bell,In Your Face,False
+2023,8,11,95,Dalton Kincaid,Scott Flett,Rookie Squad,False
+2023,8,12,96,Zay Flowers,Brady Reid,Lets Ride,False
+2023,9,1,97,AJ Dillon,Brady Reid,Lets Ride,False
+2023,9,2,98,Jaylen Warren,Scott Flett,Rookie Squad,False
+2023,9,3,99,David Njoku,Rob Bell,In Your Face,False
+2023,9,4,100,Odell Beckham Jr.,Ryan Keyser,Juicy Smuyet ,False
+2023,9,5,101,Jaxon Smith-Njigba,George,Never cutting charbs,False
+2023,9,6,102,Jamaal Williams,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,9,7,103,Gabe Davis,Bill Schwartz,The  Commish,False
+2023,9,8,104,Kirk Cousins,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,9,9,105,Daniel Jones,Kyle Schwartz,Team AutoDraft,False
+2023,9,10,106,Tua Tagovailoa,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,9,11,107,Raheem Mostert,Joe Marcellino,Maybe This Year,False
+2023,9,12,108,Evan Engram,Mike Riley,Mike Riley,False
+2023,10,1,109,Elijah Moore,Mike Riley,Mike Riley,False
+2023,10,2,110,Quentin Johnston,Joe Marcellino,Maybe This Year,False
+2023,10,3,111,JuJu Smith-Schuster,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,10,4,112,Cole Kmet,Kyle Schwartz,Team AutoDraft,False
+2023,10,5,113,Jerick McKinnon,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,10,6,114,Samaje Perine,Bill Schwartz,The  Commish,False
+2023,10,7,115,Deon Jackson,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,10,8,116,Jakobi Meyers,George,Never cutting charbs,False
+2023,10,9,117,Nico Collins,Ryan Keyser,Juicy Smuyet ,False
+2023,10,10,118,Adam Thielen,Rob Bell,In Your Face,False
+2023,10,11,119,Tank Bigsby,Scott Flett,Rookie Squad,False
+2023,10,12,120,DJ Chark Jr.,Brady Reid,Lets Ride,False
+2023,11,1,121,Rashaad Penny,Brady Reid,Lets Ride,False
+2023,11,2,122,Anthony Richardson,Scott Flett,Rookie Squad,False
+2023,11,3,123,Devin Singletary,Rob Bell,In Your Face,False
+2023,11,4,124,Ezekiel Elliott,Ryan Keyser,Juicy Smuyet ,False
+2023,11,5,125,Zach Charbonnet,George,Never cutting charbs,False
+2023,11,6,126,Juwan Johnson,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,11,7,127,49ers D/ST,Bill Schwartz,The  Commish,False
+2023,11,8,128,Steelers D/ST,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,11,9,129,Rondale Moore,Kyle Schwartz,Team AutoDraft,False
+2023,11,10,130,Bills D/ST,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,11,11,131,Elijah Mitchell,Joe Marcellino,Maybe This Year,False
+2023,11,12,132,Tyler Higbee,Mike Riley,Mike Riley,False
+2023,12,1,133,Gerald Everett,Mike Riley,Mike Riley,False
+2023,12,2,134,Dolphins D/ST,Joe Marcellino,Maybe This Year,False
+2023,12,3,135,Zay Jones,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,12,4,136,Aaron Rodgers,Kyle Schwartz,Team AutoDraft,False
+2023,12,5,137,Kadarius Toney,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,12,6,138,Rashod Bateman,Bill Schwartz,The  Commish,False
+2023,12,7,139,Saints D/ST,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,12,8,140,De'Von Achane,George,Never cutting charbs,False
+2023,12,9,141,Ravens D/ST,Ryan Keyser,Juicy Smuyet ,False
+2023,12,10,142,Tyler Allgeier,Rob Bell,In Your Face,False
+2023,12,11,143,Marvin Mims Jr.,Scott Flett,Rookie Squad,False
+2023,12,12,144,Chigoziem Okonkwo,Brady Reid,Lets Ride,False
+2023,13,1,145,Browns D/ST,Brady Reid,Lets Ride,False
+2023,13,2,146,Sam LaPorta,Scott Flett,Rookie Squad,False
+2023,13,3,147,Cowboys D/ST,Rob Bell,In Your Face,False
+2023,13,4,148,Darnell Mooney,Ryan Keyser,Juicy Smuyet ,False
+2023,13,5,149,Damien Harris,George,Never cutting charbs,False
+2023,13,6,150,Allen Lazard,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,13,7,151,Kareem Hunt,Bill Schwartz,The  Commish,False
+2023,13,8,152,Geno Smith,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,13,9,153,Tyler Boyd,Kyle Schwartz,Team AutoDraft,False
+2023,13,10,154,Dalton Schultz,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,13,11,155,Jonathan Mingo,Joe Marcellino,Maybe This Year,False
+2023,13,12,156,Jets D/ST,Mike Riley,Mike Riley,False
+2023,14,1,157,Zack Moss,Mike Riley,Mike Riley,False
+2023,14,2,158,Isaiah Hodgins,Joe Marcellino,Maybe This Year,False
+2023,14,3,159,Gus Edwards,Kevin Schwartz,Ridin Da Gus Bus to 10th place,False
+2023,14,4,160,Panthers D/ST,Kyle Schwartz,Team AutoDraft,False
+2023,14,5,161,Kenneth Gainwell,Zach Schwartz,It's Always Sunny in Baltimore,False
+2023,14,6,162,Parris Campbell,Bill Schwartz,The  Commish,False
+2023,14,7,163,Leonard Fournette,Brian Schwartz,No I'm Ryan Keyser ,False
+2023,14,8,164,Eagles D/ST,George,Never cutting charbs,False
+2023,14,9,165,Chase Claypool,Ryan Keyser,Juicy Smuyet ,False
+2023,14,10,166,Hunter Renfrow,Rob Bell,In Your Face,False
+2023,14,11,167,Titans D/ST,Scott Flett,Rookie Squad,False
+2023,14,12,168,Roschon Johnson,Brady Reid,Lets Ride,False
+2024,1,1,1,CeeDee Lamb,Kyle Schwartz,LosersUnited,False
+2024,1,2,2,Christian McCaffrey,George,Never cutting charbs,False
+2024,1,3,3,Amon-Ra St. Brown,Kevin Schwartz,Kevon-Ra,False
+2024,1,4,4,Tyreek Hill,Larry Schwartz,The New York NoGiants,False
+2024,1,5,5,Breece Hall,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,1,6,6,Ja'Marr Chase,Mike Riley,Bread (Riley's Version),False
+2024,1,7,7,Justin Jefferson,Bill Schwartz,The  Commish,False
+2024,1,8,8,Bijan Robinson,Mike Linker,Jalen Squirts,False
+2024,1,9,9,Saquon Barkley,Ryan Keyser,I'm Ryan Keyser,False
+2024,1,10,10,A.J. Brown,Joe Marcellino,Maybe This Year,False
+2024,1,11,11,Jonathan Taylor,Brady Reid,Keep Doubting,False
+2024,1,12,12,Garrett Wilson,Brian Schwartz,Son of a Commish ,False
+2024,2,1,13,Travis Etienne Jr.,Brian Schwartz,Son of a Commish ,False
+2024,2,2,14,Puka Nacua,Brady Reid,Keep Doubting,False
+2024,2,3,15,Derrick Henry,Joe Marcellino,Maybe This Year,False
+2024,2,4,16,Kyren Williams,Ryan Keyser,I'm Ryan Keyser,False
+2024,2,5,17,Davante Adams,Mike Linker,Jalen Squirts,False
+2024,2,6,18,Isiah Pacheco,Bill Schwartz,The  Commish,False
+2024,2,7,19,Chris Olave,Mike Riley,Bread (Riley's Version),False
+2024,2,8,20,Jahmyr Gibbs,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,2,9,21,Marvin Harrison Jr.,Larry Schwartz,The New York NoGiants,False
+2024,2,10,22,Mike Evans,Kevin Schwartz,Kevon-Ra,False
+2024,2,11,23,Drake London,George,Never cutting charbs,False
+2024,2,12,24,Rachaad White,Kyle Schwartz,LosersUnited,False
+2024,3,1,25,James Cook,Kyle Schwartz,LosersUnited,False
+2024,3,2,26,Nico Collins,George,Never cutting charbs,False
+2024,3,3,27,Josh Jacobs,Kevin Schwartz,Kevon-Ra,False
+2024,3,4,28,Deebo Samuel Sr.,Larry Schwartz,The New York NoGiants,False
+2024,3,5,29,Michael Pittman Jr.,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,3,6,30,De'Von Achane,Mike Riley,Bread (Riley's Version),False
+2024,3,7,31,DJ Moore,Bill Schwartz,The  Commish,False
+2024,3,8,32,Jalen Hurts,Mike Linker,Jalen Squirts,False
+2024,3,9,33,Brandon Aiyuk,Ryan Keyser,I'm Ryan Keyser,False
+2024,3,10,34,Stefon Diggs,Joe Marcellino,Maybe This Year,False
+2024,3,11,35,Joe Mixon,Brady Reid,Keep Doubting,False
+2024,3,12,36,Travis Kelce,Brian Schwartz,Son of a Commish ,False
+2024,4,1,37,DK Metcalf,Brian Schwartz,Son of a Commish ,False
+2024,4,2,38,DeVonta Smith,Brady Reid,Keep Doubting,False
+2024,4,3,39,Cooper Kupp,Joe Marcellino,Maybe This Year,False
+2024,4,4,40,Malik Nabers,Ryan Keyser,I'm Ryan Keyser,False
+2024,4,5,41,Jaylen Waddle,Mike Linker,Jalen Squirts,False
+2024,4,6,42,Josh Allen,Bill Schwartz,The  Commish,False
+2024,4,7,43,Rashee Rice,Mike Riley,Bread (Riley's Version),False
+2024,4,8,44,Zay Flowers,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,4,9,45,Sam LaPorta,Larry Schwartz,The New York NoGiants,False
+2024,4,10,46,Kenneth Walker III,Kevin Schwartz,Kevon-Ra,False
+2024,4,11,47,Lamar Jackson,George,Never cutting charbs,False
+2024,4,12,48,Mark Andrews,Kyle Schwartz,LosersUnited,False
+2024,5,1,49,Tank Dell,Kyle Schwartz,LosersUnited,False
+2024,5,2,50,Alvin Kamara,George,Never cutting charbs,False
+2024,5,3,51,Amari Cooper,Kevin Schwartz,Kevon-Ra,False
+2024,5,4,52,Tee Higgins,Larry Schwartz,The New York NoGiants,False
+2024,5,5,53,Calvin Ridley,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,5,6,54,Trey McBride,Mike Riley,Bread (Riley's Version),False
+2024,5,7,55,Chris Godwin,Bill Schwartz,The  Commish,False
+2024,5,8,56,D'Andre Swift,Mike Linker,Jalen Squirts,False
+2024,5,9,57,Evan Engram,Ryan Keyser,I'm Ryan Keyser,False
+2024,5,10,58,Aaron Jones,Joe Marcellino,Maybe This Year,False
+2024,5,11,59,George Pickens,Brady Reid,Keep Doubting,False
+2024,5,12,60,James Conner,Brian Schwartz,Son of a Commish ,False
+2024,6,1,61,Patrick Mahomes,Brian Schwartz,Son of a Commish ,False
+2024,6,2,62,Dalton Kincaid,Brady Reid,Keep Doubting,False
+2024,6,3,63,Terry McLaurin,Joe Marcellino,Maybe This Year,False
+2024,6,4,64,C.J. Stroud,Ryan Keyser,I'm Ryan Keyser,False
+2024,6,5,65,Diontae Johnson,Mike Linker,Jalen Squirts,False
+2024,6,6,66,Rhamondre Stevenson,Bill Schwartz,The  Commish,False
+2024,6,7,67,Christian Kirk,Mike Riley,Bread (Riley's Version),False
+2024,6,8,68,Jaxon Smith-Njigba,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,6,9,69,Zamir White,Larry Schwartz,The New York NoGiants,False
+2024,6,10,70,Anthony Richardson,Kevin Schwartz,Kevon-Ra,False
+2024,6,11,71,Keenan Allen,George,Never cutting charbs,False
+2024,6,12,72,Dak Prescott,Kyle Schwartz,LosersUnited,False
+2024,7,1,73,David Montgomery,Kyle Schwartz,LosersUnited,False
+2024,7,2,74,Najee Harris,George,Never cutting charbs,False
+2024,7,3,75,George Kittle,Kevin Schwartz,Kevon-Ra,False
+2024,7,4,76,Brian Robinson Jr.,Larry Schwartz,The New York NoGiants,False
+2024,7,5,77,Joe Burrow,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,7,6,78,Javonte Williams,Mike Riley,Bread (Riley's Version),False
+2024,7,7,79,Jaylen Warren,Bill Schwartz,The  Commish,False
+2024,7,8,80,Jayden Reed,Mike Linker,Jalen Squirts,False
+2024,7,9,81,Courtland Sutton,Ryan Keyser,I'm Ryan Keyser,False
+2024,7,10,82,Kyler Murray,Joe Marcellino,Maybe This Year,False
+2024,7,11,83,Christian Watson,Brady Reid,Keep Doubting,False
+2024,7,12,84,Brian Thomas Jr.,Brian Schwartz,Son of a Commish ,False
+2024,8,1,85,Jerome Ford,Brian Schwartz,Son of a Commish ,False
+2024,8,2,86,Tyjae Spears,Brady Reid,Keep Doubting,False
+2024,8,3,87,Kyle Pitts,Joe Marcellino,Maybe This Year,False
+2024,8,4,88,Ladd McConkey,Ryan Keyser,I'm Ryan Keyser,False
+2024,8,5,89,Raheem Mostert,Mike Linker,Jalen Squirts,False
+2024,8,6,90,Jake Ferguson,Bill Schwartz,The  Commish,False
+2024,8,7,91,Jayden Daniels,Mike Riley,Bread (Riley's Version),False
+2024,8,8,92,Chase Brown,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,8,9,93,Tony Pollard,Larry Schwartz,The New York NoGiants,False
+2024,8,10,94,Zack Moss,Kevin Schwartz,Kevon-Ra,False
+2024,8,11,95,Xavier Worthy,George,Never cutting charbs,False
+2024,8,12,96,Gus Edwards,Kyle Schwartz,LosersUnited,False
+2024,9,1,97,Keon Coleman,Kyle Schwartz,LosersUnited,False
+2024,9,2,98,Dallas Goedert,George,Never cutting charbs,False
+2024,9,3,99,Austin Ekeler,Kevin Schwartz,Kevon-Ra,False
+2024,9,4,100,Jordan Love,Larry Schwartz,The New York NoGiants,False
+2024,9,5,101,David Njoku,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,9,6,102,Devin Singletary,Mike Riley,Bread (Riley's Version),False
+2024,9,7,103,Ezekiel Elliott,Bill Schwartz,The  Commish,False
+2024,9,8,104,Cole Kmet,Mike Linker,Jalen Squirts,False
+2024,9,9,105,Rome Odunze,Ryan Keyser,I'm Ryan Keyser,False
+2024,9,10,106,Jakobi Meyers,Joe Marcellino,Maybe This Year,False
+2024,9,11,107,Jordan Addison,Brady Reid,Keep Doubting,False
+2024,9,12,108,DeAndre Hopkins,Brian Schwartz,Son of a Commish ,False
+2024,10,1,109,Chuba Hubbard,Brian Schwartz,Son of a Commish ,False
+2024,10,2,110,Brock Purdy,Brady Reid,Keep Doubting,False
+2024,10,3,111,Tyler Allgeier,Joe Marcellino,Maybe This Year,False
+2024,10,4,112,Trey Benson,Ryan Keyser,I'm Ryan Keyser,False
+2024,10,5,113,Curtis Samuel,Mike Linker,Jalen Squirts,False
+2024,10,6,114,Hollywood Brown,Bill Schwartz,The  Commish,False
+2024,10,7,115,Jaleel McLaughlin,Mike Riley,Bread (Riley's Version),False
+2024,10,8,116,Jonathon Brooks,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,10,9,117,Pat Freiermuth,Larry Schwartz,The New York NoGiants,False
+2024,10,10,118,Jerry Jeudy,Kevin Schwartz,Kevon-Ra,False
+2024,10,11,119,Zach Charbonnet,George,Never cutting charbs,False
+2024,10,12,120,Mike Williams,Kyle Schwartz,LosersUnited,False
+2024,11,1,121,Nick Chubb,Kyle Schwartz,LosersUnited,False
+2024,11,2,122,Jameson Williams,George,Never cutting charbs,False
+2024,11,3,123,J.K. Dobbins,Kevin Schwartz,Kevon-Ra,False
+2024,11,4,124,Tua Tagovailoa,Larry Schwartz,The New York NoGiants,False
+2024,11,5,125,Rashid Shaheed,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,11,6,126,Rico Dowdle,Mike Riley,Bread (Riley's Version),False
+2024,11,7,127,Khalil Shakir,Bill Schwartz,The  Commish,False
+2024,11,8,128,Caleb Williams,Mike Linker,Jalen Squirts,False
+2024,11,9,129,Darnell Mooney,Ryan Keyser,I'm Ryan Keyser,False
+2024,11,10,130,Brock Bowers,Joe Marcellino,Maybe This Year,False
+2024,11,11,131,Joshua Palmer,Brady Reid,Keep Doubting,False
+2024,11,12,132,Tyler Lockett,Brian Schwartz,Son of a Commish ,False
+2024,12,1,133,Dontayvion Wicks,Brian Schwartz,Son of a Commish ,False
+2024,12,2,134,Ty Chandler,Brady Reid,Keep Doubting,False
+2024,12,3,135,Adonai Mitchell,Joe Marcellino,Maybe This Year,False
+2024,12,4,136,Dalton Schultz,Ryan Keyser,I'm Ryan Keyser,False
+2024,12,5,137,Gabe Davis,Mike Linker,Jalen Squirts,False
+2024,12,6,138,Romeo Doubs,Bill Schwartz,The  Commish,False
+2024,12,7,139,Blake Corum,Mike Riley,Bread (Riley's Version),False
+2024,12,8,140,Michael Wilson,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,12,9,141,Adam Thielen,Larry Schwartz,The New York NoGiants,False
+2024,12,10,142,Antonio Gibson,Kevin Schwartz,Kevon-Ra,False
+2024,12,11,143,Justin Herbert,George,Never cutting charbs,False
+2024,12,12,144,Aaron Rodgers,Kyle Schwartz,LosersUnited,False
+2024,13,1,145,Browns D/ST,Kyle Schwartz,LosersUnited,False
+2024,13,2,146,T.J. Hockenson,George,Never cutting charbs,False
+2024,13,3,147,Ravens D/ST,Kevin Schwartz,Kevon-Ra,False
+2024,13,4,148,MarShawn Lloyd,Larry Schwartz,The New York NoGiants,False
+2024,13,5,149,DeMario Douglas,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,13,6,150,Tank Bigsby,Mike Riley,Bread (Riley's Version),False
+2024,13,7,151,Jordan Mason,Bill Schwartz,The  Commish,False
+2024,13,8,152,Bucky Irving,Mike Linker,Jalen Squirts,False
+2024,13,9,153,Xavier Legette,Ryan Keyser,I'm Ryan Keyser,False
+2024,13,10,154,Jaylen Wright,Joe Marcellino,Maybe This Year,False
+2024,13,11,155,Ray Davis,Brady Reid,Keep Doubting,False
+2024,13,12,156,Ja'Lynn Polk,Brian Schwartz,Son of a Commish ,False
+2024,14,1,157,Cowboys D/ST,Brian Schwartz,Son of a Commish ,False
+2024,14,2,158,Jets D/ST,Brady Reid,Keep Doubting,False
+2024,14,3,159,49ers D/ST,Joe Marcellino,Maybe This Year,False
+2024,14,4,160,Dolphins D/ST,Ryan Keyser,I'm Ryan Keyser,False
+2024,14,5,161,Steelers D/ST,Mike Linker,Jalen Squirts,False
+2024,14,6,162,Chiefs D/ST,Bill Schwartz,The  Commish,False
+2024,14,7,163,Seahawks D/ST,Mike Riley,Bread (Riley's Version),False
+2024,14,8,164,Lions D/ST,Zach Schwartz,It's Always Sunny in Baltimore,False
+2024,14,9,165,Saints D/ST,Larry Schwartz,The New York NoGiants,False
+2024,14,10,166,Juwan Johnson,Kevin Schwartz,Kevon-Ra,False
+2024,14,11,167,Eagles D/ST,George,Never cutting charbs,False
+2024,14,12,168,Brandin Cooks,Kyle Schwartz,LosersUnited,False
+2025,1,1,1,Ja'Marr Chase,Mike Linker,Not Lamarvelous,False
+2025,1,2,2,Bijan Robinson,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,1,3,3,Saquon Barkley,Ryan Keyser,Juicy Smuyet,False
+2025,1,4,4,Jahmyr Gibbs,Brian Schwartz,Son of a Commish ,False
+2025,1,5,5,CeeDee Lamb,Joe Marcellino,Not This Year,False
+2025,1,6,6,Justin Jefferson,Mike Riley,Riley,False
+2025,1,7,7,Puka Nacua,Evan Myers,Omar's Coming,False
+2025,1,8,8,De'Von Achane,Bill Schwartz,The  Commish,False
+2025,1,9,9,Christian McCaffrey,Larry Schwartz,The New York Geezers,False
+2025,1,10,10,Derrick Henry,Kyle Schwartz,The Njoku's on *Me,False
+2025,1,11,11,Ashton Jeanty,Brady Reid,Keep Doubting,False
+2025,1,12,12,Malik Nabers,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,2,1,13,Amon-Ra St. Brown,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,2,2,14,Nico Collins,Brady Reid,Keep Doubting,False
+2025,2,3,15,A.J. Brown,Kyle Schwartz,The Njoku's on *Me,False
+2025,2,4,16,Brock Bowers,Larry Schwartz,The New York Geezers,False
+2025,2,5,17,Brian Thomas Jr.,Bill Schwartz,The  Commish,False
+2025,2,6,18,Chase Brown,Evan Myers,Omar's Coming,False
+2025,2,7,19,Drake London,Mike Riley,Riley,False
+2025,2,8,20,Bucky Irving,Joe Marcellino,Not This Year,False
+2025,2,9,21,Tee Higgins,Brian Schwartz,Son of a Commish ,False
+2025,2,10,22,Jonathan Taylor,Ryan Keyser,Juicy Smuyet,False
+2025,2,11,23,Trey McBride,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,2,12,24,Ladd McConkey,Mike Linker,Not Lamarvelous,False
+2025,3,1,25,Lamar Jackson,Mike Linker,Not Lamarvelous,False
+2025,3,2,26,Josh Jacobs,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,3,3,27,Josh Allen,Ryan Keyser,Juicy Smuyet,False
+2025,3,4,28,Jaxon Smith-Njigba,Brian Schwartz,Son of a Commish ,False
+2025,3,5,29,Kyren Williams,Joe Marcellino,Not This Year,False
+2025,3,6,30,Tyreek Hill,Mike Riley,Riley,False
+2025,3,7,31,Omarion Hampton,Evan Myers,Omar's Coming,False
+2025,3,8,32,Terry McLaurin,Bill Schwartz,The  Commish,False
+2025,3,9,33,James Cook III,Larry Schwartz,The New York Geezers,False
+2025,3,10,34,Davante Adams,Kyle Schwartz,The Njoku's on *Me,False
+2025,3,11,35,Garrett Wilson,Brady Reid,Keep Doubting,False
+2025,3,12,36,Alvin Kamara,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,4,1,37,Chuba Hubbard,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,4,2,38,Jayden Daniels,Brady Reid,Keep Doubting,False
+2025,4,3,39,Jalen Hurts,Kyle Schwartz,The Njoku's on *Me,False
+2025,4,4,40,Joe Burrow,Larry Schwartz,The New York Geezers,False
+2025,4,5,41,Mike Evans,Bill Schwartz,The  Commish,False
+2025,4,6,42,George Kittle,Evan Myers,Omar's Coming,False
+2025,4,7,43,Kenneth Walker III,Mike Riley,Riley,False
+2025,4,8,44,Marvin Harrison Jr.,Joe Marcellino,Not This Year,False
+2025,4,9,45,TreVeyon Henderson,Brian Schwartz,Son of a Commish ,False
+2025,4,10,46,Tetairoa McMillan,Ryan Keyser,Juicy Smuyet,False
+2025,4,11,47,Breece Hall,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,4,12,48,James Conner,Mike Linker,Not Lamarvelous,False
+2025,5,1,49,Courtland Sutton,Mike Linker,Not Lamarvelous,False
+2025,5,2,50,DeVonta Smith,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,5,3,51,Zay Flowers,Ryan Keyser,Juicy Smuyet,False
+2025,5,4,52,Jameson Williams,Brian Schwartz,Son of a Commish ,False
+2025,5,5,53,Jaylen Waddle,Joe Marcellino,Not This Year,False
+2025,5,6,54,D'Andre Swift,Mike Riley,Riley,False
+2025,5,7,55,DK Metcalf,Evan Myers,Omar's Coming,False
+2025,5,8,56,DJ Moore,Bill Schwartz,The  Commish,False
+2025,5,9,57,George Pickens,Larry Schwartz,The New York Geezers,False
+2025,5,10,58,Xavier Worthy,Kyle Schwartz,The Njoku's on *Me,False
+2025,5,11,59,Calvin Ridley,Brady Reid,Keep Doubting,False
+2025,5,12,60,Jerry Jeudy,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,6,1,61,Rome Odunze,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,6,2,62,RJ Harvey,Brady Reid,Keep Doubting,False
+2025,6,3,63,T.J. Hockenson,Kyle Schwartz,The Njoku's on *Me,False
+2025,6,4,64,Tony Pollard,Larry Schwartz,The New York Geezers,False
+2025,6,5,65,David Montgomery,Bill Schwartz,The  Commish,False
+2025,6,6,66,Emeka Egbuka,Evan Myers,Omar's Coming,False
+2025,6,7,67,Isiah Pacheco,Mike Riley,Riley,False
+2025,6,8,68,Matthew Golden,Joe Marcellino,Not This Year,False
+2025,6,9,69,Aaron Jones Sr.,Brian Schwartz,Son of a Commish ,False
+2025,6,10,70,Sam LaPorta,Ryan Keyser,Juicy Smuyet,False
+2025,6,11,71,Travis Hunter,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,6,12,72,Ricky Pearsall,Mike Linker,Not Lamarvelous,False
+2025,7,1,73,Jaylen Warren,Mike Linker,Not Lamarvelous,False
+2025,7,2,74,Jakobi Meyers,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,7,3,75,Chris Olave,Ryan Keyser,Juicy Smuyet,False
+2025,7,4,76,Rashee Rice,Brian Schwartz,Son of a Commish ,False
+2025,7,5,77,Bo Nix,Joe Marcellino,Not This Year,False
+2025,7,6,78,Tyrone Tracy Jr.,Mike Riley,Riley,False
+2025,7,7,79,Stefon Diggs,Evan Myers,Omar's Coming,False
+2025,7,8,80,Jacory Croskey-Merritt,Bill Schwartz,The  Commish,False
+2025,7,9,81,Michael Pittman Jr.,Larry Schwartz,The New York Geezers,False
+2025,7,10,82,Patrick Mahomes,Kyle Schwartz,The Njoku's on *Me,False
+2025,7,11,83,Travis Kelce,Brady Reid,Keep Doubting,False
+2025,7,12,84,Evan Engram,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,8,1,85,Austin Ekeler,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,8,2,86,Javonte Williams,Brady Reid,Keep Doubting,False
+2025,8,3,87,David Njoku,Kyle Schwartz,The Njoku's on *Me,False
+2025,8,4,88,Mark Andrews,Larry Schwartz,The New York Geezers,False
+2025,8,5,89,Kaleb Johnson,Bill Schwartz,The  Commish,False
+2025,8,6,90,Deebo Samuel,Evan Myers,Omar's Coming,False
+2025,8,7,91,Jordan Addison,Mike Riley,Riley,False
+2025,8,8,92,Khalil Shakir,Joe Marcellino,Not This Year,False
+2025,8,9,93,Keon Coleman,Brian Schwartz,Son of a Commish ,False
+2025,8,10,94,Cooper Kupp,Ryan Keyser,Juicy Smuyet,False
+2025,8,11,95,Darnell Mooney,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,8,12,96,Jordan Mason,Mike Linker,Not Lamarvelous,False
+2025,9,1,97,Tyler Warren,Mike Linker,Not Lamarvelous,False
+2025,9,2,98,Baker Mayfield,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,9,3,99,Cam Skattebo,Ryan Keyser,Juicy Smuyet,False
+2025,9,4,100,Tucker Kraft,Brian Schwartz,Son of a Commish ,False
+2025,9,5,101,Keenan Allen,Joe Marcellino,Not This Year,False
+2025,9,6,102,Zach Charbonnet,Mike Riley,Riley,False
+2025,9,7,103,Josh Downs,Evan Myers,Omar's Coming,False
+2025,9,8,104,J.K. Dobbins,Bill Schwartz,The  Commish,False
+2025,9,9,105,Wan'Dale Robinson,Larry Schwartz,The New York Geezers,False
+2025,9,10,106,Rhamondre Stevenson,Kyle Schwartz,The Njoku's on *Me,False
+2025,9,11,107,Travis Etienne Jr.,Brady Reid,Keep Doubting,False
+2025,9,12,108,Kyler Murray,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,10,1,109,Nick Chubb,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,10,2,110,Xavier Legette,Brady Reid,Keep Doubting,False
+2025,10,3,111,Brock Purdy,Kyle Schwartz,The Njoku's on *Me,False
+2025,10,4,112,Jauan Jennings,Larry Schwartz,The New York Geezers,False
+2025,10,5,113,Rashod Bateman,Bill Schwartz,The  Commish,False
+2025,10,6,114,Tank Bigsby,Evan Myers,Omar's Coming,False
+2025,10,7,115,Bhayshul Tuten,Mike Riley,Riley,False
+2025,10,8,116,Colston Loveland,Joe Marcellino,Not This Year,False
+2025,10,9,117,Drake Maye,Brian Schwartz,Son of a Commish ,False
+2025,10,10,118,Broncos D/ST,Ryan Keyser,Juicy Smuyet,False
+2025,10,11,119,Jerome Ford,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,10,12,120,Jayden Reed,Mike Linker,Not Lamarvelous,False
+2025,11,1,121,Braelon Allen,Mike Linker,Not Lamarvelous,False
+2025,11,2,122,Rachaad White,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,11,3,123,Chris Godwin Jr.,Ryan Keyser,Juicy Smuyet,False
+2025,11,4,124,Christian Kirk,Brian Schwartz,Son of a Commish ,False
+2025,11,5,125,Trey Benson,Joe Marcellino,Not This Year,False
+2025,11,6,126,Cedric Tillman,Mike Riley,Riley,False
+2025,11,7,127,Dak Prescott,Evan Myers,Omar's Coming,False
+2025,11,8,128,Justin Herbert,Bill Schwartz,The  Commish,False
+2025,11,9,129,Ravens D/ST,Larry Schwartz,The New York Geezers,False
+2025,11,10,130,Jaydon Blue,Kyle Schwartz,The Njoku's on *Me,False
+2025,11,11,131,Joe Mixon,Brady Reid,Keep Doubting,False
+2025,11,12,132,Jayden Higgins,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,12,1,133,Dallas Goedert,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,12,2,134,Steelers D/ST,Brady Reid,Keep Doubting,False
+2025,12,3,135,Rashid Shaheed,Kyle Schwartz,The Njoku's on *Me,False
+2025,12,4,136,Caleb Williams,Larry Schwartz,The New York Geezers,False
+2025,12,5,137,Joshua Palmer,Bill Schwartz,The  Commish,False
+2025,12,6,138,Quinshon Judkins,Evan Myers,Omar's Coming,False
+2025,12,7,139,Justin Fields,Mike Riley,Riley,False
+2025,12,8,140,Ray Davis,Joe Marcellino,Not This Year,False
+2025,12,9,141,Brandon Aiyuk,Brian Schwartz,Son of a Commish ,False
+2025,12,10,142,Dalton Kincaid,Ryan Keyser,Juicy Smuyet,False
+2025,12,11,143,Tyler Allgeier,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,12,12,144,Ollie Gordon II,Mike Linker,Not Lamarvelous,False
+2025,13,1,145,Eagles D/ST,Mike Linker,Not Lamarvelous,False
+2025,13,2,146,Texans D/ST,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,13,3,147,Marvin Mims Jr.,Ryan Keyser,Juicy Smuyet,False
+2025,13,4,148,Cardinals D/ST,Brian Schwartz,Son of a Commish ,False
+2025,13,5,149,Tre' Harris,Joe Marcellino,Not This Year,False
+2025,13,6,150,Jake Ferguson,Mike Riley,Riley,False
+2025,13,7,151,Vikings D/ST,Evan Myers,Omar's Coming,False
+2025,13,8,152,Zach Ertz,Bill Schwartz,The  Commish,False
+2025,13,9,153,DeMario Douglas,Larry Schwartz,The New York Geezers,False
+2025,13,10,154,Jordan Love,Kyle Schwartz,The Njoku's on *Me,False
+2025,13,11,155,Romeo Doubs,Brady Reid,Keep Doubting,False
+2025,13,12,156,Patriots D/ST,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,14,1,157,Dylan Sampson,Zach Schwartz,It's Always Sunny in Baltimore,False
+2025,14,2,158,Najee Harris,Brady Reid,Keep Doubting,False
+2025,14,3,159,Seahawks D/ST,Kyle Schwartz,The Njoku's on *Me,False
+2025,14,4,160,J.J. McCarthy,Larry Schwartz,The New York Geezers,False
+2025,14,5,161,Bills D/ST,Bill Schwartz,The  Commish,False
+2025,14,6,162,Brian Robinson Jr.,Evan Myers,Omar's Coming,False
+2025,14,7,163,49ers D/ST,Mike Riley,Riley,False
+2025,14,8,164,Bears D/ST,Joe Marcellino,Not This Year,False
+2025,14,9,165,Tyler Lockett,Brian Schwartz,Son of a Commish ,False
+2025,14,10,166,Keaton Mitchell,Ryan Keyser,Juicy Smuyet,False
+2025,14,11,167,Amari Cooper,Kevin Schwartz,Kev Got a Bijan the Offseason,False
+2025,14,12,168,Bryce Young,Mike Linker,Not Lamarvelous,False
