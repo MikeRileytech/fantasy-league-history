@@ -16,13 +16,14 @@ load_dotenv()
 
 st.set_page_config(page_title="League History", page_icon="🏈", layout="wide")
 
-# Force Streamlit to reload all cached data and UI
-if "app_version" not in st.session_state:
-    st.session_state.app_version = "v5"
-
 @st.cache_data(show_spinner="Loading league data...")
-def load_all(_cache_version="v5"):
-    """Load all league data. _cache_version forces cache invalidation on data logic changes."""
+def load_all(cache_version):
+    """Load all league data. cache_version busts the cache when data logic changes.
+
+    NOTE: the parameter must NOT start with an underscore - Streamlit excludes
+    underscore-prefixed parameters from the cache key, so changing them would
+    never invalidate old cached data.
+    """
     teams = league_data.load_teams()
     matchups = league_data.load_matchups()
     draft = league_data.load_draft()
@@ -30,7 +31,7 @@ def load_all(_cache_version="v5"):
 
 
 try:
-    teams, matchups, draft = load_all()
+    teams, matchups, draft = load_all(cache_version="v6")
 except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()
