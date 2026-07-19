@@ -1,0 +1,169 @@
+season,overall_pick,round,pick_in_round,espn_team_id,team_name,player_id,player_name,is_keeper,bid_amount
+2023,1,1,1,6,Lets Ride,4262921,Justin Jefferson,False,0
+2023,2,1,2,13,Rookie Squad,4362628,Ja'Marr Chase,False,0
+2023,3,1,3,2,In Your Face,3068267,Austin Ekeler,False,0
+2023,4,1,4,4,Juicy Smuyet ,3117251,Christian McCaffrey,False,0
+2023,5,1,5,12,Never cutting charbs,15847,Travis Kelce,False,0
+2023,6,1,6,7,No I'm Ryan Keyser ,3116406,Tyreek Hill,False,0
+2023,7,1,7,1,The  Commish,3929630,Saquon Barkley,False,0
+2023,8,1,8,8,It's Always Sunny in Baltimore,4430807,Bijan Robinson,False,0
+2023,9,1,9,14,Team AutoDraft,16800,Davante Adams,False,0
+2023,10,1,10,3,Ridin Da Gus Bus to 10th place,3043078,Derrick Henry,False,0
+2023,11,1,11,5,Maybe This Year,3916148,Tony Pollard,False,0
+2023,12,1,12,10,Mike Riley,4374302,Amon-Ra St. Brown,False,0
+2023,13,2,1,10,Mike Riley,4241389,CeeDee Lamb,False,0
+2023,14,2,2,5,Maybe This Year,4569618,Garrett Wilson,False,0
+2023,15,2,3,3,Ridin Da Gus Bus to 10th place,3128720,Nick Chubb,False,0
+2023,16,2,4,14,Team AutoDraft,4047365,Josh Jacobs,False,0
+2023,17,2,5,8,It's Always Sunny in Baltimore,2976212,Stefon Diggs,False,0
+2023,18,2,6,1,The  Commish,2977187,Cooper Kupp,False,0
+2023,19,2,7,7,No I'm Ryan Keyser ,4047646,A.J. Brown,False,0
+2023,20,2,8,12,Never cutting charbs,3116385,Joe Mixon,False,0
+2023,21,2,9,4,Juicy Smuyet ,4372016,Jaylen Waddle,False,0
+2023,22,2,10,2,In Your Face,4047650,DK Metcalf,False,0
+2023,23,2,11,13,Rookie Squad,4361370,Chris Olave,False,0
+2023,24,2,12,6,Lets Ride,4239996,Travis Etienne Jr.,False,0
+2023,25,3,1,6,Lets Ride,4429795,Jahmyr Gibbs,False,0
+2023,26,3,2,13,Rookie Squad,3925357,Calvin Ridley,False,0
+2023,27,3,3,2,In Your Face,3918298,Josh Allen,False,0
+2023,28,3,4,4,Juicy Smuyet ,3139477,Patrick Mahomes,False,0
+2023,29,3,5,12,Never cutting charbs,4239993,Tee Higgins,False,0
+2023,30,3,6,7,No I'm Ryan Keyser ,4040715,Jalen Hurts,False,0
+2023,31,3,7,1,The  Commish,15818,Keenan Allen,False,0
+2023,32,3,8,8,It's Always Sunny in Baltimore,4241478,DeVonta Smith,False,0
+2023,33,3,9,14,Team AutoDraft,3042519,Aaron Jones,False,0
+2023,34,3,10,3,Ridin Da Gus Bus to 10th place,3916387,Lamar Jackson,False,0
+2023,35,3,11,5,Maybe This Year,4360238,Dameon Pierce,False,0
+2023,36,3,12,10,Mike Riley,4569173,Rhamondre Stevenson,False,0
+2023,37,4,1,10,Mike Riley,3932905,Diontae Johnson,False,0
+2023,38,4,2,5,Maybe This Year,2976499,Amari Cooper,False,0
+2023,39,4,3,3,Ridin Da Gus Bus to 10th place,3116365,Mark Andrews,False,0
+2023,40,4,4,14,Team AutoDraft,4697815,Rachaad White,False,0
+2023,41,4,5,8,It's Always Sunny in Baltimore,3126486,Deebo Samuel,False,0
+2023,42,4,6,1,The  Commish,3915511,Joe Burrow,False,0
+2023,43,4,7,7,No I'm Ryan Keyser ,15795,DeAndre Hopkins,False,0
+2023,44,4,8,12,Never cutting charbs,4241457,Najee Harris,False,0
+2023,45,4,9,4,Juicy Smuyet ,4248528,Christian Watson,False,0
+2023,46,4,10,2,In Your Face,3116165,Chris Godwin,False,0
+2023,47,4,11,13,Rookie Squad,4361579,Javonte Williams,False,0
+2023,48,4,12,6,Lets Ride,2576925,Darren Waller,False,0
+2023,49,5,1,6,Lets Ride,3045138,Mike Williams,False,0
+2023,50,5,2,13,Rookie Squad,4240021,Cam Akers,False,0
+2023,51,5,3,2,In Your Face,4045163,Miles Sanders,False,0
+2023,52,5,4,4,Juicy Smuyet ,4567048,Kenneth Walker III,False,0
+2023,53,5,5,12,Never cutting charbs,4427366,Breece Hall,False,0
+2023,54,5,6,7,No I'm Ryan Keyser ,4048244,Alexander Mattison,False,0
+2023,55,5,7,1,The  Commish,3045147,James Conner,False,0
+2023,56,5,8,8,It's Always Sunny in Baltimore,4379399,James Cook,False,0
+2023,57,5,9,14,Team AutoDraft,16737,Mike Evans,False,0
+2023,58,5,10,3,Ridin Da Gus Bus to 10th place,3121422,Terry McLaurin,False,0
+2023,59,5,11,5,Maybe This Year,4362887,Justin Fields,False,0
+2023,60,5,12,10,Mike Riley,4360310,Trevor Lawrence,False,0
+2023,61,6,1,10,Mike Riley,4360438,Brandon Aiyuk,False,0
+2023,62,6,2,5,Maybe This Year,3121023,Dallas Goedert,False,0
+2023,63,6,3,3,Ridin Da Gus Bus to 10th place,4426502,Drake London,False,0
+2023,64,6,4,14,Team AutoDraft,3054850,Alvin Kamara,False,0
+2023,65,6,5,8,It's Always Sunny in Baltimore,4036133,T.J. Hockenson,False,0
+2023,66,6,6,1,The  Commish,4360248,Kyle Pitts,False,0
+2023,67,6,7,7,No I'm Ryan Keyser ,3915416,DJ Moore,False,0
+2023,68,6,8,12,Never cutting charbs,4038941,Justin Herbert,False,0
+2023,69,6,9,4,Juicy Smuyet ,3040151,George Kittle,False,0
+2023,70,6,10,2,In Your Face,4241463,Jerry Jeudy,False,0
+2023,71,6,11,13,Rookie Squad,4429205,Jordan Addison,False,0
+2023,72,6,12,6,Lets Ride,2577417,Dak Prescott,False,0
+2023,73,7,1,6,Lets Ride,2577327,Tyler Lockett,False,0
+2023,74,7,2,13,Rookie Squad,3122840,Deshaun Watson,False,0
+2023,75,7,3,2,In Your Face,4241985,J.K. Dobbins,False,0
+2023,76,7,4,4,Juicy Smuyet ,3895856,Christian Kirk,False,0
+2023,77,7,5,12,Never cutting charbs,4035687,Michael Pittman Jr.,False,0
+2023,78,7,6,7,No I'm Ryan Keyser ,3116593,Dalvin Cook,False,0
+2023,79,7,7,1,The  Commish,4241372,Marquise Brown,False,0
+2023,80,7,8,8,It's Always Sunny in Baltimore,4361409,Jahan Dotson,False,0
+2023,81,7,9,14,Team AutoDraft,16731,Brandin Cooks,False,0
+2023,82,7,10,3,Ridin Da Gus Bus to 10th place,4426354,George Pickens,False,0
+2023,83,7,11,5,Maybe This Year,2976316,Michael Thomas,False,0
+2023,84,7,12,10,Mike Riley,4360294,Antonio Gibson,False,0
+2023,85,8,1,10,Mike Riley,4242335,Jonathan Taylor,False,0
+2023,86,8,2,5,Maybe This Year,4361529,Isiah Pacheco,False,0
+2023,87,8,3,3,Ridin Da Gus Bus to 10th place,4035538,David Montgomery,False,0
+2023,88,8,4,14,Team AutoDraft,4361411,Pat Freiermuth,False,0
+2023,89,8,5,8,It's Always Sunny in Baltimore,3128429,Courtland Sutton,False,0
+2023,90,8,6,1,The  Commish,4241474,Brian Robinson Jr.,False,0
+2023,91,8,7,7,No I'm Ryan Keyser ,4035886,Khalil Herbert,False,0
+2023,92,8,8,12,Never cutting charbs,4259545,D'Andre Swift,False,0
+2023,93,8,9,4,Juicy Smuyet ,4430191,Skyy Moore,False,0
+2023,94,8,10,2,In Your Face,4567156,Treylon Burks,False,0
+2023,95,8,11,13,Rookie Squad,4385690,Dalton Kincaid,False,0
+2023,96,8,12,6,Lets Ride,4429615,Zay Flowers,False,0
+2023,97,9,1,6,Lets Ride,4239934,AJ Dillon,False,0
+2023,98,9,2,13,Rookie Squad,4569987,Jaylen Warren,False,0
+2023,99,9,3,2,In Your Face,3123076,David Njoku,False,0
+2023,100,9,4,4,Juicy Smuyet ,16733,Odell Beckham Jr.,False,0
+2023,101,9,5,12,Never cutting charbs,4430878,Jaxon Smith-Njigba,False,0
+2023,102,9,6,7,No I'm Ryan Keyser ,2980453,Jamaal Williams,False,0
+2023,103,9,7,1,The  Commish,4243537,Gabe Davis,False,0
+2023,104,9,8,8,It's Always Sunny in Baltimore,14880,Kirk Cousins,False,0
+2023,105,9,9,14,Team AutoDraft,3917792,Daniel Jones,False,0
+2023,106,9,10,3,Ridin Da Gus Bus to 10th place,4241479,Tua Tagovailoa,False,0
+2023,107,9,11,5,Maybe This Year,2576414,Raheem Mostert,False,0
+2023,108,9,12,10,Mike Riley,3051876,Evan Engram,False,0
+2023,109,10,1,10,Mike Riley,4372414,Elijah Moore,False,0
+2023,110,10,2,5,Maybe This Year,4429025,Quentin Johnston,False,0
+2023,111,10,3,3,Ridin Da Gus Bus to 10th place,3120348,JuJu Smith-Schuster,False,0
+2023,112,10,4,14,Team AutoDraft,4258595,Cole Kmet,False,0
+2023,113,10,5,8,It's Always Sunny in Baltimore,16782,Jerick McKinnon,False,0
+2023,114,10,6,1,The  Commish,3116389,Samaje Perine,False,0
+2023,115,10,7,7,No I'm Ryan Keyser ,4240455,Deon Jackson,False,0
+2023,116,10,8,12,Never cutting charbs,3916433,Jakobi Meyers,False,0
+2023,117,10,9,4,Juicy Smuyet ,4258173,Nico Collins,False,0
+2023,118,10,10,2,In Your Face,16460,Adam Thielen,False,0
+2023,119,10,11,13,Rookie Squad,4429013,Tank Bigsby,False,0
+2023,120,10,12,6,Lets Ride,3115394,DJ Chark Jr.,False,0
+2023,121,11,1,6,Lets Ride,3139925,Rashaad Penny,False,0
+2023,122,11,2,13,Rookie Squad,4429084,Anthony Richardson,False,0
+2023,123,11,3,2,In Your Face,4040761,Devin Singletary,False,0
+2023,124,11,4,4,Juicy Smuyet ,3051392,Ezekiel Elliott,False,0
+2023,125,11,5,12,Never cutting charbs,4426385,Zach Charbonnet,False,0
+2023,126,11,6,7,No I'm Ryan Keyser ,3929645,Juwan Johnson,False,0
+2023,127,11,7,1,The  Commish,-16025,49ers D/ST,False,0
+2023,128,11,8,8,It's Always Sunny in Baltimore,-16023,Steelers D/ST,False,0
+2023,129,11,9,14,Team AutoDraft,4372485,Rondale Moore,False,0
+2023,130,11,10,3,Ridin Da Gus Bus to 10th place,-16002,Bills D/ST,False,0
+2023,131,11,11,5,Maybe This Year,4241555,Elijah Mitchell,False,0
+2023,132,11,12,10,Mike Riley,2573401,Tyler Higbee,False,0
+2023,133,12,1,10,Mike Riley,3918639,Gerald Everett,False,0
+2023,134,12,2,5,Maybe This Year,-16015,Dolphins D/ST,False,0
+2023,135,12,3,3,Ridin Da Gus Bus to 10th place,3059722,Zay Jones,False,0
+2023,136,12,4,14,Team AutoDraft,8439,Aaron Rodgers,False,0
+2023,137,12,5,8,It's Always Sunny in Baltimore,4240600,Kadarius Toney,False,0
+2023,138,12,6,1,The  Commish,4360939,Rashod Bateman,False,0
+2023,139,12,7,7,No I'm Ryan Keyser ,-16018,Saints D/ST,False,0
+2023,140,12,8,12,Never cutting charbs,4429160,De'Von Achane,False,0
+2023,141,12,9,4,Juicy Smuyet ,-16033,Ravens D/ST,False,0
+2023,142,12,10,2,In Your Face,4373626,Tyler Allgeier,False,0
+2023,143,12,11,13,Rookie Squad,4686472,Marvin Mims Jr.,False,0
+2023,144,12,12,6,Lets Ride,4360635,Chigoziem Okonkwo,False,0
+2023,145,13,1,6,Lets Ride,-16005,Browns D/ST,False,0
+2023,146,13,2,13,Rookie Squad,4430027,Sam LaPorta,False,0
+2023,147,13,3,2,In Your Face,-16006,Cowboys D/ST,False,0
+2023,148,13,4,4,Juicy Smuyet ,4040655,Darnell Mooney,False,0
+2023,149,13,5,12,Never cutting charbs,3925347,Damien Harris,False,0
+2023,150,13,6,7,No I'm Ryan Keyser ,3128390,Allen Lazard,False,0
+2023,151,13,7,1,The  Commish,3059915,Kareem Hunt,False,0
+2023,152,13,8,8,It's Always Sunny in Baltimore,15864,Geno Smith,False,0
+2023,153,13,9,14,Team AutoDraft,3045144,Tyler Boyd,False,0
+2023,154,13,10,3,Ridin Da Gus Bus to 10th place,3117256,Dalton Schultz,False,0
+2023,155,13,11,5,Maybe This Year,4426485,Jonathan Mingo,False,0
+2023,156,13,12,10,Mike Riley,-16020,Jets D/ST,False,0
+2023,157,14,1,10,Mike Riley,4035676,Zack Moss,False,0
+2023,158,14,2,5,Maybe This Year,4242540,Isaiah Hodgins,False,0
+2023,159,14,3,3,Ridin Da Gus Bus to 10th place,3051926,Gus Edwards,False,0
+2023,160,14,4,14,Team AutoDraft,-16029,Panthers D/ST,False,0
+2023,161,14,5,8,It's Always Sunny in Baltimore,4371733,Kenneth Gainwell,False,0
+2023,162,14,6,1,The  Commish,3121410,Parris Campbell,False,0
+2023,163,14,7,7,No I'm Ryan Keyser ,3115364,Leonard Fournette,False,0
+2023,164,14,8,12,Never cutting charbs,-16021,Eagles D/ST,False,0
+2023,165,14,9,4,Juicy Smuyet ,4046692,Chase Claypool,False,0
+2023,166,14,10,2,In Your Face,3135321,Hunter Renfrow,False,0
+2023,167,14,11,13,Rookie Squad,-16010,Titans D/ST,False,0
+2023,168,14,12,6,Lets Ride,4426386,Roschon Johnson,False,0

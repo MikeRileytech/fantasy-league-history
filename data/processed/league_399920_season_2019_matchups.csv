@@ -1,0 +1,193 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2019,1,False,1,The  Commish,7,Diggin Them TD's,169.0,102.28,W
+2019,2,False,1,The  Commish,13,99 Problems but L. Fitz ain't 1,103.6,114.22,L
+2019,3,False,1,The  Commish,4,Juicy Smuyet,170.64,97.24,W
+2019,4,False,1,The  Commish,8,The Man With  The Yellow Hat ,144.1,118.2,W
+2019,5,False,1,The  Commish,5,Maybe This Year,163.22,98.76,W
+2019,6,False,1,The  Commish,3,Gnarls Barkley,138.1,81.2,W
+2019,7,False,1,The  Commish,12,Curious George,99.14,124.76,L
+2019,8,False,1,The  Commish,6,Team Flatcheese,129.08,119.8,W
+2019,9,False,1,The  Commish,9,LOCKETT LIKE I  TALK IT,173.02,135.56,W
+2019,10,False,1,The  Commish,10,DENVER BREAD,139.18,128.62,W
+2019,11,False,1,The  Commish,2,In Your Face,110.98,103.08,W
+2019,12,False,1,The  Commish,7,Diggin Them TD's,91.8,87.64,W
+2019,13,False,1,The  Commish,13,99 Problems but L. Fitz ain't 1,89.2,112.86,L
+2019,14,True,1,The  Commish,1,The  Commish,121.8,121.8,U
+2019,15,True,1,The  Commish,3,Gnarls Barkley,147.14,128.42,W
+2019,16,True,1,The  Commish,6,Team Flatcheese,104.76,120.4,L
+2019,1,False,2,In Your Face,6,Team Flatcheese,147.52,171.8,L
+2019,2,False,2,In Your Face,9,LOCKETT LIKE I  TALK IT,85.92,119.12,L
+2019,3,False,2,In Your Face,10,DENVER BREAD,161.76,135.88,W
+2019,4,False,2,In Your Face,12,Curious George,122.4,92.48,W
+2019,5,False,2,In Your Face,7,Diggin Them TD's,109.84,110.84,L
+2019,6,False,2,In Your Face,13,99 Problems but L. Fitz ain't 1,147.12,111.1,W
+2019,7,False,2,In Your Face,4,Juicy Smuyet,67.14,86.82,L
+2019,8,False,2,In Your Face,8,The Man With  The Yellow Hat ,116.84,105.46,W
+2019,9,False,2,In Your Face,5,Maybe This Year,123.16,91.66,W
+2019,10,False,2,In Your Face,3,Gnarls Barkley,109.74,69.7,W
+2019,11,False,2,In Your Face,1,The  Commish,103.08,110.98,L
+2019,12,False,2,In Your Face,6,Team Flatcheese,130.48,139.18,L
+2019,13,False,2,In Your Face,9,LOCKETT LIKE I  TALK IT,121.02,108.3,W
+2019,14,True,2,In Your Face,3,Gnarls Barkley,94.22,98.98,L
+2019,15,True,2,In Your Face,10,DENVER BREAD,133.8,129.88,W
+2019,16,True,2,In Your Face,10,DENVER BREAD,94.74,134.52,L
+2019,1,False,3,Gnarls Barkley,13,99 Problems but L. Fitz ain't 1,118.64,97.44,W
+2019,2,False,3,Gnarls Barkley,4,Juicy Smuyet,126.5,125.26,W
+2019,3,False,3,Gnarls Barkley,8,The Man With  The Yellow Hat ,130.4,125.54,W
+2019,4,False,3,Gnarls Barkley,5,Maybe This Year,134.34,129.5,W
+2019,5,False,3,Gnarls Barkley,12,Curious George,128.26,145.82,L
+2019,6,False,3,Gnarls Barkley,1,The  Commish,81.2,138.1,L
+2019,7,False,3,Gnarls Barkley,6,Team Flatcheese,115.56,132.46,L
+2019,8,False,3,Gnarls Barkley,9,LOCKETT LIKE I  TALK IT,175.78,120.26,W
+2019,9,False,3,Gnarls Barkley,10,DENVER BREAD,129.04,80.8,W
+2019,10,False,3,Gnarls Barkley,2,In Your Face,69.7,109.74,L
+2019,11,False,3,Gnarls Barkley,7,Diggin Them TD's,105.76,106.24,L
+2019,12,False,3,Gnarls Barkley,13,99 Problems but L. Fitz ain't 1,154.86,60.78,W
+2019,13,False,3,Gnarls Barkley,4,Juicy Smuyet,121.72,107.96,W
+2019,14,True,3,Gnarls Barkley,2,In Your Face,98.98,94.22,W
+2019,15,True,3,Gnarls Barkley,1,The  Commish,128.42,147.14,L
+2019,16,True,3,Gnarls Barkley,8,The Man With  The Yellow Hat ,145.5,148.68,L
+2019,1,False,4,Juicy Smuyet,5,Maybe This Year,112.52,130.82,L
+2019,2,False,4,Juicy Smuyet,3,Gnarls Barkley,125.26,126.5,L
+2019,3,False,4,Juicy Smuyet,1,The  Commish,97.24,170.64,L
+2019,4,False,4,Juicy Smuyet,6,Team Flatcheese,104.6,96.72,W
+2019,5,False,4,Juicy Smuyet,9,LOCKETT LIKE I  TALK IT,169.34,102.0,W
+2019,6,False,4,Juicy Smuyet,10,DENVER BREAD,111.9,141.24,L
+2019,7,False,4,Juicy Smuyet,2,In Your Face,86.82,67.14,W
+2019,8,False,4,Juicy Smuyet,7,Diggin Them TD's,123.76,127.36,L
+2019,9,False,4,Juicy Smuyet,13,99 Problems but L. Fitz ain't 1,129.94,103.54,W
+2019,10,False,4,Juicy Smuyet,12,Curious George,88.28,135.32,L
+2019,11,False,4,Juicy Smuyet,8,The Man With  The Yellow Hat ,132.12,133.54,L
+2019,12,False,4,Juicy Smuyet,5,Maybe This Year,117.32,97.44,W
+2019,13,False,4,Juicy Smuyet,3,Gnarls Barkley,107.96,121.72,L
+2019,14,True,4,Juicy Smuyet,7,Diggin Them TD's,135.48,98.02,W
+2019,15,True,4,Juicy Smuyet,13,99 Problems but L. Fitz ain't 1,130.68,59.76,W
+2019,16,True,4,Juicy Smuyet,9,LOCKETT LIKE I  TALK IT,115.16,69.7,W
+2019,1,False,5,Maybe This Year,4,Juicy Smuyet,130.82,112.52,W
+2019,2,False,5,Maybe This Year,8,The Man With  The Yellow Hat ,113.84,106.36,W
+2019,3,False,5,Maybe This Year,12,Curious George,144.16,122.2,W
+2019,4,False,5,Maybe This Year,3,Gnarls Barkley,129.5,134.34,L
+2019,5,False,5,Maybe This Year,1,The  Commish,98.76,163.22,L
+2019,6,False,5,Maybe This Year,6,Team Flatcheese,96.72,119.12,L
+2019,7,False,5,Maybe This Year,9,LOCKETT LIKE I  TALK IT,76.14,141.34,L
+2019,8,False,5,Maybe This Year,10,DENVER BREAD,129.88,158.14,L
+2019,9,False,5,Maybe This Year,2,In Your Face,91.66,123.16,L
+2019,10,False,5,Maybe This Year,7,Diggin Them TD's,97.52,91.78,W
+2019,11,False,5,Maybe This Year,13,99 Problems but L. Fitz ain't 1,93.52,106.2,L
+2019,12,False,5,Maybe This Year,4,Juicy Smuyet,97.44,117.32,L
+2019,13,False,5,Maybe This Year,8,The Man With  The Yellow Hat ,130.3,142.84,L
+2019,14,True,5,Maybe This Year,12,Curious George,67.7,100.2,L
+2019,15,True,5,Maybe This Year,7,Diggin Them TD's,56.24,92.4,L
+2019,16,True,5,Maybe This Year,12,Curious George,56.56,106.84,L
+2019,1,False,6,Team Flatcheese,2,In Your Face,171.8,147.52,W
+2019,2,False,6,Team Flatcheese,7,Diggin Them TD's,134.46,89.0,W
+2019,3,False,6,Team Flatcheese,13,99 Problems but L. Fitz ain't 1,116.74,105.12,W
+2019,4,False,6,Team Flatcheese,4,Juicy Smuyet,96.72,104.6,L
+2019,5,False,6,Team Flatcheese,8,The Man With  The Yellow Hat ,110.12,101.92,W
+2019,6,False,6,Team Flatcheese,5,Maybe This Year,119.12,96.72,W
+2019,7,False,6,Team Flatcheese,3,Gnarls Barkley,132.46,115.56,W
+2019,8,False,6,Team Flatcheese,1,The  Commish,119.8,129.08,L
+2019,9,False,6,Team Flatcheese,12,Curious George,155.38,78.44,W
+2019,10,False,6,Team Flatcheese,9,LOCKETT LIKE I  TALK IT,166.48,83.96,W
+2019,11,False,6,Team Flatcheese,10,DENVER BREAD,108.96,118.0,L
+2019,12,False,6,Team Flatcheese,2,In Your Face,139.18,130.48,W
+2019,13,False,6,Team Flatcheese,7,Diggin Them TD's,113.64,129.38,L
+2019,14,True,6,Team Flatcheese,6,Team Flatcheese,118.26,118.26,U
+2019,15,True,6,Team Flatcheese,8,The Man With  The Yellow Hat ,163.18,145.66,W
+2019,16,True,6,Team Flatcheese,1,The  Commish,120.4,104.76,W
+2019,1,False,7,Diggin Them TD's,1,The  Commish,102.28,169.0,L
+2019,2,False,7,Diggin Them TD's,6,Team Flatcheese,89.0,134.46,L
+2019,3,False,7,Diggin Them TD's,9,LOCKETT LIKE I  TALK IT,105.42,129.88,L
+2019,4,False,7,Diggin Them TD's,10,DENVER BREAD,101.5,137.08,L
+2019,5,False,7,Diggin Them TD's,2,In Your Face,110.84,109.84,W
+2019,6,False,7,Diggin Them TD's,12,Curious George,181.54,112.92,W
+2019,7,False,7,Diggin Them TD's,13,99 Problems but L. Fitz ain't 1,100.06,110.82,L
+2019,8,False,7,Diggin Them TD's,4,Juicy Smuyet,127.36,123.76,W
+2019,9,False,7,Diggin Them TD's,8,The Man With  The Yellow Hat ,93.4,118.6,L
+2019,10,False,7,Diggin Them TD's,5,Maybe This Year,91.78,97.52,L
+2019,11,False,7,Diggin Them TD's,3,Gnarls Barkley,106.24,105.76,W
+2019,12,False,7,Diggin Them TD's,1,The  Commish,87.64,91.8,L
+2019,13,False,7,Diggin Them TD's,6,Team Flatcheese,129.38,113.64,W
+2019,14,True,7,Diggin Them TD's,4,Juicy Smuyet,98.02,135.48,L
+2019,15,True,7,Diggin Them TD's,5,Maybe This Year,92.4,56.24,W
+2019,16,True,7,Diggin Them TD's,13,99 Problems but L. Fitz ain't 1,110.46,57.12,W
+2019,1,False,8,The Man With  The Yellow Hat ,12,Curious George,111.46,66.66,W
+2019,2,False,8,The Man With  The Yellow Hat ,5,Maybe This Year,106.36,113.84,L
+2019,3,False,8,The Man With  The Yellow Hat ,3,Gnarls Barkley,125.54,130.4,L
+2019,4,False,8,The Man With  The Yellow Hat ,1,The  Commish,118.2,144.1,L
+2019,5,False,8,The Man With  The Yellow Hat ,6,Team Flatcheese,101.92,110.12,L
+2019,6,False,8,The Man With  The Yellow Hat ,9,LOCKETT LIKE I  TALK IT,125.76,88.62,W
+2019,7,False,8,The Man With  The Yellow Hat ,10,DENVER BREAD,95.46,84.42,W
+2019,8,False,8,The Man With  The Yellow Hat ,2,In Your Face,105.46,116.84,L
+2019,9,False,8,The Man With  The Yellow Hat ,7,Diggin Them TD's,118.6,93.4,W
+2019,10,False,8,The Man With  The Yellow Hat ,13,99 Problems but L. Fitz ain't 1,120.92,140.66,L
+2019,11,False,8,The Man With  The Yellow Hat ,4,Juicy Smuyet,133.54,132.12,W
+2019,12,False,8,The Man With  The Yellow Hat ,12,Curious George,95.1,91.56,W
+2019,13,False,8,The Man With  The Yellow Hat ,5,Maybe This Year,142.84,130.3,W
+2019,14,True,8,The Man With  The Yellow Hat ,10,DENVER BREAD,153.64,101.4,W
+2019,15,True,8,The Man With  The Yellow Hat ,6,Team Flatcheese,145.66,163.18,L
+2019,16,True,8,The Man With  The Yellow Hat ,3,Gnarls Barkley,148.68,145.5,W
+2019,1,False,9,LOCKETT LIKE I  TALK IT,10,DENVER BREAD,140.26,115.16,W
+2019,2,False,9,LOCKETT LIKE I  TALK IT,2,In Your Face,119.12,85.92,W
+2019,3,False,9,LOCKETT LIKE I  TALK IT,7,Diggin Them TD's,129.88,105.42,W
+2019,4,False,9,LOCKETT LIKE I  TALK IT,13,99 Problems but L. Fitz ain't 1,113.48,72.64,W
+2019,5,False,9,LOCKETT LIKE I  TALK IT,4,Juicy Smuyet,102.0,169.34,L
+2019,6,False,9,LOCKETT LIKE I  TALK IT,8,The Man With  The Yellow Hat ,88.62,125.76,L
+2019,7,False,9,LOCKETT LIKE I  TALK IT,5,Maybe This Year,141.34,76.14,W
+2019,8,False,9,LOCKETT LIKE I  TALK IT,3,Gnarls Barkley,120.26,175.78,L
+2019,9,False,9,LOCKETT LIKE I  TALK IT,1,The  Commish,135.56,173.02,L
+2019,10,False,9,LOCKETT LIKE I  TALK IT,6,Team Flatcheese,83.96,166.48,L
+2019,11,False,9,LOCKETT LIKE I  TALK IT,12,Curious George,125.86,60.9,W
+2019,12,False,9,LOCKETT LIKE I  TALK IT,10,DENVER BREAD,70.98,140.26,L
+2019,13,False,9,LOCKETT LIKE I  TALK IT,2,In Your Face,108.3,121.02,L
+2019,14,True,9,LOCKETT LIKE I  TALK IT,13,99 Problems but L. Fitz ain't 1,55.0,92.72,L
+2019,15,True,9,LOCKETT LIKE I  TALK IT,12,Curious George,131.9,100.22,W
+2019,16,True,9,LOCKETT LIKE I  TALK IT,4,Juicy Smuyet,69.7,115.16,L
+2019,1,False,10,DENVER BREAD,9,LOCKETT LIKE I  TALK IT,115.16,140.26,L
+2019,2,False,10,DENVER BREAD,12,Curious George,137.38,131.22,W
+2019,3,False,10,DENVER BREAD,2,In Your Face,135.88,161.76,L
+2019,4,False,10,DENVER BREAD,7,Diggin Them TD's,137.08,101.5,W
+2019,5,False,10,DENVER BREAD,13,99 Problems but L. Fitz ain't 1,137.96,118.72,W
+2019,6,False,10,DENVER BREAD,4,Juicy Smuyet,141.24,111.9,W
+2019,7,False,10,DENVER BREAD,8,The Man With  The Yellow Hat ,84.42,95.46,L
+2019,8,False,10,DENVER BREAD,5,Maybe This Year,158.14,129.88,W
+2019,9,False,10,DENVER BREAD,3,Gnarls Barkley,80.8,129.04,L
+2019,10,False,10,DENVER BREAD,1,The  Commish,128.62,139.18,L
+2019,11,False,10,DENVER BREAD,6,Team Flatcheese,118.0,108.96,W
+2019,12,False,10,DENVER BREAD,9,LOCKETT LIKE I  TALK IT,140.26,70.98,W
+2019,13,False,10,DENVER BREAD,12,Curious George,103.4,83.72,W
+2019,14,True,10,DENVER BREAD,8,The Man With  The Yellow Hat ,101.4,153.64,L
+2019,15,True,10,DENVER BREAD,2,In Your Face,129.88,133.8,L
+2019,16,True,10,DENVER BREAD,2,In Your Face,134.52,94.74,W
+2019,1,False,12,Curious George,8,The Man With  The Yellow Hat ,66.66,111.46,L
+2019,2,False,12,Curious George,10,DENVER BREAD,131.22,137.38,L
+2019,3,False,12,Curious George,5,Maybe This Year,122.2,144.16,L
+2019,4,False,12,Curious George,2,In Your Face,92.48,122.4,L
+2019,5,False,12,Curious George,3,Gnarls Barkley,145.82,128.26,W
+2019,6,False,12,Curious George,7,Diggin Them TD's,112.92,181.54,L
+2019,7,False,12,Curious George,1,The  Commish,124.76,99.14,W
+2019,8,False,12,Curious George,13,99 Problems but L. Fitz ain't 1,122.3,135.28,L
+2019,9,False,12,Curious George,6,Team Flatcheese,78.44,155.38,L
+2019,10,False,12,Curious George,4,Juicy Smuyet,135.32,88.28,W
+2019,11,False,12,Curious George,9,LOCKETT LIKE I  TALK IT,60.9,125.86,L
+2019,12,False,12,Curious George,8,The Man With  The Yellow Hat ,91.56,95.1,L
+2019,13,False,12,Curious George,10,DENVER BREAD,83.72,103.4,L
+2019,14,True,12,Curious George,5,Maybe This Year,100.2,67.7,W
+2019,15,True,12,Curious George,9,LOCKETT LIKE I  TALK IT,100.22,131.9,L
+2019,16,True,12,Curious George,5,Maybe This Year,106.84,56.56,W
+2019,1,False,13,99 Problems but L. Fitz ain't 1,3,Gnarls Barkley,97.44,118.64,L
+2019,2,False,13,99 Problems but L. Fitz ain't 1,1,The  Commish,114.22,103.6,W
+2019,3,False,13,99 Problems but L. Fitz ain't 1,6,Team Flatcheese,105.12,116.74,L
+2019,4,False,13,99 Problems but L. Fitz ain't 1,9,LOCKETT LIKE I  TALK IT,72.64,113.48,L
+2019,5,False,13,99 Problems but L. Fitz ain't 1,10,DENVER BREAD,118.72,137.96,L
+2019,6,False,13,99 Problems but L. Fitz ain't 1,2,In Your Face,111.1,147.12,L
+2019,7,False,13,99 Problems but L. Fitz ain't 1,7,Diggin Them TD's,110.82,100.06,W
+2019,8,False,13,99 Problems but L. Fitz ain't 1,12,Curious George,135.28,122.3,W
+2019,9,False,13,99 Problems but L. Fitz ain't 1,4,Juicy Smuyet,103.54,129.94,L
+2019,10,False,13,99 Problems but L. Fitz ain't 1,8,The Man With  The Yellow Hat ,140.66,120.92,W
+2019,11,False,13,99 Problems but L. Fitz ain't 1,5,Maybe This Year,106.2,93.52,W
+2019,12,False,13,99 Problems but L. Fitz ain't 1,3,Gnarls Barkley,60.78,154.86,L
+2019,13,False,13,99 Problems but L. Fitz ain't 1,1,The  Commish,112.86,89.2,W
+2019,14,True,13,99 Problems but L. Fitz ain't 1,9,LOCKETT LIKE I  TALK IT,92.72,55.0,W
+2019,15,True,13,99 Problems but L. Fitz ain't 1,4,Juicy Smuyet,59.76,130.68,L
+2019,16,True,13,99 Problems but L. Fitz ain't 1,7,Diggin Them TD's,57.12,110.46,L

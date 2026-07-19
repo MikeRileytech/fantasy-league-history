@@ -1,0 +1,181 @@
+season,overall_pick,round,pick_in_round,espn_team_id,team_name,player_id,player_name,is_keeper,bid_amount
+2019,1,1,1,3,Gnarls Barkley,3929630,Saquon Barkley,False,0
+2019,2,1,2,1,The  Commish,3117251,Christian McCaffrey,False,0
+2019,3,1,3,10,DENVER BREAD,3054850,Alvin Kamara,False,0
+2019,4,1,4,2,In Your Face,2508176,David Johnson,False,0
+2019,5,1,5,8,The Man With  The Yellow Hat ,3051392,Ezekiel Elliott,False,0
+2019,6,1,6,6,Team Flatcheese,15795,DeAndre Hopkins,False,0
+2019,7,1,7,7,Diggin Them TD's,15825,Le'Veon Bell,False,0
+2019,8,1,8,9,LOCKETT LIKE I  TALK IT,16800,Davante Adams,False,0
+2019,9,1,9,4,Juicy Smuyet,2976316,Michael Thomas,False,0
+2019,10,1,10,5,Maybe This Year,13982,Julio Jones,False,0
+2019,11,1,11,12,Curious George,3116406,Tyreek Hill,False,0
+2019,12,1,12,13,99 Problems but L. Fitz ain't 1,3120348,JuJu Smith-Schuster,False,0
+2019,13,2,1,13,99 Problems but L. Fitz ain't 1,3116593,Dalvin Cook,False,0
+2019,14,2,2,12,Curious George,16733,Odell Beckham Jr.,False,0
+2019,15,2,3,5,Maybe This Year,3045147,James Conner,False,0
+2019,16,2,4,4,Juicy Smuyet,2977644,Todd Gurley II,False,0
+2019,17,2,5,9,LOCKETT LIKE I  TALK IT,13934,Antonio Brown,False,0
+2019,18,2,6,7,Diggin Them TD's,3116385,Joe Mixon,False,0
+2019,19,2,7,6,Team Flatcheese,15847,Travis Kelce,False,0
+2019,20,2,8,8,The Man With  The Yellow Hat ,15818,Keenan Allen,False,0
+2019,21,2,9,2,In Your Face,16737,Mike Evans,False,0
+2019,22,2,10,10,DENVER BREAD,3128720,Nick Chubb,False,0
+2019,23,2,11,1,The  Commish,2976499,Amari Cooper,False,0
+2019,24,2,12,3,Gnarls Barkley,3115364,Leonard Fournette,False,0
+2019,25,3,1,3,Gnarls Barkley,15835,Zach Ertz,False,0
+2019,26,3,2,1,The  Commish,3919596,Chris Carson,False,0
+2019,27,3,3,10,DENVER BREAD,16460,Adam Thielen,False,0
+2019,28,3,4,2,In Your Face,3139477,Patrick Mahomes,False,0
+2019,29,3,5,8,The Man With  The Yellow Hat ,16944,Devonta Freeman,False,0
+2019,30,3,6,6,Team Flatcheese,3043078,Derrick Henry,False,0
+2019,31,3,7,7,Diggin Them TD's,12649,Julian Edelman,False,0
+2019,32,3,8,9,LOCKETT LIKE I  TALK IT,4047365,Josh Jacobs,False,0
+2019,33,3,9,4,Juicy Smuyet,3040151,George Kittle,False,0
+2019,34,3,10,5,Maybe This Year,17359,Damien Williams,False,0
+2019,35,3,11,12,Curious George,3916925,Kerryon Johnson,False,0
+2019,36,3,12,13,99 Problems but L. Fitz ain't 1,2576434,Melvin Gordon,False,0
+2019,37,4,1,13,99 Problems but L. Fitz ain't 1,3925357,Calvin Ridley,False,0
+2019,38,4,2,12,Curious George,3042519,Aaron Jones,False,0
+2019,39,4,3,5,Maybe This Year,16731,Brandin Cooks,False,0
+2019,40,4,4,4,Juicy Smuyet,4035538,David Montgomery,False,0
+2019,41,4,5,9,LOCKETT LIKE I  TALK IT,2577327,Tyler Lockett,False,0
+2019,42,4,6,7,Diggin Them TD's,2976212,Stefon Diggs,False,0
+2019,43,4,7,6,Team Flatcheese,2979843,Kenyan Drake,False,0
+2019,44,4,8,8,The Man With  The Yellow Hat ,15880,Robert Woods,False,0
+2019,45,4,9,2,In Your Face,13981,Mark Ingram II,False,0
+2019,46,4,10,10,DENVER BREAD,3116165,Chris Godwin,False,0
+2019,47,4,11,1,The  Commish,2974858,Kenny Golladay,False,0
+2019,48,4,12,3,Gnarls Barkley,2977187,Cooper Kupp,False,0
+2019,49,5,1,3,Gnarls Barkley,3045144,Tyler Boyd,False,0
+2019,50,5,2,1,The  Commish,14924,T.Y. Hilton,False,0
+2019,51,5,3,10,DENVER BREAD,3139605,Marlon Mack,False,0
+2019,52,5,4,2,In Your Face,14912,Alshon Jeffery,False,0
+2019,53,5,5,8,The Man With  The Yellow Hat ,3128721,Sony Michel,False,0
+2019,54,5,6,6,Team Flatcheese,3915416,DJ Moore,False,0
+2019,55,5,7,7,Diggin Them TD's,16913,James White,False,0
+2019,56,5,8,9,LOCKETT LIKE I  TALK IT,2969962,Duke Johnson,False,0
+2019,57,5,9,4,Juicy Smuyet,3045138,Mike Williams,False,0
+2019,58,5,10,5,Maybe This Year,2976592,Sterling Shepard,False,0
+2019,59,5,11,12,Curious George,3052117,Phillip Lindsay,False,0
+2019,60,5,12,13,99 Problems but L. Fitz ain't 1,3892889,Dede Westbrook,False,0
+2019,61,6,1,13,99 Problems but L. Fitz ain't 1,3843750,Derrius Guice,False,0
+2019,62,6,2,12,Curious George,8439,Aaron Rodgers,False,0
+2019,63,6,3,5,Maybe This Year,3051876,Evan Engram,False,0
+2019,64,6,4,4,Juicy Smuyet,3122840,Deshaun Watson,False,0
+2019,65,6,5,9,LOCKETT LIKE I  TALK IT,4045163,Miles Sanders,False,0
+2019,66,6,6,7,Diggin Them TD's,3066158,Tarik Cohen,False,0
+2019,67,6,7,6,Team Flatcheese,15705,Josh Gordon,False,0
+2019,68,6,8,8,The Man With  The Yellow Hat ,11237,Matt Ryan,False,0
+2019,69,6,9,2,In Your Face,16799,Allen Robinson II,False,0
+2019,70,6,10,10,DENVER BREAD,2979477,Tevin Coleman,False,0
+2019,71,6,11,1,The  Commish,3046439,Hunter Henry,False,0
+2019,72,6,12,3,Gnarls Barkley,2574808,Robby Anderson,False,0
+2019,73,7,1,3,Gnarls Barkley,16790,Jarvis Landry,False,0
+2019,74,7,2,1,The  Commish,3139925,Rashaad Penny,False,0
+2019,75,7,3,10,DENVER BREAD,3121427,Curtis Samuel,False,0
+2019,76,7,4,2,In Your Face,13983,A.J. Green,False,0
+2019,77,7,5,8,The Man With  The Yellow Hat ,3043080,O.J. Howard,False,0
+2019,78,7,6,6,Team Flatcheese,16725,Sammy Watkins,False,0
+2019,79,7,7,7,Diggin Them TD's,3052587,Baker Mayfield,False,0
+2019,80,7,8,9,LOCKETT LIKE I  TALK IT,3068267,Austin Ekeler,False,0
+2019,81,7,9,4,Juicy Smuyet,13295,Emmanuel Sanders,False,0
+2019,82,7,10,5,Maybe This Year,3049916,Matt Breida,False,0
+2019,83,7,11,12,Curious George,12537,Jared Cook,False,0
+2019,84,7,12,13,99 Problems but L. Fitz ain't 1,3046779,Jared Goff,False,0
+2019,85,8,1,13,99 Problems but L. Fitz ain't 1,4039359,Darrell Henderson Jr.,False,0
+2019,86,8,2,12,Curious George,3122449,James Washington,False,0
+2019,87,8,3,5,Maybe This Year,2573079,Carson Wentz,False,0
+2019,88,8,4,4,Juicy Smuyet,3895856,Christian Kirk,False,0
+2019,89,8,5,9,LOCKETT LIKE I  TALK IT,13994,Cam Newton,False,0
+2019,90,8,6,7,Diggin Them TD's,15072,Marvin Jones Jr.,False,0
+2019,91,8,7,6,Team Flatcheese,2577417,Dak Prescott,False,0
+2019,92,8,8,8,The Man With  The Yellow Hat ,3042778,Corey Davis,False,0
+2019,93,8,9,2,In Your Face,4040761,Devin Singletary,False,0
+2019,94,8,10,10,DENVER BREAD,15853,Vance McDonald,False,0
+2019,95,8,11,1,The  Commish,3122672,Royce Freeman,False,0
+2019,96,8,12,3,Gnarls Barkley,5528,Larry Fitzgerald,False,0
+2019,97,9,1,3,Gnarls Barkley,15920,Latavius Murray,False,0
+2019,98,9,2,1,The  Commish,-16003,Bears D/ST,False,0
+2019,99,9,3,10,DENVER BREAD,3052876,Will Fuller V,False,0
+2019,100,9,4,2,In Your Face,3123076,David Njoku,False,0
+2019,101,9,5,8,The Man With  The Yellow Hat ,3051738,Marquez Valdes-Scantling,False,0
+2019,102,9,6,6,Team Flatcheese,12514,LeSean McCoy,False,0
+2019,103,9,7,7,Diggin Them TD's,3128429,Courtland Sutton,False,0
+2019,104,9,8,9,LOCKETT LIKE I  TALK IT,9761,Delanie Walker,False,0
+2019,105,9,9,4,Juicy Smuyet,4036348,Michael Gallup,False,0
+2019,106,9,10,5,Maybe This Year,3916148,Tony Pollard,False,0
+2019,107,9,11,12,Curious George,3060022,Jordan Howard,False,0
+2019,108,9,12,13,99 Problems but L. Fitz ain't 1,3917315,Kyler Murray,False,0
+2019,109,10,1,13,99 Problems but L. Fitz ain't 1,16732,Eric Ebron,False,0
+2019,110,10,2,12,Curious George,11283,DeSean Jackson,False,0
+2019,111,10,3,5,Maybe This Year,-16030,Jaguars D/ST,False,0
+2019,112,10,4,4,Juicy Smuyet,2580,Drew Brees,False,0
+2019,113,10,5,9,LOCKETT LIKE I  TALK IT,2587819,Tyrell Williams,False,0
+2019,114,10,6,7,Diggin Them TD's,3051902,Peyton Barber,False,0
+2019,115,10,7,6,Team Flatcheese,16791,Donte Moncrief,False,0
+2019,116,10,8,8,The Man With  The Yellow Hat ,4361606,Darwin Thompson,False,0
+2019,117,10,9,2,In Your Face,2576716,Jamison Crowder,False,0
+2019,118,10,10,10,DENVER BREAD,3127306,Dante Pettis,False,0
+2019,119,10,11,1,The  Commish,14881,Russell Wilson,False,0
+2019,120,10,12,3,Gnarls Barkley,5536,Ben Roethlisberger,False,0
+2019,121,11,1,3,Gnarls Barkley,14922,Mohamed Sanu Sr.,False,0
+2019,122,11,2,1,The  Commish,16777,Carlos Hyde,False,0
+2019,123,11,3,10,DENVER BREAD,3916387,Lamar Jackson,False,0
+2019,124,11,4,2,In Your Face,-16021,Eagles D/ST,False,0
+2019,125,11,5,8,The Man With  The Yellow Hat ,2330,Tom Brady,False,0
+2019,126,11,6,6,Team Flatcheese,16781,Paul Richardson Jr.,False,0
+2019,127,11,7,7,Diggin Them TD's,3115913,Geronimo Allison,False,0
+2019,128,11,8,9,LOCKETT LIKE I  TALK IT,3916430,Nyheim Hines,False,0
+2019,129,11,9,4,Juicy Smuyet,2972091,Jalen Richard,False,0
+2019,130,11,10,5,Maybe This Year,4047650,DK Metcalf,False,0
+2019,131,11,11,12,Curious George,16974,Trey Burton,False,0
+2019,132,11,12,13,99 Problems but L. Fitz ain't 1,13217,Golden Tate,False,0
+2019,133,12,1,13,99 Problems but L. Fitz ain't 1,3119195,Chase Edmonds,False,0
+2019,134,12,2,12,Curious George,15683,Justin Tucker,False,0
+2019,135,12,3,5,Maybe This Year,15860,Jordan Reed,False,0
+2019,136,12,4,4,Juicy Smuyet,3915823,Keke Coutee,False,0
+2019,137,12,5,9,LOCKETT LIKE I  TALK IT,-16014,Rams D/ST,False,0
+2019,138,12,6,7,Diggin Them TD's,3043275,Austin Hooper,False,0
+2019,139,12,7,6,Team Flatcheese,8479,Frank Gore,False,0
+2019,140,12,8,8,The Man With  The Yellow Hat ,-16016,Vikings D/ST,False,0
+2019,141,12,9,2,In Your Face,16804,John Brown,False,0
+2019,142,12,10,10,DENVER BREAD,2576491,Adam Humphries,False,0
+2019,143,12,11,1,The  Commish,2576623,DeVante Parker,False,0
+2019,144,12,12,3,Gnarls Barkley,14993,Greg Zuerlein,False,0
+2019,145,13,1,3,Gnarls Barkley,-16018,Saints D/ST,False,0
+2019,146,13,2,1,The  Commish,14880,Kirk Cousins,False,0
+2019,147,13,3,10,DENVER BREAD,3116136,Justin Jackson,False,0
+2019,148,13,4,2,In Your Face,2985659,Wil Lutz,False,0
+2019,149,13,5,8,The Man With  The Yellow Hat ,3116365,Mark Andrews,False,0
+2019,150,13,6,6,Team Flatcheese,-16017,Patriots D/ST,False,0
+2019,151,13,7,7,Diggin Them TD's,14198,Dion Lewis,False,0
+2019,152,13,8,9,LOCKETT LIKE I  TALK IT,3055899,Harrison Butker,False,0
+2019,153,13,9,4,Juicy Smuyet,-16024,Chargers D/ST,False,0
+2019,154,13,10,5,Maybe This Year,3128774,Kalen Ballage,False,0
+2019,155,13,11,12,Curious George,2969939,Jameis Winston,False,0
+2019,156,13,12,13,99 Problems but L. Fitz ain't 1,4048244,Alexander Mattison,False,0
+2019,157,14,1,13,99 Problems but L. Fitz ain't 1,-16011,Colts D/ST,False,0
+2019,158,14,2,12,Curious George,3050487,Anthony Miller,False,0
+2019,159,14,3,5,Maybe This Year,5529,Philip Rivers,False,0
+2019,160,14,4,4,Juicy Smuyet,2971573,Ka'imi Fairbairn,False,0
+2019,161,14,5,9,LOCKETT LIKE I  TALK IT,2576925,Darren Waller,False,0
+2019,162,14,6,7,Diggin Them TD's,-16033,Ravens D/ST,False,0
+2019,163,14,7,6,Team Flatcheese,9704,Stephen Gostkowski,False,0
+2019,164,14,8,8,The Man With  The Yellow Hat ,9354,Robbie Gould,False,0
+2019,165,14,9,2,In Your Face,3039707,Mitchell Trubisky,False,0
+2019,166,14,10,10,DENVER BREAD,-16007,Broncos D/ST,False,0
+2019,167,14,11,1,The  Commish,3123052,Michael Badgley,False,0
+2019,168,14,12,3,Gnarls Barkley,4241372,Marquise Brown,False,0
+2019,169,15,1,3,Gnarls Barkley,12483,Matthew Stafford,False,0
+2019,170,15,2,1,The  Commish,3057987,DaeSean Hamilton,False,0
+2019,171,15,3,10,DENVER BREAD,3050478,Jake Elliott,False,0
+2019,172,15,4,2,In Your Face,3059915,Kareem Hunt,False,0
+2019,173,15,5,8,The Man With  The Yellow Hat ,4038441,Justice Hill,False,0
+2019,174,15,6,6,Team Flatcheese,2578570,Jacoby Brissett,False,0
+2019,175,15,7,7,Diggin Them TD's,4333,Matt Bryant,False,0
+2019,176,15,8,9,LOCKETT LIKE I  TALK IT,3116721,Jaylen Samuels,False,0
+2019,177,15,9,4,Juicy Smuyet,16504,Jack Doyle,False,0
+2019,178,15,10,5,Maybe This Year,3124679,Jason Sanders,False,0
+2019,179,15,11,12,Curious George,-16005,Browns D/ST,False,0
+2019,180,15,12,13,99 Problems but L. Fitz ain't 1,16486,Brett Maher,False,0

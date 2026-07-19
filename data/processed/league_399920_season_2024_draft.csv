@@ -1,0 +1,169 @@
+season,overall_pick,round,pick_in_round,espn_team_id,team_name,player_id,player_name,is_keeper,bid_amount
+2024,1,1,1,14,LosersUnited,4241389,CeeDee Lamb,False,0
+2024,2,1,2,12,Never cutting charbs,3117251,Christian McCaffrey,False,0
+2024,3,1,3,3,Kevon-Ra,4374302,Amon-Ra St. Brown,False,0
+2024,4,1,4,13,The New York NoGiants,3116406,Tyreek Hill,False,0
+2024,5,1,5,8,It's Always Sunny in Baltimore,4427366,Breece Hall,False,0
+2024,6,1,6,10,Bread (Riley's Version),4362628,Ja'Marr Chase,False,0
+2024,7,1,7,1,The  Commish,4262921,Justin Jefferson,False,0
+2024,8,1,8,2,Jalen Squirts,4430807,Bijan Robinson,False,0
+2024,9,1,9,4,I'm Ryan Keyser,3929630,Saquon Barkley,False,0
+2024,10,1,10,5,Maybe This Year,4047646,A.J. Brown,False,0
+2024,11,1,11,6,Keep Doubting,4242335,Jonathan Taylor,False,0
+2024,12,1,12,7,Son of a Commish ,4569618,Garrett Wilson,False,0
+2024,13,2,1,7,Son of a Commish ,4239996,Travis Etienne Jr.,False,0
+2024,14,2,2,6,Keep Doubting,4426515,Puka Nacua,False,0
+2024,15,2,3,5,Maybe This Year,3043078,Derrick Henry,False,0
+2024,16,2,4,4,I'm Ryan Keyser,4430737,Kyren Williams,False,0
+2024,17,2,5,2,Jalen Squirts,16800,Davante Adams,False,0
+2024,18,2,6,1,The  Commish,4361529,Isiah Pacheco,False,0
+2024,19,2,7,10,Bread (Riley's Version),4361370,Chris Olave,False,0
+2024,20,2,8,8,It's Always Sunny in Baltimore,4429795,Jahmyr Gibbs,False,0
+2024,21,2,9,13,The New York NoGiants,4432708,Marvin Harrison Jr.,False,0
+2024,22,2,10,3,Kevon-Ra,16737,Mike Evans,False,0
+2024,23,2,11,12,Never cutting charbs,4426502,Drake London,False,0
+2024,24,2,12,14,LosersUnited,4697815,Rachaad White,False,0
+2024,25,3,1,14,LosersUnited,4379399,James Cook,False,0
+2024,26,3,2,12,Never cutting charbs,4258173,Nico Collins,False,0
+2024,27,3,3,3,Kevon-Ra,4047365,Josh Jacobs,False,0
+2024,28,3,4,13,The New York NoGiants,3126486,Deebo Samuel Sr.,False,0
+2024,29,3,5,8,It's Always Sunny in Baltimore,4035687,Michael Pittman Jr.,False,0
+2024,30,3,6,10,Bread (Riley's Version),4429160,De'Von Achane,False,0
+2024,31,3,7,1,The  Commish,3915416,DJ Moore,False,0
+2024,32,3,8,2,Jalen Squirts,4040715,Jalen Hurts,False,0
+2024,33,3,9,4,I'm Ryan Keyser,4360438,Brandon Aiyuk,False,0
+2024,34,3,10,5,Maybe This Year,2976212,Stefon Diggs,False,0
+2024,35,3,11,6,Keep Doubting,3116385,Joe Mixon,False,0
+2024,36,3,12,7,Son of a Commish ,15847,Travis Kelce,False,0
+2024,37,4,1,7,Son of a Commish ,4047650,DK Metcalf,False,0
+2024,38,4,2,6,Keep Doubting,4241478,DeVonta Smith,False,0
+2024,39,4,3,5,Maybe This Year,2977187,Cooper Kupp,False,0
+2024,40,4,4,4,I'm Ryan Keyser,4595348,Malik Nabers,False,0
+2024,41,4,5,2,Jalen Squirts,4372016,Jaylen Waddle,False,0
+2024,42,4,6,1,The  Commish,3918298,Josh Allen,False,0
+2024,43,4,7,10,Bread (Riley's Version),4428331,Rashee Rice,False,0
+2024,44,4,8,8,It's Always Sunny in Baltimore,4429615,Zay Flowers,False,0
+2024,45,4,9,13,The New York NoGiants,4430027,Sam LaPorta,False,0
+2024,46,4,10,3,Kevon-Ra,4567048,Kenneth Walker III,False,0
+2024,47,4,11,12,Never cutting charbs,3916387,Lamar Jackson,False,0
+2024,48,4,12,14,LosersUnited,3116365,Mark Andrews,False,0
+2024,49,5,1,14,LosersUnited,4366031,Tank Dell,False,0
+2024,50,5,2,12,Never cutting charbs,3054850,Alvin Kamara,False,0
+2024,51,5,3,3,Kevon-Ra,2976499,Amari Cooper,False,0
+2024,52,5,4,13,The New York NoGiants,4239993,Tee Higgins,False,0
+2024,53,5,5,8,It's Always Sunny in Baltimore,3925357,Calvin Ridley,False,0
+2024,54,5,6,10,Bread (Riley's Version),4361307,Trey McBride,False,0
+2024,55,5,7,1,The  Commish,3116165,Chris Godwin,False,0
+2024,56,5,8,2,Jalen Squirts,4259545,D'Andre Swift,False,0
+2024,57,5,9,4,I'm Ryan Keyser,3051876,Evan Engram,False,0
+2024,58,5,10,5,Maybe This Year,3042519,Aaron Jones,False,0
+2024,59,5,11,6,Keep Doubting,4426354,George Pickens,False,0
+2024,60,5,12,7,Son of a Commish ,3045147,James Conner,False,0
+2024,61,6,1,7,Son of a Commish ,3139477,Patrick Mahomes,False,0
+2024,62,6,2,6,Keep Doubting,4385690,Dalton Kincaid,False,0
+2024,63,6,3,5,Maybe This Year,3121422,Terry McLaurin,False,0
+2024,64,6,4,4,I'm Ryan Keyser,4432577,C.J. Stroud,False,0
+2024,65,6,5,2,Jalen Squirts,3932905,Diontae Johnson,False,0
+2024,66,6,6,1,The  Commish,4569173,Rhamondre Stevenson,False,0
+2024,67,6,7,10,Bread (Riley's Version),3895856,Christian Kirk,False,0
+2024,68,6,8,8,It's Always Sunny in Baltimore,4430878,Jaxon Smith-Njigba,False,0
+2024,69,6,9,13,The New York NoGiants,4361777,Zamir White,False,0
+2024,70,6,10,3,Kevon-Ra,4429084,Anthony Richardson,False,0
+2024,71,6,11,12,Never cutting charbs,15818,Keenan Allen,False,0
+2024,72,6,12,14,LosersUnited,2577417,Dak Prescott,False,0
+2024,73,7,1,14,LosersUnited,4035538,David Montgomery,False,0
+2024,74,7,2,12,Never cutting charbs,4241457,Najee Harris,False,0
+2024,75,7,3,3,Kevon-Ra,3040151,George Kittle,False,0
+2024,76,7,4,13,The New York NoGiants,4241474,Brian Robinson Jr.,False,0
+2024,77,7,5,8,It's Always Sunny in Baltimore,3915511,Joe Burrow,False,0
+2024,78,7,6,10,Bread (Riley's Version),4361579,Javonte Williams,False,0
+2024,79,7,7,1,The  Commish,4569987,Jaylen Warren,False,0
+2024,80,7,8,2,Jalen Squirts,4362249,Jayden Reed,False,0
+2024,81,7,9,4,I'm Ryan Keyser,3128429,Courtland Sutton,False,0
+2024,82,7,10,5,Maybe This Year,3917315,Kyler Murray,False,0
+2024,83,7,11,6,Keep Doubting,4248528,Christian Watson,False,0
+2024,84,7,12,7,Son of a Commish ,4432773,Brian Thomas Jr.,False,0
+2024,85,8,1,7,Son of a Commish ,4372019,Jerome Ford,False,0
+2024,86,8,2,6,Keep Doubting,4428557,Tyjae Spears,False,0
+2024,87,8,3,5,Maybe This Year,4360248,Kyle Pitts,False,0
+2024,88,8,4,4,I'm Ryan Keyser,4612826,Ladd McConkey,False,0
+2024,89,8,5,2,Jalen Squirts,2576414,Raheem Mostert,False,0
+2024,90,8,6,1,The  Commish,4242355,Jake Ferguson,False,0
+2024,91,8,7,10,Bread (Riley's Version),4426348,Jayden Daniels,False,0
+2024,92,8,8,8,It's Always Sunny in Baltimore,4362238,Chase Brown,False,0
+2024,93,8,9,13,The New York NoGiants,3916148,Tony Pollard,False,0
+2024,94,8,10,3,Kevon-Ra,4035676,Zack Moss,False,0
+2024,95,8,11,12,Never cutting charbs,4683062,Xavier Worthy,False,0
+2024,96,8,12,14,LosersUnited,3051926,Gus Edwards,False,0
+2024,97,9,1,14,LosersUnited,4635008,Keon Coleman,False,0
+2024,98,9,2,12,Never cutting charbs,3121023,Dallas Goedert,False,0
+2024,99,9,3,3,Kevon-Ra,3068267,Austin Ekeler,False,0
+2024,100,9,4,13,The New York NoGiants,4036378,Jordan Love,False,0
+2024,101,9,5,8,It's Always Sunny in Baltimore,3123076,David Njoku,False,0
+2024,102,9,6,10,Bread (Riley's Version),4040761,Devin Singletary,False,0
+2024,103,9,7,1,The  Commish,3051392,Ezekiel Elliott,False,0
+2024,104,9,8,2,Jalen Squirts,4258595,Cole Kmet,False,0
+2024,105,9,9,4,I'm Ryan Keyser,4431299,Rome Odunze,False,0
+2024,106,9,10,5,Maybe This Year,3916433,Jakobi Meyers,False,0
+2024,107,9,11,6,Keep Doubting,4429205,Jordan Addison,False,0
+2024,108,9,12,7,Son of a Commish ,15795,DeAndre Hopkins,False,0
+2024,109,10,1,7,Son of a Commish ,4241416,Chuba Hubbard,False,0
+2024,110,10,2,6,Keep Doubting,4361741,Brock Purdy,False,0
+2024,111,10,3,5,Maybe This Year,4373626,Tyler Allgeier,False,0
+2024,112,10,4,4,I'm Ryan Keyser,4429275,Trey Benson,False,0
+2024,113,10,5,2,Jalen Squirts,3121427,Curtis Samuel,False,0
+2024,114,10,6,1,The  Commish,4241372,Hollywood Brown,False,0
+2024,115,10,7,10,Bread (Riley's Version),4722893,Jaleel McLaughlin,False,0
+2024,116,10,8,8,It's Always Sunny in Baltimore,4678008,Jonathon Brooks,False,0
+2024,117,10,9,13,The New York NoGiants,4361411,Pat Freiermuth,False,0
+2024,118,10,10,3,Kevon-Ra,4241463,Jerry Jeudy,False,0
+2024,119,10,11,12,Never cutting charbs,4426385,Zach Charbonnet,False,0
+2024,120,10,12,14,LosersUnited,3045138,Mike Williams,False,0
+2024,121,11,1,14,LosersUnited,3128720,Nick Chubb,False,0
+2024,122,11,2,12,Never cutting charbs,4426388,Jameson Williams,False,0
+2024,123,11,3,3,Kevon-Ra,4241985,J.K. Dobbins,False,0
+2024,124,11,4,13,The New York NoGiants,4241479,Tua Tagovailoa,False,0
+2024,125,11,5,8,It's Always Sunny in Baltimore,4032473,Rashid Shaheed,False,0
+2024,126,11,6,10,Bread (Riley's Version),4038815,Rico Dowdle,False,0
+2024,127,11,7,1,The  Commish,4373678,Khalil Shakir,False,0
+2024,128,11,8,2,Jalen Squirts,4431611,Caleb Williams,False,0
+2024,129,11,9,4,I'm Ryan Keyser,4040655,Darnell Mooney,False,0
+2024,130,11,10,5,Maybe This Year,4432665,Brock Bowers,False,0
+2024,131,11,11,6,Keep Doubting,4242433,Joshua Palmer,False,0
+2024,132,11,12,7,Son of a Commish ,2577327,Tyler Lockett,False,0
+2024,133,12,1,7,Son of a Commish ,4428850,Dontayvion Wicks,False,0
+2024,134,12,2,6,Keep Doubting,4242431,Ty Chandler,False,0
+2024,135,12,3,5,Maybe This Year,4597500,Adonai Mitchell,False,0
+2024,136,12,4,4,I'm Ryan Keyser,3117256,Dalton Schultz,False,0
+2024,137,12,5,2,Jalen Squirts,4243537,Gabe Davis,False,0
+2024,138,12,6,1,The  Commish,4361432,Romeo Doubs,False,0
+2024,139,12,7,10,Bread (Riley's Version),4429096,Blake Corum,False,0
+2024,140,12,8,8,It's Always Sunny in Baltimore,4360761,Michael Wilson,False,0
+2024,141,12,9,13,The New York NoGiants,16460,Adam Thielen,False,0
+2024,142,12,10,3,Kevon-Ra,4360294,Antonio Gibson,False,0
+2024,143,12,11,12,Never cutting charbs,4038941,Justin Herbert,False,0
+2024,144,12,12,14,LosersUnited,8439,Aaron Rodgers,False,0
+2024,145,13,1,14,LosersUnited,-16005,Browns D/ST,False,0
+2024,146,13,2,12,Never cutting charbs,4036133,T.J. Hockenson,False,0
+2024,147,13,3,3,Kevon-Ra,-16033,Ravens D/ST,False,0
+2024,148,13,4,13,The New York NoGiants,4429023,MarShawn Lloyd,False,0
+2024,149,13,5,8,It's Always Sunny in Baltimore,4427095,DeMario Douglas,False,0
+2024,150,13,6,10,Bread (Riley's Version),4429013,Tank Bigsby,False,0
+2024,151,13,7,1,The  Commish,4360569,Jordan Mason,False,0
+2024,152,13,8,2,Jalen Squirts,4596448,Bucky Irving,False,0
+2024,153,13,9,4,I'm Ryan Keyser,4430034,Xavier Legette,False,0
+2024,154,13,10,5,Maybe This Year,4682745,Jaylen Wright,False,0
+2024,155,13,11,6,Keep Doubting,4429501,Ray Davis,False,0
+2024,156,13,12,7,Son of a Commish ,4430637,Ja'Lynn Polk,False,0
+2024,157,14,1,7,Son of a Commish ,-16006,Cowboys D/ST,False,0
+2024,158,14,2,6,Keep Doubting,-16020,Jets D/ST,False,0
+2024,159,14,3,5,Maybe This Year,-16025,49ers D/ST,False,0
+2024,160,14,4,4,I'm Ryan Keyser,-16015,Dolphins D/ST,False,0
+2024,161,14,5,2,Jalen Squirts,-16023,Steelers D/ST,False,0
+2024,162,14,6,1,The  Commish,-16012,Chiefs D/ST,False,0
+2024,163,14,7,10,Bread (Riley's Version),-16026,Seahawks D/ST,False,0
+2024,164,14,8,8,It's Always Sunny in Baltimore,-16008,Lions D/ST,False,0
+2024,165,14,9,13,The New York NoGiants,-16018,Saints D/ST,False,0
+2024,166,14,10,3,Kevon-Ra,3929645,Juwan Johnson,False,0
+2024,167,14,11,12,Never cutting charbs,-16021,Eagles D/ST,False,0
+2024,168,14,12,14,LosersUnited,16731,Brandin Cooks,False,0

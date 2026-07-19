@@ -1,0 +1,205 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2024,1,False,1,The  Commish,8,It's Always Sunny in Baltimore,129.28,103.26,W
+2024,2,False,1,The  Commish,10,Bread (Riley's Version),132.56,120.84,W
+2024,3,False,1,The  Commish,7,Son of a Commish ,133.32,134.98,L
+2024,4,False,1,The  Commish,13,The New York NoGiants,116.2,119.28,L
+2024,5,False,1,The  Commish,12,Never cutting charbs,129.84,153.92,L
+2024,6,False,1,The  Commish,4,I'm Ryan Keyser,108.9,119.98,L
+2024,7,False,1,The  Commish,2,Jalen Squirts,93.42,108.86,L
+2024,8,False,1,The  Commish,5,Maybe This Year,99.32,123.68,L
+2024,9,False,1,The  Commish,14,LosersUnited,127.8,115.62,W
+2024,10,False,1,The  Commish,3,Kevon-Ra,110.5,92.04,W
+2024,11,False,1,The  Commish,6,Keep Doubting,87.38,127.66,L
+2024,12,False,1,The  Commish,8,It's Always Sunny in Baltimore,88.76,149.42,L
+2024,13,False,1,The  Commish,10,Bread (Riley's Version),124.42,150.24,L
+2024,14,False,1,The  Commish,7,Son of a Commish ,148.58,148.02,W
+2024,15,True,1,The  Commish,2,Jalen Squirts,113.58,130.2,L
+2024,16,True,1,The  Commish,13,The New York NoGiants,103.46,105.14,L
+2024,17,True,1,The  Commish,6,Keep Doubting,84.68,107.48,L
+2024,1,False,2,Jalen Squirts,13,The New York NoGiants,116.02,127.9,L
+2024,2,False,2,Jalen Squirts,12,Never cutting charbs,108.02,142.58,L
+2024,3,False,2,Jalen Squirts,4,I'm Ryan Keyser,88.84,142.3,L
+2024,4,False,2,Jalen Squirts,3,Kevon-Ra,118.32,126.48,L
+2024,5,False,2,Jalen Squirts,5,Maybe This Year,109.56,138.66,L
+2024,6,False,2,Jalen Squirts,14,LosersUnited,147.66,131.92,W
+2024,7,False,2,Jalen Squirts,1,The  Commish,108.86,93.42,W
+2024,8,False,2,Jalen Squirts,6,Keep Doubting,136.14,137.0,L
+2024,9,False,2,Jalen Squirts,8,It's Always Sunny in Baltimore,129.2,176.64,L
+2024,10,False,2,Jalen Squirts,10,Bread (Riley's Version),112.68,152.48,L
+2024,11,False,2,Jalen Squirts,7,Son of a Commish ,92.44,112.38,L
+2024,12,False,2,Jalen Squirts,13,The New York NoGiants,114.46,101.86,W
+2024,13,False,2,Jalen Squirts,12,Never cutting charbs,157.12,145.68,W
+2024,14,False,2,Jalen Squirts,4,I'm Ryan Keyser,122.72,66.3,W
+2024,15,True,2,Jalen Squirts,1,The  Commish,130.2,113.58,W
+2024,16,True,2,Jalen Squirts,14,LosersUnited,107.54,121.5,L
+2024,17,True,2,Jalen Squirts,4,I'm Ryan Keyser,71.4,137.0,L
+2024,1,False,3,Kevon-Ra,6,Keep Doubting,109.58,86.44,W
+2024,2,False,3,Kevon-Ra,4,I'm Ryan Keyser,112.56,95.7,W
+2024,3,False,3,Kevon-Ra,8,It's Always Sunny in Baltimore,105.48,76.46,W
+2024,4,False,3,Kevon-Ra,2,Jalen Squirts,126.48,118.32,W
+2024,5,False,3,Kevon-Ra,10,Bread (Riley's Version),114.66,128.92,L
+2024,6,False,3,Kevon-Ra,5,Maybe This Year,118.3,150.16,L
+2024,7,False,3,Kevon-Ra,7,Son of a Commish ,147.78,116.6,W
+2024,8,False,3,Kevon-Ra,14,LosersUnited,136.14,148.44,L
+2024,9,False,3,Kevon-Ra,13,The New York NoGiants,117.48,77.2,W
+2024,10,False,3,Kevon-Ra,1,The  Commish,92.04,110.5,L
+2024,11,False,3,Kevon-Ra,12,Never cutting charbs,140.92,107.28,W
+2024,12,False,3,Kevon-Ra,6,Keep Doubting,115.36,95.66,W
+2024,13,False,3,Kevon-Ra,4,I'm Ryan Keyser,142.22,112.44,W
+2024,14,False,3,Kevon-Ra,8,It's Always Sunny in Baltimore,157.28,162.36,L
+2024,15,True,3,Kevon-Ra,12,Never cutting charbs,151.14,130.3,W
+2024,16,True,3,Kevon-Ra,5,Maybe This Year,129.74,143.62,L
+2024,17,True,3,Kevon-Ra,10,Bread (Riley's Version),139.58,153.18,L
+2024,1,False,4,I'm Ryan Keyser,12,Never cutting charbs,98.46,117.22,L
+2024,2,False,4,I'm Ryan Keyser,3,Kevon-Ra,95.7,112.56,L
+2024,3,False,4,I'm Ryan Keyser,2,Jalen Squirts,142.3,88.84,W
+2024,4,False,4,I'm Ryan Keyser,5,Maybe This Year,119.0,143.28,L
+2024,5,False,4,I'm Ryan Keyser,14,LosersUnited,141.74,106.68,W
+2024,6,False,4,I'm Ryan Keyser,1,The  Commish,119.98,108.9,W
+2024,7,False,4,I'm Ryan Keyser,6,Keep Doubting,90.84,114.98,L
+2024,8,False,4,I'm Ryan Keyser,8,It's Always Sunny in Baltimore,97.78,113.26,L
+2024,9,False,4,I'm Ryan Keyser,10,Bread (Riley's Version),140.54,131.36,W
+2024,10,False,4,I'm Ryan Keyser,7,Son of a Commish ,77.34,102.44,L
+2024,11,False,4,I'm Ryan Keyser,13,The New York NoGiants,124.78,194.2,L
+2024,12,False,4,I'm Ryan Keyser,12,Never cutting charbs,143.06,115.48,W
+2024,13,False,4,I'm Ryan Keyser,3,Kevon-Ra,112.44,142.22,L
+2024,14,False,4,I'm Ryan Keyser,2,Jalen Squirts,66.3,122.72,L
+2024,15,True,4,I'm Ryan Keyser,14,LosersUnited,71.26,118.24,L
+2024,16,True,4,I'm Ryan Keyser,6,Keep Doubting,107.8,81.92,W
+2024,17,True,4,I'm Ryan Keyser,2,Jalen Squirts,137.0,71.4,W
+2024,1,False,5,Maybe This Year,7,Son of a Commish ,139.78,109.94,W
+2024,2,False,5,Maybe This Year,13,The New York NoGiants,107.34,108.28,L
+2024,3,False,5,Maybe This Year,12,Never cutting charbs,145.3,133.88,W
+2024,4,False,5,Maybe This Year,4,I'm Ryan Keyser,143.28,119.0,W
+2024,5,False,5,Maybe This Year,2,Jalen Squirts,138.66,109.56,W
+2024,6,False,5,Maybe This Year,3,Kevon-Ra,150.16,118.3,W
+2024,7,False,5,Maybe This Year,14,LosersUnited,174.4,73.24,W
+2024,8,False,5,Maybe This Year,1,The  Commish,123.68,99.32,W
+2024,9,False,5,Maybe This Year,6,Keep Doubting,124.36,113.22,W
+2024,10,False,5,Maybe This Year,8,It's Always Sunny in Baltimore,115.84,137.92,L
+2024,11,False,5,Maybe This Year,10,Bread (Riley's Version),121.18,131.04,L
+2024,12,False,5,Maybe This Year,7,Son of a Commish ,129.8,90.82,W
+2024,13,False,5,Maybe This Year,13,The New York NoGiants,114.4,106.84,W
+2024,14,False,5,Maybe This Year,12,Never cutting charbs,113.16,107.02,W
+2024,15,True,5,Maybe This Year,5,Maybe This Year,120.06,120.06,U
+2024,16,True,5,Maybe This Year,3,Kevon-Ra,143.62,129.74,W
+2024,17,True,5,Maybe This Year,8,It's Always Sunny in Baltimore,136.46,139.98,L
+2024,1,False,6,Keep Doubting,3,Kevon-Ra,86.44,109.58,L
+2024,2,False,6,Keep Doubting,8,It's Always Sunny in Baltimore,85.16,141.62,L
+2024,3,False,6,Keep Doubting,10,Bread (Riley's Version),127.08,158.76,L
+2024,4,False,6,Keep Doubting,7,Son of a Commish ,114.02,118.3,L
+2024,5,False,6,Keep Doubting,13,The New York NoGiants,92.06,100.24,L
+2024,6,False,6,Keep Doubting,12,Never cutting charbs,132.7,121.72,W
+2024,7,False,6,Keep Doubting,4,I'm Ryan Keyser,114.98,90.84,W
+2024,8,False,6,Keep Doubting,2,Jalen Squirts,137.0,136.14,W
+2024,9,False,6,Keep Doubting,5,Maybe This Year,113.22,124.36,L
+2024,10,False,6,Keep Doubting,14,LosersUnited,103.52,124.0,L
+2024,11,False,6,Keep Doubting,1,The  Commish,127.66,87.38,W
+2024,12,False,6,Keep Doubting,3,Kevon-Ra,95.66,115.36,L
+2024,13,False,6,Keep Doubting,8,It's Always Sunny in Baltimore,104.76,120.76,L
+2024,14,False,6,Keep Doubting,10,Bread (Riley's Version),119.3,174.62,L
+2024,15,True,6,Keep Doubting,13,The New York NoGiants,57.98,121.76,L
+2024,16,True,6,Keep Doubting,4,I'm Ryan Keyser,81.92,107.8,L
+2024,17,True,6,Keep Doubting,1,The  Commish,107.48,84.68,W
+2024,1,False,7,Son of a Commish ,5,Maybe This Year,109.94,139.78,L
+2024,2,False,7,Son of a Commish ,14,LosersUnited,105.64,101.12,W
+2024,3,False,7,Son of a Commish ,1,The  Commish,134.98,133.32,W
+2024,4,False,7,Son of a Commish ,6,Keep Doubting,118.3,114.02,W
+2024,5,False,7,Son of a Commish ,8,It's Always Sunny in Baltimore,128.06,155.98,L
+2024,6,False,7,Son of a Commish ,10,Bread (Riley's Version),78.12,101.26,L
+2024,7,False,7,Son of a Commish ,3,Kevon-Ra,116.6,147.78,L
+2024,8,False,7,Son of a Commish ,13,The New York NoGiants,122.74,120.5,W
+2024,9,False,7,Son of a Commish ,12,Never cutting charbs,154.56,110.4,W
+2024,10,False,7,Son of a Commish ,4,I'm Ryan Keyser,102.44,77.34,W
+2024,11,False,7,Son of a Commish ,2,Jalen Squirts,112.38,92.44,W
+2024,12,False,7,Son of a Commish ,5,Maybe This Year,90.82,129.8,L
+2024,13,False,7,Son of a Commish ,14,LosersUnited,102.28,134.4,L
+2024,14,False,7,Son of a Commish ,1,The  Commish,148.02,148.58,L
+2024,15,True,7,Son of a Commish ,8,It's Always Sunny in Baltimore,120.2,131.54,L
+2024,16,True,7,Son of a Commish ,12,Never cutting charbs,167.64,112.68,W
+2024,17,True,7,Son of a Commish ,12,Never cutting charbs,97.4,107.32,L
+2024,1,False,8,It's Always Sunny in Baltimore,1,The  Commish,103.26,129.28,L
+2024,2,False,8,It's Always Sunny in Baltimore,6,Keep Doubting,141.62,85.16,W
+2024,3,False,8,It's Always Sunny in Baltimore,3,Kevon-Ra,76.46,105.48,L
+2024,4,False,8,It's Always Sunny in Baltimore,10,Bread (Riley's Version),84.38,94.02,L
+2024,5,False,8,It's Always Sunny in Baltimore,7,Son of a Commish ,155.98,128.06,W
+2024,6,False,8,It's Always Sunny in Baltimore,13,The New York NoGiants,107.42,106.5,W
+2024,7,False,8,It's Always Sunny in Baltimore,12,Never cutting charbs,114.24,122.24,L
+2024,8,False,8,It's Always Sunny in Baltimore,4,I'm Ryan Keyser,113.26,97.78,W
+2024,9,False,8,It's Always Sunny in Baltimore,2,Jalen Squirts,176.64,129.2,W
+2024,10,False,8,It's Always Sunny in Baltimore,5,Maybe This Year,137.92,115.84,W
+2024,11,False,8,It's Always Sunny in Baltimore,14,LosersUnited,135.24,102.7,W
+2024,12,False,8,It's Always Sunny in Baltimore,1,The  Commish,149.42,88.76,W
+2024,13,False,8,It's Always Sunny in Baltimore,6,Keep Doubting,120.76,104.76,W
+2024,14,False,8,It's Always Sunny in Baltimore,3,Kevon-Ra,162.36,157.28,W
+2024,15,True,8,It's Always Sunny in Baltimore,7,Son of a Commish ,131.54,120.2,W
+2024,16,True,8,It's Always Sunny in Baltimore,10,Bread (Riley's Version),150.68,131.92,W
+2024,17,True,8,It's Always Sunny in Baltimore,5,Maybe This Year,139.98,136.46,W
+2024,1,False,10,Bread (Riley's Version),14,LosersUnited,115.96,96.66,W
+2024,2,False,10,Bread (Riley's Version),1,The  Commish,120.84,132.56,L
+2024,3,False,10,Bread (Riley's Version),6,Keep Doubting,158.76,127.08,W
+2024,4,False,10,Bread (Riley's Version),8,It's Always Sunny in Baltimore,94.02,84.38,W
+2024,5,False,10,Bread (Riley's Version),3,Kevon-Ra,128.92,114.66,W
+2024,6,False,10,Bread (Riley's Version),7,Son of a Commish ,101.26,78.12,W
+2024,7,False,10,Bread (Riley's Version),13,The New York NoGiants,103.94,80.5,W
+2024,8,False,10,Bread (Riley's Version),12,Never cutting charbs,117.7,130.56,L
+2024,9,False,10,Bread (Riley's Version),4,I'm Ryan Keyser,131.36,140.54,L
+2024,10,False,10,Bread (Riley's Version),2,Jalen Squirts,152.48,112.68,W
+2024,11,False,10,Bread (Riley's Version),5,Maybe This Year,131.04,121.18,W
+2024,12,False,10,Bread (Riley's Version),14,LosersUnited,149.1,140.58,W
+2024,13,False,10,Bread (Riley's Version),1,The  Commish,150.24,124.42,W
+2024,14,False,10,Bread (Riley's Version),6,Keep Doubting,174.62,119.3,W
+2024,15,True,10,Bread (Riley's Version),10,Bread (Riley's Version),0.0,0.0,U
+2024,16,True,10,Bread (Riley's Version),8,It's Always Sunny in Baltimore,131.92,150.68,L
+2024,17,True,10,Bread (Riley's Version),3,Kevon-Ra,153.18,139.58,W
+2024,1,False,12,Never cutting charbs,4,I'm Ryan Keyser,117.22,98.46,W
+2024,2,False,12,Never cutting charbs,2,Jalen Squirts,142.58,108.02,W
+2024,3,False,12,Never cutting charbs,5,Maybe This Year,133.88,145.3,L
+2024,4,False,12,Never cutting charbs,14,LosersUnited,151.84,93.84,W
+2024,5,False,12,Never cutting charbs,1,The  Commish,153.92,129.84,W
+2024,6,False,12,Never cutting charbs,6,Keep Doubting,121.72,132.7,L
+2024,7,False,12,Never cutting charbs,8,It's Always Sunny in Baltimore,122.24,114.24,W
+2024,8,False,12,Never cutting charbs,10,Bread (Riley's Version),130.56,117.7,W
+2024,9,False,12,Never cutting charbs,7,Son of a Commish ,110.4,154.56,L
+2024,10,False,12,Never cutting charbs,13,The New York NoGiants,141.4,95.3,W
+2024,11,False,12,Never cutting charbs,3,Kevon-Ra,107.28,140.92,L
+2024,12,False,12,Never cutting charbs,4,I'm Ryan Keyser,115.48,143.06,L
+2024,13,False,12,Never cutting charbs,2,Jalen Squirts,145.68,157.12,L
+2024,14,False,12,Never cutting charbs,5,Maybe This Year,107.02,113.16,L
+2024,15,True,12,Never cutting charbs,3,Kevon-Ra,130.3,151.14,L
+2024,16,True,12,Never cutting charbs,7,Son of a Commish ,112.68,167.64,L
+2024,17,True,12,Never cutting charbs,7,Son of a Commish ,107.32,97.4,W
+2024,1,False,13,The New York NoGiants,2,Jalen Squirts,127.9,116.02,W
+2024,2,False,13,The New York NoGiants,5,Maybe This Year,108.28,107.34,W
+2024,3,False,13,The New York NoGiants,14,LosersUnited,77.46,87.02,L
+2024,4,False,13,The New York NoGiants,1,The  Commish,119.28,116.2,W
+2024,5,False,13,The New York NoGiants,6,Keep Doubting,100.24,92.06,W
+2024,6,False,13,The New York NoGiants,8,It's Always Sunny in Baltimore,106.5,107.42,L
+2024,7,False,13,The New York NoGiants,10,Bread (Riley's Version),80.5,103.94,L
+2024,8,False,13,The New York NoGiants,7,Son of a Commish ,120.5,122.74,L
+2024,9,False,13,The New York NoGiants,3,Kevon-Ra,77.2,117.48,L
+2024,10,False,13,The New York NoGiants,12,Never cutting charbs,95.3,141.4,L
+2024,11,False,13,The New York NoGiants,4,I'm Ryan Keyser,194.2,124.78,W
+2024,12,False,13,The New York NoGiants,2,Jalen Squirts,101.86,114.46,L
+2024,13,False,13,The New York NoGiants,5,Maybe This Year,106.84,114.4,L
+2024,14,False,13,The New York NoGiants,14,LosersUnited,89.62,128.34,L
+2024,15,True,13,The New York NoGiants,6,Keep Doubting,121.76,57.98,W
+2024,16,True,13,The New York NoGiants,1,The  Commish,105.14,103.46,W
+2024,17,True,13,The New York NoGiants,14,LosersUnited,132.32,48.0,W
+2024,1,False,14,LosersUnited,10,Bread (Riley's Version),96.66,115.96,L
+2024,2,False,14,LosersUnited,7,Son of a Commish ,101.12,105.64,L
+2024,3,False,14,LosersUnited,13,The New York NoGiants,87.02,77.46,W
+2024,4,False,14,LosersUnited,12,Never cutting charbs,93.84,151.84,L
+2024,5,False,14,LosersUnited,4,I'm Ryan Keyser,106.68,141.74,L
+2024,6,False,14,LosersUnited,2,Jalen Squirts,131.92,147.66,L
+2024,7,False,14,LosersUnited,5,Maybe This Year,73.24,174.4,L
+2024,8,False,14,LosersUnited,3,Kevon-Ra,148.44,136.14,W
+2024,9,False,14,LosersUnited,1,The  Commish,115.62,127.8,L
+2024,10,False,14,LosersUnited,6,Keep Doubting,124.0,103.52,W
+2024,11,False,14,LosersUnited,8,It's Always Sunny in Baltimore,102.7,135.24,L
+2024,12,False,14,LosersUnited,10,Bread (Riley's Version),140.58,149.1,L
+2024,13,False,14,LosersUnited,7,Son of a Commish ,134.4,102.28,W
+2024,14,False,14,LosersUnited,13,The New York NoGiants,128.34,89.62,W
+2024,15,True,14,LosersUnited,4,I'm Ryan Keyser,118.24,71.26,W
+2024,16,True,14,LosersUnited,2,Jalen Squirts,121.5,107.54,W
+2024,17,True,14,LosersUnited,13,The New York NoGiants,48.0,132.32,L

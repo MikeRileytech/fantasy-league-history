@@ -1,0 +1,181 @@
+season,overall_pick,round,pick_in_round,espn_team_id,team_name,player_id,player_name,is_keeper,bid_amount
+2015,1,1,1,6,Team Flatcheese,13934,Antonio Brown,False,0
+2015,2,1,2,9,New Yawk Bklyn's Best,13215,Dez Bryant,False,0
+2015,3,1,3,12,Cntrl Alt Delete,11307,Jamaal Charles,False,0
+2015,4,1,4,1,The  Commish,10452,Adrian Peterson,False,0
+2015,5,1,5,3,Hyde Yo Kids Hyde Yo Wife,13216,Demaryius Thomas,False,0
+2015,6,1,6,11,Baltimore Hail Marys,2580,Drew Brees,False,0
+2015,7,1,7,8,Abdullah Oblangada ,16040,C.J. Anderson,False,0
+2015,8,1,8,5,Team Beats by Ray,11278,Matt Forte,False,0
+2015,9,1,9,2,In Your Face,15825,Le'Veon Bell,False,0
+2015,10,1,10,4,Straight out of Gronkton!,13229,Rob Gronkowski,False,0
+2015,11,1,11,10,Team Riley,4333,Matt Bryant,False,0
+2015,12,1,12,7,3rd Down For What,10456,Marshawn Lynch,False,0
+2015,13,2,1,7,3rd Down For What,12514,LeSean McCoy,False,0
+2015,14,2,2,10,Team Riley,15835,Zach Ertz,False,0
+2015,15,2,3,4,Straight out of Gronkton!,14005,DeMarco Murray,False,0
+2015,16,2,4,2,In Your Face,8479,Frank Gore,False,0
+2015,17,2,5,5,Team Beats by Ray,15009,Alfred Morris,False,0
+2015,18,2,6,8,Abdullah Oblangada ,13982,Julio Jones,False,0
+2015,19,2,7,11,Baltimore Hail Marys,9588,Reggie Bush,False,0
+2015,20,2,8,3,Hyde Yo Kids Hyde Yo Wife,16733,Odell Beckham Jr.,False,0
+2015,21,2,9,1,The  Commish,13983,A.J. Green,False,0
+2015,22,2,10,12,Cntrl Alt Delete,14053,Randall Cobb,False,0
+2015,23,2,11,9,New Yawk Bklyn's Best,13587,Chris Ivory,False,0
+2015,24,2,12,6,Team Flatcheese,16737,Mike Evans,False,0
+2015,25,3,1,6,Team Flatcheese,13981,Mark Ingram,False,0
+2015,26,3,2,9,New Yawk Bklyn's Best,10447,Calvin Johnson,False,0
+2015,27,3,3,12,Cntrl Alt Delete,16728,Teddy Bridgewater,False,0
+2015,28,3,4,1,The  Commish,14912,Alshon Jeffery,False,0
+2015,29,3,5,3,Hyde Yo Kids Hyde Yo Wife,13295,Emmanuel Sanders,False,0
+2015,30,3,6,11,Baltimore Hail Marys,5528,Larry Fitzgerald,False,0
+2015,31,3,7,8,Abdullah Oblangada ,15795,DeAndre Hopkins,False,0
+2015,32,3,8,5,Team Beats by Ray,16731,Brandin Cooks,False,0
+2015,33,3,9,2,In Your Face,8439,Aaron Rodgers,False,0
+2015,34,3,10,4,Straight out of Gronkton!,12649,Julian Edelman,False,0
+2015,35,3,11,10,Team Riley,15041,Daniel Herron,False,0
+2015,36,3,12,7,3rd Down For What,1428,Peyton Manning,False,0
+2015,37,4,1,7,3rd Down For What,16763,Jordan Matthews,False,0
+2015,38,4,2,10,Team Riley,16791,Donte Moncrief,False,0
+2015,39,4,3,4,Straight out of Gronkton!,13217,Golden Tate,False,0
+2015,40,4,4,2,In Your Face,15893,Andre Ellington,False,0
+2015,41,4,5,5,Team Beats by Ray,15920,Latavius Murray,False,0
+2015,42,4,6,8,Abdullah Oblangada ,2977644,Todd Gurley,False,0
+2015,43,4,7,11,Baltimore Hail Marys,16803,Jeremy Hill,False,0
+2015,44,4,8,3,Hyde Yo Kids Hyde Yo Wife,16777,Carlos Hyde,False,0
+2015,45,4,9,1,The  Commish,12497,Arian Foster,False,0
+2015,46,4,10,12,Cntrl Alt Delete,2576434,Melvin Gordon,False,0
+2015,47,4,11,9,New Yawk Bklyn's Best,12503,Rashad Jennings,False,0
+2015,48,4,12,6,Team Flatcheese,5536,Ben Roethlisberger,False,0
+2015,49,5,1,6,Team Flatcheese,13536,Joique Bell,False,0
+2015,50,5,2,9,New Yawk Bklyn's Best,13232,Jimmy Graham,False,0
+2015,51,5,3,12,Cntrl Alt Delete,15885,Charles Johnson,False,0
+2015,52,5,4,1,The  Commish,16921,Alfred Blue,False,0
+2015,53,5,5,3,Hyde Yo Kids Hyde Yo Wife,9705,Brandon Marshall,False,0
+2015,54,5,6,11,Baltimore Hail Marys,15848,Eddie Lacy,False,0
+2015,55,5,7,8,Abdullah Oblangada ,4461,Andre Johnson,False,0
+2015,56,5,8,5,Team Beats by Ray,16790,Jarvis Landry,False,0
+2015,57,5,9,2,In Your Face,15818,Keenan Allen,False,0
+2015,58,5,10,4,Straight out of Gronkton!,11283,DeSean Jackson,False,0
+2015,59,5,11,10,Team Riley,2576623,DeVante Parker,False,0
+2015,60,5,12,7,3rd Down For What,2976516,T.J. Yeldon,False,0
+2015,61,6,1,7,3rd Down For What,13225,Riley Cooper,False,0
+2015,62,6,2,10,Team Riley,14874,Andrew Luck,False,0
+2015,63,6,3,4,Straight out of Gronkton!,13203,C.J. Spiller,False,0
+2015,64,6,4,2,In Your Face,16799,Allen Robinson,False,0
+2015,65,6,5,5,Team Beats by Ray,14881,Russell Wilson,False,0
+2015,66,6,6,8,Abdullah Oblangada ,17133,Isaiah Crowell,False,0
+2015,67,6,7,11,Baltimore Hail Marys,14924,T.Y. Hilton,False,0
+2015,68,6,8,3,Hyde Yo Kids Hyde Yo Wife,13213,LeGarrette Blount,False,0
+2015,69,6,9,1,The  Commish,15826,Giovani Bernard,False,0
+2015,70,6,10,12,Cntrl Alt Delete,14189,Jordan Cameron,False,0
+2015,71,6,11,9,New Yawk Bklyn's Best,5526,Eli Manning,False,0
+2015,72,6,12,6,Team Flatcheese,10475,Greg Olsen,False,0
+2015,73,7,1,6,Team Flatcheese,2971618,Nelson Agholor,False,0
+2015,74,7,2,9,New Yawk Bklyn's Best,4527,Jason Witten,False,0
+2015,75,7,3,12,Cntrl Alt Delete,14876,Ryan Tannehill,False,0
+2015,76,7,4,1,The  Commish,11237,Matt Ryan,False,0
+2015,77,7,5,3,Hyde Yo Kids Hyde Yo Wife,16784,Tre Mason,False,0
+2015,78,7,6,11,Baltimore Hail Marys,9838,Marques Colston,False,0
+2015,79,7,7,8,Abdullah Oblangada ,15847,Travis Kelce,False,0
+2015,80,7,8,5,Team Beats by Ray,16886,Martavis Bryant,False,0
+2015,81,7,9,2,In Your Face,11295,Martellus Bennett,False,0
+2015,82,7,10,4,Straight out of Gronkton!,13271,Eric Decker,False,0
+2015,83,7,11,10,Team Riley,11467,Justin Forsett,False,0
+2015,84,7,12,7,3rd Down For What,2330,Tom Brady,False,0
+2015,85,8,1,7,3rd Down For What,16804,John Brown,False,0
+2015,86,8,2,10,Team Riley,12579,Jeremy Maclin,False,0
+2015,87,8,3,4,Straight out of Gronkton!,16794,Bishop Sankey,False,0
+2015,88,8,4,2,In Your Face,4512,Anquan Boldin,False,0
+2015,89,8,5,5,Team Beats by Ray,9761,Delanie Walker,False,0
+2015,90,8,6,8,Abdullah Oblangada ,2576336,Ameer Abdullah,False,0
+2015,91,8,7,11,Baltimore Hail Marys,16795,Austin Seferian-Jenkins,False,0
+2015,92,8,8,3,Hyde Yo Kids Hyde Yo Wife,11238,Darren McFadden,False,0
+2015,93,8,9,1,The  Commish,16944,Devonta Freeman,False,0
+2015,94,8,10,12,Cntrl Alt Delete,15996,Zac Stacy,False,0
+2015,95,8,11,9,New Yawk Bklyn's Best,5209,Tony Romo,False,0
+2015,96,8,12,6,Team Flatcheese,13204,Ryan Mathews,False,0
+2015,97,9,1,6,Team Flatcheese,16793,Cody Latimer,False,0
+2015,98,9,2,9,New Yawk Bklyn's Best,-16026,Seahawks D/ST,False,0
+2015,99,9,3,12,Cntrl Alt Delete,16013,Joseph Randle,False,0
+2015,100,9,4,1,The  Commish,13197,Sam Bradford,False,0
+2015,101,9,5,3,Hyde Yo Kids Hyde Yo Wife,8442,Roddy White,False,0
+2015,102,9,6,11,Baltimore Hail Marys,11247,Jonathan Stewart,False,0
+2015,103,9,7,8,Abdullah Oblangada ,5529,Philip Rivers,False,0
+2015,104,9,8,5,Team Beats by Ray,11788,Danny Woodhead,False,0
+2015,105,9,9,2,In Your Face,14909,Kendall Wright,False,0
+2015,106,9,10,4,Straight out of Gronkton!,13994,Cam Newton,False,0
+2015,107,9,11,10,Team Riley,8475,Vincent Jackson,False,0
+2015,108,9,12,7,3rd Down For What,11276,Eddie Royal,False,0
+2015,109,10,1,7,3rd Down For What,14017,Shane Vereen,False,0
+2015,110,10,2,10,Team Riley,14885,Doug Martin,False,0
+2015,111,10,3,4,Straight out of Gronkton!,15364,Jonas Gray,False,0
+2015,112,10,4,2,In Your Face,2979477,Tevin Coleman,False,0
+2015,113,10,5,5,Team Beats by Ray,2977609,Devin Funchess,False,0
+2015,114,10,6,8,Abdullah Oblangada ,-16002,Bills D/ST,False,0
+2015,115,10,7,11,Baltimore Hail Marys,14914,Brian Quick,False,0
+2015,116,10,8,3,Hyde Yo Kids Hyde Yo Wife,-16007,Broncos D/ST,False,0
+2015,117,10,9,1,The  Commish,11439,Pierre Garcon,False,0
+2015,118,10,10,12,Cntrl Alt Delete,16725,Sammy Watkins,False,0
+2015,119,10,11,9,New Yawk Bklyn's Best,13553,Victor Cruz,False,0
+2015,120,10,12,6,Team Flatcheese,16782,Jerick McKinnon,False,0
+2015,121,11,1,6,Team Flatcheese,15823,Montee Ball,False,0
+2015,122,11,2,9,New Yawk Bklyn's Best,16749,Charles Sims,False,0
+2015,123,11,3,12,Cntrl Alt Delete,14908,Michael Floyd,False,0
+2015,124,11,4,1,The  Commish,-16033,Ravens D/ST,False,0
+2015,125,11,5,3,Hyde Yo Kids Hyde Yo Wife,9684,Owen Daniels,False,0
+2015,126,11,6,11,Baltimore Hail Marys,15788,Tyler Eifert,False,0
+2015,127,11,7,8,Abdullah Oblangada ,14204,Julius Thomas,False,0
+2015,128,11,8,5,Team Beats by Ray,2969962,Duke Johnson Jr.,False,0
+2015,129,11,9,2,In Your Face,9704,Stephen Gostkowski,False,0
+2015,130,11,10,4,Straight out of Gronkton!,-16034,Texans D/ST,False,0
+2015,131,11,11,10,Team Riley,14032,Torrey Smith,False,0
+2015,132,11,12,7,3rd Down For What,14901,Dwayne Allen,False,0
+2015,133,12,1,7,3rd Down For What,15072,Marvin Jones,False,0
+2015,134,12,2,10,Team Riley,16950,Lorenzo Taliaferro,False,0
+2015,135,12,3,4,Straight out of Gronkton!,11458,Stevie Johnson,False,0
+2015,136,12,4,2,In Your Face,11252,Joe Flacco,False,0
+2015,137,12,5,5,Team Beats by Ray,14221,Doug Baldwin,False,0
+2015,138,12,6,8,Abdullah Oblangada ,2971433,Dorial Green-Beckham,False,0
+2015,139,12,7,11,Baltimore Hail Marys,1097,Adam Vinatieri,False,0
+2015,140,12,8,3,Hyde Yo Kids Hyde Yo Wife,9613,DeAngelo Williams,False,0
+2015,141,12,9,1,The  Commish,9592,Vernon Davis,False,0
+2015,142,12,10,12,Cntrl Alt Delete,-16022,Cardinals D/ST,False,0
+2015,143,12,11,9,New Yawk Bklyn's Best,15683,Justin Tucker,False,0
+2015,144,12,12,6,Team Flatcheese,2577134,Ty Montgomery,False,0
+2015,145,13,1,6,Team Flatcheese,14877,Nick Foles,False,0
+2015,146,13,2,9,New Yawk Bklyn's Best,12563,Michael Crabtree,False,0
+2015,147,13,3,12,Cntrl Alt Delete,2972460,Breshad Perriman,False,0
+2015,148,13,4,1,The  Commish,14322,Dan Bailey,False,0
+2015,149,13,5,3,Hyde Yo Kids Hyde Yo Wife,14001,Colin Kaepernick,False,0
+2015,150,13,6,11,Baltimore Hail Marys,-16017,Patriots D/ST,False,0
+2015,151,13,7,8,Abdullah Oblangada ,2969939,Jameis Winston,False,0
+2015,152,13,8,5,Team Beats by Ray,10636,Mason Crosby,False,0
+2015,153,13,9,2,In Your Face,16016,Kenny Stills,False,0
+2015,154,13,10,4,Straight out of Gronkton!,11923,Steven Hauschka,False,0
+2015,155,13,11,10,Team Riley,-16004,Bengals D/ST,False,0
+2015,156,13,12,7,3rd Down For What,16339,Brandon McManus,False,0
+2015,157,14,1,7,3rd Down For What,-16020,Jets D/ST,False,0
+2015,158,14,2,10,Team Riley,15873,Markus Wheaton,False,0
+2015,159,14,3,4,Straight out of Gronkton!,8544,Darren Sproles,False,0
+2015,160,14,4,2,In Your Face,15878,Terrance Williams,False,0
+2015,161,14,5,5,Team Beats by Ray,2980105,Matt Jones,False,0
+2015,162,14,6,8,Abdullah Oblangada ,2148,Sebastian Janikowski,False,0
+2015,163,14,7,11,Baltimore Hail Marys,12483,Matthew Stafford,False,0
+2015,164,14,8,3,Hyde Yo Kids Hyde Yo Wife,16976,Chandler Catanzaro,False,0
+2015,165,14,9,1,The  Commish,14054,Kyle Rudolph,False,0
+2015,166,14,10,12,Cntrl Alt Delete,16889,Andre Williams,False,0
+2015,167,14,11,9,New Yawk Bklyn's Best,12569,Percy Harvin,False,0
+2015,168,14,12,6,Team Flatcheese,11122,Matt Prater,False,0
+2015,169,15,1,6,Team Flatcheese,-16014,Rams D/ST,False,0
+2015,170,15,2,9,New Yawk Bklyn's Best,2578,Reggie Wayne,False,0
+2015,171,15,3,12,Cntrl Alt Delete,17082,Cody Parkey,False,0
+2015,172,15,4,1,The  Commish,16800,Davante Adams,False,0
+2015,173,15,5,3,Hyde Yo Kids Hyde Yo Wife,16757,Derek Carr,False,0
+2015,174,15,6,11,Baltimore Hail Marys,12601,Mike Wallace,False,0
+2015,175,15,7,8,Abdullah Oblangada ,2577253,Javorius Allen,False,0
+2015,176,15,8,5,Team Beats by Ray,-16015,Dolphins D/ST,False,0
+2015,177,15,9,2,In Your Face,-16019,Giants D/ST,False,0
+2015,178,15,10,4,Straight out of Gronkton!,2576395,Devin Smith,False,0
+2015,179,15,11,10,Team Riley,14886,Lamar Miller,False,0
+2015,180,15,12,7,3rd Down For What,2622,Steve Smith Sr.,False,0

@@ -1,0 +1,169 @@
+season,overall_pick,round,pick_in_round,espn_team_id,team_name,player_id,player_name,is_keeper,bid_amount
+2021,1,1,1,12,Curious George,3117251,Christian McCaffrey,False,0
+2021,2,1,2,1,The  Commish,3116593,Dalvin Cook,False,0
+2021,3,1,3,3,The Road To Speedo Town,3054850,Alvin Kamara,False,0
+2021,4,1,4,5,Maybe This Year,3043078,Derrick Henry,False,0
+2021,5,1,5,4,I'm Ryan  Keyser,16800,Davante Adams,False,0
+2021,6,1,6,13,What R U Doin  Step Bro?!?!,4241457,Najee Harris,False,0
+2021,7,1,7,14,AW YouMISSEDme,3116406,Tyreek Hill,False,0
+2021,8,1,8,6,Saquon CeeDee's Nutz,3929630,Saquon Barkley,False,0
+2021,9,1,9,7,Fantasy Football Team,3051392,Ezekiel Elliott,False,0
+2021,10,1,10,8,"Wu Tang Sports Ventures, Inc.",3068267,Austin Ekeler,False,0
+2021,11,1,11,2,In Your Face,15847,Travis Kelce,False,0
+2021,12,1,12,10,DENVER BREAD,3042519,Aaron Jones,False,0
+2021,13,2,1,10,DENVER BREAD,3128720,Nick Chubb,False,0
+2021,14,2,2,2,In Your Face,4242335,Jonathan Taylor,False,0
+2021,15,2,3,8,"Wu Tang Sports Ventures, Inc.",2976212,Stefon Diggs,False,0
+2021,16,2,4,7,Fantasy Football Team,15795,DeAndre Hopkins,False,0
+2021,17,2,5,6,Saquon CeeDee's Nutz,4360294,Antonio Gibson,False,0
+2021,18,2,6,14,AW YouMISSEDme,3116385,Joe Mixon,False,0
+2021,19,2,7,13,What R U Doin  Step Bro?!?!,4047646,A.J. Brown,False,0
+2021,20,2,8,4,I'm Ryan  Keyser,4047650,DK Metcalf,False,0
+2021,21,2,9,5,Maybe This Year,4242214,Clyde Edwards-Helaire,False,0
+2021,22,2,10,3,The Road To Speedo Town,3925357,Calvin Ridley,False,0
+2021,23,2,11,1,The  Commish,4262921,Justin Jefferson,False,0
+2021,24,2,12,12,Curious George,2576925,Darren Waller,False,0
+2021,25,3,1,12,Curious George,15818,Keenan Allen,False,0
+2021,26,3,2,1,The  Commish,3121422,Terry McLaurin,False,0
+2021,27,3,3,3,The Road To Speedo Town,16799,Allen Robinson II,False,0
+2021,28,3,4,5,Maybe This Year,3040151,George Kittle,False,0
+2021,29,3,5,4,I'm Ryan  Keyser,4035538,David Montgomery,False,0
+2021,30,3,6,13,What R U Doin  Step Bro?!?!,4052042,James Robinson,False,0
+2021,31,3,7,14,AW YouMISSEDme,16737,Mike Evans,False,0
+2021,32,3,8,6,Saquon CeeDee's Nutz,4241389,CeeDee Lamb,False,0
+2021,33,3,9,7,Fantasy Football Team,3919596,Chris Carson,False,0
+2021,34,3,10,8,"Wu Tang Sports Ventures, Inc.",4045163,Miles Sanders,False,0
+2021,35,3,11,2,In Your Face,15880,Robert Woods,False,0
+2021,36,3,12,10,DENVER BREAD,3932905,Diontae Johnson,False,0
+2021,37,4,1,10,DENVER BREAD,2977187,Cooper Kupp,False,0
+2021,38,4,2,2,In Your Face,4259545,D'Andre Swift,False,0
+2021,39,4,3,8,"Wu Tang Sports Ventures, Inc.",2976499,Amari Cooper,False,0
+2021,40,4,4,7,Fantasy Football Team,16460,Adam Thielen,False,0
+2021,41,4,5,6,Saquon CeeDee's Nutz,2577327,Tyler Lockett,False,0
+2021,42,4,6,14,AW YouMISSEDme,3139477,Patrick Mahomes,False,0
+2021,43,4,7,13,What R U Doin  Step Bro?!?!,4361579,Javonte Williams,False,0
+2021,44,4,8,4,I'm Ryan  Keyser,3116165,Chris Godwin,False,0
+2021,45,4,9,5,Maybe This Year,4239993,Tee Higgins,False,0
+2021,46,4,10,3,The Road To Speedo Town,3915416,DJ Moore,False,0
+2021,47,4,11,1,The  Commish,3051926,Gus Edwards,False,0
+2021,48,4,12,12,Curious George,13982,Julio Jones,False,0
+2021,49,5,1,12,Curious George,4047365,Josh Jacobs,False,0
+2021,50,5,2,1,The  Commish,3918298,Josh Allen,False,0
+2021,51,5,3,3,The Road To Speedo Town,3059915,Kareem Hunt,False,0
+2021,52,5,4,5,Maybe This Year,3886818,Myles Gaskin,False,0
+2021,53,5,5,4,I'm Ryan  Keyser,3917315,Kyler Murray,False,0
+2021,54,5,6,13,What R U Doin  Step Bro?!?!,4241463,Jerry Jeudy,False,0
+2021,55,5,7,14,AW YouMISSEDme,3116365,Mark Andrews,False,0
+2021,56,5,8,6,Saquon CeeDee's Nutz,4360438,Brandon Aiyuk,False,0
+2021,57,5,9,7,Fantasy Football Team,3916387,Lamar Jackson,False,0
+2021,58,5,10,8,"Wu Tang Sports Ventures, Inc.",3128429,Courtland Sutton,False,0
+2021,59,5,11,2,In Your Face,3120348,JuJu Smith-Schuster,False,0
+2021,60,5,12,10,DENVER BREAD,3025433,Mike Davis,False,0
+2021,61,6,1,10,DENVER BREAD,4039359,Darrell Henderson Jr.,False,0
+2021,62,6,2,2,In Your Face,8439,Aaron Rodgers,False,0
+2021,63,6,3,8,"Wu Tang Sports Ventures, Inc.",2577417,Dak Prescott,False,0
+2021,64,6,4,7,Fantasy Football Team,2974858,Kenny Golladay,False,0
+2021,65,6,5,6,Saquon CeeDee's Nutz,4036133,T.J. Hockenson,False,0
+2021,66,6,6,14,AW YouMISSEDme,2574808,Robby Anderson,False,0
+2021,67,6,7,13,What R U Doin  Step Bro?!?!,3119195,Chase Edmonds,False,0
+2021,68,6,8,4,I'm Ryan  Keyser,4360248,Kyle Pitts,False,0
+2021,69,6,9,5,Maybe This Year,14881,Russell Wilson,False,0
+2021,70,6,10,3,The Road To Speedo Town,4243160,Laviska Shenault Jr.,False,0
+2021,71,6,11,1,The  Commish,16733,Odell Beckham Jr.,False,0
+2021,72,6,12,12,Curious George,3925347,Damien Harris,False,0
+2021,73,7,1,12,Curious George,4046692,Chase Claypool,False,0
+2021,74,7,2,1,The  Commish,16731,Brandin Cooks,False,0
+2021,75,7,3,3,The Road To Speedo Town,16813,Logan Thomas,False,0
+2021,76,7,4,5,Maybe This Year,4241478,DeVonta Smith,False,0
+2021,77,7,5,4,I'm Ryan  Keyser,4362628,Ja'Marr Chase,False,0
+2021,78,7,6,13,What R U Doin  Step Bro?!?!,4036131,Noah Fant,False,0
+2021,79,7,7,14,AW YouMISSEDme,3045144,Tyler Boyd,False,0
+2021,80,7,8,6,Saquon CeeDee's Nutz,4038941,Justin Herbert,False,0
+2021,81,7,9,7,Fantasy Football Team,2576414,Raheem Mostert,False,0
+2021,82,7,10,8,"Wu Tang Sports Ventures, Inc.",2976316,Michael Thomas,False,0
+2021,83,7,11,2,In Your Face,4241372,Marquise Brown,False,0
+2021,84,7,12,10,DENVER BREAD,14876,Ryan Tannehill,False,0
+2021,85,8,1,10,DENVER BREAD,3121023,Dallas Goedert,False,0
+2021,86,8,2,2,In Your Face,3042778,Corey Davis,False,0
+2021,87,8,3,8,"Wu Tang Sports Ventures, Inc.",13934,Antonio Brown,False,0
+2021,88,8,4,7,Fantasy Football Team,3052876,William Fuller V,False,0
+2021,89,8,5,6,Saquon CeeDee's Nutz,3128721,Sony Michel,False,0
+2021,90,8,6,14,AW YouMISSEDme,2979843,Kenyan Drake,False,0
+2021,91,8,7,13,What R U Doin  Step Bro?!?!,12483,Matthew Stafford,False,0
+2021,92,8,8,4,I'm Ryan  Keyser,3115364,Leonard Fournette,False,0
+2021,93,8,9,5,Maybe This Year,4241475,Henry Ruggs III,False,0
+2021,94,8,10,3,The Road To Speedo Town,2330,Tom Brady,False,0
+2021,95,8,11,1,The  Commish,2576434,Melvin Gordon III,False,0
+2021,96,8,12,12,Curious George,4040715,Jalen Hurts,False,0
+2021,97,9,1,12,Curious George,3126486,Deebo Samuel,False,0
+2021,98,9,2,1,The  Commish,3045147,James Conner,False,0
+2021,99,9,3,3,The Road To Speedo Town,3915511,Joe Burrow,False,0
+2021,100,9,4,5,Maybe This Year,4372016,Jaylen Waddle,False,0
+2021,101,9,5,4,I'm Ryan  Keyser,3912550,Ronald Jones II,False,0
+2021,102,9,6,13,What R U Doin  Step Bro?!?!,4035687,Michael Pittman Jr.,False,0
+2021,103,9,7,14,AW YouMISSEDme,15349,Cole Beasley,False,0
+2021,104,9,8,6,Saquon CeeDee's Nutz,3115394,DJ Chark Jr.,False,0
+2021,105,9,9,7,Fantasy Football Team,4040761,Devin Singletary,False,0
+2021,106,9,10,8,"Wu Tang Sports Ventures, Inc.",4239934,AJ Dillon,False,0
+2021,107,9,11,2,In Your Face,4035676,Zack Moss,False,0
+2021,108,9,12,10,DENVER BREAD,3121427,Curtis Samuel,False,0
+2021,109,10,1,10,DENVER BREAD,2508176,David Johnson,False,0
+2021,110,10,2,2,In Your Face,15072,Marvin Jones Jr.,False,0
+2021,111,10,3,8,"Wu Tang Sports Ventures, Inc.",3054212,Jonnu Smith,False,0
+2021,112,10,4,7,Fantasy Football Team,4035170,Marquez Callaway,False,0
+2021,113,10,5,6,Saquon CeeDee's Nutz,3045138,Mike Williams,False,0
+2021,114,10,6,14,AW YouMISSEDme,2980453,Jamaal Williams,False,0
+2021,115,10,7,13,What R U Doin  Step Bro?!?!,3916433,Jakobi Meyers,False,0
+2021,116,10,8,4,I'm Ryan  Keyser,16790,Jarvis Landry,False,0
+2021,117,10,9,5,Maybe This Year,4040655,Darnell Mooney,False,0
+2021,118,10,10,3,The Road To Speedo Town,4036348,Michael Gallup,False,0
+2021,119,10,11,1,The  Commish,2576623,DeVante Parker,False,0
+2021,120,10,12,12,Curious George,4241401,Trey Sermon,False,0
+2021,121,11,1,12,Curious George,4241802,Jalen Reagor,False,0
+2021,122,11,2,1,The  Commish,2573401,Tyler Higbee,False,0
+2021,123,11,3,3,The Road To Speedo Town,3916430,Nyheim Hines,False,0
+2021,124,11,4,5,Maybe This Year,4240657,Michael Carter,False,0
+2021,125,11,5,4,I'm Ryan  Keyser,2975674,Robert Tonyan,False,0
+2021,126,11,6,13,What R U Doin  Step Bro?!?!,4038818,Bryan Edwards,False,0
+2021,127,11,7,14,AW YouMISSEDme,13229,Rob Gronkowski,False,0
+2021,128,11,8,6,Saquon CeeDee's Nutz,16913,James White,False,0
+2021,129,11,9,7,Fantasy Football Team,-16027,Buccaneers D/ST,False,0
+2021,130,11,10,8,"Wu Tang Sports Ventures, Inc.",4035004,Mecole Hardman,False,0
+2021,131,11,11,2,In Your Face,2971618,Nelson Agholor,False,0
+2021,132,11,12,10,DENVER BREAD,-16033,Ravens D/ST,False,0
+2021,133,12,1,10,DENVER BREAD,4243537,Gabriel Davis,False,0
+2021,134,12,2,2,In Your Face,-16023,Steelers D/ST,False,0
+2021,135,12,3,8,"Wu Tang Sports Ventures, Inc.",-16025,49ers D/ST,False,0
+2021,136,12,4,7,Fantasy Football Team,3116164,Mike Gesicki,False,0
+2021,137,12,5,6,Saquon CeeDee's Nutz,3916148,Tony Pollard,False,0
+2021,138,12,6,14,AW YouMISSEDme,3052587,Baker Mayfield,False,0
+2021,139,12,7,13,What R U Doin  Step Bro?!?!,4362887,Justin Fields,False,0
+2021,140,12,8,4,I'm Ryan  Keyser,-16028,Commanders D/ST,False,0
+2021,141,12,9,5,Maybe This Year,4258595,Cole Kmet,False,0
+2021,142,12,10,3,The Road To Speedo Town,4048244,Alexander Mattison,False,0
+2021,143,12,11,1,The  Commish,-16014,Rams D/ST,False,0
+2021,144,12,12,12,Curious George,11237,Matt Ryan,False,0
+2021,145,13,1,12,Curious George,4372414,Elijah Moore,False,0
+2021,146,13,2,1,The  Commish,3043275,Austin Hooper,False,0
+2021,147,13,3,3,The Road To Speedo Town,3895827,Ty'Son Williams,False,0
+2021,148,13,4,5,Maybe This Year,4372485,Rondale Moore,False,0
+2021,149,13,5,4,I'm Ryan  Keyser,4360310,Trevor Lawrence,False,0
+2021,150,13,6,13,What R U Doin  Step Bro?!?!,-16007,Broncos D/ST,False,0
+2021,151,13,7,14,AW YouMISSEDme,2976592,Sterling Shepard,False,0
+2021,152,13,8,6,Saquon CeeDee's Nutz,-16002,Bills D/ST,False,0
+2021,153,13,9,7,Fantasy Football Team,3115378,Russell Gage,False,0
+2021,154,13,10,8,"Wu Tang Sports Ventures, Inc.",4241416,Chuba Hubbard,False,0
+2021,155,13,11,2,In Your Face,4383351,Trey Lance,False,0
+2021,156,13,12,10,DENVER BREAD,4569173,Rhamondre Stevenson,False,0
+2021,157,14,1,10,DENVER BREAD,3052117,Phillip Lindsay,False,0
+2021,158,14,2,2,In Your Face,14053,Randall Cobb,False,0
+2021,159,14,3,8,"Wu Tang Sports Ventures, Inc.",3046439,Hunter Henry,False,0
+2021,160,14,4,7,Fantasy Football Team,2979477,Tevin Coleman,False,0
+2021,161,14,5,6,Saquon CeeDee's Nutz,4241479,Tua Tagovailoa,False,0
+2021,162,14,6,14,AW YouMISSEDme,-16005,Browns D/ST,False,0
+2021,163,14,7,13,What R U Doin  Step Bro?!?!,3918639,Gerald Everett,False,0
+2021,164,14,8,4,I'm Ryan  Keyser,2572861,J.D. McKissic,False,0
+2021,165,14,9,5,Maybe This Year,-16011,Colts D/ST,False,0
+2021,166,14,10,3,The Road To Speedo Town,-16017,Patriots D/ST,False,0
+2021,167,14,11,1,The  Commish,4360939,Rashod Bateman,False,0
+2021,168,14,12,12,Curious George,-16009,Packers D/ST,False,0

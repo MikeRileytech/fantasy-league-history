@@ -1,0 +1,193 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2016,1,False,1,The  Commish,7,Wilson!!!!!!!   Wilson!!!!!!,79.2,62.52,W
+2016,2,False,1,The  Commish,13,Fat Eddie Lacy,94.76,107.1,L
+2016,3,False,1,The  Commish,4,CJ 2k16,79.48,110.88,L
+2016,4,False,1,The  Commish,8,Make Fantasy Great Again,104.9,79.78,W
+2016,5,False,1,The  Commish,5,From Worst to Worst,134.4,68.66,W
+2016,6,False,1,The  Commish,3,Delegate Odell Watkins,69.46,89.14,L
+2016,7,False,1,The  Commish,12,Cntrl Alt Delete,75.26,101.42,L
+2016,8,False,1,The  Commish,6,Team Flatcheese,93.02,109.1,L
+2016,9,False,1,The  Commish,9,New Yawk Bklyn's Best,86.42,83.18,W
+2016,10,False,1,The  Commish,10,Team Riley,118.22,77.58,W
+2016,11,False,1,The  Commish,2,In Your Face,83.38,78.58,W
+2016,12,False,1,The  Commish,7,Wilson!!!!!!!   Wilson!!!!!!,89.74,72.74,W
+2016,13,False,1,The  Commish,13,Fat Eddie Lacy,118.56,97.1,W
+2016,14,True,1,The  Commish,1,The  Commish,104.5,104.5,U
+2016,15,True,1,The  Commish,5,From Worst to Worst,88.48,60.88,W
+2016,16,True,1,The  Commish,7,Wilson!!!!!!!   Wilson!!!!!!,122.78,88.78,W
+2016,1,False,2,In Your Face,6,Team Flatcheese,91.36,101.22,L
+2016,2,False,2,In Your Face,9,New Yawk Bklyn's Best,81.32,84.9,L
+2016,3,False,2,In Your Face,10,Team Riley,96.28,69.36,W
+2016,4,False,2,In Your Face,12,Cntrl Alt Delete,90.9,102.36,L
+2016,5,False,2,In Your Face,7,Wilson!!!!!!!   Wilson!!!!!!,97.56,84.2,W
+2016,6,False,2,In Your Face,13,Fat Eddie Lacy,137.58,90.98,W
+2016,7,False,2,In Your Face,4,CJ 2k16,62.84,106.88,L
+2016,8,False,2,In Your Face,8,Make Fantasy Great Again,65.98,111.38,L
+2016,9,False,2,In Your Face,5,From Worst to Worst,90.4,96.78,L
+2016,10,False,2,In Your Face,3,Delegate Odell Watkins,106.64,73.44,W
+2016,11,False,2,In Your Face,1,The  Commish,78.58,83.38,L
+2016,12,False,2,In Your Face,6,Team Flatcheese,97.24,90.8,W
+2016,13,False,2,In Your Face,9,New Yawk Bklyn's Best,112.78,118.16,L
+2016,14,True,2,In Your Face,9,New Yawk Bklyn's Best,80.7,55.82,W
+2016,15,True,2,In Your Face,10,Team Riley,122.6,55.92,W
+2016,16,True,2,In Your Face,3,Delegate Odell Watkins,95.32,104.16,L
+2016,1,False,3,Delegate Odell Watkins,13,Fat Eddie Lacy,93.94,80.92,W
+2016,2,False,3,Delegate Odell Watkins,4,CJ 2k16,82.28,102.36,L
+2016,3,False,3,Delegate Odell Watkins,8,Make Fantasy Great Again,81.16,84.8,L
+2016,4,False,3,Delegate Odell Watkins,5,From Worst to Worst,102.12,87.84,W
+2016,5,False,3,Delegate Odell Watkins,12,Cntrl Alt Delete,113.44,83.88,W
+2016,6,False,3,Delegate Odell Watkins,1,The  Commish,89.14,69.46,W
+2016,7,False,3,Delegate Odell Watkins,6,Team Flatcheese,85.38,93.08,L
+2016,8,False,3,Delegate Odell Watkins,9,New Yawk Bklyn's Best,78.3,81.8,L
+2016,9,False,3,Delegate Odell Watkins,10,Team Riley,120.44,102.56,W
+2016,10,False,3,Delegate Odell Watkins,2,In Your Face,73.44,106.64,L
+2016,11,False,3,Delegate Odell Watkins,7,Wilson!!!!!!!   Wilson!!!!!!,83.8,102.58,L
+2016,12,False,3,Delegate Odell Watkins,13,Fat Eddie Lacy,114.34,77.54,W
+2016,13,False,3,Delegate Odell Watkins,4,CJ 2k16,55.86,116.84,L
+2016,14,True,3,Delegate Odell Watkins,10,Team Riley,46.56,57.38,L
+2016,15,True,3,Delegate Odell Watkins,13,Fat Eddie Lacy,79.82,70.94,W
+2016,16,True,3,Delegate Odell Watkins,2,In Your Face,104.16,95.32,W
+2016,1,False,4,CJ 2k16,5,From Worst to Worst,110.04,158.76,L
+2016,2,False,4,CJ 2k16,3,Delegate Odell Watkins,102.36,82.28,W
+2016,3,False,4,CJ 2k16,1,The  Commish,110.88,79.48,W
+2016,4,False,4,CJ 2k16,6,Team Flatcheese,105.82,80.08,W
+2016,5,False,4,CJ 2k16,9,New Yawk Bklyn's Best,122.22,91.46,W
+2016,6,False,4,CJ 2k16,10,Team Riley,95.52,53.5,W
+2016,7,False,4,CJ 2k16,2,In Your Face,106.88,62.84,W
+2016,8,False,4,CJ 2k16,7,Wilson!!!!!!!   Wilson!!!!!!,99.2,81.52,W
+2016,9,False,4,CJ 2k16,13,Fat Eddie Lacy,104.02,127.4,L
+2016,10,False,4,CJ 2k16,12,Cntrl Alt Delete,111.3,92.94,W
+2016,11,False,4,CJ 2k16,8,Make Fantasy Great Again,135.3,87.58,W
+2016,12,False,4,CJ 2k16,5,From Worst to Worst,102.44,120.72,L
+2016,13,False,4,CJ 2k16,3,Delegate Odell Watkins,116.84,55.86,W
+2016,14,True,4,CJ 2k16,4,CJ 2k16,98.16,98.16,U
+2016,15,True,4,CJ 2k16,7,Wilson!!!!!!!   Wilson!!!!!!,85.0,102.14,L
+2016,16,True,4,CJ 2k16,5,From Worst to Worst,86.34,92.38,L
+2016,1,False,5,From Worst to Worst,4,CJ 2k16,158.76,110.04,W
+2016,2,False,5,From Worst to Worst,8,Make Fantasy Great Again,80.32,87.62,L
+2016,3,False,5,From Worst to Worst,12,Cntrl Alt Delete,78.7,86.84,L
+2016,4,False,5,From Worst to Worst,3,Delegate Odell Watkins,87.84,102.12,L
+2016,5,False,5,From Worst to Worst,1,The  Commish,68.66,134.4,L
+2016,6,False,5,From Worst to Worst,6,Team Flatcheese,74.06,109.7,L
+2016,7,False,5,From Worst to Worst,9,New Yawk Bklyn's Best,111.54,69.24,W
+2016,8,False,5,From Worst to Worst,10,Team Riley,108.64,112.42,L
+2016,9,False,5,From Worst to Worst,2,In Your Face,96.78,90.4,W
+2016,10,False,5,From Worst to Worst,7,Wilson!!!!!!!   Wilson!!!!!!,111.14,111.78,L
+2016,11,False,5,From Worst to Worst,13,Fat Eddie Lacy,99.64,66.14,W
+2016,12,False,5,From Worst to Worst,4,CJ 2k16,120.72,102.44,W
+2016,13,False,5,From Worst to Worst,8,Make Fantasy Great Again,75.86,66.0,W
+2016,14,True,5,From Worst to Worst,12,Cntrl Alt Delete,87.04,70.34,W
+2016,15,True,5,From Worst to Worst,1,The  Commish,60.88,88.48,L
+2016,16,True,5,From Worst to Worst,4,CJ 2k16,92.38,86.34,W
+2016,1,False,6,Team Flatcheese,2,In Your Face,101.22,91.36,W
+2016,2,False,6,Team Flatcheese,7,Wilson!!!!!!!   Wilson!!!!!!,53.42,76.86,L
+2016,3,False,6,Team Flatcheese,13,Fat Eddie Lacy,109.94,67.44,W
+2016,4,False,6,Team Flatcheese,4,CJ 2k16,80.08,105.82,L
+2016,5,False,6,Team Flatcheese,8,Make Fantasy Great Again,65.52,79.16,L
+2016,6,False,6,Team Flatcheese,5,From Worst to Worst,109.7,74.06,W
+2016,7,False,6,Team Flatcheese,3,Delegate Odell Watkins,93.08,85.38,W
+2016,8,False,6,Team Flatcheese,1,The  Commish,109.1,93.02,W
+2016,9,False,6,Team Flatcheese,12,Cntrl Alt Delete,93.02,65.54,W
+2016,10,False,6,Team Flatcheese,9,New Yawk Bklyn's Best,101.32,70.06,W
+2016,11,False,6,Team Flatcheese,10,Team Riley,81.8,90.1,L
+2016,12,False,6,Team Flatcheese,2,In Your Face,90.8,97.24,L
+2016,13,False,6,Team Flatcheese,7,Wilson!!!!!!!   Wilson!!!!!!,44.14,70.18,L
+2016,14,True,6,Team Flatcheese,7,Wilson!!!!!!!   Wilson!!!!!!,65.38,72.6,L
+2016,15,True,6,Team Flatcheese,12,Cntrl Alt Delete,99.56,97.2,W
+2016,16,True,6,Team Flatcheese,12,Cntrl Alt Delete,73.56,73.32,W
+2016,1,False,7,Wilson!!!!!!!   Wilson!!!!!!,1,The  Commish,62.52,79.2,L
+2016,2,False,7,Wilson!!!!!!!   Wilson!!!!!!,6,Team Flatcheese,76.86,53.42,W
+2016,3,False,7,Wilson!!!!!!!   Wilson!!!!!!,9,New Yawk Bklyn's Best,114.8,143.5,L
+2016,4,False,7,Wilson!!!!!!!   Wilson!!!!!!,10,Team Riley,93.62,50.36,W
+2016,5,False,7,Wilson!!!!!!!   Wilson!!!!!!,2,In Your Face,84.2,97.56,L
+2016,6,False,7,Wilson!!!!!!!   Wilson!!!!!!,12,Cntrl Alt Delete,97.8,78.68,W
+2016,7,False,7,Wilson!!!!!!!   Wilson!!!!!!,13,Fat Eddie Lacy,66.42,84.64,L
+2016,8,False,7,Wilson!!!!!!!   Wilson!!!!!!,4,CJ 2k16,81.52,99.2,L
+2016,9,False,7,Wilson!!!!!!!   Wilson!!!!!!,8,Make Fantasy Great Again,90.86,77.28,W
+2016,10,False,7,Wilson!!!!!!!   Wilson!!!!!!,5,From Worst to Worst,111.78,111.14,W
+2016,11,False,7,Wilson!!!!!!!   Wilson!!!!!!,3,Delegate Odell Watkins,102.58,83.8,W
+2016,12,False,7,Wilson!!!!!!!   Wilson!!!!!!,1,The  Commish,72.74,89.74,L
+2016,13,False,7,Wilson!!!!!!!   Wilson!!!!!!,6,Team Flatcheese,70.18,44.14,W
+2016,14,True,7,Wilson!!!!!!!   Wilson!!!!!!,6,Team Flatcheese,72.6,65.38,W
+2016,15,True,7,Wilson!!!!!!!   Wilson!!!!!!,4,CJ 2k16,102.14,85.0,W
+2016,16,True,7,Wilson!!!!!!!   Wilson!!!!!!,1,The  Commish,88.78,122.78,L
+2016,1,False,8,Make Fantasy Great Again,12,Cntrl Alt Delete,94.98,135.3,L
+2016,2,False,8,Make Fantasy Great Again,5,From Worst to Worst,87.62,80.32,W
+2016,3,False,8,Make Fantasy Great Again,3,Delegate Odell Watkins,84.8,81.16,W
+2016,4,False,8,Make Fantasy Great Again,1,The  Commish,79.78,104.9,L
+2016,5,False,8,Make Fantasy Great Again,6,Team Flatcheese,79.16,65.52,W
+2016,6,False,8,Make Fantasy Great Again,9,New Yawk Bklyn's Best,72.44,88.7,L
+2016,7,False,8,Make Fantasy Great Again,10,Team Riley,98.24,115.4,L
+2016,8,False,8,Make Fantasy Great Again,2,In Your Face,111.38,65.98,W
+2016,9,False,8,Make Fantasy Great Again,7,Wilson!!!!!!!   Wilson!!!!!!,77.28,90.86,L
+2016,10,False,8,Make Fantasy Great Again,13,Fat Eddie Lacy,79.84,91.34,L
+2016,11,False,8,Make Fantasy Great Again,4,CJ 2k16,87.58,135.3,L
+2016,12,False,8,Make Fantasy Great Again,12,Cntrl Alt Delete,54.26,98.76,L
+2016,13,False,8,Make Fantasy Great Again,5,From Worst to Worst,66.0,75.86,L
+2016,14,True,8,Make Fantasy Great Again,13,Fat Eddie Lacy,70.0,92.74,L
+2016,15,True,8,Make Fantasy Great Again,9,New Yawk Bklyn's Best,66.22,119.66,L
+2016,16,True,8,Make Fantasy Great Again,13,Fat Eddie Lacy,81.06,76.38,W
+2016,1,False,9,New Yawk Bklyn's Best,10,Team Riley,68.1,121.16,L
+2016,2,False,9,New Yawk Bklyn's Best,2,In Your Face,84.9,81.32,W
+2016,3,False,9,New Yawk Bklyn's Best,7,Wilson!!!!!!!   Wilson!!!!!!,143.5,114.8,W
+2016,4,False,9,New Yawk Bklyn's Best,13,Fat Eddie Lacy,66.72,96.74,L
+2016,5,False,9,New Yawk Bklyn's Best,4,CJ 2k16,91.46,122.22,L
+2016,6,False,9,New Yawk Bklyn's Best,8,Make Fantasy Great Again,88.7,72.44,W
+2016,7,False,9,New Yawk Bklyn's Best,5,From Worst to Worst,69.24,111.54,L
+2016,8,False,9,New Yawk Bklyn's Best,3,Delegate Odell Watkins,81.8,78.3,W
+2016,9,False,9,New Yawk Bklyn's Best,1,The  Commish,83.18,86.42,L
+2016,10,False,9,New Yawk Bklyn's Best,6,Team Flatcheese,70.06,101.32,L
+2016,11,False,9,New Yawk Bklyn's Best,12,Cntrl Alt Delete,69.42,79.88,L
+2016,12,False,9,New Yawk Bklyn's Best,10,Team Riley,98.5,94.9,W
+2016,13,False,9,New Yawk Bklyn's Best,2,In Your Face,118.16,112.78,W
+2016,14,True,9,New Yawk Bklyn's Best,2,In Your Face,55.82,80.7,L
+2016,15,True,9,New Yawk Bklyn's Best,8,Make Fantasy Great Again,119.66,66.22,W
+2016,16,True,9,New Yawk Bklyn's Best,10,Team Riley,89.98,132.18,L
+2016,1,False,10,Team Riley,9,New Yawk Bklyn's Best,121.16,68.1,W
+2016,2,False,10,Team Riley,12,Cntrl Alt Delete,113.66,91.58,W
+2016,3,False,10,Team Riley,2,In Your Face,69.36,96.28,L
+2016,4,False,10,Team Riley,7,Wilson!!!!!!!   Wilson!!!!!!,50.36,93.62,L
+2016,5,False,10,Team Riley,13,Fat Eddie Lacy,92.88,90.26,W
+2016,6,False,10,Team Riley,4,CJ 2k16,53.5,95.52,L
+2016,7,False,10,Team Riley,8,Make Fantasy Great Again,115.4,98.24,W
+2016,8,False,10,Team Riley,5,From Worst to Worst,112.42,108.64,W
+2016,9,False,10,Team Riley,3,Delegate Odell Watkins,102.56,120.44,L
+2016,10,False,10,Team Riley,1,The  Commish,77.58,118.22,L
+2016,11,False,10,Team Riley,6,Team Flatcheese,90.1,81.8,W
+2016,12,False,10,Team Riley,9,New Yawk Bklyn's Best,94.9,98.5,L
+2016,13,False,10,Team Riley,12,Cntrl Alt Delete,111.4,112.42,L
+2016,14,True,10,Team Riley,3,Delegate Odell Watkins,57.38,46.56,W
+2016,15,True,10,Team Riley,2,In Your Face,55.92,122.6,L
+2016,16,True,10,Team Riley,9,New Yawk Bklyn's Best,132.18,89.98,W
+2016,1,False,12,Cntrl Alt Delete,8,Make Fantasy Great Again,135.3,94.98,W
+2016,2,False,12,Cntrl Alt Delete,10,Team Riley,91.58,113.66,L
+2016,3,False,12,Cntrl Alt Delete,5,From Worst to Worst,86.84,78.7,W
+2016,4,False,12,Cntrl Alt Delete,2,In Your Face,102.36,90.9,W
+2016,5,False,12,Cntrl Alt Delete,3,Delegate Odell Watkins,83.88,113.44,L
+2016,6,False,12,Cntrl Alt Delete,7,Wilson!!!!!!!   Wilson!!!!!!,78.68,97.8,L
+2016,7,False,12,Cntrl Alt Delete,1,The  Commish,101.42,75.26,W
+2016,8,False,12,Cntrl Alt Delete,13,Fat Eddie Lacy,76.0,62.88,W
+2016,9,False,12,Cntrl Alt Delete,6,Team Flatcheese,65.54,93.02,L
+2016,10,False,12,Cntrl Alt Delete,4,CJ 2k16,92.94,111.3,L
+2016,11,False,12,Cntrl Alt Delete,9,New Yawk Bklyn's Best,79.88,69.42,W
+2016,12,False,12,Cntrl Alt Delete,8,Make Fantasy Great Again,98.76,54.26,W
+2016,13,False,12,Cntrl Alt Delete,10,Team Riley,112.42,111.4,W
+2016,14,True,12,Cntrl Alt Delete,5,From Worst to Worst,70.34,87.04,L
+2016,15,True,12,Cntrl Alt Delete,6,Team Flatcheese,97.2,99.56,L
+2016,16,True,12,Cntrl Alt Delete,6,Team Flatcheese,73.32,73.56,L
+2016,1,False,13,Fat Eddie Lacy,3,Delegate Odell Watkins,80.92,93.94,L
+2016,2,False,13,Fat Eddie Lacy,1,The  Commish,107.1,94.76,W
+2016,3,False,13,Fat Eddie Lacy,6,Team Flatcheese,67.44,109.94,L
+2016,4,False,13,Fat Eddie Lacy,9,New Yawk Bklyn's Best,96.74,66.72,W
+2016,5,False,13,Fat Eddie Lacy,10,Team Riley,90.26,92.88,L
+2016,6,False,13,Fat Eddie Lacy,2,In Your Face,90.98,137.58,L
+2016,7,False,13,Fat Eddie Lacy,7,Wilson!!!!!!!   Wilson!!!!!!,84.64,66.42,W
+2016,8,False,13,Fat Eddie Lacy,12,Cntrl Alt Delete,62.88,76.0,L
+2016,9,False,13,Fat Eddie Lacy,4,CJ 2k16,127.4,104.02,W
+2016,10,False,13,Fat Eddie Lacy,8,Make Fantasy Great Again,91.34,79.84,W
+2016,11,False,13,Fat Eddie Lacy,5,From Worst to Worst,66.14,99.64,L
+2016,12,False,13,Fat Eddie Lacy,3,Delegate Odell Watkins,77.54,114.34,L
+2016,13,False,13,Fat Eddie Lacy,1,The  Commish,97.1,118.56,L
+2016,14,True,13,Fat Eddie Lacy,8,Make Fantasy Great Again,92.74,70.0,W
+2016,15,True,13,Fat Eddie Lacy,3,Delegate Odell Watkins,70.94,79.82,L
+2016,16,True,13,Fat Eddie Lacy,8,Make Fantasy Great Again,76.38,81.06,L

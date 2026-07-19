@@ -1,0 +1,193 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2018,1,False,1,The  Commish,7,My Little  Cooper Kupp,102.06,161.06,L
+2018,2,False,1,The  Commish,13,99 Problems but L. Fitz ain't 1,98.18,102.36,L
+2018,3,False,1,The  Commish,4,Dalvin and the  Chipmunks,159.64,129.4,W
+2018,4,False,1,The  Commish,8,Curious George,122.58,127.56,L
+2018,5,False,1,The  Commish,5,From Worst to Worst,113.92,89.02,W
+2018,6,False,1,The  Commish,3,Say Cheeeez For The Kamara,147.6,100.4,W
+2018,7,False,1,The  Commish,12,Cntrl Alt Delete,131.2,72.94,W
+2018,8,False,1,The  Commish,6,Team Flatcheese,148.54,92.46,W
+2018,9,False,1,The  Commish,9,LOCKETT LIKE I  TALK IT,106.14,154.8,L
+2018,10,False,1,The  Commish,10,bread BREAD,125.9,126.2,L
+2018,11,False,1,The  Commish,2,In Your Face,180.22,153.28,W
+2018,12,False,1,The  Commish,7,My Little  Cooper Kupp,114.44,97.76,W
+2018,13,False,1,The  Commish,13,99 Problems but L. Fitz ain't 1,136.28,110.58,W
+2018,14,True,1,The  Commish,9,LOCKETT LIKE I  TALK IT,98.44,121.38,L
+2018,15,True,1,The  Commish,2,In Your Face,95.02,86.86,W
+2018,16,True,1,The  Commish,2,In Your Face,100.54,124.28,L
+2018,1,False,2,In Your Face,6,Team Flatcheese,169.94,122.54,W
+2018,2,False,2,In Your Face,9,LOCKETT LIKE I  TALK IT,101.14,98.96,W
+2018,3,False,2,In Your Face,10,bread BREAD,120.9,128.06,L
+2018,4,False,2,In Your Face,12,Cntrl Alt Delete,97.32,144.48,L
+2018,5,False,2,In Your Face,7,My Little  Cooper Kupp,118.18,113.46,W
+2018,6,False,2,In Your Face,13,99 Problems but L. Fitz ain't 1,174.3,131.94,W
+2018,7,False,2,In Your Face,4,Dalvin and the  Chipmunks,142.44,111.0,W
+2018,8,False,2,In Your Face,8,Curious George,107.36,163.82,L
+2018,9,False,2,In Your Face,5,From Worst to Worst,85.86,133.72,L
+2018,10,False,2,In Your Face,3,Say Cheeeez For The Kamara,147.86,99.26,W
+2018,11,False,2,In Your Face,1,The  Commish,153.28,180.22,L
+2018,12,False,2,In Your Face,6,Team Flatcheese,130.82,115.74,W
+2018,13,False,2,In Your Face,9,LOCKETT LIKE I  TALK IT,135.16,132.92,W
+2018,14,True,2,In Your Face,13,99 Problems but L. Fitz ain't 1,122.64,147.2,L
+2018,15,True,2,In Your Face,1,The  Commish,86.86,95.02,L
+2018,16,True,2,In Your Face,1,The  Commish,124.28,100.54,W
+2018,1,False,3,Say Cheeeez For The Kamara,13,99 Problems but L. Fitz ain't 1,148.38,117.12,W
+2018,2,False,3,Say Cheeeez For The Kamara,4,Dalvin and the  Chipmunks,151.56,147.5,W
+2018,3,False,3,Say Cheeeez For The Kamara,8,Curious George,97.82,163.16,L
+2018,4,False,3,Say Cheeeez For The Kamara,5,From Worst to Worst,128.86,128.78,W
+2018,5,False,3,Say Cheeeez For The Kamara,12,Cntrl Alt Delete,126.94,136.62,L
+2018,6,False,3,Say Cheeeez For The Kamara,1,The  Commish,100.4,147.6,L
+2018,7,False,3,Say Cheeeez For The Kamara,6,Team Flatcheese,125.38,95.26,W
+2018,8,False,3,Say Cheeeez For The Kamara,9,LOCKETT LIKE I  TALK IT,118.16,135.46,L
+2018,9,False,3,Say Cheeeez For The Kamara,10,bread BREAD,113.66,105.5,W
+2018,10,False,3,Say Cheeeez For The Kamara,2,In Your Face,99.26,147.86,L
+2018,11,False,3,Say Cheeeez For The Kamara,7,My Little  Cooper Kupp,115.7,113.64,W
+2018,12,False,3,Say Cheeeez For The Kamara,13,99 Problems but L. Fitz ain't 1,109.92,123.18,L
+2018,13,False,3,Say Cheeeez For The Kamara,4,Dalvin and the  Chipmunks,103.3,115.96,L
+2018,14,True,3,Say Cheeeez For The Kamara,7,My Little  Cooper Kupp,86.82,78.5,W
+2018,15,True,3,Say Cheeeez For The Kamara,10,bread BREAD,114.36,90.44,W
+2018,16,True,3,Say Cheeeez For The Kamara,4,Dalvin and the  Chipmunks,107.04,136.76,L
+2018,1,False,4,Dalvin and the  Chipmunks,5,From Worst to Worst,115.84,99.64,W
+2018,2,False,4,Dalvin and the  Chipmunks,3,Say Cheeeez For The Kamara,147.5,151.56,L
+2018,3,False,4,Dalvin and the  Chipmunks,1,The  Commish,129.4,159.64,L
+2018,4,False,4,Dalvin and the  Chipmunks,6,Team Flatcheese,156.3,94.82,W
+2018,5,False,4,Dalvin and the  Chipmunks,9,LOCKETT LIKE I  TALK IT,100.8,153.2,L
+2018,6,False,4,Dalvin and the  Chipmunks,10,bread BREAD,87.28,133.7,L
+2018,7,False,4,Dalvin and the  Chipmunks,2,In Your Face,111.0,142.44,L
+2018,8,False,4,Dalvin and the  Chipmunks,7,My Little  Cooper Kupp,133.66,118.0,W
+2018,9,False,4,Dalvin and the  Chipmunks,13,99 Problems but L. Fitz ain't 1,97.12,148.22,L
+2018,10,False,4,Dalvin and the  Chipmunks,12,Cntrl Alt Delete,70.8,165.52,L
+2018,11,False,4,Dalvin and the  Chipmunks,8,Curious George,98.52,149.82,L
+2018,12,False,4,Dalvin and the  Chipmunks,5,From Worst to Worst,122.6,160.0,L
+2018,13,False,4,Dalvin and the  Chipmunks,3,Say Cheeeez For The Kamara,115.96,103.3,W
+2018,14,True,4,Dalvin and the  Chipmunks,5,From Worst to Worst,124.88,118.62,W
+2018,15,True,4,Dalvin and the  Chipmunks,7,My Little  Cooper Kupp,132.96,98.42,W
+2018,16,True,4,Dalvin and the  Chipmunks,3,Say Cheeeez For The Kamara,136.76,107.04,W
+2018,1,False,5,From Worst to Worst,4,Dalvin and the  Chipmunks,99.64,115.84,L
+2018,2,False,5,From Worst to Worst,8,Curious George,126.78,166.54,L
+2018,3,False,5,From Worst to Worst,12,Cntrl Alt Delete,96.98,114.74,L
+2018,4,False,5,From Worst to Worst,3,Say Cheeeez For The Kamara,128.78,128.86,L
+2018,5,False,5,From Worst to Worst,1,The  Commish,89.02,113.92,L
+2018,6,False,5,From Worst to Worst,6,Team Flatcheese,99.92,103.0,L
+2018,7,False,5,From Worst to Worst,9,LOCKETT LIKE I  TALK IT,120.76,170.44,L
+2018,8,False,5,From Worst to Worst,10,bread BREAD,122.0,101.34,W
+2018,9,False,5,From Worst to Worst,2,In Your Face,133.72,85.86,W
+2018,10,False,5,From Worst to Worst,7,My Little  Cooper Kupp,156.74,131.32,W
+2018,11,False,5,From Worst to Worst,13,99 Problems but L. Fitz ain't 1,83.38,137.32,L
+2018,12,False,5,From Worst to Worst,4,Dalvin and the  Chipmunks,160.0,122.6,W
+2018,13,False,5,From Worst to Worst,8,Curious George,112.38,133.06,L
+2018,14,True,5,From Worst to Worst,4,Dalvin and the  Chipmunks,118.62,124.88,L
+2018,15,True,5,From Worst to Worst,6,Team Flatcheese,86.62,77.04,W
+2018,16,True,5,From Worst to Worst,10,bread BREAD,133.76,100.86,W
+2018,1,False,6,Team Flatcheese,2,In Your Face,122.54,169.94,L
+2018,2,False,6,Team Flatcheese,7,My Little  Cooper Kupp,104.3,120.24,L
+2018,3,False,6,Team Flatcheese,13,99 Problems but L. Fitz ain't 1,130.8,107.36,W
+2018,4,False,6,Team Flatcheese,4,Dalvin and the  Chipmunks,94.82,156.3,L
+2018,5,False,6,Team Flatcheese,8,Curious George,144.56,137.02,W
+2018,6,False,6,Team Flatcheese,5,From Worst to Worst,103.0,99.92,W
+2018,7,False,6,Team Flatcheese,3,Say Cheeeez For The Kamara,95.26,125.38,L
+2018,8,False,6,Team Flatcheese,1,The  Commish,92.46,148.54,L
+2018,9,False,6,Team Flatcheese,12,Cntrl Alt Delete,68.48,82.56,L
+2018,10,False,6,Team Flatcheese,9,LOCKETT LIKE I  TALK IT,116.92,89.12,W
+2018,11,False,6,Team Flatcheese,10,bread BREAD,70.18,121.14,L
+2018,12,False,6,Team Flatcheese,2,In Your Face,115.74,130.82,L
+2018,13,False,6,Team Flatcheese,7,My Little  Cooper Kupp,115.7,88.76,W
+2018,14,True,6,Team Flatcheese,10,bread BREAD,80.3,117.38,L
+2018,15,True,6,Team Flatcheese,5,From Worst to Worst,77.04,86.62,L
+2018,16,True,6,Team Flatcheese,7,My Little  Cooper Kupp,74.0,87.94,L
+2018,1,False,7,My Little  Cooper Kupp,1,The  Commish,161.06,102.06,W
+2018,2,False,7,My Little  Cooper Kupp,6,Team Flatcheese,120.24,104.3,W
+2018,3,False,7,My Little  Cooper Kupp,9,LOCKETT LIKE I  TALK IT,97.54,108.72,L
+2018,4,False,7,My Little  Cooper Kupp,10,bread BREAD,163.2,136.66,W
+2018,5,False,7,My Little  Cooper Kupp,2,In Your Face,113.46,118.18,L
+2018,6,False,7,My Little  Cooper Kupp,12,Cntrl Alt Delete,107.98,125.52,L
+2018,7,False,7,My Little  Cooper Kupp,13,99 Problems but L. Fitz ain't 1,96.52,93.18,W
+2018,8,False,7,My Little  Cooper Kupp,4,Dalvin and the  Chipmunks,118.0,133.66,L
+2018,9,False,7,My Little  Cooper Kupp,8,Curious George,158.02,132.0,W
+2018,10,False,7,My Little  Cooper Kupp,5,From Worst to Worst,131.32,156.74,L
+2018,11,False,7,My Little  Cooper Kupp,3,Say Cheeeez For The Kamara,113.64,115.7,L
+2018,12,False,7,My Little  Cooper Kupp,1,The  Commish,97.76,114.44,L
+2018,13,False,7,My Little  Cooper Kupp,6,Team Flatcheese,88.76,115.7,L
+2018,14,True,7,My Little  Cooper Kupp,3,Say Cheeeez For The Kamara,78.5,86.82,L
+2018,15,True,7,My Little  Cooper Kupp,4,Dalvin and the  Chipmunks,98.42,132.96,L
+2018,16,True,7,My Little  Cooper Kupp,6,Team Flatcheese,87.94,74.0,W
+2018,1,False,8,Curious George,12,Cntrl Alt Delete,128.94,138.46,L
+2018,2,False,8,Curious George,5,From Worst to Worst,166.54,126.78,W
+2018,3,False,8,Curious George,3,Say Cheeeez For The Kamara,163.16,97.82,W
+2018,4,False,8,Curious George,1,The  Commish,127.56,122.58,W
+2018,5,False,8,Curious George,6,Team Flatcheese,137.02,144.56,L
+2018,6,False,8,Curious George,9,LOCKETT LIKE I  TALK IT,140.68,128.86,W
+2018,7,False,8,Curious George,10,bread BREAD,130.92,114.76,W
+2018,8,False,8,Curious George,2,In Your Face,163.82,107.36,W
+2018,9,False,8,Curious George,7,My Little  Cooper Kupp,132.0,158.02,L
+2018,10,False,8,Curious George,13,99 Problems but L. Fitz ain't 1,131.56,164.36,L
+2018,11,False,8,Curious George,4,Dalvin and the  Chipmunks,149.82,98.52,W
+2018,12,False,8,Curious George,12,Cntrl Alt Delete,136.92,116.18,W
+2018,13,False,8,Curious George,5,From Worst to Worst,133.06,112.38,W
+2018,14,True,8,Curious George,8,Curious George,116.88,116.88,U
+2018,15,True,8,Curious George,9,LOCKETT LIKE I  TALK IT,117.62,47.1,W
+2018,16,True,8,Curious George,12,Cntrl Alt Delete,156.02,150.24,W
+2018,1,False,9,LOCKETT LIKE I  TALK IT,10,bread BREAD,115.36,79.54,W
+2018,2,False,9,LOCKETT LIKE I  TALK IT,2,In Your Face,98.96,101.14,L
+2018,3,False,9,LOCKETT LIKE I  TALK IT,7,My Little  Cooper Kupp,108.72,97.54,W
+2018,4,False,9,LOCKETT LIKE I  TALK IT,13,99 Problems but L. Fitz ain't 1,113.96,125.5,L
+2018,5,False,9,LOCKETT LIKE I  TALK IT,4,Dalvin and the  Chipmunks,153.2,100.8,W
+2018,6,False,9,LOCKETT LIKE I  TALK IT,8,Curious George,128.86,140.68,L
+2018,7,False,9,LOCKETT LIKE I  TALK IT,5,From Worst to Worst,170.44,120.76,W
+2018,8,False,9,LOCKETT LIKE I  TALK IT,3,Say Cheeeez For The Kamara,135.46,118.16,W
+2018,9,False,9,LOCKETT LIKE I  TALK IT,1,The  Commish,154.8,106.14,W
+2018,10,False,9,LOCKETT LIKE I  TALK IT,6,Team Flatcheese,89.12,116.92,L
+2018,11,False,9,LOCKETT LIKE I  TALK IT,12,Cntrl Alt Delete,86.06,145.42,L
+2018,12,False,9,LOCKETT LIKE I  TALK IT,10,bread BREAD,126.62,125.28,W
+2018,13,False,9,LOCKETT LIKE I  TALK IT,2,In Your Face,132.92,135.16,L
+2018,14,True,9,LOCKETT LIKE I  TALK IT,1,The  Commish,121.38,98.44,W
+2018,15,True,9,LOCKETT LIKE I  TALK IT,8,Curious George,47.1,117.62,L
+2018,16,True,9,LOCKETT LIKE I  TALK IT,13,99 Problems but L. Fitz ain't 1,91.42,120.94,L
+2018,1,False,10,bread BREAD,9,LOCKETT LIKE I  TALK IT,79.54,115.36,L
+2018,2,False,10,bread BREAD,12,Cntrl Alt Delete,154.78,169.1,L
+2018,3,False,10,bread BREAD,2,In Your Face,128.06,120.9,W
+2018,4,False,10,bread BREAD,7,My Little  Cooper Kupp,136.66,163.2,L
+2018,5,False,10,bread BREAD,13,99 Problems but L. Fitz ain't 1,118.2,133.94,L
+2018,6,False,10,bread BREAD,4,Dalvin and the  Chipmunks,133.7,87.28,W
+2018,7,False,10,bread BREAD,8,Curious George,114.76,130.92,L
+2018,8,False,10,bread BREAD,5,From Worst to Worst,101.34,122.0,L
+2018,9,False,10,bread BREAD,3,Say Cheeeez For The Kamara,105.5,113.66,L
+2018,10,False,10,bread BREAD,1,The  Commish,126.2,125.9,W
+2018,11,False,10,bread BREAD,6,Team Flatcheese,121.14,70.18,W
+2018,12,False,10,bread BREAD,9,LOCKETT LIKE I  TALK IT,125.28,126.62,L
+2018,13,False,10,bread BREAD,12,Cntrl Alt Delete,98.44,131.54,L
+2018,14,True,10,bread BREAD,6,Team Flatcheese,117.38,80.3,W
+2018,15,True,10,bread BREAD,3,Say Cheeeez For The Kamara,90.44,114.36,L
+2018,16,True,10,bread BREAD,5,From Worst to Worst,100.86,133.76,L
+2018,1,False,12,Cntrl Alt Delete,8,Curious George,138.46,128.94,W
+2018,2,False,12,Cntrl Alt Delete,10,bread BREAD,169.1,154.78,W
+2018,3,False,12,Cntrl Alt Delete,5,From Worst to Worst,114.74,96.98,W
+2018,4,False,12,Cntrl Alt Delete,2,In Your Face,144.48,97.32,W
+2018,5,False,12,Cntrl Alt Delete,3,Say Cheeeez For The Kamara,136.62,126.94,W
+2018,6,False,12,Cntrl Alt Delete,7,My Little  Cooper Kupp,125.52,107.98,W
+2018,7,False,12,Cntrl Alt Delete,1,The  Commish,72.94,131.2,L
+2018,8,False,12,Cntrl Alt Delete,13,99 Problems but L. Fitz ain't 1,124.66,136.9,L
+2018,9,False,12,Cntrl Alt Delete,6,Team Flatcheese,82.56,68.48,W
+2018,10,False,12,Cntrl Alt Delete,4,Dalvin and the  Chipmunks,165.52,70.8,W
+2018,11,False,12,Cntrl Alt Delete,9,LOCKETT LIKE I  TALK IT,145.42,86.06,W
+2018,12,False,12,Cntrl Alt Delete,8,Curious George,116.18,136.92,L
+2018,13,False,12,Cntrl Alt Delete,10,bread BREAD,131.54,98.44,W
+2018,14,True,12,Cntrl Alt Delete,12,Cntrl Alt Delete,110.52,110.52,U
+2018,15,True,12,Cntrl Alt Delete,13,99 Problems but L. Fitz ain't 1,134.98,97.46,W
+2018,16,True,12,Cntrl Alt Delete,8,Curious George,150.24,156.02,L
+2018,1,False,13,99 Problems but L. Fitz ain't 1,3,Say Cheeeez For The Kamara,117.12,148.38,L
+2018,2,False,13,99 Problems but L. Fitz ain't 1,1,The  Commish,102.36,98.18,W
+2018,3,False,13,99 Problems but L. Fitz ain't 1,6,Team Flatcheese,107.36,130.8,L
+2018,4,False,13,99 Problems but L. Fitz ain't 1,9,LOCKETT LIKE I  TALK IT,125.5,113.96,W
+2018,5,False,13,99 Problems but L. Fitz ain't 1,10,bread BREAD,133.94,118.2,W
+2018,6,False,13,99 Problems but L. Fitz ain't 1,2,In Your Face,131.94,174.3,L
+2018,7,False,13,99 Problems but L. Fitz ain't 1,7,My Little  Cooper Kupp,93.18,96.52,L
+2018,8,False,13,99 Problems but L. Fitz ain't 1,12,Cntrl Alt Delete,136.9,124.66,W
+2018,9,False,13,99 Problems but L. Fitz ain't 1,4,Dalvin and the  Chipmunks,148.22,97.12,W
+2018,10,False,13,99 Problems but L. Fitz ain't 1,8,Curious George,164.36,131.56,W
+2018,11,False,13,99 Problems but L. Fitz ain't 1,5,From Worst to Worst,137.32,83.38,W
+2018,12,False,13,99 Problems but L. Fitz ain't 1,3,Say Cheeeez For The Kamara,123.18,109.92,W
+2018,13,False,13,99 Problems but L. Fitz ain't 1,1,The  Commish,110.58,136.28,L
+2018,14,True,13,99 Problems but L. Fitz ain't 1,2,In Your Face,147.2,122.64,W
+2018,15,True,13,99 Problems but L. Fitz ain't 1,12,Cntrl Alt Delete,97.46,134.98,L
+2018,16,True,13,99 Problems but L. Fitz ain't 1,9,LOCKETT LIKE I  TALK IT,120.94,91.42,W

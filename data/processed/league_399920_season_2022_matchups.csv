@@ -1,0 +1,205 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2022,1,False,1,The  Commish,4,I'm Ryan  Keyser,119.76,159.4,L
+2022,2,False,1,The  Commish,3,Cookin With Colonel Sanders,160.86,83.3,W
+2022,3,False,1,The  Commish,5,Maybe This Year,86.88,84.84,W
+2022,4,False,1,The  Commish,2,In Your Face,135.3,131.16,W
+2022,5,False,1,The  Commish,12,Quads Are us,106.42,144.56,L
+2022,6,False,1,The  Commish,6,Team  Vengeance,86.02,110.4,L
+2022,7,False,1,The  Commish,8,Wu Tang Sports Ventures ,130.42,102.1,W
+2022,8,False,1,The  Commish,7,I. AM. (NOT) BATEMAN! ,149.24,127.78,W
+2022,9,False,1,The  Commish,14,Team YB,85.4,105.52,L
+2022,10,False,1,The  Commish,10,DENVER RILEY,76.04,76.8,L
+2022,11,False,1,The  Commish,13,What R U Doin  Step Bro?!?!,124.4,101.0,W
+2022,12,False,1,The  Commish,4,I'm Ryan  Keyser,111.66,130.6,L
+2022,13,False,1,The  Commish,3,Cookin With Colonel Sanders,120.1,133.14,L
+2022,14,False,1,The  Commish,5,Maybe This Year,142.38,96.6,W
+2022,15,True,1,The  Commish,12,Quads Are us,106.02,174.86,L
+2022,16,True,1,The  Commish,5,Maybe This Year,99.6,107.16,L
+2022,17,True,1,The  Commish,3,Cookin With Colonel Sanders,114.08,85.58,W
+2022,1,False,2,In Your Face,14,Team YB,87.6,117.12,L
+2022,2,False,2,In Your Face,13,What R U Doin  Step Bro?!?!,109.58,111.36,L
+2022,3,False,2,In Your Face,3,Cookin With Colonel Sanders,134.66,89.32,W
+2022,4,False,2,In Your Face,1,The  Commish,131.16,135.3,L
+2022,5,False,2,In Your Face,6,Team  Vengeance,152.82,135.48,W
+2022,6,False,2,In Your Face,7,I. AM. (NOT) BATEMAN! ,80.28,100.5,L
+2022,7,False,2,In Your Face,10,DENVER RILEY,147.7,103.52,W
+2022,8,False,2,In Your Face,4,I'm Ryan  Keyser,148.28,160.32,L
+2022,9,False,2,In Your Face,5,Maybe This Year,126.8,210.22,L
+2022,10,False,2,In Your Face,12,Quads Are us,127.1,133.3,L
+2022,11,False,2,In Your Face,8,Wu Tang Sports Ventures ,132.6,109.86,W
+2022,12,False,2,In Your Face,14,Team YB,174.92,115.44,W
+2022,13,False,2,In Your Face,13,What R U Doin  Step Bro?!?!,107.78,83.32,W
+2022,14,False,2,In Your Face,3,Cookin With Colonel Sanders,147.96,115.26,W
+2022,15,True,2,In Your Face,4,I'm Ryan  Keyser,126.72,164.64,L
+2022,16,True,2,In Your Face,7,I. AM. (NOT) BATEMAN! ,79.3,72.16,W
+2022,17,True,2,In Your Face,7,I. AM. (NOT) BATEMAN! ,77.72,99.78,L
+2022,1,False,3,Cookin With Colonel Sanders,13,What R U Doin  Step Bro?!?!,82.88,113.58,L
+2022,2,False,3,Cookin With Colonel Sanders,1,The  Commish,83.3,160.86,L
+2022,3,False,3,Cookin With Colonel Sanders,2,In Your Face,89.32,134.66,L
+2022,4,False,3,Cookin With Colonel Sanders,6,Team  Vengeance,167.3,111.28,W
+2022,5,False,3,Cookin With Colonel Sanders,7,I. AM. (NOT) BATEMAN! ,94.44,148.86,L
+2022,6,False,3,Cookin With Colonel Sanders,10,DENVER RILEY,95.92,100.6,L
+2022,7,False,3,Cookin With Colonel Sanders,4,I'm Ryan  Keyser,107.7,103.62,W
+2022,8,False,3,Cookin With Colonel Sanders,5,Maybe This Year,146.44,125.0,W
+2022,9,False,3,Cookin With Colonel Sanders,12,Quads Are us,78.5,91.2,L
+2022,10,False,3,Cookin With Colonel Sanders,8,Wu Tang Sports Ventures ,105.12,100.14,W
+2022,11,False,3,Cookin With Colonel Sanders,14,Team YB,136.14,117.46,W
+2022,12,False,3,Cookin With Colonel Sanders,13,What R U Doin  Step Bro?!?!,107.64,126.26,L
+2022,13,False,3,Cookin With Colonel Sanders,1,The  Commish,133.14,120.1,W
+2022,14,False,3,Cookin With Colonel Sanders,2,In Your Face,115.26,147.96,L
+2022,15,True,3,Cookin With Colonel Sanders,14,Team YB,94.92,96.4,L
+2022,16,True,3,Cookin With Colonel Sanders,8,Wu Tang Sports Ventures ,114.48,172.26,L
+2022,17,True,3,Cookin With Colonel Sanders,1,The  Commish,85.58,114.08,L
+2022,1,False,4,I'm Ryan  Keyser,1,The  Commish,159.4,119.76,W
+2022,2,False,4,I'm Ryan  Keyser,5,Maybe This Year,95.0,177.98,L
+2022,3,False,4,I'm Ryan  Keyser,12,Quads Are us,136.48,145.7,L
+2022,4,False,4,I'm Ryan  Keyser,8,Wu Tang Sports Ventures ,141.86,134.56,W
+2022,5,False,4,I'm Ryan  Keyser,14,Team YB,99.08,131.9,L
+2022,6,False,4,I'm Ryan  Keyser,13,What R U Doin  Step Bro?!?!,118.52,116.84,W
+2022,7,False,4,I'm Ryan  Keyser,3,Cookin With Colonel Sanders,103.62,107.7,L
+2022,8,False,4,I'm Ryan  Keyser,2,In Your Face,160.32,148.28,W
+2022,9,False,4,I'm Ryan  Keyser,6,Team  Vengeance,133.04,142.34,L
+2022,10,False,4,I'm Ryan  Keyser,7,I. AM. (NOT) BATEMAN! ,122.44,115.4,W
+2022,11,False,4,I'm Ryan  Keyser,10,DENVER RILEY,98.56,114.3,L
+2022,12,False,4,I'm Ryan  Keyser,1,The  Commish,130.6,111.66,W
+2022,13,False,4,I'm Ryan  Keyser,5,Maybe This Year,156.02,118.9,W
+2022,14,False,4,I'm Ryan  Keyser,12,Quads Are us,171.68,106.18,W
+2022,15,True,4,I'm Ryan  Keyser,2,In Your Face,164.64,126.72,W
+2022,16,True,4,I'm Ryan  Keyser,6,Team  Vengeance,138.76,123.6,W
+2022,17,True,4,I'm Ryan  Keyser,10,DENVER RILEY,165.12,78.56,W
+2022,1,False,5,Maybe This Year,10,DENVER RILEY,87.76,138.12,L
+2022,2,False,5,Maybe This Year,4,I'm Ryan  Keyser,177.98,95.0,W
+2022,3,False,5,Maybe This Year,1,The  Commish,84.84,86.88,L
+2022,4,False,5,Maybe This Year,12,Quads Are us,82.56,113.72,L
+2022,5,False,5,Maybe This Year,8,Wu Tang Sports Ventures ,100.76,79.78,W
+2022,6,False,5,Maybe This Year,14,Team YB,101.66,96.62,W
+2022,7,False,5,Maybe This Year,13,What R U Doin  Step Bro?!?!,75.78,117.26,L
+2022,8,False,5,Maybe This Year,3,Cookin With Colonel Sanders,125.0,146.44,L
+2022,9,False,5,Maybe This Year,2,In Your Face,210.22,126.8,W
+2022,10,False,5,Maybe This Year,6,Team  Vengeance,135.68,191.16,L
+2022,11,False,5,Maybe This Year,7,I. AM. (NOT) BATEMAN! ,119.22,96.24,W
+2022,12,False,5,Maybe This Year,10,DENVER RILEY,99.08,151.72,L
+2022,13,False,5,Maybe This Year,4,I'm Ryan  Keyser,118.9,156.02,L
+2022,14,False,5,Maybe This Year,1,The  Commish,96.6,142.38,L
+2022,15,True,5,Maybe This Year,8,Wu Tang Sports Ventures ,113.18,77.3,W
+2022,16,True,5,Maybe This Year,1,The  Commish,107.16,99.6,W
+2022,17,True,5,Maybe This Year,12,Quads Are us,60.96,108.3,L
+2022,1,False,6,Team  Vengeance,8,Wu Tang Sports Ventures ,146.52,149.52,L
+2022,2,False,6,Team  Vengeance,14,Team YB,128.16,135.68,L
+2022,3,False,6,Team  Vengeance,13,What R U Doin  Step Bro?!?!,126.2,141.3,L
+2022,4,False,6,Team  Vengeance,3,Cookin With Colonel Sanders,111.28,167.3,L
+2022,5,False,6,Team  Vengeance,2,In Your Face,135.48,152.82,L
+2022,6,False,6,Team  Vengeance,1,The  Commish,110.4,86.02,W
+2022,7,False,6,Team  Vengeance,7,I. AM. (NOT) BATEMAN! ,153.74,139.54,W
+2022,8,False,6,Team  Vengeance,10,DENVER RILEY,98.48,135.0,L
+2022,9,False,6,Team  Vengeance,4,I'm Ryan  Keyser,142.34,133.04,W
+2022,10,False,6,Team  Vengeance,5,Maybe This Year,191.16,135.68,W
+2022,11,False,6,Team  Vengeance,12,Quads Are us,125.0,81.28,W
+2022,12,False,6,Team  Vengeance,8,Wu Tang Sports Ventures ,144.64,132.56,W
+2022,13,False,6,Team  Vengeance,14,Team YB,129.04,124.9,W
+2022,14,False,6,Team  Vengeance,13,What R U Doin  Step Bro?!?!,115.66,78.9,W
+2022,15,True,6,Team  Vengeance,6,Team  Vengeance,139.0,139.0,U
+2022,16,True,6,Team  Vengeance,4,I'm Ryan  Keyser,123.6,138.76,L
+2022,17,True,6,Team  Vengeance,13,What R U Doin  Step Bro?!?!,80.7,89.8,L
+2022,1,False,7,I. AM. (NOT) BATEMAN! ,12,Quads Are us,98.0,144.68,L
+2022,2,False,7,I. AM. (NOT) BATEMAN! ,8,Wu Tang Sports Ventures ,161.46,147.02,W
+2022,3,False,7,I. AM. (NOT) BATEMAN! ,14,Team YB,95.84,102.86,L
+2022,4,False,7,I. AM. (NOT) BATEMAN! ,13,What R U Doin  Step Bro?!?!,165.58,123.14,W
+2022,5,False,7,I. AM. (NOT) BATEMAN! ,3,Cookin With Colonel Sanders,148.86,94.44,W
+2022,6,False,7,I. AM. (NOT) BATEMAN! ,2,In Your Face,100.5,80.28,W
+2022,7,False,7,I. AM. (NOT) BATEMAN! ,6,Team  Vengeance,139.54,153.74,L
+2022,8,False,7,I. AM. (NOT) BATEMAN! ,1,The  Commish,127.78,149.24,L
+2022,9,False,7,I. AM. (NOT) BATEMAN! ,10,DENVER RILEY,119.48,106.12,W
+2022,10,False,7,I. AM. (NOT) BATEMAN! ,4,I'm Ryan  Keyser,115.4,122.44,L
+2022,11,False,7,I. AM. (NOT) BATEMAN! ,5,Maybe This Year,96.24,119.22,L
+2022,12,False,7,I. AM. (NOT) BATEMAN! ,12,Quads Are us,112.86,107.92,W
+2022,13,False,7,I. AM. (NOT) BATEMAN! ,8,Wu Tang Sports Ventures ,122.8,75.74,W
+2022,14,False,7,I. AM. (NOT) BATEMAN! ,14,Team YB,122.9,75.26,W
+2022,15,True,7,I. AM. (NOT) BATEMAN! ,13,What R U Doin  Step Bro?!?!,128.52,138.0,L
+2022,16,True,7,I. AM. (NOT) BATEMAN! ,2,In Your Face,72.16,79.3,L
+2022,17,True,7,I. AM. (NOT) BATEMAN! ,2,In Your Face,99.78,77.72,W
+2022,1,False,8,Wu Tang Sports Ventures ,6,Team  Vengeance,149.52,146.52,W
+2022,2,False,8,Wu Tang Sports Ventures ,7,I. AM. (NOT) BATEMAN! ,147.02,161.46,L
+2022,3,False,8,Wu Tang Sports Ventures ,10,DENVER RILEY,113.92,123.7,L
+2022,4,False,8,Wu Tang Sports Ventures ,4,I'm Ryan  Keyser,134.56,141.86,L
+2022,5,False,8,Wu Tang Sports Ventures ,5,Maybe This Year,79.78,100.76,L
+2022,6,False,8,Wu Tang Sports Ventures ,12,Quads Are us,123.2,122.76,W
+2022,7,False,8,Wu Tang Sports Ventures ,1,The  Commish,102.1,130.42,L
+2022,8,False,8,Wu Tang Sports Ventures ,14,Team YB,119.72,118.52,W
+2022,9,False,8,Wu Tang Sports Ventures ,13,What R U Doin  Step Bro?!?!,84.72,126.44,L
+2022,10,False,8,Wu Tang Sports Ventures ,3,Cookin With Colonel Sanders,100.14,105.12,L
+2022,11,False,8,Wu Tang Sports Ventures ,2,In Your Face,109.86,132.6,L
+2022,12,False,8,Wu Tang Sports Ventures ,6,Team  Vengeance,132.56,144.64,L
+2022,13,False,8,Wu Tang Sports Ventures ,7,I. AM. (NOT) BATEMAN! ,75.74,122.8,L
+2022,14,False,8,Wu Tang Sports Ventures ,10,DENVER RILEY,111.36,85.18,W
+2022,15,True,8,Wu Tang Sports Ventures ,5,Maybe This Year,77.3,113.18,L
+2022,16,True,8,Wu Tang Sports Ventures ,3,Cookin With Colonel Sanders,172.26,114.48,W
+2022,17,True,8,Wu Tang Sports Ventures ,14,Team YB,109.68,85.7,W
+2022,1,False,10,DENVER RILEY,5,Maybe This Year,138.12,87.76,W
+2022,2,False,10,DENVER RILEY,12,Quads Are us,107.12,107.38,L
+2022,3,False,10,DENVER RILEY,8,Wu Tang Sports Ventures ,123.7,113.92,W
+2022,4,False,10,DENVER RILEY,14,Team YB,92.06,72.18,W
+2022,5,False,10,DENVER RILEY,13,What R U Doin  Step Bro?!?!,142.96,151.58,L
+2022,6,False,10,DENVER RILEY,3,Cookin With Colonel Sanders,100.6,95.92,W
+2022,7,False,10,DENVER RILEY,2,In Your Face,103.52,147.7,L
+2022,8,False,10,DENVER RILEY,6,Team  Vengeance,135.0,98.48,W
+2022,9,False,10,DENVER RILEY,7,I. AM. (NOT) BATEMAN! ,106.12,119.48,L
+2022,10,False,10,DENVER RILEY,1,The  Commish,76.8,76.04,W
+2022,11,False,10,DENVER RILEY,4,I'm Ryan  Keyser,114.3,98.56,W
+2022,12,False,10,DENVER RILEY,5,Maybe This Year,151.72,99.08,W
+2022,13,False,10,DENVER RILEY,12,Quads Are us,135.1,111.62,W
+2022,14,False,10,DENVER RILEY,8,Wu Tang Sports Ventures ,85.18,111.36,L
+2022,15,True,10,DENVER RILEY,10,DENVER RILEY,0.0,0.0,U
+2022,16,True,10,DENVER RILEY,13,What R U Doin  Step Bro?!?!,114.74,88.56,W
+2022,17,True,10,DENVER RILEY,4,I'm Ryan  Keyser,78.56,165.12,L
+2022,1,False,12,Quads Are us,7,I. AM. (NOT) BATEMAN! ,144.68,98.0,W
+2022,2,False,12,Quads Are us,10,DENVER RILEY,107.38,107.12,W
+2022,3,False,12,Quads Are us,4,I'm Ryan  Keyser,145.7,136.48,W
+2022,4,False,12,Quads Are us,5,Maybe This Year,113.72,82.56,W
+2022,5,False,12,Quads Are us,1,The  Commish,144.56,106.42,W
+2022,6,False,12,Quads Are us,8,Wu Tang Sports Ventures ,122.76,123.2,L
+2022,7,False,12,Quads Are us,14,Team YB,84.52,123.98,L
+2022,8,False,12,Quads Are us,13,What R U Doin  Step Bro?!?!,107.62,136.88,L
+2022,9,False,12,Quads Are us,3,Cookin With Colonel Sanders,91.2,78.5,W
+2022,10,False,12,Quads Are us,2,In Your Face,133.3,127.1,W
+2022,11,False,12,Quads Are us,6,Team  Vengeance,81.28,125.0,L
+2022,12,False,12,Quads Are us,7,I. AM. (NOT) BATEMAN! ,107.92,112.86,L
+2022,13,False,12,Quads Are us,10,DENVER RILEY,111.62,135.1,L
+2022,14,False,12,Quads Are us,4,I'm Ryan  Keyser,106.18,171.68,L
+2022,15,True,12,Quads Are us,1,The  Commish,174.86,106.02,W
+2022,16,True,12,Quads Are us,14,Team YB,177.08,75.0,W
+2022,17,True,12,Quads Are us,5,Maybe This Year,108.3,60.96,W
+2022,1,False,13,What R U Doin  Step Bro?!?!,3,Cookin With Colonel Sanders,113.58,82.88,W
+2022,2,False,13,What R U Doin  Step Bro?!?!,2,In Your Face,111.36,109.58,W
+2022,3,False,13,What R U Doin  Step Bro?!?!,6,Team  Vengeance,141.3,126.2,W
+2022,4,False,13,What R U Doin  Step Bro?!?!,7,I. AM. (NOT) BATEMAN! ,123.14,165.58,L
+2022,5,False,13,What R U Doin  Step Bro?!?!,10,DENVER RILEY,151.58,142.96,W
+2022,6,False,13,What R U Doin  Step Bro?!?!,4,I'm Ryan  Keyser,116.84,118.52,L
+2022,7,False,13,What R U Doin  Step Bro?!?!,5,Maybe This Year,117.26,75.78,W
+2022,8,False,13,What R U Doin  Step Bro?!?!,12,Quads Are us,136.88,107.62,W
+2022,9,False,13,What R U Doin  Step Bro?!?!,8,Wu Tang Sports Ventures ,126.44,84.72,W
+2022,10,False,13,What R U Doin  Step Bro?!?!,14,Team YB,103.98,116.5,L
+2022,11,False,13,What R U Doin  Step Bro?!?!,1,The  Commish,101.0,124.4,L
+2022,12,False,13,What R U Doin  Step Bro?!?!,3,Cookin With Colonel Sanders,126.26,107.64,W
+2022,13,False,13,What R U Doin  Step Bro?!?!,2,In Your Face,83.32,107.78,L
+2022,14,False,13,What R U Doin  Step Bro?!?!,6,Team  Vengeance,78.9,115.66,L
+2022,15,True,13,What R U Doin  Step Bro?!?!,7,I. AM. (NOT) BATEMAN! ,138.0,128.52,W
+2022,16,True,13,What R U Doin  Step Bro?!?!,10,DENVER RILEY,88.56,114.74,L
+2022,17,True,13,What R U Doin  Step Bro?!?!,6,Team  Vengeance,89.8,80.7,W
+2022,1,False,14,Team YB,2,In Your Face,117.12,87.6,W
+2022,2,False,14,Team YB,6,Team  Vengeance,135.68,128.16,W
+2022,3,False,14,Team YB,7,I. AM. (NOT) BATEMAN! ,102.86,95.84,W
+2022,4,False,14,Team YB,10,DENVER RILEY,72.18,92.06,L
+2022,5,False,14,Team YB,4,I'm Ryan  Keyser,131.9,99.08,W
+2022,6,False,14,Team YB,5,Maybe This Year,96.62,101.66,L
+2022,7,False,14,Team YB,12,Quads Are us,123.98,84.52,W
+2022,8,False,14,Team YB,8,Wu Tang Sports Ventures ,118.52,119.72,L
+2022,9,False,14,Team YB,1,The  Commish,105.52,85.4,W
+2022,10,False,14,Team YB,13,What R U Doin  Step Bro?!?!,116.5,103.98,W
+2022,11,False,14,Team YB,3,Cookin With Colonel Sanders,117.46,136.14,L
+2022,12,False,14,Team YB,2,In Your Face,115.44,174.92,L
+2022,13,False,14,Team YB,6,Team  Vengeance,124.9,129.04,L
+2022,14,False,14,Team YB,7,I. AM. (NOT) BATEMAN! ,75.26,122.9,L
+2022,15,True,14,Team YB,3,Cookin With Colonel Sanders,96.4,94.92,W
+2022,16,True,14,Team YB,12,Quads Are us,75.0,177.08,L
+2022,17,True,14,Team YB,8,Wu Tang Sports Ventures ,85.7,109.68,L

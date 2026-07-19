@@ -1,0 +1,205 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2021,1,False,1,The  Commish,14,AW YouMISSEDme,119.14,141.68,L
+2021,2,False,1,The  Commish,6,Saquon CeeDee's Nutz,128.36,156.32,L
+2021,3,False,1,The  Commish,7,Fantasy Football Team,157.02,110.88,W
+2021,4,False,1,The  Commish,10,DENVER BREAD,103.22,143.74,L
+2021,5,False,1,The  Commish,2,In Your Face,104.2,170.96,L
+2021,6,False,1,The  Commish,5,Maybe This Year,125.72,123.08,W
+2021,7,False,1,The  Commish,4,I'm Ryan  Keyser,123.32,174.04,L
+2021,8,False,1,The  Commish,3,The Road To Speedo Town,110.46,115.8,L
+2021,9,False,1,The  Commish,8,"Wu Tang Sports Ventures, Inc.",122.26,98.18,W
+2021,10,False,1,The  Commish,12,Curious George,121.64,159.72,L
+2021,11,False,1,The  Commish,13,What R U Doin  Step Bro?!?!,158.86,96.12,W
+2021,12,False,1,The  Commish,14,AW YouMISSEDme,114.56,110.0,W
+2021,13,False,1,The  Commish,6,Saquon CeeDee's Nutz,119.1,146.58,L
+2021,14,False,1,The  Commish,7,Fantasy Football Team,143.02,140.64,W
+2021,15,True,1,The  Commish,7,Fantasy Football Team,84.2,107.78,L
+2021,16,True,1,The  Commish,14,AW YouMISSEDme,81.16,89.02,L
+2021,17,True,1,The  Commish,6,Saquon CeeDee's Nutz,84.8,77.48,W
+2021,1,False,2,In Your Face,10,DENVER BREAD,149.62,117.98,W
+2021,2,False,2,In Your Face,3,The Road To Speedo Town,122.3,121.74,W
+2021,3,False,2,In Your Face,5,Maybe This Year,105.14,120.12,L
+2021,4,False,2,In Your Face,4,I'm Ryan  Keyser,105.12,130.22,L
+2021,5,False,2,In Your Face,1,The  Commish,170.96,104.2,W
+2021,6,False,2,In Your Face,8,"Wu Tang Sports Ventures, Inc.",142.6,150.5,L
+2021,7,False,2,In Your Face,12,Curious George,151.26,109.74,W
+2021,8,False,2,In Your Face,13,What R U Doin  Step Bro?!?!,106.76,150.0,L
+2021,9,False,2,In Your Face,14,AW YouMISSEDme,137.52,117.64,W
+2021,10,False,2,In Your Face,6,Saquon CeeDee's Nutz,112.68,105.8,W
+2021,11,False,2,In Your Face,7,Fantasy Football Team,177.3,139.44,W
+2021,12,False,2,In Your Face,10,DENVER BREAD,89.78,137.9,L
+2021,13,False,2,In Your Face,3,The Road To Speedo Town,87.56,137.92,L
+2021,14,False,2,In Your Face,5,Maybe This Year,89.64,128.68,L
+2021,15,True,2,In Your Face,6,Saquon CeeDee's Nutz,152.32,119.24,W
+2021,16,True,2,In Your Face,7,Fantasy Football Team,98.38,126.3,L
+2021,17,True,2,In Your Face,14,AW YouMISSEDme,108.52,90.06,W
+2021,1,False,3,The Road To Speedo Town,12,Curious George,129.26,163.76,L
+2021,2,False,3,The Road To Speedo Town,2,In Your Face,121.74,122.3,L
+2021,3,False,3,The Road To Speedo Town,13,What R U Doin  Step Bro?!?!,131.28,144.92,L
+2021,4,False,3,The Road To Speedo Town,5,Maybe This Year,96.96,107.46,L
+2021,5,False,3,The Road To Speedo Town,14,AW YouMISSEDme,127.14,66.58,W
+2021,6,False,3,The Road To Speedo Town,4,I'm Ryan  Keyser,82.18,122.36,L
+2021,7,False,3,The Road To Speedo Town,6,Saquon CeeDee's Nutz,117.64,59.82,W
+2021,8,False,3,The Road To Speedo Town,1,The  Commish,115.8,110.46,W
+2021,9,False,3,The Road To Speedo Town,7,Fantasy Football Team,85.08,113.58,L
+2021,10,False,3,The Road To Speedo Town,8,"Wu Tang Sports Ventures, Inc.",62.6,100.14,L
+2021,11,False,3,The Road To Speedo Town,10,DENVER BREAD,95.08,112.74,L
+2021,12,False,3,The Road To Speedo Town,12,Curious George,67.54,106.86,L
+2021,13,False,3,The Road To Speedo Town,2,In Your Face,137.92,87.56,W
+2021,14,False,3,The Road To Speedo Town,13,What R U Doin  Step Bro?!?!,119.62,127.68,L
+2021,15,True,3,The Road To Speedo Town,14,AW YouMISSEDme,118.36,96.04,W
+2021,16,True,3,The Road To Speedo Town,6,Saquon CeeDee's Nutz,82.78,75.74,W
+2021,17,True,3,The Road To Speedo Town,7,Fantasy Football Team,114.9,57.2,W
+2021,1,False,4,I'm Ryan  Keyser,6,Saquon CeeDee's Nutz,140.86,122.08,W
+2021,2,False,4,I'm Ryan  Keyser,7,Fantasy Football Team,119.4,145.06,L
+2021,3,False,4,I'm Ryan  Keyser,10,DENVER BREAD,132.34,133.08,L
+2021,4,False,4,I'm Ryan  Keyser,2,In Your Face,130.22,105.12,W
+2021,5,False,4,I'm Ryan  Keyser,5,Maybe This Year,171.86,89.08,W
+2021,6,False,4,I'm Ryan  Keyser,3,The Road To Speedo Town,122.36,82.18,W
+2021,7,False,4,I'm Ryan  Keyser,1,The  Commish,174.04,123.32,W
+2021,8,False,4,I'm Ryan  Keyser,8,"Wu Tang Sports Ventures, Inc.",88.56,140.6,L
+2021,9,False,4,I'm Ryan  Keyser,12,Curious George,76.0,121.88,L
+2021,10,False,4,I'm Ryan  Keyser,13,What R U Doin  Step Bro?!?!,85.68,95.82,L
+2021,11,False,4,I'm Ryan  Keyser,14,AW YouMISSEDme,111.48,118.5,L
+2021,12,False,4,I'm Ryan  Keyser,6,Saquon CeeDee's Nutz,95.18,130.92,L
+2021,13,False,4,I'm Ryan  Keyser,7,Fantasy Football Team,159.72,97.4,W
+2021,14,False,4,I'm Ryan  Keyser,10,DENVER BREAD,156.02,127.54,W
+2021,15,True,4,I'm Ryan  Keyser,13,What R U Doin  Step Bro?!?!,93.28,69.36,W
+2021,16,True,4,I'm Ryan  Keyser,8,"Wu Tang Sports Ventures, Inc.",148.1,118.1,W
+2021,17,True,4,I'm Ryan  Keyser,12,Curious George,209.82,119.36,W
+2021,1,False,5,Maybe This Year,7,Fantasy Football Team,124.86,102.5,W
+2021,2,False,5,Maybe This Year,10,DENVER BREAD,121.32,162.08,L
+2021,3,False,5,Maybe This Year,2,In Your Face,120.12,105.14,W
+2021,4,False,5,Maybe This Year,3,The Road To Speedo Town,107.46,96.96,W
+2021,5,False,5,Maybe This Year,4,I'm Ryan  Keyser,89.08,171.86,L
+2021,6,False,5,Maybe This Year,1,The  Commish,123.08,125.72,L
+2021,7,False,5,Maybe This Year,8,"Wu Tang Sports Ventures, Inc.",127.68,107.0,W
+2021,8,False,5,Maybe This Year,12,Curious George,107.64,105.78,W
+2021,9,False,5,Maybe This Year,13,What R U Doin  Step Bro?!?!,104.84,108.56,L
+2021,10,False,5,Maybe This Year,14,AW YouMISSEDme,149.32,107.24,W
+2021,11,False,5,Maybe This Year,6,Saquon CeeDee's Nutz,71.18,105.58,L
+2021,12,False,5,Maybe This Year,7,Fantasy Football Team,115.3,138.02,L
+2021,13,False,5,Maybe This Year,10,DENVER BREAD,150.62,145.22,W
+2021,14,False,5,Maybe This Year,2,In Your Face,128.68,89.64,W
+2021,15,True,5,Maybe This Year,10,DENVER BREAD,68.34,111.98,L
+2021,16,True,5,Maybe This Year,13,What R U Doin  Step Bro?!?!,154.64,67.08,W
+2021,17,True,5,Maybe This Year,13,What R U Doin  Step Bro?!?!,104.64,93.06,W
+2021,1,False,6,Saquon CeeDee's Nutz,4,I'm Ryan  Keyser,122.08,140.86,L
+2021,2,False,6,Saquon CeeDee's Nutz,1,The  Commish,156.32,128.36,W
+2021,3,False,6,Saquon CeeDee's Nutz,8,"Wu Tang Sports Ventures, Inc.",132.04,90.72,W
+2021,4,False,6,Saquon CeeDee's Nutz,12,Curious George,107.38,147.68,L
+2021,5,False,6,Saquon CeeDee's Nutz,13,What R U Doin  Step Bro?!?!,156.52,109.1,W
+2021,6,False,6,Saquon CeeDee's Nutz,14,AW YouMISSEDme,112.2,163.78,L
+2021,7,False,6,Saquon CeeDee's Nutz,3,The Road To Speedo Town,59.82,117.64,L
+2021,8,False,6,Saquon CeeDee's Nutz,7,Fantasy Football Team,110.42,90.96,W
+2021,9,False,6,Saquon CeeDee's Nutz,10,DENVER BREAD,94.24,115.26,L
+2021,10,False,6,Saquon CeeDee's Nutz,2,In Your Face,105.8,112.68,L
+2021,11,False,6,Saquon CeeDee's Nutz,5,Maybe This Year,105.58,71.18,W
+2021,12,False,6,Saquon CeeDee's Nutz,4,I'm Ryan  Keyser,130.92,95.18,W
+2021,13,False,6,Saquon CeeDee's Nutz,1,The  Commish,146.58,119.1,W
+2021,14,False,6,Saquon CeeDee's Nutz,8,"Wu Tang Sports Ventures, Inc.",123.3,126.58,L
+2021,15,True,6,Saquon CeeDee's Nutz,2,In Your Face,119.24,152.32,L
+2021,16,True,6,Saquon CeeDee's Nutz,3,The Road To Speedo Town,75.74,82.78,L
+2021,17,True,6,Saquon CeeDee's Nutz,1,The  Commish,77.48,84.8,L
+2021,1,False,7,Fantasy Football Team,5,Maybe This Year,102.5,124.86,L
+2021,2,False,7,Fantasy Football Team,4,I'm Ryan  Keyser,145.06,119.4,W
+2021,3,False,7,Fantasy Football Team,1,The  Commish,110.88,157.02,L
+2021,4,False,7,Fantasy Football Team,8,"Wu Tang Sports Ventures, Inc.",122.44,129.72,L
+2021,5,False,7,Fantasy Football Team,12,Curious George,160.04,110.52,W
+2021,6,False,7,Fantasy Football Team,13,What R U Doin  Step Bro?!?!,132.08,133.04,L
+2021,7,False,7,Fantasy Football Team,14,AW YouMISSEDme,146.34,60.44,W
+2021,8,False,7,Fantasy Football Team,6,Saquon CeeDee's Nutz,90.96,110.42,L
+2021,9,False,7,Fantasy Football Team,3,The Road To Speedo Town,113.58,85.08,W
+2021,10,False,7,Fantasy Football Team,10,DENVER BREAD,108.86,100.64,W
+2021,11,False,7,Fantasy Football Team,2,In Your Face,139.44,177.3,L
+2021,12,False,7,Fantasy Football Team,5,Maybe This Year,138.02,115.3,W
+2021,13,False,7,Fantasy Football Team,4,I'm Ryan  Keyser,97.4,159.72,L
+2021,14,False,7,Fantasy Football Team,1,The  Commish,140.64,143.02,L
+2021,15,True,7,Fantasy Football Team,1,The  Commish,107.78,84.2,W
+2021,16,True,7,Fantasy Football Team,2,In Your Face,126.3,98.38,W
+2021,17,True,7,Fantasy Football Team,3,The Road To Speedo Town,57.2,114.9,L
+2021,1,False,8,"Wu Tang Sports Ventures, Inc.",13,What R U Doin  Step Bro?!?!,154.12,106.44,W
+2021,2,False,8,"Wu Tang Sports Ventures, Inc.",14,AW YouMISSEDme,99.68,123.12,L
+2021,3,False,8,"Wu Tang Sports Ventures, Inc.",6,Saquon CeeDee's Nutz,90.72,132.04,L
+2021,4,False,8,"Wu Tang Sports Ventures, Inc.",7,Fantasy Football Team,129.72,122.44,W
+2021,5,False,8,"Wu Tang Sports Ventures, Inc.",10,DENVER BREAD,167.58,126.28,W
+2021,6,False,8,"Wu Tang Sports Ventures, Inc.",2,In Your Face,150.5,142.6,W
+2021,7,False,8,"Wu Tang Sports Ventures, Inc.",5,Maybe This Year,107.0,127.68,L
+2021,8,False,8,"Wu Tang Sports Ventures, Inc.",4,I'm Ryan  Keyser,140.6,88.56,W
+2021,9,False,8,"Wu Tang Sports Ventures, Inc.",1,The  Commish,98.18,122.26,L
+2021,10,False,8,"Wu Tang Sports Ventures, Inc.",3,The Road To Speedo Town,100.14,62.6,W
+2021,11,False,8,"Wu Tang Sports Ventures, Inc.",12,Curious George,115.02,144.98,L
+2021,12,False,8,"Wu Tang Sports Ventures, Inc.",13,What R U Doin  Step Bro?!?!,108.42,103.18,W
+2021,13,False,8,"Wu Tang Sports Ventures, Inc.",14,AW YouMISSEDme,126.94,99.56,W
+2021,14,False,8,"Wu Tang Sports Ventures, Inc.",6,Saquon CeeDee's Nutz,126.58,123.3,W
+2021,15,True,8,"Wu Tang Sports Ventures, Inc.",8,"Wu Tang Sports Ventures, Inc.",115.1,115.1,U
+2021,16,True,8,"Wu Tang Sports Ventures, Inc.",4,I'm Ryan  Keyser,118.1,148.1,L
+2021,17,True,8,"Wu Tang Sports Ventures, Inc.",10,DENVER BREAD,123.68,129.34,L
+2021,1,False,10,DENVER BREAD,2,In Your Face,117.98,149.62,L
+2021,2,False,10,DENVER BREAD,5,Maybe This Year,162.08,121.32,W
+2021,3,False,10,DENVER BREAD,4,I'm Ryan  Keyser,133.08,132.34,W
+2021,4,False,10,DENVER BREAD,1,The  Commish,143.74,103.22,W
+2021,5,False,10,DENVER BREAD,8,"Wu Tang Sports Ventures, Inc.",126.28,167.58,L
+2021,6,False,10,DENVER BREAD,12,Curious George,160.98,104.1,W
+2021,7,False,10,DENVER BREAD,13,What R U Doin  Step Bro?!?!,122.88,137.56,L
+2021,8,False,10,DENVER BREAD,14,AW YouMISSEDme,120.62,130.0,L
+2021,9,False,10,DENVER BREAD,6,Saquon CeeDee's Nutz,115.26,94.24,W
+2021,10,False,10,DENVER BREAD,7,Fantasy Football Team,100.64,108.86,L
+2021,11,False,10,DENVER BREAD,3,The Road To Speedo Town,112.74,95.08,W
+2021,12,False,10,DENVER BREAD,2,In Your Face,137.9,89.78,W
+2021,13,False,10,DENVER BREAD,5,Maybe This Year,145.22,150.62,L
+2021,14,False,10,DENVER BREAD,4,I'm Ryan  Keyser,127.54,156.02,L
+2021,15,True,10,DENVER BREAD,5,Maybe This Year,111.98,68.34,W
+2021,16,True,10,DENVER BREAD,12,Curious George,163.2,164.16,L
+2021,17,True,10,DENVER BREAD,8,"Wu Tang Sports Ventures, Inc.",129.34,123.68,W
+2021,1,False,12,Curious George,3,The Road To Speedo Town,163.76,129.26,W
+2021,2,False,12,Curious George,13,What R U Doin  Step Bro?!?!,135.8,106.02,W
+2021,3,False,12,Curious George,14,AW YouMISSEDme,113.54,101.0,W
+2021,4,False,12,Curious George,6,Saquon CeeDee's Nutz,147.68,107.38,W
+2021,5,False,12,Curious George,7,Fantasy Football Team,110.52,160.04,L
+2021,6,False,12,Curious George,10,DENVER BREAD,104.1,160.98,L
+2021,7,False,12,Curious George,2,In Your Face,109.74,151.26,L
+2021,8,False,12,Curious George,5,Maybe This Year,105.78,107.64,L
+2021,9,False,12,Curious George,4,I'm Ryan  Keyser,121.88,76.0,W
+2021,10,False,12,Curious George,1,The  Commish,159.72,121.64,W
+2021,11,False,12,Curious George,8,"Wu Tang Sports Ventures, Inc.",144.98,115.02,W
+2021,12,False,12,Curious George,3,The Road To Speedo Town,106.86,67.54,W
+2021,13,False,12,Curious George,13,What R U Doin  Step Bro?!?!,96.98,118.7,L
+2021,14,False,12,Curious George,14,AW YouMISSEDme,142.7,120.72,W
+2021,15,True,12,Curious George,12,Curious George,83.96,83.96,U
+2021,16,True,12,Curious George,10,DENVER BREAD,164.16,163.2,W
+2021,17,True,12,Curious George,4,I'm Ryan  Keyser,119.36,209.82,L
+2021,1,False,13,What R U Doin  Step Bro?!?!,8,"Wu Tang Sports Ventures, Inc.",106.44,154.12,L
+2021,2,False,13,What R U Doin  Step Bro?!?!,12,Curious George,106.02,135.8,L
+2021,3,False,13,What R U Doin  Step Bro?!?!,3,The Road To Speedo Town,144.92,131.28,W
+2021,4,False,13,What R U Doin  Step Bro?!?!,14,AW YouMISSEDme,133.1,136.52,L
+2021,5,False,13,What R U Doin  Step Bro?!?!,6,Saquon CeeDee's Nutz,109.1,156.52,L
+2021,6,False,13,What R U Doin  Step Bro?!?!,7,Fantasy Football Team,133.04,132.08,W
+2021,7,False,13,What R U Doin  Step Bro?!?!,10,DENVER BREAD,137.56,122.88,W
+2021,8,False,13,What R U Doin  Step Bro?!?!,2,In Your Face,150.0,106.76,W
+2021,9,False,13,What R U Doin  Step Bro?!?!,5,Maybe This Year,108.56,104.84,W
+2021,10,False,13,What R U Doin  Step Bro?!?!,4,I'm Ryan  Keyser,95.82,85.68,W
+2021,11,False,13,What R U Doin  Step Bro?!?!,1,The  Commish,96.12,158.86,L
+2021,12,False,13,What R U Doin  Step Bro?!?!,8,"Wu Tang Sports Ventures, Inc.",103.18,108.42,L
+2021,13,False,13,What R U Doin  Step Bro?!?!,12,Curious George,118.7,96.98,W
+2021,14,False,13,What R U Doin  Step Bro?!?!,3,The Road To Speedo Town,127.68,119.62,W
+2021,15,True,13,What R U Doin  Step Bro?!?!,4,I'm Ryan  Keyser,69.36,93.28,L
+2021,16,True,13,What R U Doin  Step Bro?!?!,5,Maybe This Year,67.08,154.64,L
+2021,17,True,13,What R U Doin  Step Bro?!?!,5,Maybe This Year,93.06,104.64,L
+2021,1,False,14,AW YouMISSEDme,1,The  Commish,141.68,119.14,W
+2021,2,False,14,AW YouMISSEDme,8,"Wu Tang Sports Ventures, Inc.",123.12,99.68,W
+2021,3,False,14,AW YouMISSEDme,12,Curious George,101.0,113.54,L
+2021,4,False,14,AW YouMISSEDme,13,What R U Doin  Step Bro?!?!,136.52,133.1,W
+2021,5,False,14,AW YouMISSEDme,3,The Road To Speedo Town,66.58,127.14,L
+2021,6,False,14,AW YouMISSEDme,6,Saquon CeeDee's Nutz,163.78,112.2,W
+2021,7,False,14,AW YouMISSEDme,7,Fantasy Football Team,60.44,146.34,L
+2021,8,False,14,AW YouMISSEDme,10,DENVER BREAD,130.0,120.62,W
+2021,9,False,14,AW YouMISSEDme,2,In Your Face,117.64,137.52,L
+2021,10,False,14,AW YouMISSEDme,5,Maybe This Year,107.24,149.32,L
+2021,11,False,14,AW YouMISSEDme,4,I'm Ryan  Keyser,118.5,111.48,W
+2021,12,False,14,AW YouMISSEDme,1,The  Commish,110.0,114.56,L
+2021,13,False,14,AW YouMISSEDme,8,"Wu Tang Sports Ventures, Inc.",99.56,126.94,L
+2021,14,False,14,AW YouMISSEDme,12,Curious George,120.72,142.7,L
+2021,15,True,14,AW YouMISSEDme,3,The Road To Speedo Town,96.04,118.36,L
+2021,16,True,14,AW YouMISSEDme,1,The  Commish,89.02,81.16,W
+2021,17,True,14,AW YouMISSEDme,2,In Your Face,90.06,108.52,L

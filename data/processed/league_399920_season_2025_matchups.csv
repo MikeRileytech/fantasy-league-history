@@ -1,0 +1,205 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2025,1,False,1,The  Commish,8,It's Always Sunny in Baltimore,104.72,107.92,L
+2025,2,False,1,The  Commish,10,Riley,123.38,91.98,W
+2025,3,False,1,The  Commish,7,Son of a Commish ,126.1,107.72,W
+2025,4,False,1,The  Commish,13,The New York Geezers,86.72,133.68,L
+2025,5,False,1,The  Commish,12,Omar's Coming,92.36,161.48,L
+2025,6,False,1,The  Commish,4,Juicy Smuyet,112.56,121.2,L
+2025,7,False,1,The  Commish,2,Not Lamarvelous,89.5,167.92,L
+2025,8,False,1,The  Commish,5,Not This Year,121.48,110.36,W
+2025,9,False,1,The  Commish,14,The Njoku's on *Me,149.38,91.2,W
+2025,10,False,1,The  Commish,3,Kev Got a Bijan the Offseason,116.8,142.1,L
+2025,11,False,1,The  Commish,6,Keep Doubting,108.54,118.32,L
+2025,12,False,1,The  Commish,8,It's Always Sunny in Baltimore,110.38,102.04,W
+2025,13,False,1,The  Commish,10,Riley,122.24,116.86,W
+2025,14,False,1,The  Commish,7,Son of a Commish ,123.56,160.06,L
+2025,15,True,1,The  Commish,2,Not Lamarvelous,122.34,98.7,W
+2025,16,True,1,The  Commish,13,The New York Geezers,130.48,105.56,W
+2025,17,True,1,The  Commish,2,Not Lamarvelous,79.9,72.3,W
+2025,1,False,2,Not Lamarvelous,13,The New York Geezers,125.46,99.02,W
+2025,2,False,2,Not Lamarvelous,12,Omar's Coming,131.9,117.84,W
+2025,3,False,2,Not Lamarvelous,4,Juicy Smuyet,130.02,131.22,L
+2025,4,False,2,Not Lamarvelous,3,Kev Got a Bijan the Offseason,89.28,127.86,L
+2025,5,False,2,Not Lamarvelous,5,Not This Year,112.88,123.8,L
+2025,6,False,2,Not Lamarvelous,14,The Njoku's on *Me,115.88,112.28,W
+2025,7,False,2,Not Lamarvelous,1,The  Commish,167.92,89.5,W
+2025,8,False,2,Not Lamarvelous,6,Keep Doubting,104.78,144.8,L
+2025,9,False,2,Not Lamarvelous,8,It's Always Sunny in Baltimore,111.06,78.82,W
+2025,10,False,2,Not Lamarvelous,10,Riley,103.64,141.18,L
+2025,11,False,2,Not Lamarvelous,7,Son of a Commish ,67.82,142.04,L
+2025,12,False,2,Not Lamarvelous,13,The New York Geezers,55.42,116.76,L
+2025,13,False,2,Not Lamarvelous,12,Omar's Coming,109.94,98.4,W
+2025,14,False,2,Not Lamarvelous,4,Juicy Smuyet,75.16,147.04,L
+2025,15,True,2,Not Lamarvelous,1,The  Commish,98.7,122.34,L
+2025,16,True,2,Not Lamarvelous,14,The Njoku's on *Me,108.34,91.8,W
+2025,17,True,2,Not Lamarvelous,1,The  Commish,72.3,79.9,L
+2025,1,False,3,Kev Got a Bijan the Offseason,6,Keep Doubting,133.18,107.02,W
+2025,2,False,3,Kev Got a Bijan the Offseason,4,Juicy Smuyet,113.0,117.62,L
+2025,3,False,3,Kev Got a Bijan the Offseason,8,It's Always Sunny in Baltimore,107.12,113.66,L
+2025,4,False,3,Kev Got a Bijan the Offseason,2,Not Lamarvelous,127.86,89.28,W
+2025,5,False,3,Kev Got a Bijan the Offseason,10,Riley,124.56,125.92,L
+2025,6,False,3,Kev Got a Bijan the Offseason,5,Not This Year,148.44,82.54,W
+2025,7,False,3,Kev Got a Bijan the Offseason,7,Son of a Commish ,126.62,178.38,L
+2025,8,False,3,Kev Got a Bijan the Offseason,14,The Njoku's on *Me,138.64,111.86,W
+2025,9,False,3,Kev Got a Bijan the Offseason,13,The New York Geezers,117.74,155.1,L
+2025,10,False,3,Kev Got a Bijan the Offseason,1,The  Commish,142.1,116.8,W
+2025,11,False,3,Kev Got a Bijan the Offseason,12,Omar's Coming,123.0,107.72,W
+2025,12,False,3,Kev Got a Bijan the Offseason,6,Keep Doubting,145.32,110.12,W
+2025,13,False,3,Kev Got a Bijan the Offseason,4,Juicy Smuyet,149.62,70.52,W
+2025,14,False,3,Kev Got a Bijan the Offseason,8,It's Always Sunny in Baltimore,130.94,122.38,W
+2025,15,True,3,Kev Got a Bijan the Offseason,12,Omar's Coming,159.32,114.06,W
+2025,16,True,3,Kev Got a Bijan the Offseason,4,Juicy Smuyet,131.48,153.4,L
+2025,17,True,3,Kev Got a Bijan the Offseason,7,Son of a Commish ,121.76,99.2,W
+2025,1,False,4,Juicy Smuyet,12,Omar's Coming,155.66,116.22,W
+2025,2,False,4,Juicy Smuyet,3,Kev Got a Bijan the Offseason,117.62,113.0,W
+2025,3,False,4,Juicy Smuyet,2,Not Lamarvelous,131.22,130.02,W
+2025,4,False,4,Juicy Smuyet,5,Not This Year,125.76,111.5,W
+2025,5,False,4,Juicy Smuyet,14,The Njoku's on *Me,145.92,128.62,W
+2025,6,False,4,Juicy Smuyet,1,The  Commish,121.2,112.56,W
+2025,7,False,4,Juicy Smuyet,6,Keep Doubting,118.04,91.64,W
+2025,8,False,4,Juicy Smuyet,8,It's Always Sunny in Baltimore,171.82,135.8,W
+2025,9,False,4,Juicy Smuyet,10,Riley,122.62,140.94,L
+2025,10,False,4,Juicy Smuyet,7,Son of a Commish ,152.14,185.5,L
+2025,11,False,4,Juicy Smuyet,13,The New York Geezers,130.58,122.6,W
+2025,12,False,4,Juicy Smuyet,12,Omar's Coming,99.82,107.66,L
+2025,13,False,4,Juicy Smuyet,3,Kev Got a Bijan the Offseason,70.52,149.62,L
+2025,14,False,4,Juicy Smuyet,2,Not Lamarvelous,147.04,75.16,W
+2025,15,True,4,Juicy Smuyet,4,Juicy Smuyet,113.62,113.62,U
+2025,16,True,4,Juicy Smuyet,3,Kev Got a Bijan the Offseason,153.4,131.48,W
+2025,17,True,4,Juicy Smuyet,6,Keep Doubting,119.72,113.82,W
+2025,1,False,5,Not This Year,7,Son of a Commish ,98.14,103.78,L
+2025,2,False,5,Not This Year,13,The New York Geezers,119.04,115.04,W
+2025,3,False,5,Not This Year,12,Omar's Coming,102.62,134.84,L
+2025,4,False,5,Not This Year,4,Juicy Smuyet,111.5,125.76,L
+2025,5,False,5,Not This Year,2,Not Lamarvelous,123.8,112.88,W
+2025,6,False,5,Not This Year,3,Kev Got a Bijan the Offseason,82.54,148.44,L
+2025,7,False,5,Not This Year,14,The Njoku's on *Me,113.84,130.34,L
+2025,8,False,5,Not This Year,1,The  Commish,110.36,121.48,L
+2025,9,False,5,Not This Year,6,Keep Doubting,124.92,120.42,W
+2025,10,False,5,Not This Year,8,It's Always Sunny in Baltimore,99.82,110.04,L
+2025,11,False,5,Not This Year,10,Riley,89.2,101.46,L
+2025,12,False,5,Not This Year,7,Son of a Commish ,150.66,196.06,L
+2025,13,False,5,Not This Year,13,The New York Geezers,117.7,91.82,W
+2025,14,False,5,Not This Year,12,Omar's Coming,93.1,112.34,L
+2025,15,True,5,Not This Year,14,The Njoku's on *Me,79.9,92.66,L
+2025,16,True,5,Not This Year,8,It's Always Sunny in Baltimore,83.4,111.4,L
+2025,17,True,5,Not This Year,14,The Njoku's on *Me,82.6,119.6,L
+2025,1,False,6,Keep Doubting,3,Kev Got a Bijan the Offseason,107.02,133.18,L
+2025,2,False,6,Keep Doubting,8,It's Always Sunny in Baltimore,115.0,179.3,L
+2025,3,False,6,Keep Doubting,10,Riley,120.48,106.32,W
+2025,4,False,6,Keep Doubting,7,Son of a Commish ,172.12,106.02,W
+2025,5,False,6,Keep Doubting,13,The New York Geezers,143.44,111.12,W
+2025,6,False,6,Keep Doubting,12,Omar's Coming,97.14,90.14,W
+2025,7,False,6,Keep Doubting,4,Juicy Smuyet,91.64,118.04,L
+2025,8,False,6,Keep Doubting,2,Not Lamarvelous,144.8,104.78,W
+2025,9,False,6,Keep Doubting,5,Not This Year,120.42,124.92,L
+2025,10,False,6,Keep Doubting,14,The Njoku's on *Me,100.0,93.82,W
+2025,11,False,6,Keep Doubting,1,The  Commish,118.32,108.54,W
+2025,12,False,6,Keep Doubting,3,Kev Got a Bijan the Offseason,110.12,145.32,L
+2025,13,False,6,Keep Doubting,8,It's Always Sunny in Baltimore,102.36,77.24,W
+2025,14,False,6,Keep Doubting,10,Riley,91.64,111.86,L
+2025,15,True,6,Keep Doubting,10,Riley,155.9,90.94,W
+2025,16,True,6,Keep Doubting,7,Son of a Commish ,132.4,117.6,W
+2025,17,True,6,Keep Doubting,4,Juicy Smuyet,113.82,119.72,L
+2025,1,False,7,Son of a Commish ,5,Not This Year,103.78,98.14,W
+2025,2,False,7,Son of a Commish ,14,The Njoku's on *Me,142.1,91.74,W
+2025,3,False,7,Son of a Commish ,1,The  Commish,107.72,126.1,L
+2025,4,False,7,Son of a Commish ,6,Keep Doubting,106.02,172.12,L
+2025,5,False,7,Son of a Commish ,8,It's Always Sunny in Baltimore,117.22,104.0,W
+2025,6,False,7,Son of a Commish ,10,Riley,151.54,100.92,W
+2025,7,False,7,Son of a Commish ,3,Kev Got a Bijan the Offseason,178.38,126.62,W
+2025,8,False,7,Son of a Commish ,13,The New York Geezers,136.18,134.52,W
+2025,9,False,7,Son of a Commish ,12,Omar's Coming,149.76,108.6,W
+2025,10,False,7,Son of a Commish ,4,Juicy Smuyet,185.5,152.14,W
+2025,11,False,7,Son of a Commish ,2,Not Lamarvelous,142.04,67.82,W
+2025,12,False,7,Son of a Commish ,5,Not This Year,196.06,150.66,W
+2025,13,False,7,Son of a Commish ,14,The Njoku's on *Me,116.28,140.44,L
+2025,14,False,7,Son of a Commish ,1,The  Commish,160.06,123.56,W
+2025,15,True,7,Son of a Commish ,7,Son of a Commish ,71.3,71.3,U
+2025,16,True,7,Son of a Commish ,6,Keep Doubting,117.6,132.4,L
+2025,17,True,7,Son of a Commish ,3,Kev Got a Bijan the Offseason,99.2,121.76,L
+2025,1,False,8,It's Always Sunny in Baltimore,1,The  Commish,107.92,104.72,W
+2025,2,False,8,It's Always Sunny in Baltimore,6,Keep Doubting,179.3,115.0,W
+2025,3,False,8,It's Always Sunny in Baltimore,3,Kev Got a Bijan the Offseason,113.66,107.12,W
+2025,4,False,8,It's Always Sunny in Baltimore,10,Riley,139.48,136.64,W
+2025,5,False,8,It's Always Sunny in Baltimore,7,Son of a Commish ,104.0,117.22,L
+2025,6,False,8,It's Always Sunny in Baltimore,13,The New York Geezers,99.66,175.48,L
+2025,7,False,8,It's Always Sunny in Baltimore,12,Omar's Coming,95.76,135.06,L
+2025,8,False,8,It's Always Sunny in Baltimore,4,Juicy Smuyet,135.8,171.82,L
+2025,9,False,8,It's Always Sunny in Baltimore,2,Not Lamarvelous,78.82,111.06,L
+2025,10,False,8,It's Always Sunny in Baltimore,5,Not This Year,110.04,99.82,W
+2025,11,False,8,It's Always Sunny in Baltimore,14,The Njoku's on *Me,82.42,99.54,L
+2025,12,False,8,It's Always Sunny in Baltimore,1,The  Commish,102.04,110.38,L
+2025,13,False,8,It's Always Sunny in Baltimore,6,Keep Doubting,77.24,102.36,L
+2025,14,False,8,It's Always Sunny in Baltimore,3,Kev Got a Bijan the Offseason,122.38,130.94,L
+2025,15,True,8,It's Always Sunny in Baltimore,13,The New York Geezers,115.08,149.52,L
+2025,16,True,8,It's Always Sunny in Baltimore,5,Not This Year,111.4,83.4,W
+2025,17,True,8,It's Always Sunny in Baltimore,13,The New York Geezers,99.54,77.58,W
+2025,1,False,10,Riley,14,The Njoku's on *Me,98.82,87.28,W
+2025,2,False,10,Riley,1,The  Commish,91.98,123.38,L
+2025,3,False,10,Riley,6,Keep Doubting,106.32,120.48,L
+2025,4,False,10,Riley,8,It's Always Sunny in Baltimore,136.64,139.48,L
+2025,5,False,10,Riley,3,Kev Got a Bijan the Offseason,125.92,124.56,W
+2025,6,False,10,Riley,7,Son of a Commish ,100.92,151.54,L
+2025,7,False,10,Riley,13,The New York Geezers,118.24,116.78,W
+2025,8,False,10,Riley,12,Omar's Coming,89.92,67.22,W
+2025,9,False,10,Riley,4,Juicy Smuyet,140.94,122.62,W
+2025,10,False,10,Riley,2,Not Lamarvelous,141.18,103.64,W
+2025,11,False,10,Riley,5,Not This Year,101.46,89.2,W
+2025,12,False,10,Riley,14,The Njoku's on *Me,90.52,112.88,L
+2025,13,False,10,Riley,1,The  Commish,116.86,122.24,L
+2025,14,False,10,Riley,6,Keep Doubting,111.86,91.64,W
+2025,15,True,10,Riley,6,Keep Doubting,90.94,155.9,L
+2025,16,True,10,Riley,12,Omar's Coming,4.1,161.36,L
+2025,17,True,10,Riley,12,Omar's Coming,0.0,82.78,L
+2025,1,False,12,Omar's Coming,4,Juicy Smuyet,116.22,155.66,L
+2025,2,False,12,Omar's Coming,2,Not Lamarvelous,117.84,131.9,L
+2025,3,False,12,Omar's Coming,5,Not This Year,134.84,102.62,W
+2025,4,False,12,Omar's Coming,14,The Njoku's on *Me,178.88,73.4,W
+2025,5,False,12,Omar's Coming,1,The  Commish,161.48,92.36,W
+2025,6,False,12,Omar's Coming,6,Keep Doubting,90.14,97.14,L
+2025,7,False,12,Omar's Coming,8,It's Always Sunny in Baltimore,135.06,95.76,W
+2025,8,False,12,Omar's Coming,10,Riley,67.22,89.92,L
+2025,9,False,12,Omar's Coming,7,Son of a Commish ,108.6,149.76,L
+2025,10,False,12,Omar's Coming,13,The New York Geezers,146.72,116.7,W
+2025,11,False,12,Omar's Coming,3,Kev Got a Bijan the Offseason,107.72,123.0,L
+2025,12,False,12,Omar's Coming,4,Juicy Smuyet,107.66,99.82,W
+2025,13,False,12,Omar's Coming,2,Not Lamarvelous,98.4,109.94,L
+2025,14,False,12,Omar's Coming,5,Not This Year,112.34,93.1,W
+2025,15,True,12,Omar's Coming,3,Kev Got a Bijan the Offseason,114.06,159.32,L
+2025,16,True,12,Omar's Coming,10,Riley,161.36,4.1,W
+2025,17,True,12,Omar's Coming,10,Riley,82.78,0.0,W
+2025,1,False,13,The New York Geezers,2,Not Lamarvelous,99.02,125.46,L
+2025,2,False,13,The New York Geezers,5,Not This Year,115.04,119.04,L
+2025,3,False,13,The New York Geezers,14,The Njoku's on *Me,115.88,123.24,L
+2025,4,False,13,The New York Geezers,1,The  Commish,133.68,86.72,W
+2025,5,False,13,The New York Geezers,6,Keep Doubting,111.12,143.44,L
+2025,6,False,13,The New York Geezers,8,It's Always Sunny in Baltimore,175.48,99.66,W
+2025,7,False,13,The New York Geezers,10,Riley,116.78,118.24,L
+2025,8,False,13,The New York Geezers,7,Son of a Commish ,134.52,136.18,L
+2025,9,False,13,The New York Geezers,3,Kev Got a Bijan the Offseason,155.1,117.74,W
+2025,10,False,13,The New York Geezers,12,Omar's Coming,116.7,146.72,L
+2025,11,False,13,The New York Geezers,4,Juicy Smuyet,122.6,130.58,L
+2025,12,False,13,The New York Geezers,2,Not Lamarvelous,116.76,55.42,W
+2025,13,False,13,The New York Geezers,5,Not This Year,91.82,117.7,L
+2025,14,False,13,The New York Geezers,14,The Njoku's on *Me,97.86,89.0,W
+2025,15,True,13,The New York Geezers,8,It's Always Sunny in Baltimore,149.52,115.08,W
+2025,16,True,13,The New York Geezers,1,The  Commish,105.56,130.48,L
+2025,17,True,13,The New York Geezers,8,It's Always Sunny in Baltimore,77.58,99.54,L
+2025,1,False,14,The Njoku's on *Me,10,Riley,87.28,98.82,L
+2025,2,False,14,The Njoku's on *Me,7,Son of a Commish ,91.74,142.1,L
+2025,3,False,14,The Njoku's on *Me,13,The New York Geezers,123.24,115.88,W
+2025,4,False,14,The Njoku's on *Me,12,Omar's Coming,73.4,178.88,L
+2025,5,False,14,The Njoku's on *Me,4,Juicy Smuyet,128.62,145.92,L
+2025,6,False,14,The Njoku's on *Me,2,Not Lamarvelous,112.28,115.88,L
+2025,7,False,14,The Njoku's on *Me,5,Not This Year,130.34,113.84,W
+2025,8,False,14,The Njoku's on *Me,3,Kev Got a Bijan the Offseason,111.86,138.64,L
+2025,9,False,14,The Njoku's on *Me,1,The  Commish,91.2,149.38,L
+2025,10,False,14,The Njoku's on *Me,6,Keep Doubting,93.82,100.0,L
+2025,11,False,14,The Njoku's on *Me,8,It's Always Sunny in Baltimore,99.54,82.42,W
+2025,12,False,14,The Njoku's on *Me,10,Riley,112.88,90.52,W
+2025,13,False,14,The Njoku's on *Me,7,Son of a Commish ,140.44,116.28,W
+2025,14,False,14,The Njoku's on *Me,13,The New York Geezers,89.0,97.86,L
+2025,15,True,14,The Njoku's on *Me,5,Not This Year,92.66,79.9,W
+2025,16,True,14,The Njoku's on *Me,2,Not Lamarvelous,91.8,108.34,L
+2025,17,True,14,The Njoku's on *Me,5,Not This Year,119.6,82.6,W

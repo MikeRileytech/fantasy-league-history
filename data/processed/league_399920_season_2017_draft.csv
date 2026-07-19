@@ -1,0 +1,181 @@
+season,overall_pick,round,pick_in_round,espn_team_id,team_name,player_id,player_name,is_keeper,bid_amount
+2017,1,1,1,10,Team Riley,2508176,David Johnson,False,0
+2017,2,1,2,3,Tevin Schwartz,15825,Le'Veon Bell,False,0
+2017,3,1,3,12,Cntrl Alt Delete,13934,Antonio Brown,False,0
+2017,4,1,4,9,New Yawk Bklyn's Best,13982,Julio Jones,False,0
+2017,5,1,5,8,Curious George,16737,Mike Evans,False,0
+2017,6,1,6,6,Team Flatcheese,12514,LeSean McCoy,False,0
+2017,7,1,7,13,Zeke's One-Two Punch,16733,Odell Beckham Jr.,False,0
+2017,8,1,8,5,From Worst to Worst,16944,Devonta Freeman,False,0
+2017,9,1,9,7,The Redemption Squad,11270,Jordy Nelson,False,0
+2017,10,1,10,2,In Your Face,2576434,Melvin Gordon,False,0
+2017,11,1,11,1,The  Commish,13983,A.J. Green,False,0
+2017,12,1,12,4,CJ 2k16,2573300,Jay Ajayi,False,0
+2017,13,2,1,4,CJ 2k16,3060022,Jordan Howard,False,0
+2017,14,2,2,1,The  Commish,14005,DeMarco Murray,False,0
+2017,15,2,3,2,In Your Face,3115364,Leonard Fournette,False,0
+2017,16,2,4,7,The Redemption Squad,2977644,Todd Gurley II,False,0
+2017,17,2,5,5,From Worst to Worst,2976316,Michael Thomas,False,0
+2017,18,2,6,13,Zeke's One-Two Punch,2976499,Amari Cooper,False,0
+2017,19,2,7,6,Team Flatcheese,16731,Brandin Cooks,False,0
+2017,20,2,8,8,Curious George,14221,Doug Baldwin,False,0
+2017,21,2,9,9,New Yawk Bklyn's Best,13229,Rob Gronkowski,False,0
+2017,22,2,10,12,Cntrl Alt Delete,14924,T.Y. Hilton,False,0
+2017,23,2,11,3,Tevin Schwartz,13215,Dez Bryant,False,0
+2017,24,2,12,10,Team Riley,16777,Carlos Hyde,False,0
+2017,25,3,1,10,Team Riley,14851,Terrelle Pryor Sr.,False,0
+2017,26,3,2,3,Tevin Schwartz,14886,Lamar Miller,False,0
+2017,27,3,3,12,Cntrl Alt Delete,13216,Demaryius Thomas,False,0
+2017,28,3,4,9,New Yawk Bklyn's Best,2330,Tom Brady,False,0
+2017,29,3,5,8,Curious George,17133,Isaiah Crowell,False,0
+2017,30,3,6,6,Team Flatcheese,14912,Alshon Jeffery,False,0
+2017,31,3,7,13,Zeke's One-Two Punch,3051392,Ezekiel Elliott,False,0
+2017,32,3,8,5,From Worst to Worst,15818,Keenan Allen,False,0
+2017,33,3,9,7,The Redemption Squad,15795,DeAndre Hopkins,False,0
+2017,34,3,10,2,In Your Face,8439,Aaron Rodgers,False,0
+2017,35,3,11,1,The  Commish,3116593,Dalvin Cook,False,0
+2017,36,3,12,4,CJ 2k16,10456,Marshawn Lynch,False,0
+2017,37,4,1,4,CJ 2k16,5528,Larry Fitzgerald,False,0
+2017,38,4,2,1,The  Commish,3059915,Kareem Hunt,False,0
+2017,39,4,3,2,In Your Face,13295,Emmanuel Sanders,False,0
+2017,40,4,4,7,The Redemption Squad,13217,Golden Tate,False,0
+2017,41,4,5,5,From Worst to Worst,2580,Drew Brees,False,0
+2017,42,4,6,13,Zeke's One-Two Punch,3117251,Christian McCaffrey,False,0
+2017,43,4,7,6,Team Flatcheese,2577134,Ty Montgomery,False,0
+2017,44,4,8,8,Curious George,3116385,Joe Mixon,False,0
+2017,45,4,9,9,New Yawk Bklyn's Best,10452,Adrian Peterson,False,0
+2017,46,4,10,12,Cntrl Alt Delete,15860,Jordan Reed,False,0
+2017,47,4,11,3,Tevin Schwartz,12563,Michael Crabtree,False,0
+2017,48,4,12,10,Team Riley,16886,Martavis Bryant,False,0
+2017,49,5,1,10,Team Riley,15847,Travis Kelce,False,0
+2017,50,5,2,3,Tevin Schwartz,16800,Davante Adams,False,0
+2017,51,5,3,12,Cntrl Alt Delete,14129,Bilal Powell,False,0
+2017,52,5,4,9,New Yawk Bklyn's Best,16799,Allen Robinson,False,0
+2017,53,5,5,8,Curious George,16730,Kelvin Benjamin,False,0
+2017,54,5,6,6,Team Flatcheese,10475,Greg Olsen,False,0
+2017,55,5,7,13,Zeke's One-Two Punch,16725,Sammy Watkins,False,0
+2017,56,5,8,5,From Worst to Worst,8479,Frank Gore,False,0
+2017,57,5,9,7,The Redemption Squad,9705,Brandon Marshall,False,0
+2017,58,5,10,2,In Your Face,16790,Jarvis Landry,False,0
+2017,59,5,11,1,The  Commish,2576716,Jamison Crowder,False,0
+2017,60,5,12,4,CJ 2k16,2976212,Stefon Diggs,False,0
+2017,61,6,1,4,CJ 2k16,13232,Jimmy Graham,False,0
+2017,62,6,2,1,The  Commish,9761,Delanie Walker,False,0
+2017,63,6,3,2,In Your Face,13981,Mark Ingram,False,0
+2017,64,6,4,7,The Redemption Squad,15994,Theo Riddick,False,0
+2017,65,6,5,5,From Worst to Worst,2576623,DeVante Parker,False,0
+2017,66,6,6,13,Zeke's One-Two Punch,15952,Mike Gillislee,False,0
+2017,67,6,7,6,Team Flatcheese,11237,Matt Ryan,False,0
+2017,68,6,8,8,Curious George,2971589,Paul Perkins,False,0
+2017,69,6,9,9,New Yawk Bklyn's Best,11439,Pierre Garcon,False,0
+2017,70,6,10,12,Cntrl Alt Delete,11788,Danny Woodhead,False,0
+2017,71,6,11,3,Tevin Schwartz,3116406,Tyreek Hill,False,0
+2017,72,6,12,10,Team Riley,16783,Terrance West,False,0
+2017,73,7,1,10,Team Riley,13994,Cam Newton,False,0
+2017,74,7,2,3,Tevin Schwartz,11283,DeSean Jackson,False,0
+2017,75,7,3,12,Cntrl Alt Delete,14881,Russell Wilson,False,0
+2017,76,7,4,9,New Yawk Bklyn's Best,11238,Darren McFadden,False,0
+2017,77,7,5,8,Curious George,12579,Jeremy Maclin,False,0
+2017,78,7,6,6,Team Flatcheese,13213,LeGarrette Blount,False,0
+2017,79,7,7,13,Zeke's One-Two Punch,16040,C.J. Anderson,False,0
+2017,80,7,8,5,From Worst to Worst,2575408,Rob Kelley,False,0
+2017,81,7,9,7,The Redemption Squad,15848,Eddie Lacy,False,0
+2017,82,7,10,2,In Your Face,2576336,Ameer Abdullah,False,0
+2017,83,7,11,1,The  Commish,12601,Mike Wallace,False,0
+2017,84,7,12,4,CJ 2k16,17258,Willie Snead,False,0
+2017,85,8,1,4,CJ 2k16,14053,Randall Cobb,False,0
+2017,86,8,2,1,The  Commish,13271,Eric Decker,False,0
+2017,87,8,3,2,In Your Face,16460,Adam Thielen,False,0
+2017,88,8,4,7,The Redemption Squad,14885,Doug Martin,False,0
+2017,89,8,5,5,From Worst to Worst,11278,Matt Forte,False,0
+2017,90,8,6,13,Zeke's One-Two Punch,12556,Kenny Britt,False,0
+2017,91,8,7,6,Team Flatcheese,3042435,Kevin White,False,0
+2017,92,8,8,8,Curious George,2587819,Tyrell Williams,False,0
+2017,93,8,9,9,New Yawk Bklyn's Best,2969939,Jameis Winston,False,0
+2017,94,8,10,12,Cntrl Alt Delete,2969962,Duke Johnson Jr.,False,0
+2017,95,8,11,3,Tevin Schwartz,2979477,Tevin Coleman,False,0
+2017,96,8,12,10,Team Riley,11247,Jonathan Stewart,False,0
+2017,97,9,1,10,Team Riley,16791,Donte Moncrief,False,0
+2017,98,9,2,3,Tevin Schwartz,14054,Kyle Rudolph,False,0
+2017,99,9,3,12,Cntrl Alt Delete,16913,James White,False,0
+2017,100,9,4,9,New Yawk Bklyn's Best,11295,Martellus Bennett,False,0
+2017,101,9,5,8,Curious George,2576237,Thomas Rawls,False,0
+2017,102,9,6,6,Team Flatcheese,15102,Rishard Matthews,False,0
+2017,103,9,7,13,Zeke's One-Two Punch,15788,Tyler Eifert,False,0
+2017,104,9,8,5,From Worst to Worst,15835,Zach Ertz,False,0
+2017,105,9,9,7,The Redemption Squad,2576980,Marcus Mariota,False,0
+2017,106,9,10,2,In Your Face,14402,Chris Hogan,False,0
+2017,107,9,11,1,The  Commish,14880,Kirk Cousins,False,0
+2017,108,9,12,4,CJ 2k16,2577417,Dak Prescott,False,0
+2017,109,10,1,4,CJ 2k16,8544,Darren Sproles,False,0
+2017,110,10,2,1,The  Commish,14874,Andrew Luck,False,0
+2017,111,10,3,2,In Your Face,4527,Jason Witten,False,0
+2017,112,10,4,7,The Redemption Squad,14193,Jacquizz Rodgers,False,0
+2017,113,10,5,5,From Worst to Worst,16804,John Brown,False,0
+2017,114,10,6,13,Zeke's One-Two Punch,16757,Derek Carr,False,0
+2017,115,10,7,6,Team Flatcheese,3043078,Derrick Henry,False,0
+2017,116,10,8,8,Curious George,3046439,Hunter Henry,False,0
+2017,117,10,9,9,New Yawk Bklyn's Best,11307,Jamaal Charles,False,0
+2017,118,10,10,12,Cntrl Alt Delete,15826,Giovani Bernard,False,0
+2017,119,10,11,3,Tevin Schwartz,12483,Matthew Stafford,False,0
+2017,120,10,12,10,Team Riley,10453,Ted Ginn Jr.,False,0
+2017,121,11,1,10,Team Riley,15971,Rex Burkhead,False,0
+2017,122,11,2,3,Tevin Schwartz,-16007,Broncos D/ST,False,0
+2017,123,11,3,12,Cntrl Alt Delete,16763,Jordan Matthews,False,0
+2017,124,11,4,9,New Yawk Bklyn's Best,4333,Matt Bryant,False,0
+2017,125,11,5,8,Curious George,5529,Philip Rivers,False,0
+2017,126,11,6,6,Team Flatcheese,3059722,Zay Jones,False,0
+2017,127,11,7,13,Zeke's One-Two Punch,2978929,Corey Coleman,False,0
+2017,128,11,8,5,From Worst to Worst,-16026,Seahawks D/ST,False,0
+2017,129,11,9,7,The Redemption Squad,15683,Justin Tucker,False,0
+2017,130,11,10,2,In Your Face,-16033,Ravens D/ST,False,0
+2017,131,11,11,1,The  Commish,-16012,Chiefs D/ST,False,0
+2017,132,11,12,4,CJ 2k16,5536,Ben Roethlisberger,False,0
+2017,133,12,1,4,CJ 2k16,9704,Stephen Gostkowski,False,0
+2017,134,12,2,1,The  Commish,15920,Latavius Murray,False,0
+2017,135,12,3,2,In Your Face,3042778,Corey Davis,False,0
+2017,136,12,4,7,The Redemption Squad,15072,Marvin Jones Jr.,False,0
+2017,137,12,5,5,From Worst to Worst,14032,Torrey Smith,False,0
+2017,138,12,6,13,Zeke's One-Two Punch,2980148,C.J. Prosise,False,0
+2017,139,12,7,6,Team Flatcheese,-16034,Texans D/ST,False,0
+2017,140,12,8,8,Curious George,15966,Chris Thompson,False,0
+2017,141,12,9,9,New Yawk Bklyn's Best,2976592,Sterling Shepard,False,0
+2017,142,12,10,12,Cntrl Alt Delete,14017,Shane Vereen,False,0
+2017,143,12,11,3,Tevin Schwartz,14163,Tyrod Taylor,False,0
+2017,144,12,12,10,Team Riley,16016,Kenny Stills,False,0
+2017,145,13,1,10,Team Riley,14922,Mohamed Sanu,False,0
+2017,146,13,2,3,Tevin Schwartz,1097,Adam Vinatieri,False,0
+2017,147,13,3,12,Cntrl Alt Delete,-16016,Vikings D/ST,False,0
+2017,148,13,4,9,New Yawk Bklyn's Best,-16030,Jaguars D/ST,False,0
+2017,149,13,5,8,Curious George,-16022,Cardinals D/ST,False,0
+2017,150,13,6,6,Team Flatcheese,14322,Dan Bailey,False,0
+2017,151,13,7,13,Zeke's One-Two Punch,11674,Danny Amendola,False,0
+2017,152,13,8,5,From Worst to Worst,17284,Charcandrick West,False,0
+2017,153,13,9,7,The Redemption Squad,-16017,Patriots D/ST,False,0
+2017,154,13,10,2,In Your Face,2573079,Carson Wentz,False,0
+2017,155,13,11,1,The  Commish,2576019,Josh Doctson,False,0
+2017,156,13,12,4,CJ 2k16,14198,Dion Lewis,False,0
+2017,157,14,1,4,CJ 2k16,15349,Cole Beasley,False,0
+2017,158,14,2,1,The  Commish,10636,Mason Crosby,False,0
+2017,159,14,3,2,In Your Face,17372,Chris Boswell,False,0
+2017,160,14,4,7,The Redemption Squad,16504,Jack Doyle,False,0
+2017,161,14,5,5,From Worst to Worst,11122,Matt Prater,False,0
+2017,162,14,6,13,Zeke's One-Two Punch,-16029,Panthers D/ST,False,0
+2017,163,14,7,6,Team Flatcheese,3043275,Austin Hooper,False,0
+2017,164,14,8,8,Curious George,17427,Cairo Santos,False,0
+2017,165,14,9,9,New Yawk Bklyn's Best,3051876,Evan Engram,False,0
+2017,166,14,10,12,Cntrl Alt Delete,15965,Dustin Hopkins,False,0
+2017,167,14,11,3,Tevin Schwartz,14012,Andy Dalton,False,0
+2017,168,14,12,10,Team Riley,-16014,Rams D/ST,False,0
+2017,169,15,1,10,Team Riley,2985659,Wil Lutz,False,0
+2017,170,15,2,3,Tevin Schwartz,4459,Carson Palmer,False,0
+2017,171,15,3,12,Cntrl Alt Delete,3054850,Alvin Kamara,False,0
+2017,172,15,4,9,New Yawk Bklyn's Best,16787,Marqise Lee,False,0
+2017,173,15,5,8,Curious George,3051889,Laquon Treadwell,False,0
+2017,174,15,6,6,Team Flatcheese,5526,Eli Manning,False,0
+2017,175,15,7,13,Zeke's One-Two Punch,15918,Caleb Sturgis,False,0
+2017,176,15,8,5,From Worst to Worst,3045147,James Conner,False,0
+2017,177,15,9,7,The Redemption Squad,16749,Charles Sims,False,0
+2017,178,15,10,2,In Your Face,2972460,Breshad Perriman,False,0
+2017,179,15,11,1,The  Commish,5362,Antonio Gates,False,0
+2017,180,15,12,4,CJ 2k16,-16023,Steelers D/ST,False,0

@@ -1,0 +1,193 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2017,1,False,1,The  Commish,7,The Redemption Squad,101.3,69.24,W
+2017,2,False,1,The  Commish,13,Zeke's One-Two Punch,79.56,70.8,W
+2017,3,False,1,The  Commish,4,CJ 2k16,137.1,35.8,W
+2017,4,False,1,The  Commish,8,Curious George,65.3,79.68,L
+2017,5,False,1,The  Commish,5,From Worst to Worst,79.78,89.74,L
+2017,6,False,1,The  Commish,3,Tevin Schwartz,96.6,95.68,W
+2017,7,False,1,The  Commish,12,Cntrl Alt Delete,69.22,97.16,L
+2017,8,False,1,The  Commish,6,Team Flatcheese,77.32,93.66,L
+2017,9,False,1,The  Commish,9,New Yawk Bklyn's Best,67.98,80.7,L
+2017,10,False,1,The  Commish,10,Team Riley,118.58,57.44,W
+2017,11,False,1,The  Commish,2,In Your Face,84.78,100.82,L
+2017,12,False,1,The  Commish,7,The Redemption Squad,94.98,104.22,L
+2017,13,False,1,The  Commish,13,Zeke's One-Two Punch,93.14,99.04,L
+2017,14,True,1,The  Commish,8,Curious George,93.34,108.06,L
+2017,15,True,1,The  Commish,5,From Worst to Worst,97.04,104.84,L
+2017,16,True,1,The  Commish,10,Team Riley,77.46,71.72,W
+2017,1,False,2,In Your Face,6,Team Flatcheese,97.14,89.64,W
+2017,2,False,2,In Your Face,9,New Yawk Bklyn's Best,119.32,87.28,W
+2017,3,False,2,In Your Face,10,Team Riley,71.92,57.98,W
+2017,4,False,2,In Your Face,12,Cntrl Alt Delete,72.26,96.2,L
+2017,5,False,2,In Your Face,7,The Redemption Squad,115.14,90.0,W
+2017,6,False,2,In Your Face,13,Zeke's One-Two Punch,114.62,40.64,W
+2017,7,False,2,In Your Face,4,CJ 2k16,128.32,75.88,W
+2017,8,False,2,In Your Face,8,Curious George,103.14,91.82,W
+2017,9,False,2,In Your Face,5,From Worst to Worst,73.16,64.52,W
+2017,10,False,2,In Your Face,3,Tevin Schwartz,103.38,74.14,W
+2017,11,False,2,In Your Face,1,The  Commish,100.82,84.78,W
+2017,12,False,2,In Your Face,6,Team Flatcheese,85.88,58.58,W
+2017,13,False,2,In Your Face,9,New Yawk Bklyn's Best,94.92,81.72,W
+2017,14,True,2,In Your Face,2,In Your Face,102.84,102.84,U
+2017,15,True,2,In Your Face,7,The Redemption Squad,110.14,130.68,L
+2017,16,True,2,In Your Face,12,Cntrl Alt Delete,85.16,84.42,W
+2017,1,False,3,Tevin Schwartz,13,Zeke's One-Two Punch,67.96,93.38,L
+2017,2,False,3,Tevin Schwartz,4,CJ 2k16,105.28,73.32,W
+2017,3,False,3,Tevin Schwartz,8,Curious George,74.86,45.68,W
+2017,4,False,3,Tevin Schwartz,5,From Worst to Worst,114.08,111.52,W
+2017,5,False,3,Tevin Schwartz,12,Cntrl Alt Delete,98.96,109.32,L
+2017,6,False,3,Tevin Schwartz,1,The  Commish,95.68,96.6,L
+2017,7,False,3,Tevin Schwartz,6,Team Flatcheese,64.18,58.72,W
+2017,8,False,3,Tevin Schwartz,9,New Yawk Bklyn's Best,113.02,88.02,W
+2017,9,False,3,Tevin Schwartz,10,Team Riley,90.54,97.3,L
+2017,10,False,3,Tevin Schwartz,2,In Your Face,74.14,103.38,L
+2017,11,False,3,Tevin Schwartz,7,The Redemption Squad,105.56,136.84,L
+2017,12,False,3,Tevin Schwartz,13,Zeke's One-Two Punch,111.8,78.92,W
+2017,13,False,3,Tevin Schwartz,4,CJ 2k16,96.8,108.78,L
+2017,14,True,3,Tevin Schwartz,13,Zeke's One-Two Punch,123.04,57.94,W
+2017,15,True,3,Tevin Schwartz,12,Cntrl Alt Delete,93.34,82.28,W
+2017,16,True,3,Tevin Schwartz,7,The Redemption Squad,75.24,119.5,L
+2017,1,False,4,CJ 2k16,5,From Worst to Worst,102.92,72.04,W
+2017,2,False,4,CJ 2k16,3,Tevin Schwartz,73.32,105.28,L
+2017,3,False,4,CJ 2k16,1,The  Commish,35.8,137.1,L
+2017,4,False,4,CJ 2k16,6,Team Flatcheese,85.72,73.98,W
+2017,5,False,4,CJ 2k16,9,New Yawk Bklyn's Best,91.46,57.02,W
+2017,6,False,4,CJ 2k16,10,Team Riley,90.34,80.76,W
+2017,7,False,4,CJ 2k16,2,In Your Face,75.88,128.32,L
+2017,8,False,4,CJ 2k16,7,The Redemption Squad,60.88,90.06,L
+2017,9,False,4,CJ 2k16,13,Zeke's One-Two Punch,70.02,101.8,L
+2017,10,False,4,CJ 2k16,12,Cntrl Alt Delete,98.4,91.22,W
+2017,11,False,4,CJ 2k16,8,Curious George,67.3,47.3,W
+2017,12,False,4,CJ 2k16,5,From Worst to Worst,88.06,110.84,L
+2017,13,False,4,CJ 2k16,3,Tevin Schwartz,108.78,96.8,W
+2017,14,True,4,CJ 2k16,7,The Redemption Squad,84.62,102.68,L
+2017,15,True,4,CJ 2k16,13,Zeke's One-Two Punch,98.74,116.4,L
+2017,16,True,4,CJ 2k16,13,Zeke's One-Two Punch,76.46,77.02,L
+2017,1,False,5,From Worst to Worst,4,CJ 2k16,72.04,102.92,L
+2017,2,False,5,From Worst to Worst,8,Curious George,99.84,71.04,W
+2017,3,False,5,From Worst to Worst,12,Cntrl Alt Delete,111.2,117.92,L
+2017,4,False,5,From Worst to Worst,3,Tevin Schwartz,111.52,114.08,L
+2017,5,False,5,From Worst to Worst,1,The  Commish,89.74,79.78,W
+2017,6,False,5,From Worst to Worst,6,Team Flatcheese,85.5,95.32,L
+2017,7,False,5,From Worst to Worst,9,New Yawk Bklyn's Best,92.84,106.76,L
+2017,8,False,5,From Worst to Worst,10,Team Riley,83.36,87.8,L
+2017,9,False,5,From Worst to Worst,2,In Your Face,64.52,73.16,L
+2017,10,False,5,From Worst to Worst,7,The Redemption Squad,73.56,98.76,L
+2017,11,False,5,From Worst to Worst,13,Zeke's One-Two Punch,99.6,119.68,L
+2017,12,False,5,From Worst to Worst,4,CJ 2k16,110.84,88.06,W
+2017,13,False,5,From Worst to Worst,8,Curious George,99.96,112.66,L
+2017,14,True,5,From Worst to Worst,6,Team Flatcheese,109.44,69.86,W
+2017,15,True,5,From Worst to Worst,1,The  Commish,104.84,97.04,W
+2017,16,True,5,From Worst to Worst,9,New Yawk Bklyn's Best,106.86,81.76,W
+2017,1,False,6,Team Flatcheese,2,In Your Face,89.64,97.14,L
+2017,2,False,6,Team Flatcheese,7,The Redemption Squad,79.68,75.4,W
+2017,3,False,6,Team Flatcheese,13,Zeke's One-Two Punch,70.56,76.82,L
+2017,4,False,6,Team Flatcheese,4,CJ 2k16,73.98,85.72,L
+2017,5,False,6,Team Flatcheese,8,Curious George,70.66,86.04,L
+2017,6,False,6,Team Flatcheese,5,From Worst to Worst,95.32,85.5,W
+2017,7,False,6,Team Flatcheese,3,Tevin Schwartz,58.72,64.18,L
+2017,8,False,6,Team Flatcheese,1,The  Commish,93.66,77.32,W
+2017,9,False,6,Team Flatcheese,12,Cntrl Alt Delete,67.92,104.28,L
+2017,10,False,6,Team Flatcheese,9,New Yawk Bklyn's Best,62.7,97.54,L
+2017,11,False,6,Team Flatcheese,10,Team Riley,104.3,53.96,W
+2017,12,False,6,Team Flatcheese,2,In Your Face,58.58,85.88,L
+2017,13,False,6,Team Flatcheese,7,The Redemption Squad,42.2,126.52,L
+2017,14,True,6,Team Flatcheese,5,From Worst to Worst,69.86,109.44,L
+2017,15,True,6,Team Flatcheese,10,Team Riley,59.4,54.42,W
+2017,16,True,6,Team Flatcheese,8,Curious George,84.94,66.3,W
+2017,1,False,7,The Redemption Squad,1,The  Commish,69.24,101.3,L
+2017,2,False,7,The Redemption Squad,6,Team Flatcheese,75.4,79.68,L
+2017,3,False,7,The Redemption Squad,9,New Yawk Bklyn's Best,85.3,111.22,L
+2017,4,False,7,The Redemption Squad,10,Team Riley,93.24,96.52,L
+2017,5,False,7,The Redemption Squad,2,In Your Face,90.0,115.14,L
+2017,6,False,7,The Redemption Squad,12,Cntrl Alt Delete,112.26,83.66,W
+2017,7,False,7,The Redemption Squad,13,Zeke's One-Two Punch,90.64,148.18,L
+2017,8,False,7,The Redemption Squad,4,CJ 2k16,90.06,60.88,W
+2017,9,False,7,The Redemption Squad,8,Curious George,112.58,96.26,W
+2017,10,False,7,The Redemption Squad,5,From Worst to Worst,98.76,73.56,W
+2017,11,False,7,The Redemption Squad,3,Tevin Schwartz,136.84,105.56,W
+2017,12,False,7,The Redemption Squad,1,The  Commish,104.22,94.98,W
+2017,13,False,7,The Redemption Squad,6,Team Flatcheese,126.52,42.2,W
+2017,14,True,7,The Redemption Squad,4,CJ 2k16,102.68,84.62,W
+2017,15,True,7,The Redemption Squad,2,In Your Face,130.68,110.14,W
+2017,16,True,7,The Redemption Squad,3,Tevin Schwartz,119.5,75.24,W
+2017,1,False,8,Curious George,12,Cntrl Alt Delete,61.88,54.12,W
+2017,2,False,8,Curious George,5,From Worst to Worst,71.04,99.84,L
+2017,3,False,8,Curious George,3,Tevin Schwartz,45.68,74.86,L
+2017,4,False,8,Curious George,1,The  Commish,79.68,65.3,W
+2017,5,False,8,Curious George,6,Team Flatcheese,86.04,70.66,W
+2017,6,False,8,Curious George,9,New Yawk Bklyn's Best,111.62,87.68,W
+2017,7,False,8,Curious George,10,Team Riley,97.06,83.32,W
+2017,8,False,8,Curious George,2,In Your Face,91.82,103.14,L
+2017,9,False,8,Curious George,7,The Redemption Squad,96.26,112.58,L
+2017,10,False,8,Curious George,13,Zeke's One-Two Punch,90.04,93.7,L
+2017,11,False,8,Curious George,4,CJ 2k16,47.3,67.3,L
+2017,12,False,8,Curious George,12,Cntrl Alt Delete,105.86,109.72,L
+2017,13,False,8,Curious George,5,From Worst to Worst,112.66,99.96,W
+2017,14,True,8,Curious George,1,The  Commish,108.06,93.34,W
+2017,15,True,8,Curious George,9,New Yawk Bklyn's Best,57.38,72.12,L
+2017,16,True,8,Curious George,6,Team Flatcheese,66.3,84.94,L
+2017,1,False,9,New Yawk Bklyn's Best,10,Team Riley,73.18,97.24,L
+2017,2,False,9,New Yawk Bklyn's Best,2,In Your Face,87.28,119.32,L
+2017,3,False,9,New Yawk Bklyn's Best,7,The Redemption Squad,111.22,85.3,W
+2017,4,False,9,New Yawk Bklyn's Best,13,Zeke's One-Two Punch,61.68,99.64,L
+2017,5,False,9,New Yawk Bklyn's Best,4,CJ 2k16,57.02,91.46,L
+2017,6,False,9,New Yawk Bklyn's Best,8,Curious George,87.68,111.62,L
+2017,7,False,9,New Yawk Bklyn's Best,5,From Worst to Worst,106.76,92.84,W
+2017,8,False,9,New Yawk Bklyn's Best,3,Tevin Schwartz,88.02,113.02,L
+2017,9,False,9,New Yawk Bklyn's Best,1,The  Commish,80.7,67.98,W
+2017,10,False,9,New Yawk Bklyn's Best,6,Team Flatcheese,97.54,62.7,W
+2017,11,False,9,New Yawk Bklyn's Best,12,Cntrl Alt Delete,90.3,139.42,L
+2017,12,False,9,New Yawk Bklyn's Best,10,Team Riley,96.78,75.8,W
+2017,13,False,9,New Yawk Bklyn's Best,2,In Your Face,81.72,94.92,L
+2017,14,True,9,New Yawk Bklyn's Best,10,Team Riley,73.52,64.64,W
+2017,15,True,9,New Yawk Bklyn's Best,8,Curious George,72.12,57.38,W
+2017,16,True,9,New Yawk Bklyn's Best,5,From Worst to Worst,81.76,106.86,L
+2017,1,False,10,Team Riley,9,New Yawk Bklyn's Best,97.24,73.18,W
+2017,2,False,10,Team Riley,12,Cntrl Alt Delete,84.82,68.22,W
+2017,3,False,10,Team Riley,2,In Your Face,57.98,71.92,L
+2017,4,False,10,Team Riley,7,The Redemption Squad,96.52,93.24,W
+2017,5,False,10,Team Riley,13,Zeke's One-Two Punch,66.2,84.02,L
+2017,6,False,10,Team Riley,4,CJ 2k16,80.76,90.34,L
+2017,7,False,10,Team Riley,8,Curious George,83.32,97.06,L
+2017,8,False,10,Team Riley,5,From Worst to Worst,87.8,83.36,W
+2017,9,False,10,Team Riley,3,Tevin Schwartz,97.3,90.54,W
+2017,10,False,10,Team Riley,1,The  Commish,57.44,118.58,L
+2017,11,False,10,Team Riley,6,Team Flatcheese,53.96,104.3,L
+2017,12,False,10,Team Riley,9,New Yawk Bklyn's Best,75.8,96.78,L
+2017,13,False,10,Team Riley,12,Cntrl Alt Delete,103.16,108.18,L
+2017,14,True,10,Team Riley,9,New Yawk Bklyn's Best,64.64,73.52,L
+2017,15,True,10,Team Riley,6,Team Flatcheese,54.42,59.4,L
+2017,16,True,10,Team Riley,1,The  Commish,71.72,77.46,L
+2017,1,False,12,Cntrl Alt Delete,8,Curious George,54.12,61.88,L
+2017,2,False,12,Cntrl Alt Delete,10,Team Riley,68.22,84.82,L
+2017,3,False,12,Cntrl Alt Delete,5,From Worst to Worst,117.92,111.2,W
+2017,4,False,12,Cntrl Alt Delete,2,In Your Face,96.2,72.26,W
+2017,5,False,12,Cntrl Alt Delete,3,Tevin Schwartz,109.32,98.96,W
+2017,6,False,12,Cntrl Alt Delete,7,The Redemption Squad,83.66,112.26,L
+2017,7,False,12,Cntrl Alt Delete,1,The  Commish,97.16,69.22,W
+2017,8,False,12,Cntrl Alt Delete,13,Zeke's One-Two Punch,118.88,79.92,W
+2017,9,False,12,Cntrl Alt Delete,6,Team Flatcheese,104.28,67.92,W
+2017,10,False,12,Cntrl Alt Delete,4,CJ 2k16,91.22,98.4,L
+2017,11,False,12,Cntrl Alt Delete,9,New Yawk Bklyn's Best,139.42,90.3,W
+2017,12,False,12,Cntrl Alt Delete,8,Curious George,109.72,105.86,W
+2017,13,False,12,Cntrl Alt Delete,10,Team Riley,108.18,103.16,W
+2017,14,True,12,Cntrl Alt Delete,12,Cntrl Alt Delete,128.04,128.04,U
+2017,15,True,12,Cntrl Alt Delete,3,Tevin Schwartz,82.28,93.34,L
+2017,16,True,12,Cntrl Alt Delete,2,In Your Face,84.42,85.16,L
+2017,1,False,13,Zeke's One-Two Punch,3,Tevin Schwartz,93.38,67.96,W
+2017,2,False,13,Zeke's One-Two Punch,1,The  Commish,70.8,79.56,L
+2017,3,False,13,Zeke's One-Two Punch,6,Team Flatcheese,76.82,70.56,W
+2017,4,False,13,Zeke's One-Two Punch,9,New Yawk Bklyn's Best,99.64,61.68,W
+2017,5,False,13,Zeke's One-Two Punch,10,Team Riley,84.02,66.2,W
+2017,6,False,13,Zeke's One-Two Punch,2,In Your Face,40.64,114.62,L
+2017,7,False,13,Zeke's One-Two Punch,7,The Redemption Squad,148.18,90.64,W
+2017,8,False,13,Zeke's One-Two Punch,12,Cntrl Alt Delete,79.92,118.88,L
+2017,9,False,13,Zeke's One-Two Punch,4,CJ 2k16,101.8,70.02,W
+2017,10,False,13,Zeke's One-Two Punch,8,Curious George,93.7,90.04,W
+2017,11,False,13,Zeke's One-Two Punch,5,From Worst to Worst,119.68,99.6,W
+2017,12,False,13,Zeke's One-Two Punch,3,Tevin Schwartz,78.92,111.8,L
+2017,13,False,13,Zeke's One-Two Punch,1,The  Commish,99.04,93.14,W
+2017,14,True,13,Zeke's One-Two Punch,3,Tevin Schwartz,57.94,123.04,L
+2017,15,True,13,Zeke's One-Two Punch,4,CJ 2k16,116.4,98.74,W
+2017,16,True,13,Zeke's One-Two Punch,4,CJ 2k16,77.02,76.46,W

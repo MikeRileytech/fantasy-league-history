@@ -1,0 +1,193 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2020,1,False,1,The  Commish,7,Fantasy Football Team,99.5,144.2,L
+2020,2,False,1,The  Commish,13,99 Problems but L. Fitz ain't 1,134.12,94.68,W
+2020,3,False,1,The  Commish,4,Juicy Smuyet,93.98,126.7,L
+2020,4,False,1,The  Commish,8,The  Lazard King,193.46,115.78,W
+2020,5,False,1,The  Commish,5,Maybe This Year,105.24,134.66,L
+2020,6,False,1,The  Commish,3,The Autodraft Allstars,109.94,80.62,W
+2020,7,False,1,The  Commish,12,Curious George,128.56,126.96,W
+2020,8,False,1,The  Commish,6,Team Flatcheese,85.96,99.02,L
+2020,9,False,1,The  Commish,9,LOCKETT LIKE I  TALK IT,79.06,82.2,L
+2020,10,False,1,The  Commish,10,DENVER BREAD,99.24,112.36,L
+2020,11,False,1,The  Commish,2,In Your Face,116.3,104.02,W
+2020,12,False,1,The  Commish,7,Fantasy Football Team,106.8,96.62,W
+2020,13,False,1,The  Commish,13,99 Problems but L. Fitz ain't 1,123.1,83.32,W
+2020,14,True,1,The  Commish,4,Juicy Smuyet,117.24,148.66,L
+2020,15,True,1,The  Commish,5,Maybe This Year,98.5,97.92,W
+2020,16,True,1,The  Commish,5,Maybe This Year,115.92,145.76,L
+2020,1,False,2,In Your Face,6,Team Flatcheese,117.54,148.08,L
+2020,2,False,2,In Your Face,9,LOCKETT LIKE I  TALK IT,143.68,118.52,W
+2020,3,False,2,In Your Face,10,DENVER BREAD,172.7,132.34,W
+2020,4,False,2,In Your Face,12,Curious George,115.3,108.2,W
+2020,5,False,2,In Your Face,7,Fantasy Football Team,106.7,150.2,L
+2020,6,False,2,In Your Face,13,99 Problems but L. Fitz ain't 1,98.9,173.12,L
+2020,7,False,2,In Your Face,4,Juicy Smuyet,124.7,147.2,L
+2020,8,False,2,In Your Face,8,The  Lazard King,129.24,124.02,W
+2020,9,False,2,In Your Face,5,Maybe This Year,112.88,106.34,W
+2020,10,False,2,In Your Face,3,The Autodraft Allstars,110.28,119.14,L
+2020,11,False,2,In Your Face,1,The  Commish,104.02,116.3,L
+2020,12,False,2,In Your Face,6,Team Flatcheese,131.0,98.24,W
+2020,13,False,2,In Your Face,9,LOCKETT LIKE I  TALK IT,156.76,136.12,W
+2020,14,True,2,In Your Face,5,Maybe This Year,118.3,112.56,W
+2020,15,True,2,In Your Face,10,DENVER BREAD,123.06,164.76,L
+2020,16,True,2,In Your Face,7,Fantasy Football Team,172.82,88.72,W
+2020,1,False,3,The Autodraft Allstars,13,99 Problems but L. Fitz ain't 1,109.36,116.8,L
+2020,2,False,3,The Autodraft Allstars,4,Juicy Smuyet,117.06,118.14,L
+2020,3,False,3,The Autodraft Allstars,8,The  Lazard King,89.8,157.28,L
+2020,4,False,3,The Autodraft Allstars,5,Maybe This Year,81.74,136.7,L
+2020,5,False,3,The Autodraft Allstars,12,Curious George,130.44,120.82,W
+2020,6,False,3,The Autodraft Allstars,1,The  Commish,80.62,109.94,L
+2020,7,False,3,The Autodraft Allstars,6,Team Flatcheese,151.62,91.3,W
+2020,8,False,3,The Autodraft Allstars,9,LOCKETT LIKE I  TALK IT,88.66,84.84,W
+2020,9,False,3,The Autodraft Allstars,10,DENVER BREAD,87.64,119.1,L
+2020,10,False,3,The Autodraft Allstars,2,In Your Face,119.14,110.28,W
+2020,11,False,3,The Autodraft Allstars,7,Fantasy Football Team,113.48,137.24,L
+2020,12,False,3,The Autodraft Allstars,13,99 Problems but L. Fitz ain't 1,119.96,138.0,L
+2020,13,False,3,The Autodraft Allstars,4,Juicy Smuyet,122.18,115.32,W
+2020,14,True,3,The Autodraft Allstars,13,99 Problems but L. Fitz ain't 1,132.58,84.26,W
+2020,15,True,3,The Autodraft Allstars,8,The  Lazard King,86.48,125.52,L
+2020,16,True,3,The Autodraft Allstars,13,99 Problems but L. Fitz ain't 1,139.76,121.9,W
+2020,1,False,4,Juicy Smuyet,5,Maybe This Year,115.5,129.82,L
+2020,2,False,4,Juicy Smuyet,3,The Autodraft Allstars,118.14,117.06,W
+2020,3,False,4,Juicy Smuyet,1,The  Commish,126.7,93.98,W
+2020,4,False,4,Juicy Smuyet,6,Team Flatcheese,172.22,138.04,W
+2020,5,False,4,Juicy Smuyet,9,LOCKETT LIKE I  TALK IT,126.5,106.5,W
+2020,6,False,4,Juicy Smuyet,10,DENVER BREAD,81.32,120.98,L
+2020,7,False,4,Juicy Smuyet,2,In Your Face,147.2,124.7,W
+2020,8,False,4,Juicy Smuyet,7,Fantasy Football Team,155.16,156.82,L
+2020,9,False,4,Juicy Smuyet,13,99 Problems but L. Fitz ain't 1,167.12,116.88,W
+2020,10,False,4,Juicy Smuyet,12,Curious George,165.9,78.32,W
+2020,11,False,4,Juicy Smuyet,8,The  Lazard King,161.76,140.7,W
+2020,12,False,4,Juicy Smuyet,5,Maybe This Year,154.9,125.72,W
+2020,13,False,4,Juicy Smuyet,3,The Autodraft Allstars,115.32,122.18,L
+2020,14,True,4,Juicy Smuyet,1,The  Commish,148.66,117.24,W
+2020,15,True,4,Juicy Smuyet,7,Fantasy Football Team,171.84,87.62,W
+2020,16,True,4,Juicy Smuyet,10,DENVER BREAD,112.88,115.0,L
+2020,1,False,5,Maybe This Year,4,Juicy Smuyet,129.82,115.5,W
+2020,2,False,5,Maybe This Year,8,The  Lazard King,119.7,144.9,L
+2020,3,False,5,Maybe This Year,12,Curious George,134.06,122.2,W
+2020,4,False,5,Maybe This Year,3,The Autodraft Allstars,136.7,81.74,W
+2020,5,False,5,Maybe This Year,1,The  Commish,134.66,105.24,W
+2020,6,False,5,Maybe This Year,6,Team Flatcheese,144.8,92.82,W
+2020,7,False,5,Maybe This Year,9,LOCKETT LIKE I  TALK IT,145.16,109.32,W
+2020,8,False,5,Maybe This Year,10,DENVER BREAD,95.34,119.66,L
+2020,9,False,5,Maybe This Year,2,In Your Face,106.34,112.88,L
+2020,10,False,5,Maybe This Year,7,Fantasy Football Team,80.82,102.16,L
+2020,11,False,5,Maybe This Year,13,99 Problems but L. Fitz ain't 1,107.86,82.38,W
+2020,12,False,5,Maybe This Year,4,Juicy Smuyet,125.72,154.9,L
+2020,13,False,5,Maybe This Year,8,The  Lazard King,129.94,128.46,W
+2020,14,True,5,Maybe This Year,2,In Your Face,112.56,118.3,L
+2020,15,True,5,Maybe This Year,1,The  Commish,97.92,98.5,L
+2020,16,True,5,Maybe This Year,1,The  Commish,145.76,115.92,W
+2020,1,False,6,Team Flatcheese,2,In Your Face,148.08,117.54,W
+2020,2,False,6,Team Flatcheese,7,Fantasy Football Team,137.96,144.26,L
+2020,3,False,6,Team Flatcheese,13,99 Problems but L. Fitz ain't 1,123.5,119.62,W
+2020,4,False,6,Team Flatcheese,4,Juicy Smuyet,138.04,172.22,L
+2020,5,False,6,Team Flatcheese,8,The  Lazard King,128.56,133.14,L
+2020,6,False,6,Team Flatcheese,5,Maybe This Year,92.82,144.8,L
+2020,7,False,6,Team Flatcheese,3,The Autodraft Allstars,91.3,151.62,L
+2020,8,False,6,Team Flatcheese,1,The  Commish,99.02,85.96,W
+2020,9,False,6,Team Flatcheese,12,Curious George,107.24,115.86,L
+2020,10,False,6,Team Flatcheese,9,LOCKETT LIKE I  TALK IT,144.98,41.42,W
+2020,11,False,6,Team Flatcheese,10,DENVER BREAD,120.14,162.16,L
+2020,12,False,6,Team Flatcheese,2,In Your Face,98.24,131.0,L
+2020,13,False,6,Team Flatcheese,7,Fantasy Football Team,74.46,117.28,L
+2020,14,True,6,Team Flatcheese,9,LOCKETT LIKE I  TALK IT,121.82,112.04,W
+2020,15,True,6,Team Flatcheese,12,Curious George,137.46,129.92,W
+2020,16,True,6,Team Flatcheese,8,The  Lazard King,141.92,109.84,W
+2020,1,False,7,Fantasy Football Team,1,The  Commish,144.2,99.5,W
+2020,2,False,7,Fantasy Football Team,6,Team Flatcheese,144.26,137.96,W
+2020,3,False,7,Fantasy Football Team,9,LOCKETT LIKE I  TALK IT,148.38,96.9,W
+2020,4,False,7,Fantasy Football Team,10,DENVER BREAD,143.12,120.4,W
+2020,5,False,7,Fantasy Football Team,2,In Your Face,150.2,106.7,W
+2020,6,False,7,Fantasy Football Team,12,Curious George,80.36,155.82,L
+2020,7,False,7,Fantasy Football Team,13,99 Problems but L. Fitz ain't 1,88.82,115.22,L
+2020,8,False,7,Fantasy Football Team,4,Juicy Smuyet,156.82,155.16,W
+2020,9,False,7,Fantasy Football Team,8,The  Lazard King,146.5,112.52,W
+2020,10,False,7,Fantasy Football Team,5,Maybe This Year,102.16,80.82,W
+2020,11,False,7,Fantasy Football Team,3,The Autodraft Allstars,137.24,113.48,W
+2020,12,False,7,Fantasy Football Team,1,The  Commish,96.62,106.8,L
+2020,13,False,7,Fantasy Football Team,6,Team Flatcheese,117.28,74.46,W
+2020,14,True,7,Fantasy Football Team,7,Fantasy Football Team,157.22,157.22,U
+2020,15,True,7,Fantasy Football Team,4,Juicy Smuyet,87.62,171.84,L
+2020,16,True,7,Fantasy Football Team,2,In Your Face,88.72,172.82,L
+2020,1,False,8,The  Lazard King,12,Curious George,137.04,99.5,W
+2020,2,False,8,The  Lazard King,5,Maybe This Year,144.9,119.7,W
+2020,3,False,8,The  Lazard King,3,The Autodraft Allstars,157.28,89.8,W
+2020,4,False,8,The  Lazard King,1,The  Commish,115.78,193.46,L
+2020,5,False,8,The  Lazard King,6,Team Flatcheese,133.14,128.56,W
+2020,6,False,8,The  Lazard King,9,LOCKETT LIKE I  TALK IT,123.24,90.9,W
+2020,7,False,8,The  Lazard King,10,DENVER BREAD,113.3,158.88,L
+2020,8,False,8,The  Lazard King,2,In Your Face,124.02,129.24,L
+2020,9,False,8,The  Lazard King,7,Fantasy Football Team,112.52,146.5,L
+2020,10,False,8,The  Lazard King,13,99 Problems but L. Fitz ain't 1,95.06,81.54,W
+2020,11,False,8,The  Lazard King,4,Juicy Smuyet,140.7,161.76,L
+2020,12,False,8,The  Lazard King,12,Curious George,121.4,146.68,L
+2020,13,False,8,The  Lazard King,5,Maybe This Year,128.46,129.94,L
+2020,14,True,8,The  Lazard King,12,Curious George,113.78,101.18,W
+2020,15,True,8,The  Lazard King,3,The Autodraft Allstars,125.52,86.48,W
+2020,16,True,8,The  Lazard King,6,Team Flatcheese,109.84,141.92,L
+2020,1,False,9,LOCKETT LIKE I  TALK IT,10,DENVER BREAD,111.68,161.18,L
+2020,2,False,9,LOCKETT LIKE I  TALK IT,2,In Your Face,118.52,143.68,L
+2020,3,False,9,LOCKETT LIKE I  TALK IT,7,Fantasy Football Team,96.9,148.38,L
+2020,4,False,9,LOCKETT LIKE I  TALK IT,13,99 Problems but L. Fitz ain't 1,125.5,92.44,W
+2020,5,False,9,LOCKETT LIKE I  TALK IT,4,Juicy Smuyet,106.5,126.5,L
+2020,6,False,9,LOCKETT LIKE I  TALK IT,8,The  Lazard King,90.9,123.24,L
+2020,7,False,9,LOCKETT LIKE I  TALK IT,5,Maybe This Year,109.32,145.16,L
+2020,8,False,9,LOCKETT LIKE I  TALK IT,3,The Autodraft Allstars,84.84,88.66,L
+2020,9,False,9,LOCKETT LIKE I  TALK IT,1,The  Commish,82.2,79.06,W
+2020,10,False,9,LOCKETT LIKE I  TALK IT,6,Team Flatcheese,41.42,144.98,L
+2020,11,False,9,LOCKETT LIKE I  TALK IT,12,Curious George,102.98,131.22,L
+2020,12,False,9,LOCKETT LIKE I  TALK IT,10,DENVER BREAD,128.3,153.98,L
+2020,13,False,9,LOCKETT LIKE I  TALK IT,2,In Your Face,136.12,156.76,L
+2020,14,True,9,LOCKETT LIKE I  TALK IT,6,Team Flatcheese,112.04,121.82,L
+2020,15,True,9,LOCKETT LIKE I  TALK IT,13,99 Problems but L. Fitz ain't 1,90.74,103.54,L
+2020,16,True,9,LOCKETT LIKE I  TALK IT,12,Curious George,106.0,82.88,W
+2020,1,False,10,DENVER BREAD,9,LOCKETT LIKE I  TALK IT,161.18,111.68,W
+2020,2,False,10,DENVER BREAD,12,Curious George,134.3,94.28,W
+2020,3,False,10,DENVER BREAD,2,In Your Face,132.34,172.7,L
+2020,4,False,10,DENVER BREAD,7,Fantasy Football Team,120.4,143.12,L
+2020,5,False,10,DENVER BREAD,13,99 Problems but L. Fitz ain't 1,107.42,131.0,L
+2020,6,False,10,DENVER BREAD,4,Juicy Smuyet,120.98,81.32,W
+2020,7,False,10,DENVER BREAD,8,The  Lazard King,158.88,113.3,W
+2020,8,False,10,DENVER BREAD,5,Maybe This Year,119.66,95.34,W
+2020,9,False,10,DENVER BREAD,3,The Autodraft Allstars,119.1,87.64,W
+2020,10,False,10,DENVER BREAD,1,The  Commish,112.36,99.24,W
+2020,11,False,10,DENVER BREAD,6,Team Flatcheese,162.16,120.14,W
+2020,12,False,10,DENVER BREAD,9,LOCKETT LIKE I  TALK IT,153.98,128.3,W
+2020,13,False,10,DENVER BREAD,12,Curious George,151.7,44.76,W
+2020,14,True,10,DENVER BREAD,10,DENVER BREAD,116.52,116.52,U
+2020,15,True,10,DENVER BREAD,2,In Your Face,164.76,123.06,W
+2020,16,True,10,DENVER BREAD,4,Juicy Smuyet,115.0,112.88,W
+2020,1,False,12,Curious George,8,The  Lazard King,99.5,137.04,L
+2020,2,False,12,Curious George,10,DENVER BREAD,94.28,134.3,L
+2020,3,False,12,Curious George,5,Maybe This Year,122.2,134.06,L
+2020,4,False,12,Curious George,2,In Your Face,108.2,115.3,L
+2020,5,False,12,Curious George,3,The Autodraft Allstars,120.82,130.44,L
+2020,6,False,12,Curious George,7,Fantasy Football Team,155.82,80.36,W
+2020,7,False,12,Curious George,1,The  Commish,126.96,128.56,L
+2020,8,False,12,Curious George,13,99 Problems but L. Fitz ain't 1,97.12,90.8,W
+2020,9,False,12,Curious George,6,Team Flatcheese,115.86,107.24,W
+2020,10,False,12,Curious George,4,Juicy Smuyet,78.32,165.9,L
+2020,11,False,12,Curious George,9,LOCKETT LIKE I  TALK IT,131.22,102.98,W
+2020,12,False,12,Curious George,8,The  Lazard King,146.68,121.4,W
+2020,13,False,12,Curious George,10,DENVER BREAD,44.76,151.7,L
+2020,14,True,12,Curious George,8,The  Lazard King,101.18,113.78,L
+2020,15,True,12,Curious George,6,Team Flatcheese,129.92,137.46,L
+2020,16,True,12,Curious George,9,LOCKETT LIKE I  TALK IT,82.88,106.0,L
+2020,1,False,13,99 Problems but L. Fitz ain't 1,3,The Autodraft Allstars,116.8,109.36,W
+2020,2,False,13,99 Problems but L. Fitz ain't 1,1,The  Commish,94.68,134.12,L
+2020,3,False,13,99 Problems but L. Fitz ain't 1,6,Team Flatcheese,119.62,123.5,L
+2020,4,False,13,99 Problems but L. Fitz ain't 1,9,LOCKETT LIKE I  TALK IT,92.44,125.5,L
+2020,5,False,13,99 Problems but L. Fitz ain't 1,10,DENVER BREAD,131.0,107.42,W
+2020,6,False,13,99 Problems but L. Fitz ain't 1,2,In Your Face,173.12,98.9,W
+2020,7,False,13,99 Problems but L. Fitz ain't 1,7,Fantasy Football Team,115.22,88.82,W
+2020,8,False,13,99 Problems but L. Fitz ain't 1,12,Curious George,90.8,97.12,L
+2020,9,False,13,99 Problems but L. Fitz ain't 1,4,Juicy Smuyet,116.88,167.12,L
+2020,10,False,13,99 Problems but L. Fitz ain't 1,8,The  Lazard King,81.54,95.06,L
+2020,11,False,13,99 Problems but L. Fitz ain't 1,5,Maybe This Year,82.38,107.86,L
+2020,12,False,13,99 Problems but L. Fitz ain't 1,3,The Autodraft Allstars,138.0,119.96,W
+2020,13,False,13,99 Problems but L. Fitz ain't 1,1,The  Commish,83.32,123.1,L
+2020,14,True,13,99 Problems but L. Fitz ain't 1,3,The Autodraft Allstars,84.26,132.58,L
+2020,15,True,13,99 Problems but L. Fitz ain't 1,9,LOCKETT LIKE I  TALK IT,103.54,90.74,W
+2020,16,True,13,99 Problems but L. Fitz ain't 1,3,The Autodraft Allstars,121.9,139.76,L

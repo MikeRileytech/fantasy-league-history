@@ -1,0 +1,205 @@
+season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponent_team_name,team_score,opponent_score,outcome
+2023,1,False,1,The  Commish,2,In Your Face,93.18,125.34,L
+2023,2,False,1,The  Commish,4,Juicy Smuyet ,165.28,121.0,W
+2023,3,False,1,The  Commish,5,Maybe This Year,145.48,153.26,L
+2023,4,False,1,The  Commish,3,Ridin Da Gus Bus to 10th place,73.5,153.86,L
+2023,5,False,1,The  Commish,7,No I'm Ryan Keyser ,131.28,191.42,L
+2023,6,False,1,The  Commish,6,Lets Ride,121.3,105.2,W
+2023,7,False,1,The  Commish,8,It's Always Sunny in Baltimore,67.06,107.76,L
+2023,8,False,1,The  Commish,14,Team AutoDraft,98.96,110.96,L
+2023,9,False,1,The  Commish,13,Rookie Squad,94.92,111.92,L
+2023,10,False,1,The  Commish,10,Mike Riley,108.62,154.2,L
+2023,11,False,1,The  Commish,12,Never cutting charbs,117.7,143.82,L
+2023,12,False,1,The  Commish,2,In Your Face,103.22,95.96,W
+2023,13,False,1,The  Commish,4,Juicy Smuyet ,115.6,133.6,L
+2023,14,False,1,The  Commish,5,Maybe This Year,85.7,159.02,L
+2023,15,True,1,The  Commish,2,In Your Face,65.16,87.96,L
+2023,16,True,1,The  Commish,3,Ridin Da Gus Bus to 10th place,140.52,121.76,W
+2023,17,True,1,The  Commish,13,Rookie Squad,57.08,116.44,L
+2023,1,False,2,In Your Face,1,The  Commish,125.34,93.18,W
+2023,2,False,2,In Your Face,5,Maybe This Year,92.66,102.54,L
+2023,3,False,2,In Your Face,7,No I'm Ryan Keyser ,111.32,132.28,L
+2023,4,False,2,In Your Face,8,It's Always Sunny in Baltimore,132.1,104.46,W
+2023,5,False,2,In Your Face,13,Rookie Squad,93.16,159.92,L
+2023,6,False,2,In Your Face,12,Never cutting charbs,97.86,135.78,L
+2023,7,False,2,In Your Face,4,Juicy Smuyet ,73.3,128.06,L
+2023,8,False,2,In Your Face,3,Ridin Da Gus Bus to 10th place,135.56,123.48,W
+2023,9,False,2,In Your Face,6,Lets Ride,81.62,95.42,L
+2023,10,False,2,In Your Face,14,Team AutoDraft,97.58,182.06,L
+2023,11,False,2,In Your Face,10,Mike Riley,124.1,132.36,L
+2023,12,False,2,In Your Face,1,The  Commish,95.96,103.22,L
+2023,13,False,2,In Your Face,5,Maybe This Year,81.34,116.36,L
+2023,14,False,2,In Your Face,7,No I'm Ryan Keyser ,111.5,130.78,L
+2023,15,True,2,In Your Face,1,The  Commish,87.96,65.16,W
+2023,16,True,2,In Your Face,5,Maybe This Year,97.2,168.2,L
+2023,17,True,2,In Your Face,3,Ridin Da Gus Bus to 10th place,111.98,153.94,L
+2023,1,False,3,Ridin Da Gus Bus to 10th place,13,Rookie Squad,72.36,129.66,L
+2023,2,False,3,Ridin Da Gus Bus to 10th place,12,Never cutting charbs,115.28,130.1,L
+2023,3,False,3,Ridin Da Gus Bus to 10th place,4,Juicy Smuyet ,119.58,126.98,L
+2023,4,False,3,Ridin Da Gus Bus to 10th place,1,The  Commish,153.86,73.5,W
+2023,5,False,3,Ridin Da Gus Bus to 10th place,6,Lets Ride,106.74,105.94,W
+2023,6,False,3,Ridin Da Gus Bus to 10th place,14,Team AutoDraft,113.12,94.2,W
+2023,7,False,3,Ridin Da Gus Bus to 10th place,10,Mike Riley,114.34,147.74,L
+2023,8,False,3,Ridin Da Gus Bus to 10th place,2,In Your Face,123.48,135.56,L
+2023,9,False,3,Ridin Da Gus Bus to 10th place,5,Maybe This Year,97.88,122.9,L
+2023,10,False,3,Ridin Da Gus Bus to 10th place,7,No I'm Ryan Keyser ,88.02,82.3,W
+2023,11,False,3,Ridin Da Gus Bus to 10th place,8,It's Always Sunny in Baltimore,122.76,118.2,W
+2023,12,False,3,Ridin Da Gus Bus to 10th place,13,Rookie Squad,99.08,109.78,L
+2023,13,False,3,Ridin Da Gus Bus to 10th place,12,Never cutting charbs,86.18,151.32,L
+2023,14,False,3,Ridin Da Gus Bus to 10th place,4,Juicy Smuyet ,102.22,118.44,L
+2023,15,True,3,Ridin Da Gus Bus to 10th place,6,Lets Ride,92.64,117.52,L
+2023,16,True,3,Ridin Da Gus Bus to 10th place,1,The  Commish,121.76,140.52,L
+2023,17,True,3,Ridin Da Gus Bus to 10th place,2,In Your Face,153.94,111.98,W
+2023,1,False,4,Juicy Smuyet ,12,Never cutting charbs,92.84,79.96,W
+2023,2,False,4,Juicy Smuyet ,1,The  Commish,121.0,165.28,L
+2023,3,False,4,Juicy Smuyet ,3,Ridin Da Gus Bus to 10th place,126.98,119.58,W
+2023,4,False,4,Juicy Smuyet ,6,Lets Ride,151.02,99.02,W
+2023,5,False,4,Juicy Smuyet ,14,Team AutoDraft,122.94,73.88,W
+2023,6,False,4,Juicy Smuyet ,10,Mike Riley,111.54,135.64,L
+2023,7,False,4,Juicy Smuyet ,2,In Your Face,128.06,73.3,W
+2023,8,False,4,Juicy Smuyet ,5,Maybe This Year,123.3,113.1,W
+2023,9,False,4,Juicy Smuyet ,7,No I'm Ryan Keyser ,74.6,100.48,L
+2023,10,False,4,Juicy Smuyet ,8,It's Always Sunny in Baltimore,130.86,142.32,L
+2023,11,False,4,Juicy Smuyet ,13,Rookie Squad,112.08,86.14,W
+2023,12,False,4,Juicy Smuyet ,12,Never cutting charbs,142.92,119.16,W
+2023,13,False,4,Juicy Smuyet ,1,The  Commish,133.6,115.6,W
+2023,14,False,4,Juicy Smuyet ,3,Ridin Da Gus Bus to 10th place,118.44,102.22,W
+2023,15,True,4,Juicy Smuyet ,8,It's Always Sunny in Baltimore,156.62,125.44,W
+2023,16,True,4,Juicy Smuyet ,10,Mike Riley,126.9,137.08,L
+2023,17,True,4,Juicy Smuyet ,14,Team AutoDraft,101.4,131.2,L
+2023,1,False,5,Maybe This Year,10,Mike Riley,103.34,132.94,L
+2023,2,False,5,Maybe This Year,2,In Your Face,102.54,92.66,W
+2023,3,False,5,Maybe This Year,1,The  Commish,153.26,145.48,W
+2023,4,False,5,Maybe This Year,7,No I'm Ryan Keyser ,102.6,156.96,L
+2023,5,False,5,Maybe This Year,8,It's Always Sunny in Baltimore,128.38,81.36,W
+2023,6,False,5,Maybe This Year,13,Rookie Squad,138.42,84.54,W
+2023,7,False,5,Maybe This Year,12,Never cutting charbs,77.16,149.66,L
+2023,8,False,5,Maybe This Year,4,Juicy Smuyet ,113.1,123.3,L
+2023,9,False,5,Maybe This Year,3,Ridin Da Gus Bus to 10th place,122.9,97.88,W
+2023,10,False,5,Maybe This Year,6,Lets Ride,80.64,146.42,L
+2023,11,False,5,Maybe This Year,14,Team AutoDraft,94.34,126.56,L
+2023,12,False,5,Maybe This Year,10,Mike Riley,117.06,159.94,L
+2023,13,False,5,Maybe This Year,2,In Your Face,116.36,81.34,W
+2023,14,False,5,Maybe This Year,1,The  Commish,159.02,85.7,W
+2023,15,True,5,Maybe This Year,13,Rookie Squad,107.34,118.82,L
+2023,16,True,5,Maybe This Year,2,In Your Face,168.2,97.2,W
+2023,17,True,5,Maybe This Year,6,Lets Ride,84.52,61.2,W
+2023,1,False,6,Lets Ride,8,It's Always Sunny in Baltimore,104.52,122.58,L
+2023,2,False,6,Lets Ride,13,Rookie Squad,120.6,81.8,W
+2023,3,False,6,Lets Ride,12,Never cutting charbs,134.76,123.0,W
+2023,4,False,6,Lets Ride,4,Juicy Smuyet ,99.02,151.02,L
+2023,5,False,6,Lets Ride,3,Ridin Da Gus Bus to 10th place,105.94,106.74,L
+2023,6,False,6,Lets Ride,1,The  Commish,105.2,121.3,L
+2023,7,False,6,Lets Ride,14,Team AutoDraft,139.16,119.38,W
+2023,8,False,6,Lets Ride,10,Mike Riley,126.46,136.18,L
+2023,9,False,6,Lets Ride,2,In Your Face,95.42,81.62,W
+2023,10,False,6,Lets Ride,5,Maybe This Year,146.42,80.64,W
+2023,11,False,6,Lets Ride,7,No I'm Ryan Keyser ,82.84,114.7,L
+2023,12,False,6,Lets Ride,8,It's Always Sunny in Baltimore,81.4,152.38,L
+2023,13,False,6,Lets Ride,13,Rookie Squad,62.84,136.84,L
+2023,14,False,6,Lets Ride,12,Never cutting charbs,136.76,143.02,L
+2023,15,True,6,Lets Ride,3,Ridin Da Gus Bus to 10th place,117.52,92.64,W
+2023,16,True,6,Lets Ride,13,Rookie Squad,99.62,71.28,W
+2023,17,True,6,Lets Ride,5,Maybe This Year,61.2,84.52,L
+2023,1,False,7,No I'm Ryan Keyser ,14,Team AutoDraft,129.1,95.86,W
+2023,2,False,7,No I'm Ryan Keyser ,10,Mike Riley,105.52,132.54,L
+2023,3,False,7,No I'm Ryan Keyser ,2,In Your Face,132.28,111.32,W
+2023,4,False,7,No I'm Ryan Keyser ,5,Maybe This Year,156.96,102.6,W
+2023,5,False,7,No I'm Ryan Keyser ,1,The  Commish,191.42,131.28,W
+2023,6,False,7,No I'm Ryan Keyser ,8,It's Always Sunny in Baltimore,121.6,91.94,W
+2023,7,False,7,No I'm Ryan Keyser ,13,Rookie Squad,162.76,99.34,W
+2023,8,False,7,No I'm Ryan Keyser ,12,Never cutting charbs,133.76,126.32,W
+2023,9,False,7,No I'm Ryan Keyser ,4,Juicy Smuyet ,100.48,74.6,W
+2023,10,False,7,No I'm Ryan Keyser ,3,Ridin Da Gus Bus to 10th place,82.3,88.02,L
+2023,11,False,7,No I'm Ryan Keyser ,6,Lets Ride,114.7,82.84,W
+2023,12,False,7,No I'm Ryan Keyser ,14,Team AutoDraft,174.1,154.84,W
+2023,13,False,7,No I'm Ryan Keyser ,10,Mike Riley,145.92,129.8,W
+2023,14,False,7,No I'm Ryan Keyser ,2,In Your Face,130.78,111.5,W
+2023,15,True,7,No I'm Ryan Keyser ,7,No I'm Ryan Keyser ,97.32,97.32,U
+2023,16,True,7,No I'm Ryan Keyser ,14,Team AutoDraft,104.84,97.02,W
+2023,17,True,7,No I'm Ryan Keyser ,10,Mike Riley,161.08,171.26,L
+2023,1,False,8,It's Always Sunny in Baltimore,6,Lets Ride,122.58,104.52,W
+2023,2,False,8,It's Always Sunny in Baltimore,14,Team AutoDraft,182.26,123.34,W
+2023,3,False,8,It's Always Sunny in Baltimore,10,Mike Riley,141.78,113.56,W
+2023,4,False,8,It's Always Sunny in Baltimore,2,In Your Face,104.46,132.1,L
+2023,5,False,8,It's Always Sunny in Baltimore,5,Maybe This Year,81.36,128.38,L
+2023,6,False,8,It's Always Sunny in Baltimore,7,No I'm Ryan Keyser ,91.94,121.6,L
+2023,7,False,8,It's Always Sunny in Baltimore,1,The  Commish,107.76,67.06,W
+2023,8,False,8,It's Always Sunny in Baltimore,13,Rookie Squad,138.46,156.32,L
+2023,9,False,8,It's Always Sunny in Baltimore,12,Never cutting charbs,115.7,105.74,W
+2023,10,False,8,It's Always Sunny in Baltimore,4,Juicy Smuyet ,142.32,130.86,W
+2023,11,False,8,It's Always Sunny in Baltimore,3,Ridin Da Gus Bus to 10th place,118.2,122.76,L
+2023,12,False,8,It's Always Sunny in Baltimore,6,Lets Ride,152.38,81.4,W
+2023,13,False,8,It's Always Sunny in Baltimore,14,Team AutoDraft,124.68,142.76,L
+2023,14,False,8,It's Always Sunny in Baltimore,10,Mike Riley,125.34,128.62,L
+2023,15,True,8,It's Always Sunny in Baltimore,4,Juicy Smuyet ,125.44,156.62,L
+2023,16,True,8,It's Always Sunny in Baltimore,12,Never cutting charbs,90.02,115.3,L
+2023,17,True,8,It's Always Sunny in Baltimore,12,Never cutting charbs,83.76,102.8,L
+2023,1,False,10,Mike Riley,5,Maybe This Year,132.94,103.34,W
+2023,2,False,10,Mike Riley,7,No I'm Ryan Keyser ,132.54,105.52,W
+2023,3,False,10,Mike Riley,8,It's Always Sunny in Baltimore,113.56,141.78,L
+2023,4,False,10,Mike Riley,13,Rookie Squad,144.88,118.6,W
+2023,5,False,10,Mike Riley,12,Never cutting charbs,89.4,150.82,L
+2023,6,False,10,Mike Riley,4,Juicy Smuyet ,135.64,111.54,W
+2023,7,False,10,Mike Riley,3,Ridin Da Gus Bus to 10th place,147.74,114.34,W
+2023,8,False,10,Mike Riley,6,Lets Ride,136.18,126.46,W
+2023,9,False,10,Mike Riley,14,Team AutoDraft,140.14,141.06,L
+2023,10,False,10,Mike Riley,1,The  Commish,154.2,108.62,W
+2023,11,False,10,Mike Riley,2,In Your Face,132.36,124.1,W
+2023,12,False,10,Mike Riley,5,Maybe This Year,159.94,117.06,W
+2023,13,False,10,Mike Riley,7,No I'm Ryan Keyser ,129.8,145.92,L
+2023,14,False,10,Mike Riley,8,It's Always Sunny in Baltimore,128.62,125.34,W
+2023,15,True,10,Mike Riley,10,Mike Riley,0.0,0.0,U
+2023,16,True,10,Mike Riley,4,Juicy Smuyet ,137.08,126.9,W
+2023,17,True,10,Mike Riley,7,No I'm Ryan Keyser ,171.26,161.08,W
+2023,1,False,12,Never cutting charbs,4,Juicy Smuyet ,79.96,92.84,L
+2023,2,False,12,Never cutting charbs,3,Ridin Da Gus Bus to 10th place,130.1,115.28,W
+2023,3,False,12,Never cutting charbs,6,Lets Ride,123.0,134.76,L
+2023,4,False,12,Never cutting charbs,14,Team AutoDraft,89.88,136.42,L
+2023,5,False,12,Never cutting charbs,10,Mike Riley,150.82,89.4,W
+2023,6,False,12,Never cutting charbs,2,In Your Face,135.78,97.86,W
+2023,7,False,12,Never cutting charbs,5,Maybe This Year,149.66,77.16,W
+2023,8,False,12,Never cutting charbs,7,No I'm Ryan Keyser ,126.32,133.76,L
+2023,9,False,12,Never cutting charbs,8,It's Always Sunny in Baltimore,105.74,115.7,L
+2023,10,False,12,Never cutting charbs,13,Rookie Squad,136.82,124.78,W
+2023,11,False,12,Never cutting charbs,1,The  Commish,143.82,117.7,W
+2023,12,False,12,Never cutting charbs,4,Juicy Smuyet ,119.16,142.92,L
+2023,13,False,12,Never cutting charbs,3,Ridin Da Gus Bus to 10th place,151.32,86.18,W
+2023,14,False,12,Never cutting charbs,6,Lets Ride,143.02,136.76,W
+2023,15,True,12,Never cutting charbs,14,Team AutoDraft,107.28,125.86,L
+2023,16,True,12,Never cutting charbs,8,It's Always Sunny in Baltimore,115.3,90.02,W
+2023,17,True,12,Never cutting charbs,8,It's Always Sunny in Baltimore,102.8,83.76,W
+2023,1,False,13,Rookie Squad,3,Ridin Da Gus Bus to 10th place,129.66,72.36,W
+2023,2,False,13,Rookie Squad,6,Lets Ride,81.8,120.6,L
+2023,3,False,13,Rookie Squad,14,Team AutoDraft,118.96,119.2,L
+2023,4,False,13,Rookie Squad,10,Mike Riley,118.6,144.88,L
+2023,5,False,13,Rookie Squad,2,In Your Face,159.92,93.16,W
+2023,6,False,13,Rookie Squad,5,Maybe This Year,84.54,138.42,L
+2023,7,False,13,Rookie Squad,7,No I'm Ryan Keyser ,99.34,162.76,L
+2023,8,False,13,Rookie Squad,8,It's Always Sunny in Baltimore,156.32,138.46,W
+2023,9,False,13,Rookie Squad,1,The  Commish,111.92,94.92,W
+2023,10,False,13,Rookie Squad,12,Never cutting charbs,124.78,136.82,L
+2023,11,False,13,Rookie Squad,4,Juicy Smuyet ,86.14,112.08,L
+2023,12,False,13,Rookie Squad,3,Ridin Da Gus Bus to 10th place,109.78,99.08,W
+2023,13,False,13,Rookie Squad,6,Lets Ride,136.84,62.84,W
+2023,14,False,13,Rookie Squad,14,Team AutoDraft,74.74,124.44,L
+2023,15,True,13,Rookie Squad,5,Maybe This Year,118.82,107.34,W
+2023,16,True,13,Rookie Squad,6,Lets Ride,71.28,99.62,L
+2023,17,True,13,Rookie Squad,1,The  Commish,116.44,57.08,W
+2023,1,False,14,Team AutoDraft,7,No I'm Ryan Keyser ,95.86,129.1,L
+2023,2,False,14,Team AutoDraft,8,It's Always Sunny in Baltimore,123.34,182.26,L
+2023,3,False,14,Team AutoDraft,13,Rookie Squad,119.2,118.96,W
+2023,4,False,14,Team AutoDraft,12,Never cutting charbs,136.42,89.88,W
+2023,5,False,14,Team AutoDraft,4,Juicy Smuyet ,73.88,122.94,L
+2023,6,False,14,Team AutoDraft,3,Ridin Da Gus Bus to 10th place,94.2,113.12,L
+2023,7,False,14,Team AutoDraft,6,Lets Ride,119.38,139.16,L
+2023,8,False,14,Team AutoDraft,1,The  Commish,110.96,98.96,W
+2023,9,False,14,Team AutoDraft,10,Mike Riley,141.06,140.14,W
+2023,10,False,14,Team AutoDraft,2,In Your Face,182.06,97.58,W
+2023,11,False,14,Team AutoDraft,5,Maybe This Year,126.56,94.34,W
+2023,12,False,14,Team AutoDraft,7,No I'm Ryan Keyser ,154.84,174.1,L
+2023,13,False,14,Team AutoDraft,8,It's Always Sunny in Baltimore,142.76,124.68,W
+2023,14,False,14,Team AutoDraft,13,Rookie Squad,124.44,74.74,W
+2023,15,True,14,Team AutoDraft,12,Never cutting charbs,125.86,107.28,W
+2023,16,True,14,Team AutoDraft,7,No I'm Ryan Keyser ,97.02,104.84,L
+2023,17,True,14,Team AutoDraft,4,Juicy Smuyet ,131.2,101.4,W
