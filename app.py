@@ -222,7 +222,7 @@ with tab_ask:
             try:
                 with st.spinner("Checking the record books..."):
                     response = get_client().messages.create(
-                        model="claude-opus-4-8",
+                        model="claude-haiku-4-5",
                         max_tokens=2000,
                         system=system,
                         messages=[
