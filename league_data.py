@@ -313,6 +313,9 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
     champion             - final_standing 1 (playoff bracket winner)
     regular_season_winner - regular_season_standing 1
     points_leader        - most total points in regular season games only
+    best_week            - biggest single-week score of the season (the season's
+                           standout weekly high; every week's winner is in
+                           weekly_high_winners)
     """
     reg = matchups[matchups["game_type"] == "regular"]
     points = (
@@ -326,6 +329,8 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
         reg_winner = one[one["regular_season_standing"] == 1].iloc[0]
         season_pts = points[points["season"] == season]
         leader = season_pts.loc[season_pts["team_score"].idxmax()]
+        season_games = reg[reg["season"] == season]
+        big_week = season_games.loc[season_games["team_score"].idxmax()]
         rows.append(
             {
                 "season": season,
@@ -336,6 +341,9 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
                 + (f"-{reg_winner['ties']}" if reg_winner["ties"] else ""),
                 "points_leader": leader["manager"],
                 "points": round(leader["team_score"], 1),
+                "best_week": big_week["manager"],
+                "best_week_score": round(big_week["team_score"], 1),
+                "best_week_number": int(big_week["week"]),
             }
         )
     return pd.DataFrame(rows)

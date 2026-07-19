@@ -120,7 +120,7 @@ with tab_trophies:
     st.caption(
         "🏆 Champion: won the playoff bracket. 🎖️ Regular Season Winner: best "
         "regular season record. 🔥 Points Leader: most total points in the "
-        "regular season."
+        "regular season. ⚡ Best Week: biggest single-week score of the season."
     )
     st.dataframe(
         trophies.sort_values("season", ascending=False),
@@ -134,6 +134,9 @@ with tab_trophies:
             "regular_season_record": "Record",
             "points_leader": "🔥 Points Leader",
             "points": st.column_config.NumberColumn("Points", format="%.1f"),
+            "best_week": "⚡ Best Week",
+            "best_week_score": st.column_config.NumberColumn("Score", format="%.1f"),
+            "best_week_number": st.column_config.NumberColumn("Week", format="%d"),
         },
     )
 
