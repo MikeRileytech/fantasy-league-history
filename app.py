@@ -99,7 +99,8 @@ with tab_trophies:
         "playoff title - the most prestigious award."
     )
     trophies = league_data.season_trophies(teams, matchups)
-    case = league_data.trophy_case(trophies)
+    weekly_winners = league_data.weekly_high_winners(matchups)
+    case = league_data.trophy_case(trophies, weekly_winners)
     st.dataframe(
         case,
         width='stretch',
@@ -119,7 +120,6 @@ with tab_trophies:
     st.caption(
         "🏆 Champion: won the playoff bracket. 🎖️ Regular Season Winner: best "
         "regular season record. 🔥 Points Leader: most total points in the "
-        "regular season. ⚡ Weekly High: biggest single-week score of the "
         "regular season."
     )
     st.dataframe(
@@ -134,9 +134,29 @@ with tab_trophies:
             "regular_season_record": "Record",
             "points_leader": "🔥 Points Leader",
             "points": st.column_config.NumberColumn("Points", format="%.1f"),
-            "weekly_high": "⚡ Weekly High",
-            "weekly_high_score": st.column_config.NumberColumn("Score", format="%.1f"),
-            "weekly_high_week": st.column_config.NumberColumn("Week", format="%d"),
+        },
+    )
+
+    st.divider()
+    st.subheader("⚡ Weekly high scores")
+    st.caption(
+        "Every regular season week hands out one weekly points award. "
+        "13 weeks per season through 2020, 14 since the NFL added an 18th week."
+    )
+    weekly_season = st.selectbox(
+        "Season", sorted(weekly_winners["season"].unique(), reverse=True),
+        key="weekly_high_season",
+    )
+    st.dataframe(
+        weekly_winners[weekly_winners["season"] == weekly_season][
+            ["week", "manager", "score"]
+        ],
+        width='stretch',
+        hide_index=True,
+        column_config={
+            "week": st.column_config.NumberColumn("Week", format="%d"),
+            "manager": "⚡ Weekly High",
+            "score": st.column_config.NumberColumn("Score", format="%.1f"),
         },
     )
 

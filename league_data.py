@@ -313,7 +313,6 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
     champion             - final_standing 1 (playoff bracket winner)
     regular_season_winner - regular_season_standing 1
     points_leader        - most total points in regular season games only
-    weekly_high          - most points in a single regular season week
     """
     reg = matchups[matchups["game_type"] == "regular"]
     points = (
@@ -327,8 +326,6 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
         reg_winner = one[one["regular_season_standing"] == 1].iloc[0]
         season_pts = points[points["season"] == season]
         leader = season_pts.loc[season_pts["team_score"].idxmax()]
-        season_games = reg[reg["season"] == season]
-        big_week = season_games.loc[season_games["team_score"].idxmax()]
         rows.append(
             {
                 "season": season,
@@ -339,21 +336,34 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
                 + (f"-{reg_winner['ties']}" if reg_winner["ties"] else ""),
                 "points_leader": leader["manager"],
                 "points": round(leader["team_score"], 1),
-                "weekly_high": big_week["manager"],
-                "weekly_high_score": round(big_week["team_score"], 1),
-                "weekly_high_week": int(big_week["week"]),
             }
         )
     return pd.DataFrame(rows)
 
 
-def trophy_case(trophies: pd.DataFrame) -> pd.DataFrame:
+def weekly_high_winners(matchups: pd.DataFrame) -> pd.DataFrame:
+    """One row per regular season week: who scored the most points that week.
+
+    Every regular season week hands out this award (13 weeks per season
+    before the NFL's 18th week, 14 after). If two teams tie for the top
+    score in a week, both get a row.
+    """
+    reg = matchups[matchups["game_type"] == "regular"]
+    week_max = reg.groupby(["season", "week"])["team_score"].transform("max")
+    winners = reg[reg["team_score"] == week_max]
+    winners = winners[["season", "week", "manager", "team_score"]].copy()
+    winners = winners.rename(columns={"team_score": "score"})
+    winners["score"] = winners["score"].round(1)
+    return winners.sort_values(["season", "week"]).reset_index(drop=True)
+
+
+def trophy_case(trophies: pd.DataFrame, weekly_winners: pd.DataFrame) -> pd.DataFrame:
     """Career trophy counts per manager, sorted by championships."""
     managers = sorted(
         set(trophies["champion"])
         | set(trophies["regular_season_winner"])
         | set(trophies["points_leader"])
-        | set(trophies["weekly_high"])
+        | set(weekly_winners["manager"])
     )
     rows = []
     for manager in managers:
@@ -365,7 +375,7 @@ def trophy_case(trophies: pd.DataFrame) -> pd.DataFrame:
                     (trophies["regular_season_winner"] == manager).sum()
                 ),
                 "points_titles": int((trophies["points_leader"] == manager).sum()),
-                "weekly_highs": int((trophies["weekly_high"] == manager).sum()),
+                "weekly_highs": int((weekly_winners["manager"] == manager).sum()),
             }
         )
     result = pd.DataFrame(rows)
