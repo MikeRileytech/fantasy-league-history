@@ -66,11 +66,18 @@ teams["final_standing"] = teams.apply(
 #### 1. **All-Time Standings** ✅
 - **Status:** Verified and accurate
 - **Data Source:** `manager_career_standings()` function
+- **View Modes:**
+  - **Regular + Playoff** (default): Overall career records across all seasons
+  - **Playoff Games Only** (NEW): Shows pure championship-pressure performance
+  - **Regular Games Only**: Shows season-long consistency
 - **Validation:** 
   - Championships counted correctly (based on final_standing = 1)
-  - Win/loss records include regular + playoff games only
-  - Win percentages calculated accurately
-- **Example:** Ryan Keyser shows 3 championships, Brian Schwartz shows 2 championships
+  - Win/loss records calculated accurately per selected view
+  - Win percentages reflect game selection
+- **Examples:**
+  - Ryan Keyser: 3 championships, 53.7% overall but 78.6% in playoffs
+  - Brian Schwartz: 2 championships, 58.3% overall, 57.1% in playoffs
+  - Shows playoff clutch players vs. regular season performers
 
 #### 2. **Season Browser** ✅
 - **Status:** Verified and accurate
@@ -190,12 +197,26 @@ teams["final_standing"] = teams.apply(
 
 ---
 
+## Feature Enhancements
+
+### Playoff Games Only View (NEW)
+Added to Career Records section for deeper performance analysis:
+
+| View Mode | Use Case | Example Finding |
+|-----------|----------|-----------------|
+| Regular + Playoff | Overall legacy | Ryan Keyser: 87W-75L (53.7%) |
+| **Playoff Only** | **Championship performance** | **Ryan Keyser: 11W-3L (78.6%)** |
+| Regular Only | Season consistency | Ryan Keyser: 76W-72L (51.4%) |
+
+**Insight:** Playoff-only view reveals who thrives under pressure vs. who performs well in regular season.
+
 ## Deployment Checklist
 
-- ✅ Code changes implemented in `league_data.py`
+- ✅ Code changes implemented in `league_data.py` and `app.py`
 - ✅ All validations passed (12/12 seasons)
+- ✅ Season browser shows correct standings (1-6 playoff-based, 7-12 locked)
+- ✅ Career records with three view modes functional
 - ✅ No breaking changes to API
-- ✅ No changes needed to `.streamlit` configuration
 - ✅ No additional dependencies added
 - ✅ Backward compatibility maintained
 
