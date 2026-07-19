@@ -189,14 +189,24 @@ with tab_seasons:
 with tab_h2h:
     st.subheader("Head-to-head records")
     st.caption("Read across a row: that manager's record against each opponent.")
-    col_po, col_cons = st.columns(2)
-    with col_po:
-        with_playoffs = st.checkbox("Include playoff games", value=True)
+    col_view, col_cons = st.columns(2)
+    with col_view:
+        h2h_view = st.radio(
+            "View",
+            ["Regular + Playoff", "Playoff Games Only", "Regular Games Only"],
+            horizontal=True,
+            key="h2h_view_mode",
+        )
     with col_cons:
         with_consolation = st.checkbox("Include consolation games", value=False)
-    game_types = ["regular"]
-    if with_playoffs:
-        game_types.append("playoff")
+
+    if h2h_view == "Regular + Playoff":
+        game_types = ["regular", "playoff"]
+    elif h2h_view == "Playoff Games Only":
+        game_types = ["playoff"]
+    else:  # Regular Games Only
+        game_types = ["regular"]
+
     if with_consolation:
         game_types.append("consolation")
     grid = league_data.head_to_head(matchups, game_types=game_types)
