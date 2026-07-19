@@ -9,6 +9,7 @@ All stats are grouped by REAL manager using manager_mapping.csv, never by
 ESPN team ID, because teams changed hands over the years.
 """
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -18,6 +19,22 @@ PROJECT_DIR = Path(__file__).resolve().parent
 PROCESSED_DIR = PROJECT_DIR / "data" / "processed"
 RAW_DIR = PROJECT_DIR / "data" / "raw"
 MAPPING_FILE = PROJECT_DIR / "manager_mapping.csv"
+
+
+def data_fingerprint() -> str:
+    """Hash of every data file's path and modification time.
+
+    Used as the cache key for the app's data loads, so any change to
+    manager_mapping.csv or the processed CSVs automatically invalidates
+    Streamlit's cache - no manual version bumping.
+    """
+    digest = hashlib.md5()
+    paths = [MAPPING_FILE] + sorted(PROCESSED_DIR.glob("*.csv"))
+    for path in paths:
+        if path.exists():
+            digest.update(str(path).encode())
+            digest.update(str(path.stat().st_mtime_ns).encode())
+    return digest.hexdigest()
 
 
 def _load_concat(pattern: str) -> pd.DataFrame:

@@ -17,12 +17,14 @@ load_dotenv()
 st.set_page_config(page_title="League History", page_icon="🏈", layout="wide")
 
 @st.cache_data(show_spinner="Loading league data...")
-def load_all(cache_version):
-    """Load all league data. cache_version busts the cache when data logic changes.
+def load_all(cache_key):
+    """Load all league data.
 
-    NOTE: the parameter must NOT start with an underscore - Streamlit excludes
-    underscore-prefixed parameters from the cache key, so changing them would
-    never invalidate old cached data.
+    cache_key is a fingerprint of the data files (paths + modification
+    times), so editing manager_mapping.csv or reimporting a season
+    automatically busts the cache. NOTE: the parameter must NOT start
+    with an underscore - Streamlit excludes underscore-prefixed
+    parameters from the cache key.
     """
     teams = league_data.load_teams()
     matchups = league_data.load_matchups()
@@ -31,7 +33,7 @@ def load_all(cache_version):
 
 
 try:
-    teams, matchups, draft = load_all(cache_version="v6")
+    teams, matchups, draft = load_all(cache_key=league_data.data_fingerprint())
 except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()
