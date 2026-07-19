@@ -45,9 +45,22 @@ def load_mapping() -> pd.DataFrame:
 
 
 def load_teams() -> pd.DataFrame:
-    """One row per team-season, with the real manager attached."""
+    """One row per team-season, with the real manager attached.
+
+    Applies playoff rule: top 6 (by regular season) use playoff placement as final_standing;
+    those finishing outside top 6 keep regular_season_standing as their final_standing.
+    """
     teams = _load_concat("*_teams.csv")
-    return teams.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+    teams = teams.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+
+    # Apply the playoff rule to final_standing
+    teams["final_standing"] = teams.apply(
+        lambda row: row["final_standing"]
+        if row["regular_season_standing"] <= 6
+        else row["regular_season_standing"],
+        axis=1,
+    )
+    return teams
 
 
 def _playoff_team_counts() -> dict:
