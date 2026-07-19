@@ -18,7 +18,7 @@ st.set_page_config(page_title="League History", page_icon="🏈", layout="wide")
 
 
 @st.cache_data
-def load_all(_cache_version="v2"):
+def load_all(_cache_version="v4"):
     """Load all league data. _cache_version forces cache invalidation on data logic changes."""
     teams = league_data.load_teams()
     matchups = league_data.load_matchups()
