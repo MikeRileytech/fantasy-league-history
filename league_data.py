@@ -271,6 +271,29 @@ def build_ask_context(teams: pd.DataFrame, matchups: pd.DataFrame, draft: pd.Dat
     return "\n".join(lines)
 
 
+def cumulative_wins(matchups: pd.DataFrame, game_types: list = None) -> pd.DataFrame:
+    """Career wins accumulated season by season, per manager.
+
+    One row per manager per season they played, with running total wins.
+    """
+    if game_types is None:
+        game_types = ["regular", "playoff"]
+    games = matchups[matchups["game_type"].isin(game_types)]
+    wins = (
+        games[games["outcome"] == "W"]
+        .groupby(["manager", "season"])
+        .size()
+        .rename("wins")
+        .reset_index()
+    )
+    # Include seasons with zero wins so lines don't skip years.
+    played = games.groupby(["manager", "season"]).size().rename("games").reset_index()
+    wins = played.merge(wins, on=["manager", "season"], how="left").fillna({"wins": 0})
+    wins = wins.sort_values(["manager", "season"])
+    wins["cumulative_wins"] = wins.groupby("manager")["wins"].cumsum().astype(int)
+    return wins[["manager", "season", "cumulative_wins"]]
+
+
 def draft_table(draft: pd.DataFrame) -> pd.DataFrame:
     cols = [
         "season",

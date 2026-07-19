@@ -35,8 +35,8 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_alltime, tab_seasons, tab_h2h, tab_draft, tab_ask = st.tabs(
-    ["All-Time Standings", "Season Browser", "Head-to-Head", "Draft History", "Ask the League"]
+tab_alltime, tab_seasons, tab_h2h, tab_draft, tab_charts, tab_ask = st.tabs(
+    ["All-Time Standings", "Season Browser", "Head-to-Head", "Draft History", "Charts", "Ask the League"]
 )
 
 with tab_alltime:
@@ -147,6 +147,109 @@ with tab_draft:
             "is_keeper": "Keeper",
         },
     )
+
+with tab_charts:
+    import altair as alt
+
+    # Colorblind-validated categorical palette; each manager keeps a fixed
+    # color regardless of which managers are selected.
+    PALETTE = ["#2a78d6", "#1baf7a", "#eda100", "#008300",
+               "#4a3aa7", "#e34948", "#e87ba4", "#eb6834"]
+
+    st.subheader("Career win percentage")
+    st.caption("Regular season + playoff games (consolation excluded).")
+    career = league_data.manager_career_standings(teams, matchups)
+    career_active = career[career["wins"] + career["losses"] + career["ties"] > 0]
+
+    # Fixed color per manager, assigned in career-table order so the managers
+    # people actually chart (top of the table, the default selection) always
+    # get distinct colors.
+    all_managers = career_active["manager"].tolist() + sorted(
+        set(teams["manager"].dropna()) - set(career_active["manager"])
+    )
+    manager_colors = {m: PALETTE[i % len(PALETTE)] for i, m in enumerate(all_managers)}
+    winpct_chart = (
+        alt.Chart(career_active)
+        .mark_bar(color="#2a78d6", cornerRadiusEnd=4, height={"band": 0.6})
+        .encode(
+            x=alt.X("win_pct:Q", title="Career win %", axis=alt.Axis(format=".0%")),
+            y=alt.Y("manager:N", sort="-x", title=None),
+            tooltip=[
+                alt.Tooltip("manager:N", title="Manager"),
+                alt.Tooltip("wins:Q", title="Wins"),
+                alt.Tooltip("losses:Q", title="Losses"),
+                alt.Tooltip("win_pct:Q", title="Win %", format=".3f"),
+                alt.Tooltip("championships:Q", title="Championships"),
+            ],
+        )
+        .properties(height=480)
+    )
+    st.altair_chart(winpct_chart, use_container_width=True)
+
+    st.divider()
+    st.subheader("Manager history over time")
+    default_managers = career_active.head(6)["manager"].tolist()
+    picked = st.multiselect(
+        "Managers to show (up to 8)",
+        all_managers,
+        default=default_managers,
+        max_selections=8,
+    )
+
+    if picked:
+        color_scale = alt.Scale(
+            domain=picked, range=[manager_colors[m] for m in picked]
+        )
+        seasons_axis = alt.X(
+            "season:O", title="Season", axis=alt.Axis(labelAngle=0)
+        )
+
+        st.markdown("**Final standing by season** (1 = champion)")
+        finish = teams[teams["manager"].isin(picked)]
+        finish_chart = (
+            alt.Chart(finish)
+            .mark_line(point=alt.OverlayMarkDef(size=70), strokeWidth=2)
+            .encode(
+                x=seasons_axis,
+                y=alt.Y(
+                    "final_standing:Q",
+                    title="Final standing",
+                    scale=alt.Scale(reverse=True, domainMin=1),
+                    axis=alt.Axis(tickMinStep=1),
+                ),
+                color=alt.Color("manager:N", scale=color_scale, title="Manager"),
+                tooltip=[
+                    alt.Tooltip("manager:N", title="Manager"),
+                    alt.Tooltip("season:O", title="Season"),
+                    alt.Tooltip("final_standing:Q", title="Finished"),
+                    alt.Tooltip("team_name:N", title="Team"),
+                ],
+            )
+            .properties(height=340)
+        )
+        st.altair_chart(finish_chart, use_container_width=True)
+
+        st.markdown("**Cumulative career wins** (regular season + playoffs)")
+        cumwins = league_data.cumulative_wins(matchups)
+        cumwins = cumwins[cumwins["manager"].isin(picked)]
+        cumwins_chart = (
+            alt.Chart(cumwins)
+            .mark_line(point=alt.OverlayMarkDef(size=70), strokeWidth=2)
+            .encode(
+                x=seasons_axis,
+                y=alt.Y("cumulative_wins:Q", title="Career wins"),
+                color=alt.Color("manager:N", scale=color_scale, title="Manager"),
+                tooltip=[
+                    alt.Tooltip("manager:N", title="Manager"),
+                    alt.Tooltip("season:O", title="Season"),
+                    alt.Tooltip("cumulative_wins:Q", title="Career wins"),
+                ],
+            )
+            .properties(height=340)
+        )
+        st.altair_chart(cumwins_chart, use_container_width=True)
+    else:
+        st.info("Pick at least one manager to see the history charts.")
 
 with tab_ask:
     st.subheader("Ask the League")
