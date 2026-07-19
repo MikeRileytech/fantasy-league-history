@@ -307,6 +307,70 @@ def cumulative_wins(matchups: pd.DataFrame, game_types: list = None) -> pd.DataF
     return wins[["manager", "season", "cumulative_wins"]]
 
 
+def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame:
+    """One row per season with the three league awards.
+
+    champion             - final_standing 1 (playoff bracket winner)
+    regular_season_winner - regular_season_standing 1
+    points_leader        - most total points in regular season games only
+    """
+    reg = matchups[matchups["game_type"] == "regular"]
+    points = (
+        reg.groupby(["season", "manager"])["team_score"].sum().reset_index()
+    )
+
+    rows = []
+    for season in sorted(teams["season"].unique()):
+        one = teams[teams["season"] == season]
+        champ = one[one["final_standing"] == 1].iloc[0]
+        reg_winner = one[one["regular_season_standing"] == 1].iloc[0]
+        season_pts = points[points["season"] == season]
+        leader = season_pts.loc[season_pts["team_score"].idxmax()]
+        rows.append(
+            {
+                "season": season,
+                "champion": champ["manager"],
+                "champion_team": champ["team_name"],
+                "regular_season_winner": reg_winner["manager"],
+                "regular_season_record": f"{reg_winner['wins']}-{reg_winner['losses']}"
+                + (f"-{reg_winner['ties']}" if reg_winner["ties"] else ""),
+                "points_leader": leader["manager"],
+                "points": round(leader["team_score"], 1),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def trophy_case(trophies: pd.DataFrame) -> pd.DataFrame:
+    """Career trophy counts per manager, sorted by championships."""
+    managers = sorted(
+        set(trophies["champion"])
+        | set(trophies["regular_season_winner"])
+        | set(trophies["points_leader"])
+    )
+    rows = []
+    for manager in managers:
+        rows.append(
+            {
+                "manager": manager,
+                "championships": int((trophies["champion"] == manager).sum()),
+                "regular_season_titles": int(
+                    (trophies["regular_season_winner"] == manager).sum()
+                ),
+                "points_titles": int((trophies["points_leader"] == manager).sum()),
+            }
+        )
+    result = pd.DataFrame(rows)
+    result["total"] = (
+        result["championships"]
+        + result["regular_season_titles"]
+        + result["points_titles"]
+    )
+    return result.sort_values(
+        ["championships", "total"], ascending=False
+    ).reset_index(drop=True)
+
+
 def draft_table(draft: pd.DataFrame) -> pd.DataFrame:
     cols = [
         "season",

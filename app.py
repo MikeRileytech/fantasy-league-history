@@ -40,8 +40,8 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_alltime, tab_seasons, tab_h2h, tab_draft, tab_charts, tab_ask = st.tabs(
-    ["All-Time Standings", "Season Browser", "Head-to-Head", "Draft History", "Charts", "Ask the League"]
+tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_draft, tab_charts, tab_ask = st.tabs(
+    ["All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Draft History", "Charts", "Ask the League"]
 )
 
 with tab_alltime:
@@ -89,6 +89,49 @@ with tab_alltime:
             "points_for": st.column_config.NumberColumn("PF", format="%.1f"),
             "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
             "championships": "🏆",
+        },
+    )
+
+with tab_trophies:
+    st.subheader("Trophy case")
+    st.caption(
+        "Career trophy counts per manager. Championships are the overall "
+        "playoff title - the most prestigious award."
+    )
+    trophies = league_data.season_trophies(teams, matchups)
+    case = league_data.trophy_case(trophies)
+    st.dataframe(
+        case,
+        width='stretch',
+        hide_index=True,
+        column_config={
+            "manager": "Manager",
+            "championships": "🏆 Championships",
+            "regular_season_titles": "🎖️ Reg. Season Titles",
+            "points_titles": "🔥 Points Titles",
+            "total": "Total",
+        },
+    )
+
+    st.divider()
+    st.subheader("Season by season")
+    st.caption(
+        "🏆 Champion: won the playoff bracket. 🎖️ Regular Season Winner: best "
+        "regular season record. 🔥 Points Leader: most total points in the "
+        "regular season."
+    )
+    st.dataframe(
+        trophies.sort_values("season", ascending=False),
+        width='stretch',
+        hide_index=True,
+        column_config={
+            "season": st.column_config.NumberColumn("Season", format="%d"),
+            "champion": "🏆 Champion",
+            "champion_team": "Champion's Team",
+            "regular_season_winner": "🎖️ Reg. Season Winner",
+            "regular_season_record": "Record",
+            "points_leader": "🔥 Points Leader",
+            "points": st.column_config.NumberColumn("Points", format="%.1f"),
         },
     )
 
