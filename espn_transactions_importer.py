@@ -13,13 +13,14 @@ seasons return nothing.
 
 Run it with:
     python espn_transactions_importer.py 2024        # one season
-    python espn_transactions_importer.py --all       # 2018 through 2025
+    python espn_transactions_importer.py --all       # 2018 through the current season
 """
 
 import argparse
 import json
 import os
 import sys
+from datetime import date
 from pathlib import Path
 
 import pandas as pd
@@ -229,7 +230,11 @@ def main():
     print(f"Using {len(creds)} credential set(s): {', '.join(c[0] for c in creds)}")
 
     if args.all:
-        seasons = range(FIRST_SEASON_WITH_DATA, 2026)
+        # NFL seasons are labeled by their starting year; before September,
+        # the "current season" is still last year's.
+        today = date.today()
+        current_season = today.year if today.month >= 9 else today.year - 1
+        seasons = range(FIRST_SEASON_WITH_DATA, current_season + 1)
     elif args.season:
         seasons = [args.season]
     else:
