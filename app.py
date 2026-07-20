@@ -250,13 +250,12 @@ with tab_tx:
         )
         shown_trades = trades if trade_season == "All" else trades[trades["season"] == trade_season]
         st.dataframe(
-            shown_trades,
+            shown_trades.drop(columns=["date"]),
             width='stretch',
             hide_index=True,
             column_config={
                 "season": st.column_config.NumberColumn("Season", format="%d"),
                 "week": st.column_config.NumberColumn("Week", format="%d"),
-                "date": "Date",
                 "manager_a": "Manager",
                 "received_a": "Received",
                 "manager_b": "Manager ",
@@ -268,13 +267,12 @@ with tab_tx:
         st.markdown("### 💰 Biggest FAAB bids of all time")
         bids = league_data.faab_bids(transactions)
         st.dataframe(
-            bids.head(20),
+            bids.head(20).drop(columns=["date"]),
             width='stretch',
             hide_index=True,
             column_config={
                 "season": st.column_config.NumberColumn("Season", format="%d"),
                 "week": st.column_config.NumberColumn("Week", format="%d"),
-                "date": "Date",
                 "manager": "Manager",
                 "player_name": "Player",
                 "bid_amount": st.column_config.NumberColumn("Bid", format="$%d"),
@@ -339,14 +337,13 @@ with tab_tx:
 
         st.caption(f"{len(shown_bids)} bids shown")
         st.dataframe(
-            shown_bids,
+            shown_bids.drop(columns=["date"]),
             width='stretch',
             hide_index=True,
             height=420,
             column_config={
                 "season": st.column_config.NumberColumn("Season", format="%d"),
                 "week": st.column_config.NumberColumn("Week", format="%d"),
-                "date": "Date",
                 "manager": "Manager",
                 "player_name": "Player",
                 "bid_amount": st.column_config.NumberColumn("Bid", format="$%d"),
@@ -394,14 +391,13 @@ with tab_tx:
         faab_shown = int(shown_log.loc[shown_log["action"] == "Waiver claim", "bid_amount"].sum())
         st.caption(f"{len(shown_log)} moves shown · ${faab_shown} FAAB spent in this view")
         st.dataframe(
-            shown_log,
+            shown_log.drop(columns=["date"]),
             width='stretch',
             hide_index=True,
             height=420,
             column_config={
                 "season": st.column_config.NumberColumn("Season", format="%d"),
                 "week": st.column_config.NumberColumn("Week", format="%d"),
-                "date": "Date",
                 "manager": "Manager",
                 "action": "Action",
                 "player_name": "Player",
