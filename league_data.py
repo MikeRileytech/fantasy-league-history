@@ -518,6 +518,92 @@ def faab_bids(transactions: pd.DataFrame) -> pd.DataFrame:
 # everyone else. Revisit if multiple managers' credentials are collected.
 
 
+def trade_proposals(transactions: pd.DataFrame) -> pd.DataFrame:
+    """Every trade proposal with player detail, and what became of it.
+
+    outcome is one of:
+      Accepted             - became an executed trade
+      Declined             - the other side rejected it
+      Withdrawn            - canceled before a response
+      Expired (no response) - sat until it lapsed
+
+    Same visibility rule as executed trades: ESPN only shares proposal
+    detail with the accounts involved, so this covers proposals involving
+    the imported account(s).
+    """
+    guid_map = {}
+    raw_mapping = pd.read_csv(MAPPING_FILE)
+    raw_mapping["manager"] = (
+        raw_mapping["manager"].fillna(raw_mapping["owner_names"]).fillna("Unknown")
+    )
+    for _, row in raw_mapping.iterrows():
+        if pd.notna(row["owner_ids"]):
+            for guid in str(row["owner_ids"]).split("; "):
+                if guid:
+                    guid_map[guid] = row["manager"]
+
+    mapping = load_mapping().set_index(["season", "espn_team_id"])["manager"]
+    upheld_refs = set(
+        transactions.loc[
+            transactions["transaction_type"] == "TRADE_UPHOLD",
+            "related_transaction_id",
+        ].dropna()
+    )
+    declined_refs = set(
+        transactions.loc[
+            transactions["transaction_type"] == "TRADE_DECLINE",
+            "related_transaction_id",
+        ].dropna()
+    )
+
+    items = transactions[
+        (transactions["transaction_type"] == "TRADE_PROPOSAL")
+        & (transactions["item_type"] == "TRADE")
+    ]
+    rows = []
+    for prop_id in items["transaction_id"].unique():
+        prop_items = items[items["transaction_id"] == prop_id]
+        first = prop_items.iloc[0]
+        season = int(first["season"])
+        sides = {}
+        for _, item in prop_items.iterrows():
+            to_team = int(item["to_team_id"])
+            sides.setdefault(to_team, []).append(item["player_name"] or "?")
+        if len(sides) < 2:
+            continue
+        team_ids = sorted(sides)
+        managers = [mapping.get((season, tid), f"team {tid}") for tid in team_ids]
+
+        if prop_id in upheld_refs:
+            outcome = "Accepted"
+        elif prop_id in declined_refs:
+            outcome = "Declined"
+        elif first["status"] == "CANCELED":
+            outcome = "Withdrawn"
+        else:
+            outcome = "Expired (no response)"
+
+        proposer = guid_map.get(first["member_id"], first["manager"])
+        rows.append(
+            {
+                "season": season,
+                "week": int(first["week"]),
+                "proposed_by": proposer,
+                "manager_a": managers[0],
+                "would_receive_a": ", ".join(sorted(sides[team_ids[0]])),
+                "manager_b": managers[1],
+                "would_receive_b": ", ".join(sorted(sides[team_ids[1]])),
+                "outcome": outcome,
+            }
+        )
+    return (
+        pd.DataFrame(rows)
+        .drop_duplicates()
+        .sort_values(["season", "week"], ascending=False)
+        .reset_index(drop=True)
+    )
+
+
 def transaction_log(transactions: pd.DataFrame) -> pd.DataFrame:
     """Every executed roster move as one readable row.
 
