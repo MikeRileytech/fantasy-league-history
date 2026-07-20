@@ -42,8 +42,8 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_draft, tab_charts, tab_ask = st.tabs(
-    ["All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Draft History", "Charts", "Ask the League"]
+tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_ask = st.tabs(
+    ["All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "Ask the League"]
 )
 
 with tab_alltime:
@@ -213,6 +213,82 @@ with tab_h2h:
         game_types.append("consolation")
     grid = league_data.head_to_head(matchups, game_types=game_types)
     st.dataframe(grid, width='stretch')
+
+with tab_tx:
+    st.subheader("Transactions")
+    st.caption(
+        "Trades, waiver claims, and roster moves. ESPN only retains "
+        "transaction logs from 2018 onward, and its player detail on some "
+        "older trades is incomplete."
+    )
+
+    @st.cache_data(show_spinner=False)
+    def load_transactions_cached(cache_key):
+        return league_data.load_transactions()
+
+    try:
+        transactions = load_transactions_cached(league_data.data_fingerprint())
+    except FileNotFoundError:
+        st.info("No transaction data imported yet. Run espn_transactions_importer.py --all first.")
+        transactions = None
+
+    if transactions is not None:
+        st.markdown("### 🤝 Trades")
+        trades = league_data.executed_trades(transactions)
+        trade_season = st.selectbox(
+            "Season",
+            ["All"] + sorted(trades["season"].unique().tolist(), reverse=True),
+            key="trade_season",
+        )
+        shown_trades = trades if trade_season == "All" else trades[trades["season"] == trade_season]
+        st.dataframe(
+            shown_trades,
+            width='stretch',
+            hide_index=True,
+            column_config={
+                "season": st.column_config.NumberColumn("Season", format="%d"),
+                "week": st.column_config.NumberColumn("Week", format="%d"),
+                "date": "Date",
+                "manager_a": "Manager",
+                "received_a": "Received",
+                "manager_b": "Manager ",
+                "received_b": "Received ",
+            },
+        )
+
+        st.divider()
+        st.markdown("### 💰 Biggest FAAB bids of all time")
+        bids = league_data.faab_bids(transactions)
+        st.dataframe(
+            bids.head(20),
+            width='stretch',
+            hide_index=True,
+            column_config={
+                "season": st.column_config.NumberColumn("Season", format="%d"),
+                "week": st.column_config.NumberColumn("Week", format="%d"),
+                "date": "Date",
+                "manager": "Manager",
+                "player_name": "Player",
+                "bid_amount": st.column_config.NumberColumn("Bid", format="$%d"),
+            },
+        )
+
+        st.divider()
+        st.markdown("### 🔄 Roster activity by manager (2018+)")
+        st.caption("Who actually works the wire - total adds, drops, and FAAB spent.")
+        activity = league_data.transaction_activity(transactions)
+        st.dataframe(
+            activity,
+            width='stretch',
+            hide_index=True,
+            column_config={
+                "manager": "Manager",
+                "adds": "Adds",
+                "drops": "Drops",
+                "waiver_claims": "Waiver Claims",
+                "faab_spent": st.column_config.NumberColumn("FAAB Spent", format="$%d"),
+            },
+        )
 
 with tab_draft:
     st.subheader("Draft history")

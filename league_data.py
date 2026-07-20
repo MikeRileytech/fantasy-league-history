@@ -415,6 +415,123 @@ def trophy_case(trophies: pd.DataFrame, weekly_winners: pd.DataFrame) -> pd.Data
     ).reset_index(drop=True)
 
 
+def load_transactions() -> pd.DataFrame:
+    """One row per player moved (or event), with the acting manager attached.
+
+    Covers 2018+ only - ESPN retains no transaction logs for this league's
+    earlier seasons.
+    """
+    tx = _load_concat("*_transactions.csv")
+    # Some 2018 events have a missing acting team id (ESPN's int-min
+    # sentinel). The item itself still knows the team: ADDs go to a team,
+    # DROPs come from one.
+    fallback = tx["to_team_id"].where(tx["item_type"] == "ADD", tx["from_team_id"])
+    bad_team = (tx["espn_team_id"] <= 0) | tx["espn_team_id"].isna()
+    tx.loc[bad_team, "espn_team_id"] = fallback[bad_team]
+    return tx.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+
+
+def executed_trades(transactions: pd.DataFrame) -> pd.DataFrame:
+    """One row per completed trade, with the players each side received.
+
+    ESPN stores trade player detail inconsistently across eras (sometimes on
+    the accept event, sometimes on the upheld proposal), so this collects
+    every executed trade that has player detail anywhere. A few old trades
+    may be missing entirely - ESPN's log, not ours.
+    """
+    mapping = load_mapping().set_index(["season", "espn_team_id"])["manager"]
+
+    upheld_refs = set(
+        transactions.loc[
+            transactions["transaction_type"] == "TRADE_UPHOLD",
+            "related_transaction_id",
+        ].dropna()
+    )
+    items = transactions[transactions["item_type"] == "TRADE"]
+    executed_ids = set(
+        items.loc[items["transaction_type"] == "TRADE_ACCEPT", "transaction_id"]
+    )
+    executed_ids |= set(
+        items.loc[items["transaction_type"] == "TRADE_UPHOLD", "transaction_id"]
+    )
+    executed_ids |= set(items["transaction_id"]) & upheld_refs
+
+    rows = []
+    for trade_id in executed_ids:
+        trade_items = items[items["transaction_id"] == trade_id]
+        first = trade_items.iloc[0]
+        season = int(first["season"])
+        # Group players by the team receiving them.
+        sides = {}
+        for _, item in trade_items.iterrows():
+            to_team = int(item["to_team_id"])
+            sides.setdefault(to_team, []).append(item["player_name"] or "?")
+        if len(sides) < 2:
+            continue  # one-sided/corrupt entry, not a real trade
+        team_ids = sorted(sides)
+        managers = [mapping.get((season, tid), f"team {tid}") for tid in team_ids]
+        rows.append(
+            {
+                "season": season,
+                "week": int(first["week"]),
+                "date": first["date"],
+                "manager_a": managers[0],
+                "received_a": ", ".join(sorted(sides[team_ids[0]])),
+                "manager_b": managers[1],
+                "received_b": ", ".join(sorted(sides[team_ids[1]])),
+            }
+        )
+    # The same trade can be recorded under both its accept event and its
+    # upheld proposal - identical players/teams/week means one trade.
+    return (
+        pd.DataFrame(rows)
+        .drop_duplicates(
+            ["season", "week", "manager_a", "received_a", "manager_b", "received_b"]
+        )
+        .sort_values(["season", "week"], ascending=False)
+        .reset_index(drop=True)
+    )
+
+
+def faab_bids(transactions: pd.DataFrame) -> pd.DataFrame:
+    """Every winning FAAB bid: who paid what for which player."""
+    waivers = transactions[
+        (transactions["transaction_type"] == "WAIVER")
+        & (transactions["status"] == "EXECUTED")
+        & (transactions["item_type"] == "ADD")
+    ]
+    bids = waivers[["season", "week", "date", "manager", "player_name", "bid_amount"]]
+    return bids.sort_values("bid_amount", ascending=False).reset_index(drop=True)
+
+
+def transaction_activity(transactions: pd.DataFrame) -> pd.DataFrame:
+    """Career transaction counts per manager (2018+): adds, drops, FAAB spent."""
+    executed = transactions[transactions["status"] == "EXECUTED"]
+    adds = executed[
+        executed["transaction_type"].isin(["WAIVER", "FREEAGENT"])
+        & (executed["item_type"] == "ADD")
+    ]
+    drops = executed[
+        executed["transaction_type"].isin(["WAIVER", "FREEAGENT", "ROSTER"])
+        & (executed["item_type"] == "DROP")
+    ]
+    waiver_adds = adds[adds["transaction_type"] == "WAIVER"]
+
+    result = pd.DataFrame(
+        {
+            "adds": adds.groupby("manager").size(),
+            "drops": drops.groupby("manager").size(),
+            "waiver_claims": waiver_adds.groupby("manager").size(),
+            "faab_spent": waiver_adds.groupby("manager")["bid_amount"].sum(),
+        }
+    ).fillna(0).astype(int)
+    return (
+        result.sort_values("adds", ascending=False)
+        .reset_index()
+        .rename(columns={"index": "manager"})
+    )
+
+
 def draft_table(draft: pd.DataFrame) -> pd.DataFrame:
     cols = [
         "season",
