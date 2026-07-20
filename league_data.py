@@ -11,6 +11,7 @@ ESPN team ID, because teams changed hands over the years.
 
 import hashlib
 import json
+from datetime import date
 from pathlib import Path
 
 import pandas as pd
@@ -19,6 +20,30 @@ PROJECT_DIR = Path(__file__).resolve().parent
 PROCESSED_DIR = PROJECT_DIR / "data" / "processed"
 RAW_DIR = PROJECT_DIR / "data" / "raw"
 MAPPING_FILE = PROJECT_DIR / "manager_mapping.csv"
+
+
+def season_in_progress() -> int | None:
+    """The season year that's currently live, or None if we're in the offseason.
+
+    ESPN never shows a manager other teams' pending/declined trade offers or
+    losing waiver bids - each side only sees their own negotiations, and only
+    the winning FAAB bid is public. Collecting everyone's cookies makes that
+    private information visible in this app, which is a real competitive
+    advantage if shown while the season is still being played. So those two
+    views (trade proposals, waiver bid losers) get hidden for whichever
+    season this returns, and only unlock once it's over.
+
+    Fantasy seasons run roughly September through the first two weeks of
+    January (regular season + playoffs). This is a date heuristic, not a
+    lookup of actual completion - it treats the season as "in progress" a
+    little conservatively (through Jan 14) so it does not unlock early.
+    """
+    today = date.today()
+    if today.month >= 9:
+        return today.year
+    if today.month == 1 and today.day < 15:
+        return today.year - 1
+    return None
 
 
 def data_fingerprint() -> str:
@@ -529,7 +554,10 @@ def trade_proposals(transactions: pd.DataFrame) -> pd.DataFrame:
 
     Same visibility rule as executed trades: ESPN only shares proposal
     detail with the accounts involved, so this covers proposals involving
-    the imported account(s).
+    the imported account(s). The current in-progress season (see
+    season_in_progress()) is excluded entirely regardless of outcome -
+    seeing a rival's pending or declined offers mid-season would be an
+    unfair edge no real manager has.
     """
     guid_map = {}
     raw_mapping = pd.read_csv(MAPPING_FILE)
@@ -596,12 +624,11 @@ def trade_proposals(transactions: pd.DataFrame) -> pd.DataFrame:
                 "outcome": outcome,
             }
         )
-    return (
-        pd.DataFrame(rows)
-        .drop_duplicates()
-        .sort_values(["season", "week"], ascending=False)
-        .reset_index(drop=True)
-    )
+    result = pd.DataFrame(rows).drop_duplicates()
+    live_season = season_in_progress()
+    if live_season is not None and not result.empty:
+        result = result[result["season"] != live_season]
+    return result.sort_values(["season", "week"], ascending=False).reset_index(drop=True)
 
 
 def transaction_log(transactions: pd.DataFrame) -> pd.DataFrame:
@@ -645,6 +672,13 @@ def waiver_bids(transactions: pd.DataFrame) -> pd.DataFrame:
       Failed (rules)  - blocked by roster/budget/acquisition limits
       Withdrawn       - canceled before waivers processed
       Never processed - leftover backup claim that became moot
+
+    ESPN only ever shows a manager the WINNING bid on a waiver claim - losing
+    bids are private to the teams that made them. For the season currently
+    being played (see season_in_progress()), every non-winning outcome is
+    hidden here so this app never hands out a live competitive edge; those
+    rows appear once the season is over. Winning bids are shown for every
+    season since ESPN already makes those public.
     """
     outcome_map = {
         "EXECUTED": "Won",
@@ -662,6 +696,11 @@ def waiver_bids(transactions: pd.DataFrame) -> pd.DataFrame:
         & (transactions["item_type"] == "ADD")
     ].drop_duplicates("transaction_id").copy()
     bids["outcome"] = bids["status"].map(outcome_map).fillna(bids["status"])
+
+    live_season = season_in_progress()
+    if live_season is not None:
+        hide = (bids["season"] == live_season) & (bids["outcome"] != "Won")
+        bids = bids[~hide]
 
     bids = bids[
         ["season", "week", "date", "manager", "player_name", "bid_amount", "outcome"]

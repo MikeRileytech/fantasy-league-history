@@ -291,7 +291,10 @@ with tab_tx:
         st.caption(
             "Declined, withdrawn, and expired offers - the full packages that "
             "were on the table. Same visibility rule as trades above: only "
-            "proposals involving the imported account(s) are available."
+            "proposals involving the imported account(s) are available. The "
+            "season currently being played is held back entirely until it "
+            "ends - ESPN never shows a manager anyone else's pending or "
+            "declined offers, so displaying them live would be an unfair edge."
         )
         proposals = league_data.trade_proposals(transactions)
         col_p1, col_p2, col_p3 = st.columns(3)
@@ -352,7 +355,10 @@ with tab_tx:
             "Every bid ever placed, including the losers. Bids on the same "
             "player in the same week sit together (highest first), so each "
             "bidding war reads top to bottom. 'Contested only' keeps just "
-            "the players multiple managers fought over."
+            "the players multiple managers fought over. For the season "
+            "currently being played, only winning bids are shown (ESPN makes "
+            "those public already) - losing bids stay hidden until the "
+            "season ends, since a manager never sees what others bid and lost."
         )
         bids_all = league_data.waiver_bids(transactions)
         col_bw1, col_bw2, col_bw3 = st.columns(3)
