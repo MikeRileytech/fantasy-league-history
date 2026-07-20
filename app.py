@@ -5,12 +5,19 @@ Run it with:
     streamlit run app.py
 """
 
+import importlib
 import os
 
 import streamlit as st
 from dotenv import load_dotenv
 
 import league_data
+
+# Streamlit hot-reloads app.py on redeploy but keeps imported modules cached
+# in the running process, which has repeatedly left league_data stale (both
+# locally and on Streamlit Cloud). Reloading is cheap - the module is only
+# function definitions - and guarantees app.py and league_data.py match.
+league_data = importlib.reload(league_data)
 
 load_dotenv()
 
