@@ -234,6 +234,14 @@ with tab_tx:
 
     if transactions is not None:
         st.markdown("### 🤝 Trades")
+        st.warning(
+            "ESPN's API only returns full trade detail for trades involving "
+            "the account that imported the data (currently Mike's), plus all "
+            "2018 trades. Other managers' trades exist in ESPN's records but "
+            "aren't retrievable with one login - if other managers share "
+            "their ESPN credentials, their trades can be imported too.",
+            icon="⚠️",
+        )
         trades = league_data.executed_trades(transactions)
         trade_season = st.selectbox(
             "Season",
@@ -253,28 +261,6 @@ with tab_tx:
                 "received_a": "Received",
                 "manager_b": "Manager ",
                 "received_b": "Received ",
-            },
-        )
-
-        st.divider()
-        st.markdown("### 📨 Trade negotiations")
-        st.caption(
-            "Who floats deals and who slams the door. Proposals and declines "
-            "are credited to whoever clicked (by ESPN member id, with a "
-            "best-effort fallback on some older events). Trades completed "
-            "counts both sides of every executed trade."
-        )
-        negotiations = league_data.trade_negotiations(transactions)
-        st.dataframe(
-            negotiations,
-            width='stretch',
-            hide_index=True,
-            column_config={
-                "manager": "Manager",
-                "proposals_sent": "📨 Proposals Sent",
-                "trades_completed": "🤝 Trades Completed",
-                "declines_issued": "🚫 Declines Issued",
-                "vetoes_cast": "⛔ Vetoes Cast",
             },
         )
 

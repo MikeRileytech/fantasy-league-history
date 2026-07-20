@@ -511,70 +511,11 @@ def faab_bids(transactions: pd.DataFrame) -> pd.DataFrame:
     return bids.sort_values("bid_amount", ascending=False).reset_index(drop=True)
 
 
-def _member_to_manager() -> dict:
-    """ESPN member GUID -> real manager name, built from manager_mapping.csv.
-
-    Member GUIDs are stable per person across seasons, so this attributes
-    actions to whoever actually clicked, even when a team has co-owners or
-    ESPN recorded the other side's team id on the event.
-    """
-    mapping = pd.read_csv(MAPPING_FILE)
-    mapping["manager"] = (
-        mapping["manager"].fillna(mapping["owner_names"]).fillna("Unknown")
-    )
-    guid_map = {}
-    for _, row in mapping.iterrows():
-        if pd.isna(row["owner_ids"]):
-            continue
-        for guid in str(row["owner_ids"]).split("; "):
-            if guid:
-                guid_map[guid] = row["manager"]
-    return guid_map
-
-
-def trade_negotiations(transactions: pd.DataFrame) -> pd.DataFrame:
-    """Per-manager trade negotiation stats: proposals, declines, deals, vetoes.
-
-    Attribution uses the acting member's GUID (who clicked), falling back to
-    the event's team when the GUID is unknown.
-    """
-    guid_map = _member_to_manager()
-
-    def actor(df):
-        by_guid = df["member_id"].map(guid_map)
-        return by_guid.fillna(df["manager"])
-
-    events = transactions.drop_duplicates("transaction_id")
-    proposals = events[events["transaction_type"] == "TRADE_PROPOSAL"].copy()
-    declines = events[events["transaction_type"] == "TRADE_DECLINE"].copy()
-    vetoes = events[events["transaction_type"] == "TRADE_VETO"].copy()
-    proposals["actor"] = actor(proposals)
-    declines["actor"] = actor(declines)
-    vetoes["actor"] = actor(vetoes)
-
-    trades = executed_trades(transactions)
-    completed = pd.concat([trades["manager_a"], trades["manager_b"]]).value_counts()
-
-    managers = sorted(
-        set(proposals["actor"].dropna())
-        | set(declines["actor"].dropna())
-        | set(completed.index)
-    )
-    rows = []
-    for manager in managers:
-        n_proposals = int((proposals["actor"] == manager).sum())
-        n_completed = int(completed.get(manager, 0))
-        rows.append(
-            {
-                "manager": manager,
-                "proposals_sent": n_proposals,
-                "trades_completed": n_completed,
-                "declines_issued": int((declines["actor"] == manager).sum()),
-                "vetoes_cast": int((vetoes["actor"] == manager).sum()),
-            }
-        )
-    result = pd.DataFrame(rows)
-    return result.sort_values("proposals_sent", ascending=False).reset_index(drop=True)
+# NOTE: a per-manager "trade negotiations" table (proposals sent, declines
+# issued) was built and removed: ESPN's mTransactions2 view personalizes
+# trade proposal/accept detail to the logged-in account, so with one login
+# the counts are complete for that manager and badly undercounted for
+# everyone else. Revisit if multiple managers' credentials are collected.
 
 
 def transaction_activity(transactions: pd.DataFrame) -> pd.DataFrame:
