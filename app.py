@@ -282,6 +282,61 @@ with tab_tx:
         )
 
         st.divider()
+        st.markdown("### 📋 Transaction log")
+        st.caption(
+            "Every executed roster move since 2018. Click any column header "
+            "to sort; combine the filters to answer questions like 'every "
+            "FAAB claim George made in 2022'."
+        )
+        log = league_data.transaction_log(transactions)
+        col_season, col_mgr, col_action = st.columns(3)
+        with col_season:
+            log_season = st.selectbox(
+                "Season",
+                ["All"] + sorted(log["season"].unique().tolist(), reverse=True),
+                key="log_season",
+            )
+        with col_mgr:
+            log_manager = st.selectbox(
+                "Manager",
+                ["All"] + sorted(log["manager"].dropna().unique().tolist()),
+                key="log_manager",
+            )
+        with col_action:
+            log_actions = st.multiselect(
+                "Move types",
+                ["Waiver claim", "Free agent pickup", "Drop"],
+                default=["Waiver claim", "Free agent pickup", "Drop"],
+                key="log_actions",
+            )
+
+        shown_log = log
+        if log_season != "All":
+            shown_log = shown_log[shown_log["season"] == log_season]
+        if log_manager != "All":
+            shown_log = shown_log[shown_log["manager"] == log_manager]
+        if log_actions:
+            shown_log = shown_log[shown_log["action"].isin(log_actions)]
+
+        faab_shown = int(shown_log.loc[shown_log["action"] == "Waiver claim", "bid_amount"].sum())
+        st.caption(f"{len(shown_log)} moves shown · ${faab_shown} FAAB spent in this view")
+        st.dataframe(
+            shown_log,
+            width='stretch',
+            hide_index=True,
+            height=420,
+            column_config={
+                "season": st.column_config.NumberColumn("Season", format="%d"),
+                "week": st.column_config.NumberColumn("Week", format="%d"),
+                "date": "Date",
+                "manager": "Manager",
+                "action": "Action",
+                "player_name": "Player",
+                "bid_amount": st.column_config.NumberColumn("FAAB", format="$%d"),
+            },
+        )
+
+        st.divider()
         st.markdown("### 🔄 Roster activity by manager (2018+)")
         st.caption("Who actually works the wire - total adds, drops, and FAAB spent.")
         activity = league_data.transaction_activity(transactions)

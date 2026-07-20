@@ -518,6 +518,38 @@ def faab_bids(transactions: pd.DataFrame) -> pd.DataFrame:
 # everyone else. Revisit if multiple managers' credentials are collected.
 
 
+def transaction_log(transactions: pd.DataFrame) -> pd.DataFrame:
+    """Every executed roster move as one readable row.
+
+    action is one of:
+      Waiver claim       - added off waivers (bid_amount = FAAB paid)
+      Free agent pickup  - added as a free agent
+      Drop               - dropped to waivers/free agency
+    """
+    executed = transactions[transactions["status"] == "EXECUTED"]
+
+    adds = executed[
+        executed["transaction_type"].isin(["WAIVER", "FREEAGENT"])
+        & (executed["item_type"] == "ADD")
+    ].copy()
+    adds["action"] = adds["transaction_type"].map(
+        {"WAIVER": "Waiver claim", "FREEAGENT": "Free agent pickup"}
+    )
+
+    drops = executed[
+        executed["transaction_type"].isin(["WAIVER", "FREEAGENT", "ROSTER"])
+        & (executed["item_type"] == "DROP")
+    ].copy()
+    drops["action"] = "Drop"
+    drops["bid_amount"] = 0  # a bid belongs to the claim, not the drop
+
+    log = pd.concat([adds, drops], ignore_index=True)
+    log = log[["season", "week", "date", "manager", "action", "player_name", "bid_amount"]]
+    return log.sort_values(
+        ["season", "week", "date"], ascending=False
+    ).reset_index(drop=True)
+
+
 def transaction_activity(transactions: pd.DataFrame) -> pd.DataFrame:
     """Career transaction counts per manager (2018+): adds, drops, FAAB spent."""
     executed = transactions[transactions["status"] == "EXECUTED"]
