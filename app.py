@@ -257,6 +257,28 @@ with tab_tx:
         )
 
         st.divider()
+        st.markdown("### 📨 Trade negotiations")
+        st.caption(
+            "Who floats deals and who slams the door. Proposals and declines "
+            "are credited to whoever clicked (by ESPN member id, with a "
+            "best-effort fallback on some older events). Trades completed "
+            "counts both sides of every executed trade."
+        )
+        negotiations = league_data.trade_negotiations(transactions)
+        st.dataframe(
+            negotiations,
+            width='stretch',
+            hide_index=True,
+            column_config={
+                "manager": "Manager",
+                "proposals_sent": "📨 Proposals Sent",
+                "trades_completed": "🤝 Trades Completed",
+                "declines_issued": "🚫 Declines Issued",
+                "vetoes_cast": "⛔ Vetoes Cast",
+            },
+        )
+
+        st.divider()
         st.markdown("### 💰 Biggest FAAB bids of all time")
         bids = league_data.faab_bids(transactions)
         st.dataframe(

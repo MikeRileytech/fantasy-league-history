@@ -113,6 +113,9 @@ def flatten(transactions, season, player_map):
             "transaction_type": t.get("type"),
             "status": t.get("status"),
             "espn_team_id": t.get("teamId"),
+            # The ESPN member GUID of the person who took the action. More
+            # reliable than teamId for attributing proposals/declines/vetoes.
+            "member_id": t.get("memberId"),
             "bid_amount": t.get("bidAmount", 0),
             "date_ms": t.get("proposedDate"),
         }
