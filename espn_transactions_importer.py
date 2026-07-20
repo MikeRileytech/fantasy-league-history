@@ -60,13 +60,37 @@ def parse_args():
 
 
 def load_credentials():
+    """Return (league_id, credential list).
+
+    ESPN personalizes trade detail to the logged-in account, so every extra
+    league member's cookies unlock their trades. Besides the base SWID /
+    ESPN_S2 pair, the .env file can hold any number of extra members using
+    a name suffix:
+
+        SWID_KYLE={...}
+        ESPN_S2_KYLE=...
+        SWID_BRIAN={...}
+        ESPN_S2_BRIAN=...
+    """
     load_dotenv(PROJECT_DIR / ".env")
     league_id = os.getenv("LEAGUE_ID")
     if not league_id:
         sys.exit("ERROR: LEAGUE_ID missing from .env (see README.md).")
-    swid = os.getenv("SWID") or None
-    espn_s2 = os.getenv("ESPN_S2") or None
-    return league_id, espn_s2, swid
+
+    creds = []
+    if os.getenv("SWID") and os.getenv("ESPN_S2"):
+        creds.append(("primary", os.getenv("SWID"), os.getenv("ESPN_S2")))
+    for key in sorted(os.environ):
+        if key.startswith("SWID_"):
+            name = key[len("SWID_"):]
+            espn_s2 = os.getenv(f"ESPN_S2_{name}")
+            if espn_s2:
+                creds.append((name.lower(), os.environ[key], espn_s2))
+            else:
+                print(f"WARNING: {key} found but ESPN_S2_{name} is missing; skipping.")
+    if not creds:
+        sys.exit("ERROR: no SWID/ESPN_S2 credentials found in .env.")
+    return league_id, creds
 
 
 def fetch_week(league_id, season, week, cookies):
@@ -139,28 +163,35 @@ def flatten(transactions, season, player_map):
     return rows
 
 
-def import_season(league_id, season, espn_s2, swid):
-    cookies = {"SWID": swid, "espn_s2": espn_s2}
+def import_season(league_id, season, creds):
     all_raw = []
     seen_ids = set()
-    for week in range(0, 20):  # 0 catches preseason moves; 19 covers late playoffs
-        try:
-            weekly = fetch_week(league_id, season, week, cookies)
-        except requests.RequestException as exc:
-            print(f"  WARNING: {season} week {week} failed ({exc}); skipping.")
-            continue
-        for t in weekly:
-            # The same transaction can show up under multiple weeks; keep one.
-            t_id = t.get("id")
-            if t_id in seen_ids:
+    for name, swid, espn_s2 in creds:
+        cookies = {"SWID": swid, "espn_s2": espn_s2}
+        added = 0
+        for week in range(0, 20):  # 0 catches preseason moves; 19 covers late playoffs
+            try:
+                weekly = fetch_week(league_id, season, week, cookies)
+            except requests.RequestException as exc:
+                print(f"  WARNING: {season} week {week} via '{name}' failed ({exc}); skipping.")
                 continue
-            seen_ids.add(t_id)
-            all_raw.append(t)
+            for t in weekly:
+                # The same transaction shows up under multiple weeks, and the
+                # same league-wide event is visible to every account; keep one.
+                t_id = t.get("id")
+                if t_id in seen_ids:
+                    continue
+                seen_ids.add(t_id)
+                all_raw.append(t)
+                added += 1
+        if len(creds) > 1:
+            print(f"  {season}: account '{name}' contributed {added} new transactions.")
 
     if not all_raw:
         print(f"{season}: no transaction data (ESPN retains nothing before {FIRST_SEASON_WITH_DATA}).")
         return
 
+    _, swid, espn_s2 = creds[0]
     player_map = build_player_map(league_id, season, espn_s2, swid)
     rows = flatten(all_raw, season, player_map)
 
@@ -194,7 +225,8 @@ def import_season(league_id, season, espn_s2, swid):
 
 def main():
     args = parse_args()
-    league_id, espn_s2, swid = load_credentials()
+    league_id, creds = load_credentials()
+    print(f"Using {len(creds)} credential set(s): {', '.join(c[0] for c in creds)}")
 
     if args.all:
         seasons = range(FIRST_SEASON_WITH_DATA, 2026)
@@ -204,7 +236,7 @@ def main():
         sys.exit("ERROR: give a season (e.g. 2024) or --all.")
 
     for season in seasons:
-        import_season(league_id, season, espn_s2, swid)
+        import_season(league_id, season, creds)
 
     print(f"\nRaw JSON saved to:  {RAW_DIR}")
     print(f"Clean CSV saved to: {PROCESSED_DIR}")
