@@ -287,69 +287,6 @@ with tab_tx:
         )
 
         st.divider()
-        st.markdown("### 🗂️ Trade proposals that never happened")
-        st.caption(
-            "Declined, withdrawn, and expired offers - the full packages that "
-            "were on the table. Same visibility rule as trades above: only "
-            "proposals involving the imported account(s) are available. The "
-            "season currently being played is held back entirely until it "
-            "ends - ESPN never shows a manager anyone else's pending or "
-            "declined offers, so displaying them live would be an unfair edge."
-        )
-        proposals = league_data.trade_proposals(transactions)
-        col_p1, col_p2, col_p3 = st.columns(3)
-        with col_p1:
-            prop_season = st.selectbox(
-                "Season",
-                ["All"] + sorted(proposals["season"].unique().tolist(), reverse=True),
-                key="prop_season",
-            )
-        with col_p2:
-            prop_manager = st.selectbox(
-                "Manager involved",
-                ["All"] + sorted(
-                    set(proposals["manager_a"]) | set(proposals["manager_b"])
-                ),
-                key="prop_manager",
-            )
-        with col_p3:
-            prop_outcomes = st.multiselect(
-                "Outcomes",
-                ["Declined", "Withdrawn", "Expired (no response)", "Accepted"],
-                default=["Declined"],
-                key="prop_outcomes",
-            )
-
-        shown_props = proposals
-        if prop_season != "All":
-            shown_props = shown_props[shown_props["season"] == prop_season]
-        if prop_manager != "All":
-            shown_props = shown_props[
-                (shown_props["manager_a"] == prop_manager)
-                | (shown_props["manager_b"] == prop_manager)
-            ]
-        if prop_outcomes:
-            shown_props = shown_props[shown_props["outcome"].isin(prop_outcomes)]
-
-        st.caption(f"{len(shown_props)} proposals shown")
-        st.dataframe(
-            shown_props,
-            width='stretch',
-            hide_index=True,
-            height=420,
-            column_config={
-                "season": st.column_config.NumberColumn("Season", format="%d"),
-                "week": st.column_config.NumberColumn("Week", format="%d"),
-                "proposed_by": "Proposed By",
-                "manager_a": "Manager",
-                "would_receive_a": "Would Have Received",
-                "manager_b": "Manager ",
-                "would_receive_b": "Would Have Received ",
-                "outcome": "Outcome",
-            },
-        )
-
-        st.divider()
         st.markdown("### ⚔️ Waiver bid history & bidding wars")
         st.caption(
             "Every bid ever placed, including the losers. Bids on the same "
