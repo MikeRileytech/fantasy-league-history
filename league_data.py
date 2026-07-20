@@ -550,6 +550,44 @@ def transaction_log(transactions: pd.DataFrame) -> pd.DataFrame:
     ).reset_index(drop=True)
 
 
+def waiver_bids(transactions: pd.DataFrame) -> pd.DataFrame:
+    """Every waiver bid ever placed - winners AND losers.
+
+    outcome is one of:
+      Won             - claim executed
+      Lost            - another team won the player that week
+      Failed (rules)  - blocked by roster/budget/acquisition limits
+      Withdrawn       - canceled before waivers processed
+      Never processed - leftover backup claim that became moot
+    """
+    outcome_map = {
+        "EXECUTED": "Won",
+        "FAILED_INVALIDPLAYERSOURCE": "Lost",
+        "FAILED_MATCHUPACQUISITIONLIMIT": "Failed (rules)",
+        "FAILED_ROSTERLIMIT": "Failed (rules)",
+        "FAILED_POSITIONLIMIT": "Failed (rules)",
+        "FAILED_AUCTIONBUDGETEXCEEDED": "Failed (rules)",
+        "FAILED_PLAYERALREADYDROPPED": "Failed (rules)",
+        "CANCELED": "Withdrawn",
+        "PENDING": "Never processed",
+    }
+    bids = transactions[
+        (transactions["transaction_type"] == "WAIVER")
+        & (transactions["item_type"] == "ADD")
+    ].drop_duplicates("transaction_id").copy()
+    bids["outcome"] = bids["status"].map(outcome_map).fillna(bids["status"])
+
+    bids = bids[
+        ["season", "week", "date", "manager", "player_name", "bid_amount", "outcome"]
+    ]
+    # Sort so every bid on the same player in the same week sits together,
+    # highest bid first - bidding wars read top to bottom.
+    return bids.sort_values(
+        ["season", "week", "player_name", "bid_amount"],
+        ascending=[False, False, True, False],
+    ).reset_index(drop=True)
+
+
 def transaction_activity(transactions: pd.DataFrame) -> pd.DataFrame:
     """Career transaction counts per manager (2018+): adds, drops, FAAB spent."""
     executed = transactions[transactions["status"] == "EXECUTED"]

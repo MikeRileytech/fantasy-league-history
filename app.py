@@ -282,6 +282,79 @@ with tab_tx:
         )
 
         st.divider()
+        st.markdown("### ⚔️ Waiver bid history & bidding wars")
+        st.caption(
+            "Every bid ever placed, including the losers. Bids on the same "
+            "player in the same week sit together (highest first), so each "
+            "bidding war reads top to bottom. 'Contested only' keeps just "
+            "the players multiple managers fought over."
+        )
+        bids_all = league_data.waiver_bids(transactions)
+        col_bw1, col_bw2, col_bw3 = st.columns(3)
+        with col_bw1:
+            bw_season = st.selectbox(
+                "Season",
+                ["All"] + sorted(bids_all["season"].unique().tolist(), reverse=True),
+                key="bw_season",
+            )
+        with col_bw2:
+            bw_manager = st.selectbox(
+                "Manager",
+                ["All"] + sorted(bids_all["manager"].dropna().unique().tolist()),
+                key="bw_manager",
+            )
+        with col_bw3:
+            bw_outcomes = st.multiselect(
+                "Outcomes",
+                sorted(bids_all["outcome"].unique().tolist()),
+                default=["Won", "Lost"],
+                key="bw_outcomes",
+            )
+        col_bw4, col_bw5 = st.columns(2)
+        with col_bw4:
+            bw_player = st.text_input("Player search", key="bw_player")
+        with col_bw5:
+            bw_contested = st.checkbox(
+                "Contested only (2+ bids on the player that week)", key="bw_contested"
+            )
+
+        shown_bids = bids_all
+        if bw_season != "All":
+            shown_bids = shown_bids[shown_bids["season"] == bw_season]
+        if bw_outcomes:
+            shown_bids = shown_bids[shown_bids["outcome"].isin(bw_outcomes)]
+        if bw_contested:
+            counts = shown_bids.groupby(["season", "week", "player_name"])[
+                "manager"
+            ].transform("nunique")
+            shown_bids = shown_bids[counts > 1]
+        # Manager and player filters come last so a bidding war stays intact
+        # while 'contested' is judged against all managers' bids.
+        if bw_manager != "All":
+            shown_bids = shown_bids[shown_bids["manager"] == bw_manager]
+        if bw_player:
+            shown_bids = shown_bids[
+                shown_bids["player_name"].str.contains(bw_player, case=False, na=False)
+            ]
+
+        st.caption(f"{len(shown_bids)} bids shown")
+        st.dataframe(
+            shown_bids,
+            width='stretch',
+            hide_index=True,
+            height=420,
+            column_config={
+                "season": st.column_config.NumberColumn("Season", format="%d"),
+                "week": st.column_config.NumberColumn("Week", format="%d"),
+                "date": "Date",
+                "manager": "Manager",
+                "player_name": "Player",
+                "bid_amount": st.column_config.NumberColumn("Bid", format="$%d"),
+                "outcome": "Outcome",
+            },
+        )
+
+        st.divider()
         st.markdown("### 📋 Transaction log")
         st.caption(
             "Every executed roster move since 2018. Click any column header "
