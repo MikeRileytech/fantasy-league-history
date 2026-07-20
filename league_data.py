@@ -424,11 +424,18 @@ def load_transactions() -> pd.DataFrame:
     tx = _load_concat("*_transactions.csv")
     # Some 2018 events have a missing acting team id (ESPN's int-min
     # sentinel). The item itself still knows the team: ADDs go to a team,
-    # DROPs come from one.
-    fallback = tx["to_team_id"].where(tx["item_type"] == "ADD", tx["from_team_id"])
-    bad_team = (tx["espn_team_id"] <= 0) | tx["espn_team_id"].isna()
-    tx.loc[bad_team, "espn_team_id"] = fallback[bad_team]
-    return tx.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+    # DROPs come from one. Everything goes through nullable Int64 so the
+    # float fallback columns never fight the int id column over dtype.
+    team = tx["espn_team_id"].astype("Int64")
+    fallback = (
+        tx["to_team_id"]
+        .where(tx["item_type"] == "ADD", tx["from_team_id"])
+        .astype("Int64")
+    )
+    tx["espn_team_id"] = team.mask((team <= 0) | team.isna(), fallback)
+    mapping = load_mapping()
+    mapping["espn_team_id"] = mapping["espn_team_id"].astype("Int64")
+    return tx.merge(mapping, on=["season", "espn_team_id"], how="left")
 
 
 def executed_trades(transactions: pd.DataFrame) -> pd.DataFrame:
