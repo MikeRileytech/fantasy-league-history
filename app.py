@@ -8,8 +8,10 @@ Run it with:
 import importlib
 import json
 import os
+import uuid
 
 import streamlit as st
+import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 import league_data
@@ -50,8 +52,8 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_ask = st.tabs(
-    ["All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "Ask the League"]
+tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask = st.tabs(
+    ["All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League"]
 )
 
 with tab_alltime:
@@ -618,6 +620,123 @@ with tab_charts:
         st.altair_chart(cumwins_chart, width='stretch')
     else:
         st.info("Pick at least one manager to see the history charts.")
+
+with tab_rules:
+    st.subheader("2026 Proposed Rule Changes")
+    st.caption(
+        "Propose a rule change for next season, or vote on existing "
+        "proposals. Proposing and voting both require a name. Voting is "
+        "limited to once per proposal per browser - it's tracked with a "
+        "cookie, not a login, so it isn't foolproof, but it's the best "
+        "option without making everyone create an account."
+    )
+
+    import rule_changes
+
+    github_token = os.getenv("GITHUB_TOKEN")
+    if not github_token:
+        try:
+            github_token = st.secrets.get("GITHUB_TOKEN")
+        except FileNotFoundError:
+            github_token = None
+    GITHUB_REPO = "MikeRileytech/fantasy-league-history"
+
+    if not github_token:
+        st.warning(
+            "No GITHUB_TOKEN found. Locally: add it to your .env file. On "
+            "Streamlit Community Cloud: add it under the app's Settings > "
+            "Secrets. See README.md for how to create one."
+        )
+        st.stop()
+
+    # A persistent anonymous voter id, stored in a first-party cookie so a
+    # browser is recognized on return visits without any login. st.context
+    # can only READ cookies the browser already sent; a brand-new visitor
+    # has none yet, so we hand them a session-only id for this run and set
+    # the cookie via injected JS - it takes effect starting next run.
+    _voter_cookie = st.context.cookies.get("league_voter_id")
+    if _voter_cookie:
+        voter_id = _voter_cookie
+    else:
+        if "_voter_id_fallback" not in st.session_state:
+            st.session_state["_voter_id_fallback"] = str(uuid.uuid4())
+        voter_id = st.session_state["_voter_id_fallback"]
+        components.html(
+            f"""<script>
+            document.cookie = "league_voter_id={voter_id}; max-age=157680000; path=/; SameSite=Lax";
+            </script>""",
+            height=0,
+        )
+
+    @st.cache_data(ttl=10)
+    def load_rule_data(_token, repo):
+        proposals = rule_changes.load_proposals(_token, repo)
+        votes = rule_changes.load_votes(_token, repo)
+        return proposals, votes
+
+    proposals, votes = load_rule_data(github_token, GITHUB_REPO)
+
+    st.markdown("### Propose a new rule")
+    with st.form("propose_rule_form", clear_on_submit=True):
+        proposer_name = st.text_input("Your name (required)")
+        proposal_text = st.text_area("Proposed rule change (required)")
+        submitted = st.form_submit_button("Submit proposal")
+        if submitted:
+            if not proposer_name.strip() or not proposal_text.strip():
+                st.error("Both your name and the proposal text are required.")
+            else:
+                with st.spinner("Saving proposal..."):
+                    rule_changes.add_proposal(github_token, GITHUB_REPO, proposer_name, proposal_text)
+                st.cache_data.clear()
+                st.success("Proposal submitted!")
+                st.rerun()
+
+    st.divider()
+    st.markdown("### Proposals")
+    if proposals.empty:
+        st.info("No proposals yet - be the first to submit one above.")
+    else:
+        for _, proposal in proposals.iterrows():
+            proposal_id = proposal["proposal_id"]
+            tally = rule_changes.vote_tally(votes, proposal_id)
+            my_vote = rule_changes.existing_vote(votes, proposal_id, voter_id)
+
+            with st.container(border=True):
+                st.markdown(f"**{proposal['proposer_name']}** proposes:")
+                st.markdown(proposal["proposal_text"])
+                st.caption(
+                    f"👍 {tally['up']} · 👎 {tally['down']} · 🤷 {tally['abstain']}"
+                )
+
+                if my_vote:
+                    st.info(f"You voted: {rule_changes.VOTE_CHOICES[my_vote]}")
+                else:
+                    with st.form(f"vote_form_{proposal_id}", clear_on_submit=True):
+                        voter_name = st.text_input("Your name (required)", key=f"voter_name_{proposal_id}")
+                        vote_choice = st.radio(
+                            "Your vote",
+                            list(rule_changes.VOTE_CHOICES),
+                            format_func=lambda v: rule_changes.VOTE_CHOICES[v],
+                            horizontal=True,
+                            key=f"vote_choice_{proposal_id}",
+                        )
+                        vote_submitted = st.form_submit_button("Cast vote")
+                        if vote_submitted:
+                            if not voter_name.strip():
+                                st.error("Your name is required to vote.")
+                            else:
+                                try:
+                                    with st.spinner("Saving vote..."):
+                                        rule_changes.add_vote(
+                                            github_token, GITHUB_REPO, proposal_id,
+                                            voter_id, voter_name, vote_choice,
+                                        )
+                                    st.cache_data.clear()
+                                    st.rerun()
+                                except rule_changes.AlreadyVotedError:
+                                    st.cache_data.clear()
+                                    st.warning("You've already voted on this proposal.")
+                                    st.rerun()
 
 with tab_ask:
     st.subheader("Ask the League")
