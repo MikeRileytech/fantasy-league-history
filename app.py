@@ -661,9 +661,12 @@ with tab_rules:
         if "_voter_id_fallback" not in st.session_state:
             st.session_state["_voter_id_fallback"] = str(uuid.uuid4())
         voter_id = st.session_state["_voter_id_fallback"]
+        # components.html renders in an isolated srcdoc iframe with its own
+        # cookie jar - document.cookie here would set a cookie nobody else
+        # can see. window.parent.document is the actual top-level page.
         components.html(
             f"""<script>
-            document.cookie = "league_voter_id={voter_id}; max-age=157680000; path=/; SameSite=Lax";
+            window.parent.document.cookie = "league_voter_id={voter_id}; max-age=157680000; path=/; SameSite=Lax";
             </script>""",
             height=0,
         )
