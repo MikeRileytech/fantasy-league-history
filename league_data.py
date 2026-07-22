@@ -195,7 +195,14 @@ def load_matchups() -> pd.DataFrame:
 
 def load_draft() -> pd.DataFrame:
     draft = _load_concat("*_draft.csv")
-    return draft.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+    draft = draft.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+    positions_file = PROCESSED_DIR / "player_positions.csv"
+    if positions_file.exists():
+        positions = pd.read_csv(positions_file)
+        draft = draft.merge(positions, on="player_id", how="left")
+    else:
+        draft["position"] = None
+    return draft
 
 
 def manager_career_standings(
@@ -331,10 +338,13 @@ def build_ask_context(teams: pd.DataFrame, matchups: pd.DataFrame, draft: pd.Dat
         )
 
     lines.append("\n# DRAFT PICKS")
-    lines.append("season|round.pick|player|manager")
+    lines.append("season|round.pick|player|position|manager")
     for _, r in draft.sort_values(["season", "overall_pick"]).iterrows():
         keeper = " (keeper)" if r.is_keeper else ""
-        lines.append(f"{r.season}|{r['round']}.{r.pick_in_round}|{r.player_name}|{r.manager}{keeper}")
+        position = r.position if pd.notna(r.position) else "?"
+        lines.append(
+            f"{r.season}|{r['round']}.{r.pick_in_round}|{r.player_name}|{position}|{r.manager}{keeper}"
+        )
 
     return "\n".join(lines)
 
@@ -610,6 +620,7 @@ def draft_table(draft: pd.DataFrame) -> pd.DataFrame:
         "pick_in_round",
         "overall_pick",
         "player_name",
+        "position",
         "manager",
         "team_name",
         "is_keeper",

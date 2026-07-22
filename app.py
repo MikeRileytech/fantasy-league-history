@@ -473,6 +473,7 @@ with tab_draft:
             "pick_in_round": "Pick",
             "overall_pick": "Overall",
             "player_name": "Player",
+            "position": "Pos",
             "manager": "Manager",
             "team_name": "Team",
             "is_keeper": "Keeper",
@@ -621,7 +622,13 @@ with tab_ask:
             "text": (
                 "You are the historian for a fantasy football league. Answer "
                 "questions using ONLY the league data below. If the data does not "
-                "contain the answer, say so - never guess or invent results. "
+                "contain the answer, say so - never guess or invent results. This "
+                "applies especially to draft picks: each pick already includes the "
+                "player's position (QB/RB/WR/TE/K/D-ST) - always read the position "
+                "directly from that field. Never rely on your own knowledge of "
+                "which position a player plays, since that can be wrong or outdated "
+                "and the data is the source of truth. A position of '?' means it "
+                "could not be resolved; say so rather than guessing. "
                 "Managers are real people; the data already maps every season to "
                 "the correct real manager. Playoff games (type P) are games where "
                 "both teams could still win the championship; consolation games "
