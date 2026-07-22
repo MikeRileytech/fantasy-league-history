@@ -426,22 +426,43 @@ with tab_tx:
 
 with tab_draft:
     st.subheader("Draft history")
-    col1, col2 = st.columns(2)
+    st.caption(
+        "Filter by season, round, and manager to answer questions like "
+        "'every first-round pick I've ever made' - pick 'All' seasons and "
+        "round 1, then your manager."
+    )
+    table = league_data.draft_table(draft)
+    col1, col2, col3 = st.columns(3)
     with col1:
         draft_season = st.selectbox(
             "Season", ["All"] + seasons, index=0, key="draft_season"
         )
     with col2:
-        search = st.text_input("Search player or manager")
+        draft_round = st.selectbox(
+            "Round",
+            ["All"] + sorted(table["round"].unique().tolist()),
+            index=0,
+            key="draft_round",
+        )
+    with col3:
+        draft_manager = st.selectbox(
+            "Filter Manager",
+            ["All"] + sorted(table["manager"].dropna().unique().tolist()),
+            index=0,
+            key="draft_manager",
+        )
+    player_search = st.text_input("Search player", key="draft_player_search")
 
-    table = league_data.draft_table(draft)
     if draft_season != "All":
         table = table[table["season"] == draft_season]
-    if search:
-        mask = table["player_name"].str.contains(search, case=False, na=False) | table[
-            "manager"
-        ].str.contains(search, case=False, na=False)
-        table = table[mask]
+    if draft_round != "All":
+        table = table[table["round"] == draft_round]
+    if draft_manager != "All":
+        table = table[table["manager"] == draft_manager]
+    if player_search:
+        table = table[
+            table["player_name"].str.contains(player_search, case=False, na=False)
+        ]
     st.dataframe(
         table,
         width='stretch',
