@@ -22,7 +22,7 @@ VOTES_PATH = "data/rule_changes/votes.csv"
 PROPOSAL_FIELDS = ["proposal_id", "created_at", "proposer_name", "proposal_text"]
 VOTE_FIELDS = ["proposal_id", "voter_id", "voter_name", "vote", "created_at"]
 
-VOTE_CHOICES = {"up": "👍 Up", "down": "👎 Down", "abstain": "🤷 Abstain"}
+VOTE_CHOICES = {"up": "✅ Up", "down": "❌ Down", "abstain": "➖ Abstain"}
 
 
 def _now() -> str:

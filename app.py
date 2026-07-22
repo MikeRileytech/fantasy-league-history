@@ -705,7 +705,7 @@ with tab_rules:
                 st.markdown(f"**{proposal['proposer_name']}** proposes:")
                 st.markdown(proposal["proposal_text"])
                 st.caption(
-                    f"👍 {tally['up']} · 👎 {tally['down']} · 🤷 {tally['abstain']}"
+                    f"✅ {tally['up']} · ❌ {tally['down']} · ➖ {tally['abstain']}"
                 )
 
                 if my_vote:
