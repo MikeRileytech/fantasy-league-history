@@ -280,6 +280,26 @@ def season_standings(teams: pd.DataFrame, season: int) -> pd.DataFrame:
     ].reset_index(drop=True)
 
 
+def manager_season_history(teams: pd.DataFrame, manager: str) -> pd.DataFrame:
+    """One row per season a given manager played, oldest first."""
+    one = teams[teams["manager"] == manager].copy()
+    one = one.sort_values("season")
+    return one[
+        [
+            "season",
+            "final_standing",
+            "regular_season_standing",
+            "logo_url",
+            "team_name",
+            "wins",
+            "losses",
+            "ties",
+            "points_for",
+            "points_against",
+        ]
+    ].reset_index(drop=True)
+
+
 def head_to_head(matchups: pd.DataFrame, game_types: list = None) -> pd.DataFrame:
     """Grid of win-loss-tie records: row manager vs column manager.
 

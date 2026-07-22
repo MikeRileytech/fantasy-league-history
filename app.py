@@ -196,28 +196,63 @@ with tab_trophies:
     )
 
 with tab_seasons:
-    season = st.selectbox("Season", seasons, index=len(seasons) - 1)
-    st.subheader(f"{season} final standings")
-    standings = league_data.season_standings(teams, season)
-    champ = standings.iloc[0]
-    st.success(f"🏆 Champion: **{champ['manager']}** ({champ['team_name']})")
-    st.dataframe(
-        standings,
-        width='stretch',
-        hide_index=True,
-        column_config={
-            "final_standing": "Final",
-            "regular_season_standing": "Reg. Season",
-            "logo_url": st.column_config.ImageColumn(" "),
-            "team_name": "Team",
-            "manager": "Manager",
-            "wins": "W",
-            "losses": "L",
-            "ties": "T",
-            "points_for": st.column_config.NumberColumn("PF", format="%.1f"),
-            "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
-        },
-    )
+    col_season, col_browser_manager = st.columns(2)
+    with col_season:
+        season = st.selectbox("Season", seasons, index=len(seasons) - 1, key="browser_season")
+    with col_browser_manager:
+        browser_manager = st.selectbox(
+            "Manager",
+            ["All"] + sorted(teams["manager"].dropna().unique().tolist()),
+            index=0,
+            key="browser_manager",
+        )
+
+    if browser_manager == "All":
+        st.subheader(f"{season} final standings")
+        standings = league_data.season_standings(teams, season)
+        champ = standings.iloc[0]
+        st.success(f"🏆 Champion: **{champ['manager']}** ({champ['team_name']})")
+        st.dataframe(
+            standings,
+            width='stretch',
+            height="content",
+            hide_index=True,
+            column_config={
+                "final_standing": "Final",
+                "regular_season_standing": "Reg. Season",
+                "logo_url": st.column_config.ImageColumn(" "),
+                "team_name": "Team",
+                "manager": "Manager",
+                "wins": "W",
+                "losses": "L",
+                "ties": "T",
+                "points_for": st.column_config.NumberColumn("PF", format="%.1f"),
+                "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
+            },
+        )
+    else:
+        history = league_data.manager_season_history(teams, browser_manager)
+        championships = int((history["final_standing"] == 1).sum())
+        st.subheader(f"{browser_manager}'s season-by-season history")
+        st.caption(f"{len(history)} seasons played · {championships} championship(s)")
+        st.dataframe(
+            history,
+            width='stretch',
+            height="content",
+            hide_index=True,
+            column_config={
+                "season": st.column_config.NumberColumn("Season", format="%d"),
+                "final_standing": "Final",
+                "regular_season_standing": "Reg. Season",
+                "logo_url": st.column_config.ImageColumn(" "),
+                "team_name": "Team",
+                "wins": "W",
+                "losses": "L",
+                "ties": "T",
+                "points_for": st.column_config.NumberColumn("PF", format="%.1f"),
+                "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
+            },
+        )
 
 with tab_h2h:
     st.subheader("Head-to-head records")
