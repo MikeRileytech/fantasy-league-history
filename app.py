@@ -84,24 +84,28 @@ with tab_alltime:
     career = league_data.manager_career_standings(teams, matchups, game_types=at_game_types)
     logos = league_data.manager_logos(teams)
     career.insert(0, "logo", career["manager"].map(logos))
-    st.caption(
-        "📊 Showing the essentials. Tap the column-visibility icon "
-        "(top-right of the table, next to search/download) to add Seasons, "
-        "First/Last year, or PF/PA."
+
+    extra_col_labels = {
+        "Seasons": "seasons",
+        "First season": "first_season",
+        "Last season": "last_season",
+        "Points For (PF)": "points_for",
+        "Points Against (PA)": "points_against",
+    }
+    extra_picked = st.multiselect(
+        "➕ Show additional stats",
+        options=list(extra_col_labels.keys()),
+        default=[],
+        key="career_extra_cols",
     )
+    extra_cols = [extra_col_labels[label] for label in extra_picked]
+
     st.dataframe(
         career,
         width='stretch',
         hide_index=True,
-        column_order=[
-            "logo",
-            "manager",
-            "championships",
-            "wins",
-            "losses",
-            "ties",
-            "win_pct",
-        ],
+        column_order=["logo", "manager", "championships", "wins", "losses", "ties", "win_pct"]
+        + extra_cols,
         column_config={
             "logo": st.column_config.ImageColumn(" "),
             "manager": "Manager",
