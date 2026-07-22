@@ -84,10 +84,24 @@ with tab_alltime:
     career = league_data.manager_career_standings(teams, matchups, game_types=at_game_types)
     logos = league_data.manager_logos(teams)
     career.insert(0, "logo", career["manager"].map(logos))
+    st.caption(
+        "📊 Showing the essentials. Tap the column-visibility icon "
+        "(top-right of the table, next to search/download) to add Seasons, "
+        "First/Last year, or PF/PA."
+    )
     st.dataframe(
         career,
         width='stretch',
         hide_index=True,
+        column_order=[
+            "logo",
+            "manager",
+            "championships",
+            "wins",
+            "losses",
+            "ties",
+            "win_pct",
+        ],
         column_config={
             "logo": st.column_config.ImageColumn(" "),
             "manager": "Manager",
