@@ -263,37 +263,6 @@ with tab_tx:
         transactions = None
 
     if transactions is not None:
-        st.markdown("### 🤝 Trades")
-        st.warning(
-            "ESPN's API only returns full trade detail for trades involving "
-            "the account that imported the data (currently Mike's), plus all "
-            "2018 trades. Other managers' trades exist in ESPN's records but "
-            "aren't retrievable with one login - if other managers share "
-            "their ESPN credentials, their trades can be imported too.",
-            icon="⚠️",
-        )
-        trades = league_data.executed_trades(transactions)
-        trade_season = st.selectbox(
-            "Season",
-            ["All"] + sorted(trades["season"].unique().tolist(), reverse=True),
-            key="trade_season",
-        )
-        shown_trades = trades if trade_season == "All" else trades[trades["season"] == trade_season]
-        st.dataframe(
-            shown_trades.drop(columns=["date"]),
-            width='stretch',
-            hide_index=True,
-            column_config={
-                "season": st.column_config.NumberColumn("Season", format="%d"),
-                "week": st.column_config.NumberColumn("Week", format="%d"),
-                "manager_a": "Manager",
-                "received_a": "Received",
-                "manager_b": "Manager ",
-                "received_b": "Received ",
-            },
-        )
-
-        st.divider()
         st.markdown("### 💰 Biggest FAAB bids of all time")
         bids = league_data.faab_bids(transactions)
         st.dataframe(
