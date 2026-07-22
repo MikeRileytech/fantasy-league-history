@@ -377,7 +377,6 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
             {
                 "season": season,
                 "champion": champ["manager"],
-                "champion_team": champ["team_name"],
                 "regular_season_winner": reg_winner["manager"],
                 "regular_season_record": f"{reg_winner['wins']}-{reg_winner['losses']}"
                 + (f"-{reg_winner['ties']}" if reg_winner["ties"] else ""),

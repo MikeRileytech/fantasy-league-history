@@ -138,7 +138,6 @@ with tab_trophies:
         column_config={
             "season": st.column_config.NumberColumn("Season", format="%d"),
             "champion": "🏆 Champion",
-            "champion_team": "Champion's Team",
             "regular_season_winner": "🎖️ Reg. Season Winner",
             "regular_season_record": "Record",
             "points_leader": "🔥 Points Leader",
