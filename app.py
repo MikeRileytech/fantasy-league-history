@@ -82,11 +82,14 @@ with tab_alltime:
         at_game_types.append("consolation")
 
     career = league_data.manager_career_standings(teams, matchups, game_types=at_game_types)
+    logos = league_data.manager_logos(teams)
+    career.insert(0, "logo", career["manager"].map(logos))
     st.dataframe(
         career,
         width='stretch',
         hide_index=True,
         column_config={
+            "logo": st.column_config.ImageColumn(" "),
             "manager": "Manager",
             "seasons": "Seasons",
             "first_season": st.column_config.NumberColumn("First", format="%d"),
@@ -110,11 +113,13 @@ with tab_trophies:
     trophies = league_data.season_trophies(teams, matchups)
     weekly_winners = league_data.weekly_high_winners(matchups)
     case = league_data.trophy_case(trophies, weekly_winners)
+    case.insert(0, "logo", case["manager"].map(logos))
     st.dataframe(
         case,
         width='stretch',
         hide_index=True,
         column_config={
+            "logo": st.column_config.ImageColumn(" "),
             "manager": "Manager",
             "championships": "🏆 Championships",
             "regular_season_titles": "🎖️ Reg. Season Titles",
@@ -184,6 +189,7 @@ with tab_seasons:
         column_config={
             "final_standing": "Final",
             "regular_season_standing": "Reg. Season",
+            "logo_url": st.column_config.ImageColumn(" "),
             "team_name": "Team",
             "manager": "Manager",
             "wins": "W",

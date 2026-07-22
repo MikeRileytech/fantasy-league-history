@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2021,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},6,8,0,1750.88,1887.74,9,11
-2021,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},7,7,0,1748.24,1771.88,7,9
-2021,3,The Road To Speedo Town,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},4,10,0,1489.8399999999997,1546.22,12,7
-2021,4,I'm Ryan  Keyser,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},7,7,0,1763.7200000000003,1632.58,6,1
-2021,5,Maybe This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},8,6,0,1641.18,1671.3,4,5
-2021,6,Saquon CeeDee's Nutz,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},7,7,0,1663.1999999999998,1629.08,8,12
-2021,7,Fantasy Football Team,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},6,8,0,1748.2400000000002,1726.48,10,8
-2021,8,"Wu Tang Sports Ventures, Inc.",East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},9,5,0,1715.2000000000003,1625.04,2,4
-2021,10,DENVER BREAD,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},7,7,0,1826.94,1740.34,5,3
-2021,12,Curious George,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},9,5,0,1764.04,1643.2,1,2
-2021,13,What R U Doin  Step Bro?!?!,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},8,6,0,1670.24,1750.36,3,6
-2021,14,AW YouMISSEDme,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},6,8,0,1596.7800000000002,1754.28,11,10
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2021,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},6,8,0,1750.88,1887.74,9,11,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2021,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},7,7,0,1748.24,1771.88,7,9,https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg
+2021,3,The Road To Speedo Town,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},4,10,0,1489.8399999999997,1546.22,12,7,https://g.espncdn.com/lm-static/logo-packs/core/Incredibles/incredibles_4.svg
+2021,4,I'm Ryan  Keyser,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},7,7,0,1763.7200000000003,1632.58,6,1,https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2021,5,Maybe This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},8,6,0,1641.18,1671.3,4,5,https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-M.svg
+2021,6,Saquon CeeDee's Nutz,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},7,7,0,1663.1999999999998,1629.08,8,12,https://dailysnark.com/wp-content/uploads/2020/11/Thumb-20-2048x1074.jpg
+2021,7,Fantasy Football Team,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},6,8,0,1748.2400000000002,1726.48,10,8,http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg
+2021,8,"Wu Tang Sports Ventures, Inc.",East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},9,5,0,1715.2000000000003,1625.04,2,4,https://fontmeme.com/images/Wu-Tang-Logo.jpg
+2021,10,DENVER BREAD,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},7,7,0,1826.94,1740.34,5,3,https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_corn-dog.svg
+2021,12,Curious George,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},9,5,0,1764.04,1643.2,1,2,https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg
+2021,13,What R U Doin  Step Bro?!?!,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},8,6,0,1670.24,1750.36,3,6,https://pbs.twimg.com/profile_images/2799591293/536c83637de9570c3d2b72230d19f308_400x400.jpeg
+2021,14,AW YouMISSEDme,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},6,8,0,1596.7800000000002,1754.28,11,10,https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg

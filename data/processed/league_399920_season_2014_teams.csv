@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2014,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},6,7,0,1155.0,1156.0,7,9
-2014,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},8,5,0,1166.0,1043.0,5,4
-2014,3,De Marc O Da Beast,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},4,9,0,1110.0,1118.0,11,8
-2014,4,Team YB,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},9,4,0,1321.0,1188.0,2,3
-2014,5,Team Beats by Ray,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},9,4,0,1218.0,1063.0,3,5
-2014,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},6,7,0,1040.0,1155.0,9,12
-2014,7,3rd Down For What,West,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},10,3,0,1296.0,1170.0,1,1
-2014,8,Team Keyser,West,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},8,5,0,1255.0,1166.0,4,6
-2014,9,New Yawk Bklyn's Best,West,Larry02532,{7FE6FADE-68F2-4650-A6FA-DE68F25650BC},6,7,0,1060.0,1063.0,8,11
-2014,10,Team Bibendum,West,kenschwartz777,{610C0DC1-44A5-40BB-AF5A-F8117AF6EE62},6,6,1,1171.0,1139.0,6,2
-2014,11,Baltimore Hail Marys,West,BohGuy,{AAFE454F-5793-4846-BE45-4F5793484606},4,8,1,1141.0,1233.0,10,7
-2014,12,Ridley Me This,West,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},1,12,0,792.0,1231.0,12,10
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2014,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},6,7,0,1155.0,1156.0,7,9,
+2014,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},8,5,0,1166.0,1043.0,5,4,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-12.svg
+2014,3,De Marc O Da Beast,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},4,9,0,1110.0,1118.0,11,8,http://www.angelfire.com/music2/fullcircle/mark_of_the_beast.jpg
+2014,4,Team YB,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},9,4,0,1321.0,1188.0,2,3,http://g.espncdn.com/s/ffllm/logos/CreepShow-ToddDetwiler/CreepShow-01.svg
+2014,5,Team Beats by Ray,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},9,4,0,1218.0,1063.0,3,5,
+2014,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},6,7,0,1040.0,1155.0,9,12,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg
+2014,7,3rd Down For What,West,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},10,3,0,1296.0,1170.0,1,1,
+2014,8,Team Keyser,West,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},8,5,0,1255.0,1166.0,4,6,http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2014,9,New Yawk Bklyn's Best,West,Larry02532,{7FE6FADE-68F2-4650-A6FA-DE68F25650BC},6,7,0,1060.0,1063.0,8,11,
+2014,10,Team Bibendum,West,kenschwartz777,{610C0DC1-44A5-40BB-AF5A-F8117AF6EE62},6,6,1,1171.0,1139.0,6,2,http://g.espncdn.com/s/ffllm/logos/BigHeroSix/SVG/BigHero6-05.svg
+2014,11,Baltimore Hail Marys,West,BohGuy,{AAFE454F-5793-4846-BE45-4F5793484606},4,8,1,1141.0,1233.0,10,7,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-08b.svg
+2014,12,Ridley Me This,West,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},1,12,0,792.0,1231.0,12,10,http://g.espncdn.com/s/ffllm/logos/CreepShow-ToddDetwiler/CreepShow-20.svg

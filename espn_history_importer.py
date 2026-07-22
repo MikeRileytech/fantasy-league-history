@@ -139,6 +139,7 @@ def build_team_records(league) -> list:
                 "points_against": team.points_against,
                 "regular_season_standing": team.standing,
                 "final_standing": team.final_standing,
+                "logo_url": team.logo_url or None,
             }
         )
     return rows

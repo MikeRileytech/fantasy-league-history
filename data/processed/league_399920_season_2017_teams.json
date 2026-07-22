@@ -12,7 +12,8 @@
     "points_for": 1165.64,
     "points_against": 1073.98,
     "regular_season_standing": 8,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2017,
@@ -27,7 +28,8 @@
     "points_for": 1280.02,
     "points_against": 993.18,
     "regular_season_standing": 1,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg"
   },
   {
     "season": 2017,
@@ -42,7 +44,8 @@
     "points_for": 1212.86,
     "points_against": 1201.78,
     "regular_season_standing": 6,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "https://paniniamerica.files.wordpress.com/2015/04/panini-america-2015-nflpa-rookie-debut-tevin-coleman.jpg?w=650"
   },
   {
     "season": 2017,
@@ -57,7 +60,8 @@
     "points_for": 1048.8799999999999,
     "points_against": 1192.52,
     "regular_season_standing": 5,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-10.svg"
   },
   {
     "season": 2017,
@@ -72,7 +76,8 @@
     "points_for": 1194.52,
     "points_against": 1267.94,
     "regular_season_standing": 12,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": null
   },
   {
     "season": 2017,
@@ -87,7 +92,8 @@
     "points_for": 967.92,
     "points_against": 1116.3,
     "regular_season_standing": 11,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg"
   },
   {
     "season": 2017,
@@ -102,7 +108,8 @@
     "points_for": 1285.0600000000002,
     "points_against": 1209.14,
     "regular_season_standing": 4,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg"
   },
   {
     "season": 2017,
@@ -117,7 +124,8 @@
     "points_for": 1096.9399999999998,
     "points_against": 1122.18,
     "regular_season_standing": 7,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/8bitHeros-JoeyEllis/8bit_football-08.svg"
   },
   {
     "season": 2017,
@@ -132,7 +140,8 @@
     "points_for": 1119.88,
     "points_against": 1251.26,
     "regular_season_standing": 9,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": null
   },
   {
     "season": 2017,
@@ -147,7 +156,8 @@
     "points_for": 1042.3,
     "points_against": 1179.72,
     "regular_season_standing": 10,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg"
   },
   {
     "season": 2017,
@@ -162,7 +172,8 @@
     "points_for": 1298.3,
     "points_against": 1156.16,
     "regular_season_standing": 2,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg"
   },
   {
     "season": 2017,
@@ -177,6 +188,7 @@
     "points_for": 1186.54,
     "points_against": 1134.7,
     "regular_season_standing": 3,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "https://draxe.com/wp-content/uploads/2015/04/bigstock-Ezekiel-Bread-3058253-e1429797463770.jpg"
   }
 ]

@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2025,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},6,8,0,1587.72,1732.84,7,7
-2025,2,Not Lamarvelous,East,Mlinker9,{6AC115FA-3A0D-4948-8115-FA3A0DD94826},6,8,0,1501.16,1670.56,8,8
-2025,3,Kev Got a Bijan the Offseason,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},9,5,0,1828.1399999999999,1608.92,3,3
-2025,4,Juicy Smuyet,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},10,4,0,1809.9599999999998,1720.84,2,1
-2025,5,Not This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},4,10,0,1537.24,1724.7,12,12
-2025,6,Keep Doubting,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},8,6,0,1634.5,1610.6,4,2
-2025,7,Son of a Commish ,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},11,3,0,1992.6399999999999,1697.38,1,4
-2025,8,It's Always Sunny in Baltimore,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},5,9,0,1548.52,1717.16,10,9
-2025,10,Riley,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},8,6,0,1571.5799999999997,1572.94,5,6
-2025,12,Omar's Coming,East,Epmyers91,{5FCF8F43-6BFC-4593-9364-2E23B55B301D},7,7,0,1683.1200000000001,1531.08,6,5
-2025,13,The New York Geezers,East,larrysschwartz,{523D9B8F-8A3C-4523-BD9B-8F8A3C852321},5,9,0,1702.3599999999997,1609.14,9,10
-2025,14,The Njoku's on *Me,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},5,9,0,1485.6399999999999,1686.42,11,11
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2025,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},6,8,0,1587.72,1732.84,7,7,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2025,2,Not Lamarvelous,East,Mlinker9,{6AC115FA-3A0D-4948-8115-FA3A0DD94826},6,8,0,1501.16,1670.56,8,8,https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2025,3,Kev Got a Bijan the Offseason,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},9,5,0,1828.1399999999999,1608.92,3,3,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/1d4c7a50-8883-11f0-9d0e-d3c969c03a65
+2025,4,Juicy Smuyet,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},10,4,0,1809.9599999999998,1720.84,2,1,https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2025,5,Not This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},4,10,0,1537.24,1724.7,12,12,https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-02.svg
+2025,6,Keep Doubting,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},8,6,0,1634.5,1610.6,4,2,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/0eb41950-c986-11f0-b1c3-bf61c28fbeb9
+2025,7,Son of a Commish ,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},11,3,0,1992.6399999999999,1697.38,1,4,https://pbs.twimg.com/media/BxRCn90CEAAh1YE.jpg
+2025,8,It's Always Sunny in Baltimore,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},5,9,0,1548.52,1717.16,10,9,https://i.redd.it/sjuwd4svl4x11.jpg
+2025,10,Riley,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},8,6,0,1571.5799999999997,1572.94,5,6,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/36e68050-c875-11f0-90f7-112fa0f42e74
+2025,12,Omar's Coming,East,Epmyers91,{5FCF8F43-6BFC-4593-9364-2E23B55B301D},7,7,0,1683.1200000000001,1531.08,6,5,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/8b5b2aa0-9af8-11f0-afb5-e14f006a2a34
+2025,13,The New York Geezers,East,larrysschwartz,{523D9B8F-8A3C-4523-BD9B-8F8A3C852321},5,9,0,1702.3599999999997,1609.14,9,10,https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-N.svg
+2025,14,The Njoku's on *Me,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},5,9,0,1485.6399999999999,1686.42,11,11,https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg

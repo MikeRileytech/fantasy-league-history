@@ -12,7 +12,8 @@
     "points_for": 1475.2599999999998,
     "points_against": 1401.14,
     "regular_season_standing": 6,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2020,
@@ -27,7 +28,8 @@
     "points_for": 1623.7,
     "points_against": 1677.82,
     "regular_season_standing": 5,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg"
   },
   {
     "season": 2020,
@@ -42,7 +44,8 @@
     "points_for": 1411.7000000000003,
     "points_against": 1555.76,
     "regular_season_standing": 10,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/core/DIS_Avengers_EndGame/DIS_Avengers_EndGame_A_2.svg"
   },
   {
     "season": 2020,
@@ -57,7 +60,8 @@
     "points_for": 1807.7400000000002,
     "points_against": 1571.7,
     "regular_season_standing": 3,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2020,
@@ -72,7 +76,8 @@
     "points_for": 1590.9199999999998,
     "points_against": 1472.16,
     "regular_season_standing": 4,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-M.svg"
   },
   {
     "season": 2020,
@@ -87,7 +92,8 @@
     "points_for": 1504.3400000000001,
     "points_against": 1636.88,
     "regular_season_standing": 11,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg"
   },
   {
     "season": 2020,
@@ -102,7 +108,8 @@
     "points_for": 1655.9600000000003,
     "points_against": 1475.74,
     "regular_season_standing": 2,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg"
   },
   {
     "season": 2020,
@@ -117,7 +124,8 @@
     "points_for": 1646.8400000000001,
     "points_against": 1676.46,
     "regular_season_standing": 7,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": "https://i.redd.it/mr8gzmfsi6811.jpg"
   },
   {
     "season": 2020,
@@ -132,7 +140,8 @@
     "points_for": 1335.1799999999998,
     "points_against": 1695.24,
     "regular_season_standing": 12,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": null
   },
   {
     "season": 2020,
@@ -147,7 +156,8 @@
     "points_for": 1754.46,
     "points_against": 1422.82,
     "regular_season_standing": 1,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_corn-dog.svg"
   },
   {
     "season": 2020,
@@ -162,7 +172,8 @@
     "points_for": 1441.74,
     "points_against": 1600.08,
     "regular_season_standing": 8,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg"
   },
   {
     "season": 2020,
@@ -177,6 +188,7 @@
     "points_for": 1435.8,
     "points_against": 1497.84,
     "regular_season_standing": 9,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "https://pbs.twimg.com/profile_images/2799591293/536c83637de9570c3d2b72230d19f308_400x400.jpeg"
   }
 ]

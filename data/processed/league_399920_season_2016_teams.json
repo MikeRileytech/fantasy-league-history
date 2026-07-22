@@ -12,7 +12,8 @@
     "points_for": 1226.8,
     "points_against": 1137.78,
     "regular_season_standing": 2,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2016,
@@ -27,7 +28,8 @@
     "points_for": 1209.46,
     "points_against": 1213.84,
     "regular_season_standing": 10,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-12.svg"
   },
   {
     "season": 2016,
@@ -42,7 +44,8 @@
     "points_for": 1173.6399999999999,
     "points_against": 1190.3,
     "regular_season_standing": 8,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": "http://vignette2.wikia.nocookie.net/thewirehbotv/images/1/15/The_Wire_Watkins.jpg/revision/latest?cb=20120903140014"
   },
   {
     "season": 2016,
@@ -57,7 +60,8 @@
     "points_for": 1422.82,
     "points_against": 1174.42,
     "regular_season_standing": 1,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-10.svg"
   },
   {
     "season": 2016,
@@ -72,7 +76,8 @@
     "points_for": 1272.6599999999999,
     "points_against": 1249.14,
     "regular_season_standing": 6,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": null
   },
   {
     "season": 2016,
@@ -87,7 +92,8 @@
     "points_for": 1133.14,
     "points_against": 1066.22,
     "regular_season_standing": 4,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg"
   },
   {
     "season": 2016,
@@ -102,7 +108,8 @@
     "points_for": 1125.8799999999999,
     "points_against": 1092.66,
     "regular_season_standing": 5,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg"
   },
   {
     "season": 2016,
@@ -117,7 +124,8 @@
     "points_for": 1073.3600000000001,
     "points_against": 1229.4,
     "regular_season_standing": 12,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2016,
@@ -132,7 +140,8 @@
     "points_for": 1133.7399999999998,
     "points_against": 1273.82,
     "regular_season_standing": 9,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": null
   },
   {
     "season": 2016,
@@ -147,7 +156,8 @@
     "points_for": 1205.2800000000002,
     "points_against": 1273.62,
     "regular_season_standing": 7,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg"
   },
   {
     "season": 2016,
@@ -162,7 +172,8 @@
     "points_for": 1205.6000000000001,
     "points_against": 1167.02,
     "regular_season_standing": 3,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg"
   },
   {
     "season": 2016,
@@ -177,6 +188,7 @@
     "points_for": 1140.4799999999998,
     "points_against": 1254.64,
     "regular_season_standing": 11,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "http://blacksportsonline.com/home/wp-content/uploads/2016/02/not-really-eddie-lacy-752x501.png"
   }
 ]

@@ -12,7 +12,8 @@
     "points_for": 1686.7000000000003,
     "points_against": 1517.82,
     "regular_season_standing": 3,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "http://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2018,
@@ -27,7 +28,8 @@
     "points_for": 1684.5599999999997,
     "points_against": 1676.12,
     "regular_season_standing": 4,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg"
   },
   {
     "season": 2018,
@@ -42,7 +44,8 @@
     "points_for": 1539.34,
     "points_against": 1677.64,
     "regular_season_standing": 7,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": "https://b97.radio.com/sites/g/files/giy826/f/styles/delta__775x515/public/Blogs/USATSI_10565344_168383875_lowres.jpg?itok=QqQJTBtC"
   },
   {
     "season": 2018,
@@ -57,7 +60,8 @@
     "points_for": 1486.7799999999997,
     "points_against": 1779.86,
     "regular_season_standing": 12,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2018,
@@ -72,7 +76,8 @@
     "points_for": 1530.1000000000004,
     "points_against": 1624.84,
     "regular_season_standing": 11,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": null
   },
   {
     "season": 2018,
@@ -87,7 +92,8 @@
     "points_for": 1374.7600000000002,
     "points_against": 1577.1,
     "regular_season_standing": 9,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg"
   },
   {
     "season": 2018,
@@ -102,7 +108,8 @@
     "points_for": 1567.5,
     "points_against": 1556.86,
     "regular_season_standing": 8,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": "http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg"
   },
   {
     "season": 2018,
@@ -117,7 +124,8 @@
     "points_for": 1842.0,
     "points_against": 1630.64,
     "regular_season_standing": 2,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/8bitHeros-JoeyEllis/8bit_football-08.svg"
   },
   {
     "season": 2018,
@@ -132,7 +140,8 @@
     "points_for": 1614.48,
     "points_against": 1513.04,
     "regular_season_standing": 6,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": null
   },
   {
     "season": 2018,
@@ -147,7 +156,8 @@
     "points_for": 1543.6000000000001,
     "points_against": 1610.6,
     "regular_season_standing": 10,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "http://g.espncdn.com/lm-static/logo-packs/core/CatsAndDogs/cats_dogs-1.svg"
   },
   {
     "season": 2018,
@@ -162,7 +172,8 @@
     "points_for": 1667.74,
     "points_against": 1441.74,
     "regular_season_standing": 1,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg"
   },
   {
     "season": 2018,
@@ -177,6 +188,7 @@
     "points_for": 1631.96,
     "points_against": 1563.26,
     "regular_season_standing": 5,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "https://pbs.twimg.com/profile_images/2799591293/536c83637de9570c3d2b72230d19f308_400x400.jpeg"
   }
 ]

@@ -105,6 +105,18 @@ def load_teams() -> pd.DataFrame:
     return teams
 
 
+def manager_logos(teams: pd.DataFrame) -> dict:
+    """manager -> logo URL, using each manager's most recent season.
+
+    Logos change nearly every year along with team names, so there is no
+    single "correct" logo for a career - this picks their current one, the
+    same way a profile picture represents someone without claiming to
+    represent every year of their life.
+    """
+    latest = teams.sort_values("season").dropna(subset=["logo_url"])
+    return latest.groupby("manager")["logo_url"].last().to_dict()
+
+
 def _playoff_team_counts() -> dict:
     """Season -> number of playoff teams, read from the saved raw ESPN JSON."""
     counts = {}
@@ -248,6 +260,7 @@ def season_standings(teams: pd.DataFrame, season: int) -> pd.DataFrame:
         [
             "final_standing",
             "regular_season_standing",
+            "logo_url",
             "team_name",
             "manager",
             "wins",

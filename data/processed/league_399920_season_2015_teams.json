@@ -12,7 +12,8 @@
     "points_for": 1218.0,
     "points_against": 1140.0,
     "regular_season_standing": 2,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2015,
@@ -27,7 +28,8 @@
     "points_for": 1134.0,
     "points_against": 1038.0,
     "regular_season_standing": 10,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-12.svg"
   },
   {
     "season": 2015,
@@ -42,7 +44,8 @@
     "points_for": 1266.0,
     "points_against": 1118.0,
     "regular_season_standing": 1,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "http://i60.tinypic.com/2e3bdsi.jpg"
   },
   {
     "season": 2015,
@@ -57,7 +60,8 @@
     "points_for": 1158.0,
     "points_against": 1161.0,
     "regular_season_standing": 3,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_02a.svg"
   },
   {
     "season": 2015,
@@ -72,7 +76,8 @@
     "points_for": 1097.0,
     "points_against": 1192.0,
     "regular_season_standing": 11,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": null
   },
   {
     "season": 2015,
@@ -87,7 +92,8 @@
     "points_for": 1037.0,
     "points_against": 961.0,
     "regular_season_standing": 6,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_14a.svg"
   },
   {
     "season": 2015,
@@ -102,7 +108,8 @@
     "points_for": 1146.0,
     "points_against": 1169.0,
     "regular_season_standing": 7,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": null
   },
   {
     "season": 2015,
@@ -117,7 +124,8 @@
     "points_for": 1116.0,
     "points_against": 1172.0,
     "regular_season_standing": 8,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2015,
@@ -132,7 +140,8 @@
     "points_for": 1026.0,
     "points_against": 1090.0,
     "regular_season_standing": 12,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": null
   },
   {
     "season": 2015,
@@ -147,7 +156,8 @@
     "points_for": 1064.0,
     "points_against": 1109.0,
     "regular_season_standing": 5,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg"
   },
   {
     "season": 2015,
@@ -162,7 +172,8 @@
     "points_for": 1059.0,
     "points_against": 1162.0,
     "regular_season_standing": 9,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/Marvel-75thAnnivSuperHeroIcons/Punisher-01.svg"
   },
   {
     "season": 2015,
@@ -177,6 +188,7 @@
     "points_for": 1099.0,
     "points_against": 1108.0,
     "regular_season_standing": 4,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg"
   }
 ]

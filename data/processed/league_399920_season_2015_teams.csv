@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2015,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},8,4,1,1218.0,1140.0,2,4
-2015,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},5,7,1,1134.0,1038.0,10,9
-2015,3,Hyde Yo Kids Hyde Yo Wife,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},9,4,0,1266.0,1118.0,1,2
-2015,4,Straight out of Gronkton!,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},7,6,0,1158.0,1161.0,3,1
-2015,5,Team Beats by Ray,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},5,8,0,1097.0,1192.0,11,7
-2015,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},7,6,0,1037.0,961.0,6,6
-2015,7,3rd Down For What,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},6,7,0,1146.0,1169.0,7,8
-2015,8,Abdullah Oblangada ,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},6,7,0,1116.0,1172.0,8,11
-2015,9,New Yawk Bklyn's Best,East,Larry02532,{7FE6FADE-68F2-4650-A6FA-DE68F25650BC},4,9,0,1026.0,1090.0,12,12
-2015,10,Team Riley,East,Ryebreadly,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},7,6,0,1064.0,1109.0,5,5
-2015,11,Baltimore Hail Marys,East,BohGuy,{AAFE454F-5793-4846-BE45-4F5793484606},6,7,0,1059.0,1162.0,9,10
-2015,12,Cntrl Alt Delete,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},7,6,0,1099.0,1108.0,4,3
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2015,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},8,4,1,1218.0,1140.0,2,4,http://g.espncdn.com/s/ffllm/logos/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2015,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},5,7,1,1134.0,1038.0,10,9,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-12.svg
+2015,3,Hyde Yo Kids Hyde Yo Wife,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},9,4,0,1266.0,1118.0,1,2,http://i60.tinypic.com/2e3bdsi.jpg
+2015,4,Straight out of Gronkton!,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},7,6,0,1158.0,1161.0,3,1,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_02a.svg
+2015,5,Team Beats by Ray,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},5,8,0,1097.0,1192.0,11,7,
+2015,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},7,6,0,1037.0,961.0,6,6,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_14a.svg
+2015,7,3rd Down For What,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},6,7,0,1146.0,1169.0,7,8,
+2015,8,Abdullah Oblangada ,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},6,7,0,1116.0,1172.0,8,11,http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2015,9,New Yawk Bklyn's Best,East,Larry02532,{7FE6FADE-68F2-4650-A6FA-DE68F25650BC},4,9,0,1026.0,1090.0,12,12,
+2015,10,Team Riley,East,Ryebreadly,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},7,6,0,1064.0,1109.0,5,5,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg
+2015,11,Baltimore Hail Marys,East,BohGuy,{AAFE454F-5793-4846-BE45-4F5793484606},6,7,0,1059.0,1162.0,9,10,http://g.espncdn.com/s/ffllm/logos/Marvel-75thAnnivSuperHeroIcons/Punisher-01.svg
+2015,12,Cntrl Alt Delete,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},7,6,0,1099.0,1108.0,4,3,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg

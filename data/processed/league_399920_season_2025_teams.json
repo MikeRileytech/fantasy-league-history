@@ -12,7 +12,8 @@
     "points_for": 1587.72,
     "points_against": 1732.84,
     "regular_season_standing": 7,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2025,
@@ -27,7 +28,8 @@
     "points_for": 1501.16,
     "points_against": 1670.56,
     "regular_season_standing": 8,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2025,
@@ -42,7 +44,8 @@
     "points_for": 1828.1399999999999,
     "points_against": 1608.92,
     "regular_season_standing": 3,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/1d4c7a50-8883-11f0-9d0e-d3c969c03a65"
   },
   {
     "season": 2025,
@@ -57,7 +60,8 @@
     "points_for": 1809.9599999999998,
     "points_against": 1720.84,
     "regular_season_standing": 2,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2025,
@@ -72,7 +76,8 @@
     "points_for": 1537.24,
     "points_against": 1724.7,
     "regular_season_standing": 12,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-02.svg"
   },
   {
     "season": 2025,
@@ -87,7 +92,8 @@
     "points_for": 1634.5,
     "points_against": 1610.6,
     "regular_season_standing": 4,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/0eb41950-c986-11f0-b1c3-bf61c28fbeb9"
   },
   {
     "season": 2025,
@@ -102,7 +108,8 @@
     "points_for": 1992.6399999999999,
     "points_against": 1697.38,
     "regular_season_standing": 1,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "https://pbs.twimg.com/media/BxRCn90CEAAh1YE.jpg"
   },
   {
     "season": 2025,
@@ -117,7 +124,8 @@
     "points_for": 1548.52,
     "points_against": 1717.16,
     "regular_season_standing": 10,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": "https://i.redd.it/sjuwd4svl4x11.jpg"
   },
   {
     "season": 2025,
@@ -132,7 +140,8 @@
     "points_for": 1571.5799999999997,
     "points_against": 1572.94,
     "regular_season_standing": 5,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/36e68050-c875-11f0-90f7-112fa0f42e74"
   },
   {
     "season": 2025,
@@ -147,7 +156,8 @@
     "points_for": 1683.1200000000001,
     "points_against": 1531.08,
     "regular_season_standing": 6,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/8b5b2aa0-9af8-11f0-afb5-e14f006a2a34"
   },
   {
     "season": 2025,
@@ -162,7 +172,8 @@
     "points_for": 1702.3599999999997,
     "points_against": 1609.14,
     "regular_season_standing": 9,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-N.svg"
   },
   {
     "season": 2025,
@@ -177,6 +188,7 @@
     "points_for": 1485.6399999999999,
     "points_against": 1686.42,
     "regular_season_standing": 11,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg"
   }
 ]

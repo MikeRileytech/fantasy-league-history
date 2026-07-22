@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2018,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},8,5,0,1686.7000000000003,1517.82,3,6
-2018,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},8,5,0,1684.5599999999997,1676.12,4,5
-2018,3,Say Cheeeez For The Kamara,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},6,7,0,1539.34,1677.64,7,8
-2018,4,Dalvin and the  Chipmunks,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},4,9,0,1486.7799999999997,1779.86,12,7
-2018,5,From Worst to Worst,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},4,9,0,1530.1000000000004,1624.84,11,9
-2018,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},5,8,0,1374.7600000000002,1577.1,9,12
-2018,7,My Little  Cooper Kupp,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},5,8,0,1567.5,1556.86,8,11
-2018,8,Curious George,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},9,4,0,1842.0,1630.64,2,1
-2018,9,LOCKETT LIKE I  TALK IT,East,LL_Sulai90,{F307EF76-8029-43C4-9AC6-587DB9941E05},7,6,0,1614.48,1513.04,6,4
-2018,10,bread BREAD,East,Ryebreadly,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},4,9,0,1543.6000000000001,1610.6,10,10
-2018,12,Cntrl Alt Delete,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},10,3,0,1667.74,1441.74,1,2
-2018,13,99 Problems but L. Fitz ain't 1,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},8,5,0,1631.96,1563.26,5,3
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2018,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},8,5,0,1686.7000000000003,1517.82,3,6,http://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2018,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},8,5,0,1684.5599999999997,1676.12,4,5,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg
+2018,3,Say Cheeeez For The Kamara,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},6,7,0,1539.34,1677.64,7,8,https://b97.radio.com/sites/g/files/giy826/f/styles/delta__775x515/public/Blogs/USATSI_10565344_168383875_lowres.jpg?itok=QqQJTBtC
+2018,4,Dalvin and the  Chipmunks,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},4,9,0,1486.7799999999997,1779.86,12,7,http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2018,5,From Worst to Worst,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},4,9,0,1530.1000000000004,1624.84,11,9,
+2018,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},5,8,0,1374.7600000000002,1577.1,9,12,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg
+2018,7,My Little  Cooper Kupp,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},5,8,0,1567.5,1556.86,8,11,http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg
+2018,8,Curious George,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},9,4,0,1842.0,1630.64,2,1,http://g.espncdn.com/s/ffllm/logos/8bitHeros-JoeyEllis/8bit_football-08.svg
+2018,9,LOCKETT LIKE I  TALK IT,East,LL_Sulai90,{F307EF76-8029-43C4-9AC6-587DB9941E05},7,6,0,1614.48,1513.04,6,4,
+2018,10,bread BREAD,East,Ryebreadly,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},4,9,0,1543.6000000000001,1610.6,10,10,http://g.espncdn.com/lm-static/logo-packs/core/CatsAndDogs/cats_dogs-1.svg
+2018,12,Cntrl Alt Delete,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},10,3,0,1667.74,1441.74,1,2,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg
+2018,13,99 Problems but L. Fitz ain't 1,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},8,5,0,1631.96,1563.26,5,3,https://pbs.twimg.com/profile_images/2799591293/536c83637de9570c3d2b72230d19f308_400x400.jpeg

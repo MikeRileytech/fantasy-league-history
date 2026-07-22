@@ -12,7 +12,8 @@
     "points_for": 1155.0,
     "points_against": 1156.0,
     "regular_season_standing": 7,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": null
   },
   {
     "season": 2014,
@@ -27,7 +28,8 @@
     "points_for": 1166.0,
     "points_against": 1043.0,
     "regular_season_standing": 5,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-12.svg"
   },
   {
     "season": 2014,
@@ -42,7 +44,8 @@
     "points_for": 1110.0,
     "points_against": 1118.0,
     "regular_season_standing": 11,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": "http://www.angelfire.com/music2/fullcircle/mark_of_the_beast.jpg"
   },
   {
     "season": 2014,
@@ -57,7 +60,8 @@
     "points_for": 1321.0,
     "points_against": 1188.0,
     "regular_season_standing": 2,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/CreepShow-ToddDetwiler/CreepShow-01.svg"
   },
   {
     "season": 2014,
@@ -72,7 +76,8 @@
     "points_for": 1218.0,
     "points_against": 1063.0,
     "regular_season_standing": 3,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": null
   },
   {
     "season": 2014,
@@ -87,7 +92,8 @@
     "points_for": 1040.0,
     "points_against": 1155.0,
     "regular_season_standing": 9,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg"
   },
   {
     "season": 2014,
@@ -102,7 +108,8 @@
     "points_for": 1296.0,
     "points_against": 1170.0,
     "regular_season_standing": 1,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": null
   },
   {
     "season": 2014,
@@ -117,7 +124,8 @@
     "points_for": 1255.0,
     "points_against": 1166.0,
     "regular_season_standing": 4,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2014,
@@ -132,7 +140,8 @@
     "points_for": 1060.0,
     "points_against": 1063.0,
     "regular_season_standing": 8,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": null
   },
   {
     "season": 2014,
@@ -147,7 +156,8 @@
     "points_for": 1171.0,
     "points_against": 1139.0,
     "regular_season_standing": 6,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BigHeroSix/SVG/BigHero6-05.svg"
   },
   {
     "season": 2014,
@@ -162,7 +172,8 @@
     "points_for": 1141.0,
     "points_against": 1233.0,
     "regular_season_standing": 10,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-08b.svg"
   },
   {
     "season": 2014,
@@ -177,6 +188,7 @@
     "points_for": 792.0,
     "points_against": 1231.0,
     "regular_season_standing": 12,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "http://g.espncdn.com/s/ffllm/logos/CreepShow-ToddDetwiler/CreepShow-20.svg"
   }
 ]

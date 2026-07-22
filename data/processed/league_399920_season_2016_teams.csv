@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2016,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},8,5,0,1226.8,1137.78,2,1
-2016,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},5,8,0,1209.46,1213.84,10,8
-2016,3,Delegate Odell Watkins,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},6,7,0,1173.6399999999999,1190.3,8,7
-2016,4,CJ 2k16,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},10,3,0,1422.82,1174.42,1,4
-2016,5,From Worst to Worst,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},6,7,0,1272.6599999999999,1249.14,6,3
-2016,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},7,6,0,1133.14,1066.22,4,5
-2016,7,Wilson!!!!!!!   Wilson!!!!!!,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},7,6,0,1125.8799999999999,1092.66,5,2
-2016,8,Make Fantasy Great Again,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},4,9,0,1073.3600000000001,1229.4,12,11
-2016,9,New Yawk Bklyn's Best,East,Larry02532,{7FE6FADE-68F2-4650-A6FA-DE68F25650BC},6,7,0,1133.7399999999998,1273.82,9,10
-2016,10,Team Riley,East,Ryebreadly,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},6,7,0,1205.2800000000002,1273.62,7,9
-2016,12,Cntrl Alt Delete,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},8,5,0,1205.6000000000001,1167.02,3,6
-2016,13,Fat Eddie Lacy,East,maxlikessports,{CAEE0654-F1F5-4231-8116-255B1F893B85},5,8,0,1140.4799999999998,1254.64,11,12
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2016,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},8,5,0,1226.8,1137.78,2,1,http://g.espncdn.com/s/ffllm/logos/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2016,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},5,8,0,1209.46,1213.84,10,8,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-12.svg
+2016,3,Delegate Odell Watkins,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},6,7,0,1173.6399999999999,1190.3,8,7,http://vignette2.wikia.nocookie.net/thewirehbotv/images/1/15/The_Wire_Watkins.jpg/revision/latest?cb=20120903140014
+2016,4,CJ 2k16,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},10,3,0,1422.82,1174.42,1,4,http://g.espncdn.com/s/ffllm/logos/CoachHerm-ChipWass/edwards-10.svg
+2016,5,From Worst to Worst,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},6,7,0,1272.6599999999999,1249.14,6,3,
+2016,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},7,6,0,1133.14,1066.22,4,5,http://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg
+2016,7,Wilson!!!!!!!   Wilson!!!!!!,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},7,6,0,1125.8799999999999,1092.66,5,2,http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg
+2016,8,Make Fantasy Great Again,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},4,9,0,1073.3600000000001,1229.4,12,11,http://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2016,9,New Yawk Bklyn's Best,East,Larry02532,{7FE6FADE-68F2-4650-A6FA-DE68F25650BC},6,7,0,1133.7399999999998,1273.82,9,10,
+2016,10,Team Riley,East,Ryebreadly,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},6,7,0,1205.2800000000002,1273.62,7,9,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg
+2016,12,Cntrl Alt Delete,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},8,5,0,1205.6000000000001,1167.02,3,6,http://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg
+2016,13,Fat Eddie Lacy,East,maxlikessports,{CAEE0654-F1F5-4231-8116-255B1F893B85},5,8,0,1140.4799999999998,1254.64,11,12,http://blacksportsonline.com/home/wp-content/uploads/2016/02/not-really-eddie-lacy-752x501.png

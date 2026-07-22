@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2020,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},7,6,0,1475.2599999999998,1401.14,6,6
-2020,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},7,6,0,1623.7,1677.82,5,3
-2020,3,The Autodraft Allstars,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},5,8,0,1411.7000000000003,1555.76,10,9
-2020,4,Juicy Smuyet,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},9,4,0,1807.7400000000002,1571.7,3,2
-2020,5,Maybe This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},8,5,0,1590.9199999999998,1472.16,4,5
-2020,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},4,9,0,1504.3400000000001,1636.88,11,7
-2020,7,Fantasy Football Team,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},10,3,0,1655.9600000000003,1475.74,2,4
-2020,8,The  Lazard King,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},6,7,0,1646.8400000000001,1676.46,7,8
-2020,9,LOCKETT LIKE I  TALK IT,East,LL_Sulai90,{F307EF76-8029-43C4-9AC6-587DB9941E05},2,11,0,1335.1799999999998,1695.24,12,11
-2020,10,DENVER BREAD,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},10,3,0,1754.46,1422.82,1,1
-2020,12,Curious George,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},5,8,0,1441.74,1600.08,8,12
-2020,13,99 Problems but L. Fitz ain't 1,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},5,8,0,1435.8,1497.84,9,10
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2020,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},7,6,0,1475.2599999999998,1401.14,6,6,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2020,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},7,6,0,1623.7,1677.82,5,3,https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg
+2020,3,The Autodraft Allstars,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},5,8,0,1411.7000000000003,1555.76,10,9,https://g.espncdn.com/lm-static/logo-packs/core/DIS_Avengers_EndGame/DIS_Avengers_EndGame_A_2.svg
+2020,4,Juicy Smuyet,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},9,4,0,1807.7400000000002,1571.7,3,2,https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2020,5,Maybe This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},8,5,0,1590.9199999999998,1472.16,4,5,https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-M.svg
+2020,6,Team Flatcheese,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},4,9,0,1504.3400000000001,1636.88,11,7,https://g.espncdn.com/s/ffllm/logos/BoneHeads-ToddDetwiler/BoneHeads-11.svg
+2020,7,Fantasy Football Team,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},10,3,0,1655.9600000000003,1475.74,2,4,http://67.media.tumblr.com/0df9afa101c3d457e8981253999f94ed/tumblr_npm5zgFOeq1utp0ioo4_1280.jpg
+2020,8,The  Lazard King,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},6,7,0,1646.8400000000001,1676.46,7,8,https://i.redd.it/mr8gzmfsi6811.jpg
+2020,9,LOCKETT LIKE I  TALK IT,East,LL_Sulai90,{F307EF76-8029-43C4-9AC6-587DB9941E05},2,11,0,1335.1799999999998,1695.24,12,11,
+2020,10,DENVER BREAD,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},10,3,0,1754.46,1422.82,1,1,https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_corn-dog.svg
+2020,12,Curious George,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},5,8,0,1441.74,1600.08,8,12,https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg
+2020,13,99 Problems but L. Fitz ain't 1,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},5,8,0,1435.8,1497.84,9,10,https://pbs.twimg.com/profile_images/2799591293/536c83637de9570c3d2b72230d19f308_400x400.jpeg

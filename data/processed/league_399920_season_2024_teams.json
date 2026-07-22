@@ -12,7 +12,8 @@
     "points_for": 1630.28,
     "points_against": 1767.8,
     "regular_season_standing": 8,
-    "final_standing": 12
+    "final_standing": 12,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg"
   },
   {
     "season": 2024,
@@ -27,7 +28,8 @@
     "points_for": 1662.0400000000002,
     "points_against": 1795.6,
     "regular_season_standing": 7,
-    "final_standing": 10
+    "final_standing": 10,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2024,
@@ -42,7 +44,8 @@
     "points_for": 1736.2799999999997,
     "points_against": 1586.48,
     "regular_season_standing": 4,
-    "final_standing": 4
+    "final_standing": 4,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/core/StarsAndFlames/stars_flames-8.svg"
   },
   {
     "season": 2024,
@@ -57,7 +60,8 @@
     "points_for": 1570.26,
     "points_against": 1714.14,
     "regular_season_standing": 10,
-    "final_standing": 9
+    "final_standing": 9,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg"
   },
   {
     "season": 2024,
@@ -72,7 +76,8 @@
     "points_for": 1841.34,
     "points_against": 1558.38,
     "regular_season_standing": 1,
-    "final_standing": 2
+    "final_standing": 2,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-02.svg"
   },
   {
     "season": 2024,
@@ -87,7 +92,8 @@
     "points_for": 1553.5600000000002,
     "points_against": 1723.68,
     "regular_season_standing": 12,
-    "final_standing": 11
+    "final_standing": 11,
+    "logo_url": "https://static01.nyt.com/athletic/uploads/wp/2022/12/16172545/GettyImages-1448566252-scaled.jpg"
   },
   {
     "season": 2024,
@@ -102,7 +108,8 @@
     "points_for": 1624.88,
     "points_against": 1706.72,
     "regular_season_standing": 6,
-    "final_standing": 6
+    "final_standing": 6,
+    "logo_url": "https://pbs.twimg.com/media/BxRCn90CEAAh1YE.jpg"
   },
   {
     "season": 2024,
@@ -117,7 +124,8 @@
     "points_for": 1778.96,
     "points_against": 1567.06,
     "regular_season_standing": 3,
-    "final_standing": 1
+    "final_standing": 1,
+    "logo_url": "https://i.redd.it/sjuwd4svl4x11.jpg"
   },
   {
     "season": 2024,
@@ -132,7 +140,8 @@
     "points_for": 1830.2400000000002,
     "points_against": 1603.22,
     "regular_season_standing": 2,
-    "final_standing": 3
+    "final_standing": 3,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/SmackTalk-LeoEspinosa/u_mad_bro-09.svg"
   },
   {
     "season": 2024,
@@ -147,7 +156,8 @@
     "points_for": 1801.2200000000003,
     "points_against": 1744.22,
     "regular_season_standing": 5,
-    "final_standing": 5
+    "final_standing": 5,
+    "logo_url": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg"
   },
   {
     "season": 2024,
@@ -162,7 +172,8 @@
     "points_for": 1505.6799999999998,
     "points_against": 1593.6,
     "regular_season_standing": 11,
-    "final_standing": 7
+    "final_standing": 7,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-N.svg"
   },
   {
     "season": 2024,
@@ -177,6 +188,7 @@
     "points_for": 1584.56,
     "points_against": 1758.4,
     "regular_season_standing": 9,
-    "final_standing": 8
+    "final_standing": 8,
+    "logo_url": "https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg"
   }
 ]

@@ -1,13 +1,13 @@
-season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing
-2023,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},3,11,0,1521.8,1867.32,11,10
-2023,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},3,11,0,1453.3999999999999,1739.9,12,12
-2023,3,Ridin Da Gus Bus to 10th place,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},5,9,0,1514.9,1646.62,10,11
-2023,4,Juicy Smuyet ,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},10,4,0,1690.1799999999998,1525.68,3,4
-2023,5,Maybe This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},7,7,0,1609.12,1664.74,7,7
-2023,6,Lets Ride,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},5,9,0,1541.34,1671.2,9,8
-2023,7,No I'm Ryan Keyser ,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},12,2,0,1881.68,1532.8,1,2
-2023,8,It's Always Sunny in Baltimore,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},7,7,0,1749.2200000000003,1659.02,6,6
-2023,10,Mike Riley,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},10,4,0,1877.94,1734.5,2,1
-2023,12,Never cutting charbs,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},8,6,0,1785.3999999999999,1601.52,4,5
-2023,13,Rookie Squad,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},6,8,0,1593.34,1620.02,8,9
-2023,14,Team AutoDraft,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},8,6,0,1744.9599999999998,1699.96,5,3
+season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
+2023,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},3,11,0,1521.8,1867.32,11,10,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2023,2,In Your Face,East,RSBase,{EC970810-E14F-4307-8FA6-3BAE92CC1B4E},3,11,0,1453.3999999999999,1739.9,12,12,https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_18a.svg
+2023,3,Ridin Da Gus Bus to 10th place,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},5,9,0,1514.9,1646.62,10,11,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_09.svg
+2023,4,Juicy Smuyet ,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},10,4,0,1690.1799999999998,1525.68,3,4,https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2023,5,Maybe This Year,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},7,7,0,1609.12,1664.74,7,7,https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-M.svg
+2023,6,Lets Ride,East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},5,9,0,1541.34,1671.2,9,8,https://dp6mhagng1yw3.cloudfront.net/entries/13th/ac48797a-78a4-4f04-bec5-14488d2462aa.jpg
+2023,7,No I'm Ryan Keyser ,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},12,2,0,1881.68,1532.8,1,2,https://pbs.twimg.com/media/BxRCn90CEAAh1YE.jpg
+2023,8,It's Always Sunny in Baltimore,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},7,7,0,1749.2200000000003,1659.02,6,6,https://i.redd.it/sjuwd4svl4x11.jpg
+2023,10,Mike Riley,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},10,4,0,1877.94,1734.5,2,1,https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_corn-dog.svg
+2023,12,Never cutting charbs,East,Geo112285,{91D28B99-9234-408F-ACE7-32AEC03EE9E2},8,6,0,1785.3999999999999,1601.52,4,5,https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_06a.svg
+2023,13,Rookie Squad,East,dalehiggins,{85A6A0E4-D846-4046-B7F8-487FAD9165E0},6,8,0,1593.34,1620.02,8,9,https://pbs.twimg.com/profile_images/2799591293/536c83637de9570c3d2b72230d19f308_400x400.jpeg
+2023,14,Team AutoDraft,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},8,6,0,1744.9599999999998,1699.96,5,3,https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg
