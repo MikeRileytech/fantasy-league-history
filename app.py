@@ -629,7 +629,12 @@ with tab_ask:
                 "directly from that field. Never rely on your own knowledge of "
                 "which position a player plays, since that can be wrong or outdated "
                 "and the data is the source of truth. A position of '?' means it "
-                "could not be resolved; say so rather than guessing. "
+                "could not be resolved; say so rather than guessing. When a question "
+                "involves counting or listing rows (picks, games, etc.), recompute "
+                "the answer directly from the LEAGUE DATA section every time, even if "
+                "a similar question was already asked earlier in this conversation - "
+                "never reuse or lightly revise a previous answer (yours or otherwise) "
+                "instead of counting fresh from the data. "
                 "Managers are real people; the data already maps every season to "
                 "the correct real manager. Playoff games (type P) are games where "
                 "both teams could still win the championship; consolation games "
@@ -646,6 +651,11 @@ with tab_ask:
 
     if "ask_messages" not in st.session_state:
         st.session_state.ask_messages = []
+
+    if st.session_state.ask_messages:
+        if st.button("🗑️ Clear chat and start fresh"):
+            st.session_state.ask_messages = []
+            st.rerun()
 
     for msg in st.session_state.ask_messages:
         with st.chat_message(msg["role"]):
