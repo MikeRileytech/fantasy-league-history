@@ -14,6 +14,7 @@ import json
 from datetime import date
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 PROJECT_DIR = Path(__file__).resolve().parent
@@ -347,6 +348,146 @@ def build_ask_context(teams: pd.DataFrame, matchups: pd.DataFrame, draft: pd.Dat
         )
 
     return "\n".join(lines)
+
+
+def _games_table(matchups: pd.DataFrame) -> pd.DataFrame:
+    """One row per game (not per team), matching build_ask_context's GAMES section."""
+    type_code = {"regular": "R", "playoff": "P", "consolation": "C"}
+    games = matchups[
+        (matchups["outcome"] == "W")
+        | ((matchups["outcome"] == "T") & (matchups["espn_team_id"] < matchups["opponent_espn_team_id"]))
+    ].copy()
+    games["game_type_code"] = games["game_type"].map(type_code)
+    return games.rename(
+        columns={
+            "manager": "winner",
+            "team_score": "winner_pts",
+            "opponent_manager": "loser",
+            "opponent_score": "loser_pts",
+        }
+    )[
+        [
+            "season",
+            "week",
+            "game_type_code",
+            "winner",
+            "winner_pts",
+            "loser",
+            "loser_pts",
+            "outcome",
+        ]
+    ]
+
+
+QUERY_DATASETS = {
+    "draft_picks": [
+        "season",
+        "round",
+        "pick_in_round",
+        "overall_pick",
+        "player_name",
+        "position",
+        "manager",
+        "team_name",
+        "is_keeper",
+    ],
+    "games": [
+        "season",
+        "week",
+        "game_type_code",
+        "winner",
+        "winner_pts",
+        "loser",
+        "loser_pts",
+        "outcome",
+    ],
+    "standings": [
+        "season",
+        "manager",
+        "team_name",
+        "final_standing",
+        "regular_season_standing",
+        "wins",
+        "losses",
+        "ties",
+        "points_for",
+        "points_against",
+    ],
+}
+
+
+def _json_safe(obj):
+    """Recursively convert numpy/pandas scalar types to plain Python types.
+
+    query_dataset's output gets passed through json.dumps() as an Anthropic
+    tool_result, which chokes on numpy.int64/float64/bool_ and NaN - none of
+    which are valid JSON on their own.
+    """
+    if isinstance(obj, dict):
+        return {k: _json_safe(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_json_safe(v) for v in obj]
+    if isinstance(obj, (np.integer,)):
+        return int(obj)
+    if isinstance(obj, (np.floating,)):
+        return None if np.isnan(obj) else float(obj)
+    if isinstance(obj, (np.bool_, bool)):
+        return bool(obj)
+    if obj is None or isinstance(obj, (str, int, float)):
+        return obj
+    try:
+        if pd.isna(obj):
+            return None
+    except (TypeError, ValueError):
+        pass
+    return str(obj)
+
+
+def query_dataset(
+    teams: pd.DataFrame,
+    matchups: pd.DataFrame,
+    draft: pd.DataFrame,
+    dataset: str,
+    filters: dict = None,
+    group_by: str = None,
+    limit: int = 50,
+) -> dict:
+    """Exact filtered/grouped query for the Ask the League tool.
+
+    Returns a plain, JSON-safe dict. This exists so the LLM never has to
+    manually tally rows from a giant text context (unreliable at this scale -
+    it visibly misattributed picks between managers when asked to count by
+    reading) - counting and filtering happen here in real pandas code, which
+    is exact by construction.
+    """
+    if dataset == "draft_picks":
+        df = draft_table(draft)
+    elif dataset == "games":
+        df = _games_table(matchups)
+    elif dataset == "standings":
+        df = teams[QUERY_DATASETS["standings"]]
+    else:
+        return {"error": f"unknown dataset '{dataset}', expected one of {list(QUERY_DATASETS)}"}
+
+    filters = filters or {}
+    valid_cols = QUERY_DATASETS[dataset]
+    for col, val in filters.items():
+        if col not in valid_cols:
+            return {"error": f"unknown filter column '{col}' for dataset '{dataset}', expected one of {valid_cols}"}
+        if pd.api.types.is_string_dtype(df[col]):
+            df = df[df[col].astype(str).str.lower() == str(val).lower()]
+        else:
+            df = df[df[col] == val]
+
+    total = int(len(df))
+    if group_by:
+        if group_by not in valid_cols:
+            return {"error": f"unknown group_by column '{group_by}', expected one of {valid_cols}"}
+        counts = df[group_by].value_counts().to_dict()
+        return _json_safe({"total_matching_rows": total, f"counts_by_{group_by}": counts})
+
+    rows = df.head(limit).to_dict(orient="records")
+    return _json_safe({"total_matching_rows": total, "rows_returned": len(rows), "rows": rows})
 
 
 def cumulative_wins(matchups: pd.DataFrame, game_types: list = None) -> pd.DataFrame:

@@ -6,6 +6,7 @@ Run it with:
 """
 
 import importlib
+import json
 import os
 
 import streamlit as st
@@ -617,24 +618,89 @@ with tab_ask:
     def get_client():
         return anthropic.Anthropic(api_key=api_key)
 
+    QUERY_TOOL = {
+        "name": "query_league_data",
+        "description": (
+            "Run an exact filtered/grouped query against the league's "
+            "structured data. ALWAYS use this for any question that requires "
+            "counting, filtering, or aggregating rows (e.g. 'how many RBs has "
+            "X drafted in round 1', 'how many times has Y beaten Z', 'who has "
+            "the most 1st place finishes') instead of counting by reading the "
+            "LEAGUE DATA text - manually tallying thousands of rows is "
+            "unreliable and must be avoided for anything countable."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "dataset": {
+                    "type": "string",
+                    "enum": ["draft_picks", "games", "standings"],
+                    "description": (
+                        "draft_picks: one row per draft pick (season, round, "
+                        "pick_in_round, overall_pick, player_name, position, "
+                        "manager, team_name, is_keeper). "
+                        "games: one row per game (season, week, "
+                        "game_type_code [R=regular/P=playoff/C=consolation], "
+                        "winner, winner_pts, loser, loser_pts, outcome). "
+                        "standings: one row per team-season (season, manager, "
+                        "team_name, final_standing, regular_season_standing, "
+                        "wins, losses, ties, points_for, points_against)."
+                    ),
+                },
+                "filters": {
+                    "type": "object",
+                    "description": (
+                        "Exact-match column filters for the chosen dataset, "
+                        "e.g. {\"manager\": \"Kyle Schwartz\", \"round\": 1, "
+                        "\"position\": \"RB\"}. Only use column names listed "
+                        "for that dataset above."
+                    ),
+                },
+                "group_by": {
+                    "type": "string",
+                    "description": (
+                        "Optional column to count matching rows per group, "
+                        "e.g. 'manager' to get an exact count per manager. "
+                        "Omit to get the actual matching rows instead."
+                    ),
+                },
+            },
+            "required": ["dataset"],
+        },
+    }
+
+    def run_query_tool(tool_input):
+        return league_data.query_dataset(
+            teams,
+            matchups,
+            draft,
+            dataset=tool_input.get("dataset"),
+            filters=tool_input.get("filters"),
+            group_by=tool_input.get("group_by"),
+        )
+
     SYSTEM_PROMPT = [
         {
             "type": "text",
             "text": (
                 "You are the historian for a fantasy football league. Answer "
-                "questions using ONLY the league data below. If the data does not "
-                "contain the answer, say so - never guess or invent results. This "
-                "applies especially to draft picks: each pick already includes the "
-                "player's position (QB/RB/WR/TE/K/D-ST) - always read the position "
-                "directly from that field. Never rely on your own knowledge of "
-                "which position a player plays, since that can be wrong or outdated "
-                "and the data is the source of truth. A position of '?' means it "
-                "could not be resolved; say so rather than guessing. When a question "
-                "involves counting or listing rows (picks, games, etc.), recompute "
-                "the answer directly from the LEAGUE DATA section every time, even if "
-                "a similar question was already asked earlier in this conversation - "
-                "never reuse or lightly revise a previous answer (yours or otherwise) "
-                "instead of counting fresh from the data. "
+                "questions using ONLY the league data below and the "
+                "query_league_data tool. If neither contains the answer, say so "
+                "- never guess or invent results. "
+                "For ANY question that requires counting, filtering, or "
+                "aggregating rows - how many, who has the most, every pick/game "
+                "matching some condition - you MUST call query_league_data and "
+                "report its exact result. Do not manually count or tally rows "
+                "from the LEAGUE DATA text yourself; with thousands of rows "
+                "that is unreliable and has produced wrong, misattributed "
+                "counts before. The LEAGUE DATA text is for context, spot "
+                "lookups, and narrative questions only. Never rely on your own "
+                "knowledge of which position a player plays - query the data "
+                "or read it from the text; a position of '?' means it could not "
+                "be resolved, say so rather than guessing. Recompute every "
+                "counting question fresh (via the tool) even if a similar "
+                "question was already asked earlier in this conversation - "
+                "never reuse or lightly revise a previous answer. "
                 "Managers are real people; the data already maps every season to "
                 "the correct real manager. Playoff games (type P) are games where "
                 "both teams could still win the championship; consolation games "
@@ -672,16 +738,39 @@ with tab_ask:
 
         with st.chat_message("assistant"):
             try:
+                # Tool-use loop: Claude may call query_league_data one or more
+                # times (e.g. to look something up before answering) before
+                # producing its final text. Only the finished text is kept in
+                # ask_messages - the tool round-trips don't need to persist.
+                api_messages = [
+                    {"role": m["role"], "content": m["content"]}
+                    for m in st.session_state.ask_messages
+                ]
                 with st.spinner("Checking the record books..."):
-                    response = get_client().messages.create(
-                        model="claude-haiku-4-5",
-                        max_tokens=2000,
-                        system=system,
-                        messages=[
-                            {"role": m["role"], "content": m["content"]}
-                            for m in st.session_state.ask_messages
-                        ],
-                    )
+                    for _ in range(5):  # safety cap on tool-call round-trips
+                        response = get_client().messages.create(
+                            model="claude-haiku-4-5",
+                            max_tokens=2000,
+                            system=system,
+                            messages=api_messages,
+                            tools=[QUERY_TOOL],
+                        )
+                        if response.stop_reason != "tool_use":
+                            break
+                        api_messages.append({"role": "assistant", "content": response.content})
+                        tool_results = []
+                        for block in response.content:
+                            if block.type != "tool_use":
+                                continue
+                            result = run_query_tool(block.input)
+                            tool_results.append(
+                                {
+                                    "type": "tool_result",
+                                    "tool_use_id": block.id,
+                                    "content": json.dumps(result),
+                                }
+                            )
+                        api_messages.append({"role": "user", "content": tool_results})
                 answer = next(
                     (b.text for b in response.content if b.type == "text"),
                     "Sorry, I couldn't produce an answer.",
