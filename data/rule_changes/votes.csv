@@ -1,3 +1,4 @@
 proposal_id,voter_id,voter_name,vote,created_at
 f4e6a9cc,voter-aaa,Alice Test,up,2026-07-22T17:07:42.757263+00:00
 f4e6a9cc,voter-bbb,Bob Test,down,2026-07-22T17:07:44.117688+00:00
+f4e6a9cc,voter-ccc,Carol Test,abstain,2026-07-22T17:07:45.786379+00:00
