@@ -507,7 +507,7 @@ with tab_charts:
         )
         .properties(height=480)
     )
-    st.altair_chart(winpct_chart, use_container_width=True)
+    st.altair_chart(winpct_chart, width='stretch')
 
     st.divider()
     st.subheader("Manager history over time")
@@ -550,7 +550,7 @@ with tab_charts:
             )
             .properties(height=340)
         )
-        st.altair_chart(finish_chart, use_container_width=True)
+        st.altair_chart(finish_chart, width='stretch')
 
         st.markdown("**Cumulative career wins** (regular season + playoffs)")
         cumwins = league_data.cumulative_wins(matchups)
@@ -570,7 +570,7 @@ with tab_charts:
             )
             .properties(height=340)
         )
-        st.altair_chart(cumwins_chart, use_container_width=True)
+        st.altair_chart(cumwins_chart, width='stretch')
     else:
         st.info("Pick at least one manager to see the history charts.")
 
