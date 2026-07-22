@@ -609,7 +609,8 @@ with tab_ask:
     import anthropic
 
     @st.cache_data
-    def get_ask_context():
+    def get_ask_context(cache_key):
+        """cache_key busts the cache when data files change - see load_all()."""
         return league_data.build_ask_context(teams, matchups, draft)
 
     @st.cache_resource
@@ -657,7 +658,7 @@ with tab_ask:
             st.markdown(question)
 
         system = [dict(SYSTEM_PROMPT[0]), dict(SYSTEM_PROMPT[1])]
-        system[1]["text"] = "# LEAGUE DATA\n" + get_ask_context()
+        system[1]["text"] = "# LEAGUE DATA\n" + get_ask_context(league_data.data_fingerprint())
 
         with st.chat_message("assistant"):
             try:
