@@ -463,6 +463,9 @@ def _json_safe(obj):
     return str(obj)
 
 
+AGG_FUNCS = {"mean", "sum", "min", "max", "count"}
+
+
 def query_dataset(
     teams: pd.DataFrame,
     matchups: pd.DataFrame,
@@ -470,15 +473,22 @@ def query_dataset(
     dataset: str,
     filters: dict = None,
     group_by: str = None,
+    agg_column: str = None,
+    agg_func: str = None,
     limit: int = 50,
 ) -> dict:
-    """Exact filtered/grouped query for the Ask the League tool.
+    """Exact filtered/grouped/aggregated query for the Ask the League tool.
 
     Returns a plain, JSON-safe dict. This exists so the LLM never has to
-    manually tally rows from a giant text context (unreliable at this scale -
-    it visibly misattributed picks between managers when asked to count by
-    reading) - counting and filtering happen here in real pandas code, which
-    is exact by construction.
+    manually tally or average rows from a giant text context (unreliable at
+    this scale - it has visibly misattributed picks between managers when
+    asked to count by reading) - filtering and math happen here in real
+    pandas code, which is exact by construction.
+
+    filters values may be a scalar (exact match) or a list (matches any of
+    the values, e.g. a range of seasons). group_by counts matching rows per
+    group by default; pass agg_column + agg_func (mean/sum/min/max/count) to
+    aggregate a numeric column per group instead (e.g. average points_for).
     """
     if dataset == "draft_picks":
         df = draft_table(draft)
@@ -491,10 +501,34 @@ def query_dataset(
 
     filters = filters or {}
     valid_cols = QUERY_DATASETS[dataset]
+    RANGE_OPS = {"$gte", "$lte", "$gt", "$lt", "$in", "$eq"}
     for col, val in filters.items():
         if col not in valid_cols:
             return {"error": f"unknown filter column '{col}' for dataset '{dataset}', expected one of {valid_cols}"}
-        if pd.api.types.is_string_dtype(df[col]):
+        if isinstance(val, dict):
+            unknown_ops = set(val) - RANGE_OPS
+            if unknown_ops:
+                return {"error": f"unknown filter operator(s) {sorted(unknown_ops)} for column '{col}', expected one of {sorted(RANGE_OPS)}"}
+            for op, threshold in val.items():
+                if op == "$gte":
+                    df = df[df[col] >= threshold]
+                elif op == "$lte":
+                    df = df[df[col] <= threshold]
+                elif op == "$gt":
+                    df = df[df[col] > threshold]
+                elif op == "$lt":
+                    df = df[df[col] < threshold]
+                elif op == "$in":
+                    df = df[df[col].isin(threshold)]
+                elif op == "$eq":
+                    df = df[df[col] == threshold]
+        elif isinstance(val, (list, tuple, set)):
+            if pd.api.types.is_string_dtype(df[col]):
+                lowered = {str(v).lower() for v in val}
+                df = df[df[col].astype(str).str.lower().isin(lowered)]
+            else:
+                df = df[df[col].isin(val)]
+        elif pd.api.types.is_string_dtype(df[col]):
             df = df[df[col].astype(str).str.lower() == str(val).lower()]
         else:
             df = df[df[col] == val]
@@ -503,6 +537,16 @@ def query_dataset(
     if group_by:
         if group_by not in valid_cols:
             return {"error": f"unknown group_by column '{group_by}', expected one of {valid_cols}"}
+        if agg_column:
+            if agg_column not in valid_cols:
+                return {"error": f"unknown agg_column '{agg_column}', expected one of {valid_cols}"}
+            func = agg_func or "mean"
+            if func not in AGG_FUNCS:
+                return {"error": f"unknown agg_func '{func}', expected one of {sorted(AGG_FUNCS)}"}
+            grouped = df.groupby(group_by)[agg_column].agg(func).sort_values(ascending=False).round(2)
+            return _json_safe(
+                {"total_matching_rows": total, f"{func}_{agg_column}_by_{group_by}": grouped.to_dict()}
+            )
         counts = df[group_by].value_counts().to_dict()
         return _json_safe({"total_matching_rows": total, f"counts_by_{group_by}": counts})
 

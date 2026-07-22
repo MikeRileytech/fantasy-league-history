@@ -685,19 +685,44 @@ with tab_ask:
                 "filters": {
                     "type": "object",
                     "description": (
-                        "Exact-match column filters for the chosen dataset, "
-                        "e.g. {\"manager\": \"Kyle Schwartz\", \"round\": 1, "
-                        "\"position\": \"RB\"}. Only use column names listed "
-                        "for that dataset above."
+                        "Column filters for the chosen dataset. A filter "
+                        "value can be: a single value for exact match, e.g. "
+                        "{\"manager\": \"Kyle Schwartz\"}; a list to match any "
+                        "of several values, e.g. {\"position\": [\"RB\", "
+                        "\"WR\"]}; or an operator object for numeric ranges - "
+                        "{\"$gte\": x}, {\"$lte\": x}, {\"$gt\": x}, "
+                        "{\"$lt\": x}, {\"$in\": [...]} - combine multiple "
+                        "operators in one object, e.g. {\"season\": {\"$gte\": "
+                        "2020, \"$lte\": 2025}} for a season range in a single "
+                        "call. Only use column names listed for that dataset "
+                        "above."
                     ),
                 },
                 "group_by": {
                     "type": "string",
                     "description": (
-                        "Optional column to count matching rows per group, "
-                        "e.g. 'manager' to get an exact count per manager. "
-                        "Omit to get the actual matching rows instead."
+                        "Optional column to aggregate matching rows per "
+                        "group, e.g. 'manager'. Combine with agg_column + "
+                        "agg_func for sums/averages (e.g. average points_for "
+                        "per manager); omit both to just count rows per "
+                        "group instead. Omit group_by entirely to get the "
+                        "actual matching rows."
                     ),
+                },
+                "agg_column": {
+                    "type": "string",
+                    "description": (
+                        "Numeric column to aggregate per group (requires "
+                        "group_by), e.g. 'points_for'. Use this instead of "
+                        "averaging/summing numbers yourself from listed rows - "
+                        "manual arithmetic over many rows is unreliable, this "
+                        "computes the exact value."
+                    ),
+                },
+                "agg_func": {
+                    "type": "string",
+                    "enum": ["mean", "sum", "min", "max", "count"],
+                    "description": "How to aggregate agg_column per group. Defaults to 'mean'.",
                 },
             },
             "required": ["dataset"],
@@ -712,6 +737,8 @@ with tab_ask:
             dataset=tool_input.get("dataset"),
             filters=tool_input.get("filters"),
             group_by=tool_input.get("group_by"),
+            agg_column=tool_input.get("agg_column"),
+            agg_func=tool_input.get("agg_func"),
         )
 
     SYSTEM_PROMPT = [
@@ -722,14 +749,17 @@ with tab_ask:
                 "questions using ONLY the league data below and the "
                 "query_league_data tool. If neither contains the answer, say so "
                 "- never guess or invent results. "
-                "For ANY question that requires counting, filtering, or "
-                "aggregating rows - how many, who has the most, every pick/game "
-                "matching some condition - you MUST call query_league_data and "
-                "report its exact result. Do not manually count or tally rows "
-                "from the LEAGUE DATA text yourself; with thousands of rows "
-                "that is unreliable and has produced wrong, misattributed "
-                "counts before. The LEAGUE DATA text is for context, spot "
-                "lookups, and narrative questions only. Never rely on your own "
+                "For ANY question that requires counting, filtering, summing, "
+                "or averaging rows - how many, who has the most, average points "
+                "over some seasons, every pick/game matching some condition - "
+                "you MUST call query_league_data and report its exact result. "
+                "Do not manually count, sum, or average numbers yourself from "
+                "the LEAGUE DATA text or from rows the tool returns; with "
+                "thousands of rows that is unreliable and has produced wrong, "
+                "misattributed counts before - use group_by with agg_column/"
+                "agg_func for any sum or average instead of doing the math "
+                "yourself. The LEAGUE DATA text is for context, spot lookups, "
+                "and narrative questions only. Never rely on your own "
                 "knowledge of which position a player plays - query the data "
                 "or read it from the text; a position of '?' means it could not "
                 "be resolved, say so rather than guessing. Recompute every "
@@ -782,7 +812,7 @@ with tab_ask:
                     for m in st.session_state.ask_messages
                 ]
                 with st.spinner("Checking the record books..."):
-                    for _ in range(5):  # safety cap on tool-call round-trips
+                    for _ in range(8):  # safety cap on tool-call round-trips
                         response = get_client().messages.create(
                             model="claude-haiku-4-5",
                             max_tokens=2000,
@@ -806,10 +836,23 @@ with tab_ask:
                                 }
                             )
                         api_messages.append({"role": "user", "content": tool_results})
-                answer = next(
-                    (b.text for b in response.content if b.type == "text"),
-                    "Sorry, I couldn't produce an answer.",
-                )
+                    else:
+                        # Loop exhausted without a final end_turn response - the
+                        # last response.content is mid-reasoning (e.g. "Let me
+                        # check each season..."), not a real answer. Don't show
+                        # it as if it were one.
+                        response = None
+                if response is None:
+                    answer = (
+                        "That question needed more lookups than I could finish - "
+                        "try breaking it into a narrower question (e.g. one "
+                        "season or manager at a time)."
+                    )
+                else:
+                    answer = next(
+                        (b.text for b in response.content if b.type == "text"),
+                        "Sorry, I couldn't produce an answer.",
+                    )
             except anthropic.AuthenticationError:
                 answer = (
                     "Your ANTHROPIC_API_KEY appears to be invalid. Double-check "
