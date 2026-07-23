@@ -5,3 +5,4 @@ streamlit==1.59.2
 anthropic==0.117.0
 altair==6.2.2
 requests==2.34.2
+extra-streamlit-components==0.1.81

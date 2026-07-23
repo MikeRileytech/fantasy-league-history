@@ -10,8 +10,8 @@ import json
 import os
 import uuid
 
+import extra_streamlit_components as stx
 import streamlit as st
-import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 import league_data
@@ -20,7 +20,14 @@ import league_data
 # in the running process, which has repeatedly left league_data stale (both
 # locally and on Streamlit Cloud). Reloading is cheap - the module is only
 # function definitions - and guarantees app.py and league_data.py match.
-league_data = importlib.reload(league_data)
+# Wrapped in try/except: if this races with Streamlit Cloud mid-writing the
+# file during its own git-pull redeploy step, reload() can throw - better to
+# serve one request with the previous (self-heals on the next rerun) than
+# crash the whole page.
+try:
+    league_data = importlib.reload(league_data)
+except Exception:
+    pass
 
 load_dotenv()
 
@@ -650,26 +657,51 @@ with tab_rules:
         st.stop()
 
     # A persistent anonymous voter id, stored in a first-party cookie so a
-    # browser is recognized on return visits without any login. st.context
-    # can only READ cookies the browser already sent; a brand-new visitor
-    # has none yet, so we hand them a session-only id for this run and set
-    # the cookie via injected JS - it takes effect starting next run.
-    _voter_cookie = st.context.cookies.get("league_voter_id")
-    if _voter_cookie:
-        voter_id = _voter_cookie
-    else:
+    # browser is recognized on return visits without any login.
+    #
+    # This uses extra_streamlit_components.CookieManager rather than a
+    # hand-rolled JS snippet via st.components.v1.html. That approach (an
+    # injected <script>document.cookie=...</script>) worked locally but not
+    # on Streamlit Community Cloud - st.components.v1.html renders inside a
+    # sandboxed srcdoc iframe, which gets its own opaque origin; whatever
+    # extra framing Streamlit Cloud's hosting adds on top of that apparently
+    # blocks reaching the real page's cookie jar there, even via
+    # window.parent. CookieManager is a real declared Streamlit component
+    # (served from the app's own origin, not srcdoc) that bridges through
+    # Streamlit's own component protocol instead of raw DOM access, which is
+    # the standard, reliable way to persist an identifier like this.
+    # get_all() defaults to {} before the component's JS has reported the
+    # real browser cookies back on this run - that's indistinguishable from
+    # "no cookie exists" by return value alone, and it settles over an
+    # async round-trip that a manually forced st.rerun() reliably outraces
+    # (confirmed by testing: even one forced extra rerun still produced a
+    # fresh random id every load). So this never writes a cookie at page
+    # render time, only at the moment a vote is actually submitted - by then
+    # the user has spent several real seconds on the page (typing,
+    # clicking), which is enough time for the component's real value to
+    # have arrived and settled naturally, no forced rerun required.
+    cookie_manager = stx.CookieManager(key="rule_changes_cookie_manager")
+    _all_cookies = cookie_manager.get_all(key="rule_changes_cookies_read") or {}
+    voter_id = _all_cookies.get("league_voter_id")
+    if not voter_id:
         if "_voter_id_fallback" not in st.session_state:
             st.session_state["_voter_id_fallback"] = str(uuid.uuid4())
         voter_id = st.session_state["_voter_id_fallback"]
-        # components.html renders in an isolated srcdoc iframe with its own
-        # cookie jar - document.cookie here would set a cookie nobody else
-        # can see. window.parent.document is the actual top-level page.
-        components.html(
-            f"""<script>
-            window.parent.document.cookie = "league_voter_id={voter_id}; max-age=157680000; path=/; SameSite=Lax";
-            </script>""",
-            height=0,
+
+    def _confirm_voter_cookie():
+        """Call right before a vote is recorded. Re-reads cookies (which by
+        now reflect the real browser state) and only writes if genuinely
+        still missing, so a returning voter never gets a second identity
+        just because their cookie hadn't loaded yet on initial render."""
+        current = cookie_manager.get_all(key="rule_changes_cookie_recheck") or {}
+        real_id = current.get("league_voter_id")
+        if real_id:
+            return real_id
+        cookie_manager.set(
+            "league_voter_id", voter_id, max_age=157680000,
+            key="rule_changes_cookie_write",
         )
+        return voter_id
 
     @st.cache_data(ttl=10)
     def load_rule_data(_token, repo):
@@ -728,11 +760,12 @@ with tab_rules:
                             if not voter_name.strip():
                                 st.error("Your name is required to vote.")
                             else:
+                                confirmed_voter_id = _confirm_voter_cookie()
                                 try:
                                     with st.spinner("Saving vote..."):
                                         rule_changes.add_vote(
                                             github_token, GITHUB_REPO, proposal_id,
-                                            voter_id, voter_name, vote_choice,
+                                            confirmed_voter_id, voter_name, vote_choice,
                                         )
                                     st.cache_data.clear()
                                     st.rerun()
