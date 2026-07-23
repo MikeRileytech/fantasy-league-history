@@ -743,6 +743,15 @@ with tab_rules:
                     f"✅ {tally['up']} · ❌ {tally['down']} · ➖ {tally['abstain']}"
                 )
 
+                proposal_votes = votes[votes["proposal_id"] == proposal_id]
+                if not proposal_votes.empty:
+                    st.markdown(
+                        "  \n".join(
+                            f"**{row['voter_name']}**: {rule_changes.VOTE_CHOICES[row['vote']]}"
+                            for _, row in proposal_votes.sort_values("created_at").iterrows()
+                        )
+                    )
+
                 if my_vote:
                     st.info(f"You voted: {rule_changes.VOTE_CHOICES[my_vote]}")
                 else:
