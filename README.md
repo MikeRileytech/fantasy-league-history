@@ -219,6 +219,15 @@ The key is a secret, just like your ESPN credentials — it lives only in
 `.env`, which Git never commits. If the tab shows an authentication error,
 re-copy the key and restart.
 
+#### Draft-strategy takes (optional)
+
+The assistant can also answer draft-strategy questions ("who should I
+target in round 2?") from `draft_takes.md` in the project root. Write one
+bullet per player with a short "why", and the assistant presents them as
+the league's scouting notes — it won't add player opinions of its own, and
+it says so when the notes have no take on someone. Edit the file and push
+to GitHub to redeploy; no code changes needed.
+
 ## Project files
 
 ```

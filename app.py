@@ -787,7 +787,9 @@ with tab_ask:
     st.subheader("Ask the League")
     st.caption(
         "Ask anything about league history — records, streaks, draft picks, "
-        "head-to-head trivia. Answers come from the imported data only."
+        "head-to-head trivia — or about draft strategy. History answers come "
+        "from the imported data only; draft takes come from the league's "
+        "scouting notes (draft_takes.md)."
     )
 
     # Local runs read the key from .env; the hosted app reads it from
@@ -812,6 +814,16 @@ with tab_ask:
     def get_ask_context(cache_key):
         """cache_key busts the cache when data files change - see load_all()."""
         return league_data.build_ask_context(teams, matchups, draft)
+
+    def load_draft_takes():
+        """Scouting notes for draft-strategy questions. Edited by hand in
+        draft_takes.md - a missing or empty file just means the assistant
+        says it has no takes yet."""
+        try:
+            with open("draft_takes.md", encoding="utf-8") as f:
+                return f.read().strip()
+        except OSError:
+            return ""
 
     @st.cache_resource
     def get_client():
@@ -909,10 +921,22 @@ with tab_ask:
         {
             "type": "text",
             "text": (
-                "You are the historian for a fantasy football league. Answer "
-                "questions using ONLY the league data below and the "
+                "You are the historian and draft analyst for a fantasy "
+                "football league. For league-history questions, answer "
+                "using ONLY the league data below and the "
                 "query_league_data tool. If neither contains the answer, say so "
                 "- never guess or invent results. "
+                "For draft-strategy questions - who to target or avoid, "
+                "sleepers, busts, player outlooks for the upcoming season - "
+                "answer from the SCOUTING NOTES section below instead. Those "
+                "notes are the honest opinions of the league's resident "
+                "analyst: present them as takes rather than facts, attribute "
+                "them to the scouting notes, and do not mix in your own "
+                "player opinions - your training data is out of date. If the "
+                "notes have no take on a player or topic, say the scouting "
+                "notes don't cover it yet rather than improvising one. You "
+                "may pair a take with league history from the data (e.g. a "
+                "manager's past draft tendencies) when it adds color. "
                 "For ANY question that requires counting, filtering, summing, "
                 "or averaging rows - how many, who has the most, average points "
                 "over some seasons, every pick/game matching some condition - "
@@ -942,6 +966,11 @@ with tab_ask:
             "text": "",  # filled with league data below
             "cache_control": {"type": "ephemeral", "ttl": "1h"},
         },
+        {
+            "type": "text",
+            "text": "",  # filled with draft_takes.md below
+            "cache_control": {"type": "ephemeral", "ttl": "1h"},
+        },
     ]
 
     if "ask_messages" not in st.session_state:
@@ -956,14 +985,20 @@ with tab_ask:
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
-    question = st.chat_input("e.g. What year did the ties happen?")
+    question = st.chat_input(
+        "e.g. What year did the ties happen? Or: who should I target in round 1?"
+    )
     if question:
         st.session_state.ask_messages.append({"role": "user", "content": question})
         with st.chat_message("user"):
             st.markdown(question)
 
-        system = [dict(SYSTEM_PROMPT[0]), dict(SYSTEM_PROMPT[1])]
+        system = [dict(block) for block in SYSTEM_PROMPT]
         system[1]["text"] = "# LEAGUE DATA\n" + get_ask_context(league_data.data_fingerprint())
+        takes = load_draft_takes()
+        system[2]["text"] = "# SCOUTING NOTES\n" + (
+            takes or "(No scouting notes yet - draft_takes.md is missing or empty.)"
+        )
 
         with st.chat_message("assistant"):
             try:
