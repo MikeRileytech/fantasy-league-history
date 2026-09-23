@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 
 import league_data
 import live_data
+import power_rankings
 import setup_wizard
 
 # Streamlit hot-reloads app.py on redeploy but keeps imported modules cached
@@ -30,6 +31,7 @@ import setup_wizard
 try:
     league_data = importlib.reload(league_data)
     live_data = importlib.reload(live_data)
+    power_rankings = importlib.reload(power_rankings)
     setup_wizard = importlib.reload(setup_wizard)
 except Exception:
     pass
@@ -78,8 +80,8 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_live, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
-    ["🔴 Live", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
+tab_live, tab_power, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
+    ["🔴 Live", "⚡ Power Rankings", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
 )
 
 with tab_live:
@@ -189,6 +191,125 @@ with tab_live:
                     "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
                 },
             )
+
+with tab_power:
+    st.subheader("⚡ Power Rankings")
+    st.caption(
+        "A weighted blend of record, points scored, strength of schedule, "
+        "and roster talent - pulled live from ESPN, same as the Live tab. "
+        "'ADP' here means this league's own draft order (there's no external "
+        "ADP feed), and it counts for less every week: a hot start off a "
+        "late pick matters a lot in week 2 and much less by the playoffs."
+    )
+
+    pr_season = league_data.season_in_progress()
+    pr_league_id, _, _ = live_data.espn_credentials()
+
+    if pr_season is None:
+        st.info("No season is currently in progress.")
+    elif pr_league_id is None:
+        st.warning(
+            "No LEAGUE_ID found. Locally: add it to your .env file. On "
+            "Streamlit Community Cloud: add LEAGUE_ID (and SWID/ESPN_S2 for "
+            "a private league) under the app's Settings > Secrets."
+        )
+    else:
+        if "power_refresh_token" not in st.session_state:
+            st.session_state.power_refresh_token = 0
+        if st.button("🔄 Refresh power rankings"):
+            st.session_state.power_refresh_token += 1
+
+        @st.cache_data(ttl=90, show_spinner="Crunching power rankings from ESPN...")
+        def load_power_bundle(season, refresh_token):
+            league_id, espn_s2, swid = live_data.espn_credentials()
+            league = live_data.fetch_live_league(league_id, season, espn_s2, swid)
+            return live_data.power_ranking_bundle(league)
+
+        try:
+            pr_bundle = load_power_bundle(pr_season, st.session_state.power_refresh_token)
+        except Exception as exc:
+            pr_bundle = None
+            st.error(f"Couldn't reach ESPN: {exc}")
+
+        if pr_bundle:
+            manager_by_id = live_data.latest_manager_by_team_id()
+            rankings, weights = power_rankings.build_power_rankings(
+                pr_bundle["teams"],
+                pr_bundle["schedule"],
+                pr_bundle["rosters"],
+                pr_bundle["draft"],
+                pr_bundle["current_week"],
+                pr_bundle["reg_season_weeks"],
+            )
+            highlights = power_rankings.team_highlights(pr_bundle["rosters"], pr_bundle["draft"])
+
+            st.caption(
+                f"Week {pr_bundle['current_week']} weighting - Record "
+                f"{weights['record_weight']:.0f}% · Points {weights['points_weight']:.0f}% · "
+                f"Strength of schedule {weights['sos_weight']:.0f}% · Roster talent "
+                f"{weights['roster_weight']:.0f}% · Draft value {weights['draft_value_weight']:.0f}%"
+            )
+
+            if rankings.empty:
+                st.info("No teams found for the current season yet.")
+            else:
+                display = rankings.copy()
+                display.insert(
+                    1,
+                    "manager",
+                    display["espn_team_id"].map(manager_by_id).fillna(display["team_name"]),
+                )
+                st.dataframe(
+                    display,
+                    width='stretch',
+                    hide_index=True,
+                    column_order=[
+                        "rank", "logo_url", "manager", "team_name",
+                        "wins", "losses", "ties", "points_for", "power_score",
+                        "record_score", "points_score", "sos_score",
+                        "roster_talent_score", "draft_value_score",
+                    ],
+                    column_config={
+                        "rank": "#",
+                        "logo_url": st.column_config.ImageColumn(" "),
+                        "manager": "Manager",
+                        "team_name": "Team",
+                        "wins": "W",
+                        "losses": "L",
+                        "ties": "T",
+                        "points_for": st.column_config.NumberColumn("PF", format="%.1f"),
+                        "power_score": st.column_config.NumberColumn("Power", format="%.1f"),
+                        "record_score": st.column_config.NumberColumn("Record", format="%.0f"),
+                        "points_score": st.column_config.NumberColumn("Points", format="%.0f"),
+                        "sos_score": st.column_config.NumberColumn("SOS", format="%.0f"),
+                        "roster_talent_score": st.column_config.NumberColumn("Roster", format="%.0f"),
+                        "draft_value_score": st.column_config.NumberColumn("Draft value", format="%.0f"),
+                    },
+                )
+
+                if not highlights.empty:
+                    st.divider()
+                    st.markdown("#### Roster highlights")
+                    merged = highlights.merge(
+                        rankings[["espn_team_id", "team_name"]], on="espn_team_id", how="left"
+                    )
+                    merged.insert(
+                        0,
+                        "manager",
+                        merged["espn_team_id"].map(manager_by_id).fillna(merged["team_name"]),
+                    )
+                    for _, row in merged.iterrows():
+                        pick = (
+                            f"pick #{row['value_player_pick']}"
+                            if row["value_player_pick"]
+                            else "undrafted"
+                        )
+                        st.markdown(
+                            f"**{row['manager']}** - best player: {row['best_player_name']} "
+                            f"({row['best_player_position']}{row['best_player_rank']}) · "
+                            f"best value: {row['value_player_name']} "
+                            f"({pick}, {row['value_over_adp']:+.0f} value over ADP)"
+                        )
 
 with tab_alltime:
     st.subheader("Career records by manager")
