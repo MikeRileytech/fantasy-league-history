@@ -233,7 +233,7 @@ with tab_power:
 
         if pr_bundle:
             manager_by_id = live_data.latest_manager_by_team_id()
-            rankings, weights = power_rankings.build_power_rankings(
+            rankings, _weights = power_rankings.build_power_rankings(
                 pr_bundle["teams"],
                 pr_bundle["schedule"],
                 pr_bundle["rosters"],
@@ -244,17 +244,6 @@ with tab_power:
             highlights = power_rankings.team_highlights(
                 pr_bundle["rosters"], pr_bundle["draft"],
                 pr_bundle["current_week"], pr_bundle["reg_season_weeks"],
-            )
-
-            draft_confidence = weights["draft_confidence"]
-            st.caption(
-                f"Week {pr_bundle['current_week']} weighting - Record "
-                f"{weights['record_weight']:.0f}% · Points {weights['points_weight']:.0f}% · "
-                f"Strength of schedule {weights['sos_weight']:.0f}% · Roster talent "
-                f"{weights['roster_weight']:.0f}% (currently blending "
-                f"{draft_confidence * 100:.0f}% draft-slot expectation / "
-                f"{(1 - draft_confidence) * 100:.0f}% actual performance per player, "
-                "sliding to 100% actual by the end of the regular season)"
             )
 
             if rankings.empty:
