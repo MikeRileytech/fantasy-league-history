@@ -194,13 +194,6 @@ with tab_live:
 
 with tab_power:
     st.subheader("⚡ Power Rankings")
-    st.caption(
-        "A weighted blend of record, points scored, strength of schedule, "
-        "and roster talent - pulled live from ESPN, same as the Live tab. "
-        "'ADP' here means this league's own draft order (there's no external "
-        "ADP feed), and it counts for less every week: a hot start off a "
-        "late pick matters a lot in week 2 and much less by the playoffs."
-    )
 
     pr_season = league_data.season_in_progress()
     pr_league_id, _, _ = live_data.espn_credentials()
