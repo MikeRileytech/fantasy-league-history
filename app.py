@@ -306,8 +306,8 @@ with tab_power:
                     )
                     for _, row in merged.iterrows():
                         pick = (
-                            f"pick #{row['value_player_pick']}"
-                            if row["value_player_pick"]
+                            f"pick #{int(row['value_player_pick'])}"
+                            if pd.notna(row["value_player_pick"])
                             else "undrafted"
                         )
                         st.markdown(
