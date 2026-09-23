@@ -241,13 +241,20 @@ with tab_power:
                 pr_bundle["current_week"],
                 pr_bundle["reg_season_weeks"],
             )
-            highlights = power_rankings.team_highlights(pr_bundle["rosters"], pr_bundle["draft"])
+            highlights = power_rankings.team_highlights(
+                pr_bundle["rosters"], pr_bundle["draft"],
+                pr_bundle["current_week"], pr_bundle["reg_season_weeks"],
+            )
 
+            draft_confidence = weights["draft_confidence"]
             st.caption(
                 f"Week {pr_bundle['current_week']} weighting - Record "
                 f"{weights['record_weight']:.0f}% · Points {weights['points_weight']:.0f}% · "
                 f"Strength of schedule {weights['sos_weight']:.0f}% · Roster talent "
-                f"{weights['roster_weight']:.0f}% · Draft value {weights['draft_value_weight']:.0f}%"
+                f"{weights['roster_weight']:.0f}% (currently blending "
+                f"{draft_confidence * 100:.0f}% draft-slot expectation / "
+                f"{(1 - draft_confidence) * 100:.0f}% actual performance per player, "
+                "sliding to 100% actual by the end of the regular season)"
             )
 
             if rankings.empty:
@@ -267,7 +274,7 @@ with tab_power:
                         "rank", "logo_url", "manager", "team_name",
                         "wins", "losses", "ties", "points_for", "power_score",
                         "record_score", "points_score", "sos_score",
-                        "roster_talent_score", "draft_value_score",
+                        "roster_talent_score",
                     ],
                     column_config={
                         "rank": "#",
@@ -283,7 +290,6 @@ with tab_power:
                         "points_score": st.column_config.NumberColumn("Points", format="%.0f"),
                         "sos_score": st.column_config.NumberColumn("SOS", format="%.0f"),
                         "roster_talent_score": st.column_config.NumberColumn("Roster", format="%.0f"),
-                        "draft_value_score": st.column_config.NumberColumn("Draft value", format="%.0f"),
                     },
                 )
 
@@ -307,8 +313,9 @@ with tab_power:
                         st.markdown(
                             f"**{row['manager']}** - best player: {row['best_player_name']} "
                             f"({row['best_player_position']}{row['best_player_rank']}) · "
-                            f"best value: {row['value_player_name']} "
-                            f"({pick}, {row['value_over_adp']:+.0f} value over ADP)"
+                            f"biggest steal: {row['value_player_name']} "
+                            f"({pick}, currently outperforming that draft slot by "
+                            f"{row['value_over_adp']:+.0f} percentile points at the position)"
                         )
 
 with tab_alltime:
