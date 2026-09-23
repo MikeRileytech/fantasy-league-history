@@ -501,7 +501,7 @@ with tab_seasons:
         )
     else:
         history = league_data.manager_season_history(teams, browser_manager)
-        championships = int((history["final_standing"] == 1).sum())
+        championships = int(history["is_champion"].sum())
         st.subheader(f"{browser_manager}'s season-by-season history")
         st.caption(f"{len(history)} seasons played · {championships} championship(s)")
         st.dataframe(
@@ -509,6 +509,11 @@ with tab_seasons:
             width='stretch',
             height="content",
             hide_index=True,
+            column_order=[
+                "season", "final_standing", "regular_season_standing",
+                "logo_url", "team_name", "wins", "losses", "ties",
+                "points_for", "points_against",
+            ],
             column_config={
                 "season": st.column_config.NumberColumn("Season", format="%d"),
                 "final_standing": "Final",

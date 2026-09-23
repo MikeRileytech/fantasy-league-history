@@ -303,6 +303,7 @@ def manager_season_history(teams: pd.DataFrame, manager: str) -> pd.DataFrame:
             "season",
             "final_standing",
             "regular_season_standing",
+            "is_champion",
             "logo_url",
             "team_name",
             "wins",
