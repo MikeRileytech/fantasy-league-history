@@ -21,9 +21,10 @@ Player evaluation
 Three things shape how much a rostered player counts toward roster_talent:
 
 1. POSITION_WEIGHTS - RB and WR are weighted highest (the positions that
-   most reliably decide who wins a week), then QB, then TE. K is weighted
-   low (a mostly-noise position nobody drafts for). D/ST is excluded
-   entirely - nobody's evaluating a roster by its defense.
+   most reliably decide who wins a week), then QB, then TE. D/ST is
+   excluded entirely - nobody's evaluating a roster by its defense (this
+   league doesn't roster kickers at all, so there's nothing to weight or
+   exclude there either).
 
 2. Magnitude, not just rank - the gap between the best QB or TE and the
    replacement-level ones at that position is much bigger than the gap
@@ -68,15 +69,14 @@ ROSTER_WEIGHT = 40
 EXCLUDED_POSITIONS = {"D/ST"}
 
 # How much each position counts toward roster_talent: RB/WR most valuable
-# (they decide the most games), then QB, then TE, then K (mostly noise, but
-# not excluded outright like D/ST). Anything unrecognized falls back to
-# DEFAULT_POSITION_WEIGHT.
+# (they decide the most games), then QB, then TE. This league doesn't
+# roster kickers, so there's no K entry here; anything unrecognized
+# (including a K, if that ever changes) falls back to DEFAULT_POSITION_WEIGHT.
 POSITION_WEIGHTS = {
     "RB": 1.0,
     "WR": 1.0,
     "QB": 0.75,
     "TE": 0.65,
-    "K": 0.35,
 }
 DEFAULT_POSITION_WEIGHT = 0.5
 
