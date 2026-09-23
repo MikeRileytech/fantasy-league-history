@@ -92,17 +92,31 @@ def load_teams() -> pd.DataFrame:
 
     Applies playoff rule: top 6 (by regular season) use playoff placement as final_standing;
     those finishing outside top 6 keep regular_season_standing as their final_standing.
+
+    ESPN reports final_standing as 0 for every team until the playoffs are
+    actually decided - importing an in-progress season (see
+    update_current_season.py) means that season's rows carry that 0 until it
+    finishes. season_final flags whether a season's placements can be
+    trusted; while it's False, final_standing is left equal to
+    regular_season_standing (i.e. current position) instead of applying the
+    playoff rule to numbers ESPN hasn't calculated yet. is_champion is
+    season_final's answer to "did this row actually win it all" - used
+    instead of a bare final_standing==1 check so an in-progress season's
+    current leader is never counted as a champion before the season ends.
     """
     teams = _load_concat("*_teams.csv")
     teams = teams.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
 
-    # Apply the playoff rule to final_standing
+    teams["season_final"] = teams.groupby("season")["final_standing"].transform(
+        lambda s: bool((s != 0).all())
+    )
     teams["final_standing"] = teams.apply(
         lambda row: row["final_standing"]
-        if row["regular_season_standing"] <= 6
+        if row["season_final"] and row["regular_season_standing"] <= 6
         else row["regular_season_standing"],
         axis=1,
     )
+    teams["is_champion"] = teams["season_final"] & (teams["final_standing"] == 1)
     return teams
 
 
@@ -238,7 +252,7 @@ def manager_career_standings(
             seasons=("season", "nunique"),
             first_season=("season", "min"),
             last_season=("season", "max"),
-            championships=("final_standing", lambda s: int((s == 1).sum())),
+            championships=("is_champion", lambda s: int(s.sum())),
         )
         .reset_index()
     )
@@ -586,6 +600,12 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
     best_week            - biggest single-week score of the season (the season's
                            standout weekly high; every week's winner is in
                            weekly_high_winners)
+
+    A season still being played (season_final is False - see load_teams())
+    has no champion or regular-season-standing winner yet, so it's left out
+    of this table entirely rather than crowning whoever is currently
+    leading. Its scores are still real, so it still shows up for a live
+    look via the Live tab / Season Browser.
     """
     reg = matchups[matchups["game_type"] == "regular"]
     points = (
@@ -595,6 +615,8 @@ def season_trophies(teams: pd.DataFrame, matchups: pd.DataFrame) -> pd.DataFrame
     rows = []
     for season in sorted(teams["season"].unique()):
         one = teams[teams["season"] == season]
+        if not bool(one["season_final"].iloc[0]):
+            continue
         champ = one[one["final_standing"] == 1].iloc[0]
         reg_winner = one[one["regular_season_standing"] == 1].iloc[0]
         season_pts = points[points["season"] == season]
@@ -831,3 +853,113 @@ def draft_table(draft: pd.DataFrame) -> pd.DataFrame:
         "is_keeper",
     ]
     return draft[cols].sort_values(["season", "overall_pick"]).reset_index(drop=True)
+
+
+# ---------------------------------------------------------------------------
+# Manager-name setup
+#
+# The mapping file is the one piece of this app that cannot be derived from
+# ESPN: it takes someone who knows the league to say which real person was
+# behind which ESPN account. These helpers back the in-app setup screen so a
+# commissioner can do that from a browser, instead of hand-editing a CSV.
+# ---------------------------------------------------------------------------
+
+MAPPING_COLUMNS = ["season", "espn_team_id", "team_name", "owner_names", "owner_ids", "manager"]
+
+
+def load_mapping_full() -> pd.DataFrame:
+    """The whole mapping file, including the ESPN owner columns.
+
+    load_mapping() deliberately returns only what the stats need; the setup
+    screen needs owner_names to group rows by ESPN account.
+    """
+    if not MAPPING_FILE.exists():
+        raise FileNotFoundError(
+            "manager_mapping.csv not found. Run generate_manager_mapping.py first."
+        )
+    return pd.read_csv(MAPPING_FILE)
+
+
+def mapping_is_unconfigured(mapping: pd.DataFrame | None = None) -> bool:
+    """True when nobody has named a single manager yet.
+
+    generate_manager_mapping.py seeds every row's manager with the ESPN
+    username, so "still equal to the username (or blank) on every row" means
+    the league has never been set up.
+    """
+    if mapping is None:
+        mapping = load_mapping_full()
+    if mapping.empty:
+        return True
+    manager = mapping["manager"].fillna("").astype(str).str.strip()
+    owner = mapping["owner_names"].fillna("").astype(str).str.strip()
+    return bool((manager.eq(owner) | manager.eq("")).all())
+
+
+def espn_accounts(mapping: pd.DataFrame | None = None) -> pd.DataFrame:
+    """One row per distinct ESPN account, with the context needed to name it.
+
+    This is what the setup screen asks about: a league with 12 years of
+    history still only has as many accounts as it has had members, so the
+    commissioner types a handful of names rather than editing every
+    team-season row.
+    """
+    if mapping is None:
+        mapping = load_mapping_full()
+
+    rows = []
+    for username, group in mapping.groupby(mapping["owner_names"].fillna("(no ESPN owner)")):
+        seasons = sorted(group["season"].unique())
+        # The name already on file, if the league has been set up before.
+        # Falling back to the username gives a sensible starting value.
+        named = [m for m in group["manager"].dropna().unique() if str(m).strip() and m != username]
+        current = named[0] if len(named) == 1 else (username if not named else "")
+        rows.append(
+            {
+                "espn_account": username,
+                "manager": current,
+                "seasons": f"{seasons[0]}-{seasons[-1]}" if len(seasons) > 1 else str(seasons[0]),
+                "teams": ", ".join(dict.fromkeys(group["team_name"].dropna().astype(str)))[:120],
+                "split": len(named) > 1,
+            }
+        )
+    return pd.DataFrame(rows).sort_values("espn_account").reset_index(drop=True)
+
+
+def apply_account_names(mapping: pd.DataFrame, names: dict) -> pd.DataFrame:
+    """Set the manager for every season an ESPN account played, per `names`.
+
+    Rows that were deliberately set to something else (a team that changed
+    hands mid-history, edited in the per-season table) are left alone: those
+    are exactly the cases the account-level screen cannot express, so it must
+    not stomp them. A row counts as deliberate when its current manager is
+    neither the ESPN username nor the account's prevailing name.
+    """
+    mapping = mapping.copy()
+    for username, real_name in names.items():
+        real_name = str(real_name).strip()
+        if not real_name:
+            continue
+        rows = mapping["owner_names"].fillna("(no ESPN owner)") == username
+        if not rows.any():
+            continue
+
+        current = mapping.loc[rows, "manager"].fillna("").astype(str)
+        prevailing = current.mode()
+        prevailing = prevailing.iloc[0] if len(prevailing) else ""
+        replaceable = current.isin({"", username, prevailing, real_name})
+
+        mapping.loc[rows & replaceable.reindex(mapping.index, fill_value=False), "manager"] = real_name
+    return mapping
+
+
+def save_mapping(mapping: pd.DataFrame) -> str:
+    """Write the mapping back to disk and return the CSV text.
+
+    The text is returned so callers that also need to persist it off-box
+    (Streamlit Cloud wipes the container's filesystem on every redeploy)
+    can push the identical bytes without re-reading the file.
+    """
+    mapping = mapping.reindex(columns=MAPPING_COLUMNS)
+    mapping.to_csv(MAPPING_FILE, index=False)
+    return MAPPING_FILE.read_text(encoding="utf-8")

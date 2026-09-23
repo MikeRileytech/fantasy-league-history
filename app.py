@@ -11,10 +11,13 @@ import os
 import uuid
 
 import extra_streamlit_components as stx
+import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
 
 import league_data
+import live_data
+import setup_wizard
 
 # Streamlit hot-reloads app.py on redeploy but keeps imported modules cached
 # in the running process, which has repeatedly left league_data stale (both
@@ -26,6 +29,8 @@ import league_data
 # crash the whole page.
 try:
     league_data = importlib.reload(league_data)
+    live_data = importlib.reload(live_data)
+    setup_wizard = importlib.reload(setup_wizard)
 except Exception:
     pass
 
@@ -49,6 +54,20 @@ def load_all(cache_key):
     return teams, matchups, draft
 
 
+# A league that has never named its managers gets the setup screen instead of
+# a dashboard, because every screen behind this would otherwise be labelled
+# with ESPN usernames rather than people.
+try:
+    _mapping = league_data.load_mapping_full()
+except FileNotFoundError as exc:
+    st.error(str(exc))
+    st.stop()
+
+if league_data.mapping_is_unconfigured(_mapping):
+    setup_wizard.render_gate(_mapping)
+    st.stop()
+
+
 try:
     teams, matchups, draft = load_all(cache_key=league_data.data_fingerprint())
 except FileNotFoundError as exc:
@@ -59,9 +78,113 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask = st.tabs(
-    ["All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League"]
+tab_live, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
+    ["🔴 Live", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
 )
+
+with tab_live:
+    st.subheader("🔴 Live scores")
+    st.caption(
+        "Pulled straight from ESPN, live - not from the imported season "
+        "data the rest of this app uses. Once this season has a couple "
+        "weeks in the books it gets imported automatically and starts "
+        "showing up in Season Browser and counting toward career records."
+    )
+
+    live_season = league_data.season_in_progress()
+    live_league_id, _, _ = live_data.espn_credentials()
+
+    if live_season is None:
+        st.info("No season is currently in progress.")
+    elif live_league_id is None:
+        st.warning("LEAGUE_ID is not set in .env - can't reach ESPN for live data.")
+    else:
+        if "live_refresh_token" not in st.session_state:
+            st.session_state.live_refresh_token = 0
+        if st.button("🔄 Refresh live scores"):
+            st.session_state.live_refresh_token += 1
+
+        @st.cache_data(ttl=90, show_spinner="Fetching live scores from ESPN...")
+        def load_live_bundle(season, refresh_token):
+            """refresh_token is unused beyond forcing a fresh fetch when the
+            refresh button bumps it - the TTL alone would otherwise serve a
+            stale result for up to 90 seconds after a manual click."""
+            league_id, espn_s2, swid = live_data.espn_credentials()
+            league = live_data.fetch_live_league(league_id, season, espn_s2, swid)
+            return {
+                "current_week": league.current_week,
+                "league_name": league.settings.name,
+                "standings": live_data.live_standings(league),
+                "matchups": live_data.live_matchups(league, league.current_week),
+            }
+
+        try:
+            bundle = load_live_bundle(live_season, st.session_state.live_refresh_token)
+        except Exception as exc:
+            bundle = None
+            st.error(f"Couldn't reach ESPN: {exc}")
+
+        if bundle:
+            manager_by_id = live_data.latest_manager_by_team_id()
+            st.caption(
+                f"**{bundle['league_name']}** · {live_season} season · "
+                f"Week {bundle['current_week']}"
+            )
+
+            st.markdown("#### This week's matchups")
+            for m in bundle["matchups"]:
+                if m["home_team_id"] is None or m["away_team_id"] is None:
+                    bye_id = m["away_team_id"] if m["home_team_id"] is None else m["home_team_id"]
+                    bye_name_fallback = m["away_team_name"] if m["home_team_id"] is None else m["home_team_name"]
+                    bye_manager = manager_by_id.get(bye_id, bye_name_fallback)
+                    st.info(f"{bye_manager} is on a bye this week.")
+                    continue
+
+                home_manager = manager_by_id.get(m["home_team_id"], m["home_team_name"])
+                away_manager = manager_by_id.get(m["away_team_id"], m["away_team_name"])
+                with st.container(border=True):
+                    c1, c2, c3 = st.columns([4, 1, 4])
+                    with c1:
+                        st.markdown(f"**{home_manager}**")
+                        st.markdown(f"### {m['home_score']:.1f}")
+                        st.caption(f"proj {m['home_projected']:.1f}")
+                    with c2:
+                        st.markdown(
+                            "<div style='text-align:center;padding-top:1.5rem;'>@</div>",
+                            unsafe_allow_html=True,
+                        )
+                    with c3:
+                        st.markdown(f"**{away_manager}**")
+                        st.markdown(f"### {m['away_score']:.1f}")
+                        st.caption(f"proj {m['away_projected']:.1f}")
+
+            st.divider()
+            st.markdown("#### Current standings")
+            standings_df = pd.DataFrame(bundle["standings"])
+            standings_df.insert(
+                0,
+                "manager",
+                standings_df["espn_team_id"].map(manager_by_id).fillna(standings_df["team_name"]),
+            )
+            st.dataframe(
+                standings_df,
+                width='stretch',
+                hide_index=True,
+                column_order=[
+                    "logo_url", "manager", "team_name",
+                    "wins", "losses", "ties", "points_for", "points_against",
+                ],
+                column_config={
+                    "logo_url": st.column_config.ImageColumn(" "),
+                    "manager": "Manager",
+                    "team_name": "Team",
+                    "wins": "W",
+                    "losses": "L",
+                    "ties": "T",
+                    "points_for": st.column_config.NumberColumn("PF", format="%.1f"),
+                    "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
+                },
+            )
 
 with tab_alltime:
     st.subheader("Career records by manager")
@@ -216,11 +339,16 @@ with tab_seasons:
             key="browser_manager",
         )
 
+    season_final = bool(teams.loc[teams["season"] == season, "season_final"].iloc[0])
+
     if browser_manager == "All":
-        st.subheader(f"{season} final standings")
+        st.subheader(f"{season} final standings" if season_final else f"{season} standings (season in progress)")
         standings = league_data.season_standings(teams, season)
-        champ = standings.iloc[0]
-        st.success(f"🏆 Champion: **{champ['manager']}** ({champ['team_name']})")
+        leader = standings.iloc[0]
+        if season_final:
+            st.success(f"🏆 Champion: **{leader['manager']}** ({leader['team_name']})")
+        else:
+            st.info(f"📊 Currently leading: **{leader['manager']}** ({leader['team_name']}) - season still in progress")
         st.dataframe(
             standings,
             width='stretch',
@@ -1064,3 +1192,6 @@ with tab_ask:
             st.markdown(answer)
 
         st.session_state.ask_messages.append({"role": "assistant", "content": answer})
+
+with tab_settings:
+    setup_wizard.render_editor(_mapping)
