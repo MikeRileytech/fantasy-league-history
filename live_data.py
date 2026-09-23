@@ -85,6 +85,81 @@ def live_matchups(league: League, week: int) -> list[dict]:
     return rows
 
 
+def _schedule_played(league: League) -> list[dict]:
+    """One row per game a team has actually played so far this season.
+
+    Byes (ESPN points a team's schedule slot back at itself for a bye week -
+    see espn_api's Team._fetch_schedule) and future/unplayed weeks
+    (outcome 'U', undecided) are excluded, since neither is a real opponent
+    to weigh strength of schedule against.
+    """
+    rows = []
+    for team in league.teams:
+        for week_index, (opponent, outcome) in enumerate(zip(team.schedule, team.outcomes)):
+            if outcome not in ("W", "L", "T"):
+                continue
+            if opponent is None or opponent.team_id == team.team_id:
+                continue
+            rows.append(
+                {
+                    "espn_team_id": team.team_id,
+                    "week": week_index + 1,
+                    "opponent_espn_team_id": opponent.team_id,
+                }
+            )
+    return rows
+
+
+def _rosters(league: League) -> list[dict]:
+    """One row per currently-rostered player, league-wide.
+
+    total_points/avg_points are season-to-date (espn_api's Player class
+    reads these from ESPN's scoring-period-0 stat entry, which is the
+    season total), reflecting whoever holds the player right now - a
+    mid-season trade or waiver move moves their season total with them.
+    """
+    rows = []
+    for team in league.teams:
+        for player in team.roster:
+            rows.append(
+                {
+                    "espn_team_id": team.team_id,
+                    "player_id": player.playerId,
+                    "player_name": player.name,
+                    "position": player.position,
+                    "total_points": round(player.total_points, 2),
+                    "avg_points": round(player.avg_points, 2),
+                }
+            )
+    return rows
+
+
+def _draft_picks(league: League) -> list[dict]:
+    """This season's draft, in pick order - fetched live so it's available
+    from week 1, before espn_history_importer.py has ever run for this
+    season (see build_draft_rows() there for the same shape, pulled from
+    the historical import path instead)."""
+    return [
+        {"player_id": pick.playerId, "overall_pick": overall_pick}
+        for overall_pick, pick in enumerate(league.draft, start=1)
+        if pick.playerId
+    ]
+
+
+def power_ranking_bundle(league: League) -> dict:
+    """Everything power_rankings.build_power_rankings() needs for one
+    live snapshot of the league: current standings, games played so far,
+    current rosters, and this season's draft order."""
+    return {
+        "current_week": league.current_week,
+        "reg_season_weeks": league.settings.reg_season_count,
+        "teams": live_standings(league),
+        "schedule": _schedule_played(league),
+        "rosters": _rosters(league),
+        "draft": _draft_picks(league),
+    }
+
+
 def latest_manager_by_team_id() -> dict:
     """Best-guess espn_team_id -> manager for a season that hasn't been
     imported yet, using the most recent season that ESPN team id appeared
