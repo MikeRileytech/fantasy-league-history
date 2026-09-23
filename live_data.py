@@ -11,6 +11,7 @@ update_current_season.py for when that import happens).
 import os
 from pathlib import Path
 
+import streamlit as st
 from dotenv import load_dotenv
 from espn_api.football import League
 
@@ -20,12 +21,27 @@ PROJECT_DIR = Path(__file__).resolve().parent
 
 
 def espn_credentials():
-    """LEAGUE_ID/ESPN_S2/SWID from .env, or (None, None, None) if unset."""
+    """LEAGUE_ID/ESPN_S2/SWID from .env locally, falling back to Streamlit
+    secrets when deployed - Streamlit Community Cloud has no .env file, so
+    the importer's local-only credentials wouldn't otherwise reach the
+    deployed app's Live tab. Returns (None, None, None) if unset either way.
+    """
     load_dotenv(PROJECT_DIR / ".env")
     league_id = os.getenv("LEAGUE_ID")
+    espn_s2 = os.getenv("ESPN_S2")
+    swid = os.getenv("SWID")
+
+    if not league_id:
+        try:
+            league_id = st.secrets.get("LEAGUE_ID")
+            espn_s2 = espn_s2 or st.secrets.get("ESPN_S2")
+            swid = swid or st.secrets.get("SWID")
+        except FileNotFoundError:
+            pass
+
     if not league_id:
         return None, None, None
-    return int(league_id), os.getenv("ESPN_S2") or None, os.getenv("SWID") or None
+    return int(league_id), espn_s2 or None, swid or None
 
 
 def fetch_live_league(league_id: int, season: int, espn_s2, swid) -> League:

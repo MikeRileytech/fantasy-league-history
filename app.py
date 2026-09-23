@@ -97,7 +97,11 @@ with tab_live:
     if live_season is None:
         st.info("No season is currently in progress.")
     elif live_league_id is None:
-        st.warning("LEAGUE_ID is not set in .env - can't reach ESPN for live data.")
+        st.warning(
+            "No LEAGUE_ID found. Locally: add it to your .env file. On "
+            "Streamlit Community Cloud: add LEAGUE_ID (and SWID/ESPN_S2 for "
+            "a private league) under the app's Settings > Secrets."
+        )
     else:
         if "live_refresh_token" not in st.session_state:
             st.session_state.live_refresh_token = 0
