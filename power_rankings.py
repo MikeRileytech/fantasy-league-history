@@ -13,19 +13,18 @@ on equal footing:
   points_for      - percentile rank of total points scored, across the league
   strength_of_schedule - percentile rank of the average win pct of opponents
                     actually played so far (tougher schedule = higher score)
-  roster_talent   - for every rostered player, how their season point total
-                    ranks against everyone else at their position (e.g.
-                    "3rd-best RB currently rostered by anyone in the league"),
-                    averaged across the whole roster. This is what rewards a
-                    team for having the league's best RB/WR/etc.
-  draft_value     - the same positional ranking, but measured against where
-                    each player was actually picked in this league's draft
-                    (there's no external ADP feed, so the league's own
-                    overall_pick stands in for it). A player taken with the
-                    last pick and outperforming the top pick at their
-                    position scores very high here; a 1.1 pick performing
-                    exactly like a 1.1 pick scores neutral, since they're
-                    meeting expectations rather than beating them.
+  roster_talent   - how good a team's roster is at the positions that
+                    actually decide games (see POSITION_WEIGHTS and
+                    "Player evaluation" below)
+  draft_value     - the same players' current standing at their position,
+                    measured against where they were actually picked in
+                    this league's draft (there's no external ADP feed, so
+                    the league's own overall_pick stands in for it). A
+                    player taken with the last pick and currently the best
+                    at their position scores very high here; a 1.1 pick
+                    currently the 2nd-best at their position scores
+                    close to neutral, since they're basically meeting
+                    expectations rather than beating them.
 
 draft_value's weight starts at DRAFT_VALUE_BASE_WEIGHT in week 1 and decays
 linearly to 0 by the final week of the regular season - a hot streak off a
@@ -33,6 +32,34 @@ linearly to 0 by the final week of the regular season - a hot streak off a
 and by design that gap should close as the sample size grows. Whatever
 weight draft_value gives up is added to roster_talent, so the five weights
 always sum to 100.
+
+Player evaluation
+------------------
+Two things shape how much a rostered player counts toward roster_talent:
+
+1. POSITION_WEIGHTS - RB and WR are weighted highest (the positions that
+   most reliably decide who wins a week), then QB, then TE. K is weighted
+   low (a mostly-noise position nobody drafts for). D/ST is excluded
+   entirely - nobody's evaluating a roster by its defense.
+
+2. Magnitude, not just rank - the gap between the best QB or TE and the
+   replacement-level ones at that position is much bigger than the gap
+   between, say, the 6th- and 12th-best at the position (there's a small
+   handful of true difference-makers, then a long flat tail). A plain
+   1st/2nd/3rd-place rank can't tell an enormous gap from a trivial one,
+   so instead each player is scored by how many standard deviations their
+   season point total is above the mean at their position
+   (_position_value_z) - the same shape as the real scoring spread, so an
+   elite QB/TE's "positional advantage" shows up as a much bigger number
+   than a middling one's, automatically.
+
+draft_value keeps to a plain positional rank/percentile on the performance
+side (position_percentile) rather than the z-score, since "value over
+ADP" is inherently about relative standing versus expectation (going from
+an expected RB30 to an actual RB1 is a huge jump in standing regardless of
+the raw point gap involved) - but it's still filtered to drop D/ST and
+weighted by POSITION_WEIGHTS in the team-level rollup, same as
+roster_talent.
 """
 
 import pandas as pd
@@ -42,6 +69,28 @@ POINTS_WEIGHT = 20
 SOS_WEIGHT = 15
 ROSTER_BASE_WEIGHT = 25
 DRAFT_VALUE_BASE_WEIGHT = 15
+
+# Nobody evaluates a roster by its defense - drop it before any player-level
+# math happens, so it can't influence roster_talent, draft_value, or the
+# "best player" / "best value" highlights.
+EXCLUDED_POSITIONS = {"D/ST"}
+
+# How much each position counts toward roster_talent/draft_value: RB/WR
+# most valuable (they decide the most games), then QB, then TE, then K
+# (mostly noise, but not excluded outright like D/ST). Anything unrecognized
+# falls back to DEFAULT_POSITION_WEIGHT.
+POSITION_WEIGHTS = {
+    "RB": 1.0,
+    "WR": 1.0,
+    "QB": 0.75,
+    "TE": 0.65,
+    "K": 0.35,
+}
+DEFAULT_POSITION_WEIGHT = 0.5
+
+# Standard-deviations-above-position-mean is unbounded in principle; clip so
+# one early-season fluke week can't single-handedly swing a team's score.
+Z_SCORE_CLIP = 3.0
 
 
 def _percentile(series: pd.Series) -> pd.Series:
@@ -56,6 +105,20 @@ def _percentile(series: pd.Series) -> pd.Series:
     return series.rank(pct=True, method="average") * 100
 
 
+def _position_value_z(roster_df: pd.DataFrame) -> pd.Series:
+    """Standard deviations above the position's mean total_points.
+
+    Magnitude-aware by construction: if this season's QBs really do have a
+    huge gap from QB1 to QB6 and almost none from QB6 to QB12, that shape
+    shows up directly in the z-scores instead of being flattened into
+    evenly-spaced ranks."""
+    grouped = roster_df.groupby("position")["total_points"]
+    mean = grouped.transform("mean")
+    std = grouped.transform("std")
+    z = (roster_df["total_points"] - mean) / std
+    return z.replace([float("inf"), float("-inf")], 0).fillna(0).clip(-Z_SCORE_CLIP, Z_SCORE_CLIP)
+
+
 def draft_value_weight(current_week: int, reg_season_weeks: int) -> float:
     """draft_value's share of the score (0..DRAFT_VALUE_BASE_WEIGHT), decaying
     linearly from full weight in week 1 to zero by the last regular season
@@ -66,14 +129,28 @@ def draft_value_weight(current_week: int, reg_season_weeks: int) -> float:
     return DRAFT_VALUE_BASE_WEIGHT * max(0.0, min(1.0, decay))
 
 
+def _prep_roster(rosters: list[dict]) -> pd.DataFrame:
+    """Roster rows as a DataFrame, with excluded positions (defense) dropped."""
+    roster_df = pd.DataFrame(
+        rosters, columns=["espn_team_id", "player_id", "player_name", "position", "total_points", "avg_points"]
+    )
+    if roster_df.empty:
+        return roster_df
+    return roster_df[~roster_df["position"].isin(EXCLUDED_POSITIONS)].copy()
+
+
 def _score_rosters(roster_df: pd.DataFrame, draft_pick_by_player: dict, total_picks: int) -> pd.DataFrame:
-    """Adds per-player position_percentile, draft_percentile and
-    value_over_adp columns to a copy of roster_df."""
+    """Adds per-player position_percentile, position_value (z-score),
+    position_weight, draft_percentile and value_over_adp columns to a copy
+    of roster_df. Assumes excluded positions have already been dropped."""
     roster = roster_df.copy()
     roster["position_percentile"] = roster.groupby("position")["total_points"].transform(_percentile)
     roster["position_rank"] = roster.groupby("position")["total_points"].rank(
         ascending=False, method="min"
     ).astype(int)
+    roster["position_value"] = _position_value_z(roster)
+    roster["position_weight"] = roster["position"].map(POSITION_WEIGHTS).fillna(DEFAULT_POSITION_WEIGHT)
+    roster["weighted_value"] = roster["position_value"] * roster["position_weight"]
 
     total_picks = max(total_picks, 1)
     roster["draft_pick"] = roster["player_id"].map(draft_pick_by_player).fillna(total_picks + 1)
@@ -83,12 +160,13 @@ def _score_rosters(roster_df: pd.DataFrame, draft_pick_by_player: dict, total_pi
     return roster
 
 
-def _weighted_value(group: pd.DataFrame) -> float:
+def _weighted_draft_value(group: pd.DataFrame) -> float:
     """Team-level draft value: each player's value_over_adp weighted by how
-    good they currently are, so a league-winning waiver pickup swings this a
-    lot more than a bench-warmer's meaningless value-over-ADP noise does."""
-    weights = group["position_percentile"].clip(lower=1)
-    return float((group["value_over_adp"] * weights).sum() / weights.sum())
+    good they currently are AND by their position's importance, so a
+    league-winning waiver-wire RB swings this a lot more than a bench
+    kicker's meaningless value-over-ADP noise does."""
+    importance = group["position_percentile"].clip(lower=1) * group["position_weight"]
+    return float((group["value_over_adp"] * importance).sum() / importance.sum())
 
 
 def build_power_rankings(
@@ -106,7 +184,8 @@ def build_power_rankings(
     schedule: espn_team_id, week, opponent_espn_team_id - one row per game
         actually played so far (byes and future weeks excluded)
     rosters: espn_team_id, player_id, player_name, position, total_points,
-        avg_points - one row per currently-rostered player
+        avg_points - one row per currently-rostered player (D/ST rows are
+        ignored - see EXCLUDED_POSITIONS)
     draft_picks: player_id, overall_pick - this season's draft, in pick order
     """
     teams_df = pd.DataFrame(teams)
@@ -132,18 +211,20 @@ def build_power_rankings(
 
     draft_pick_by_player = {d["player_id"]: d["overall_pick"] for d in draft_picks}
     total_picks = max((d["overall_pick"] for d in draft_picks), default=0)
-    roster_df = pd.DataFrame(
-        rosters, columns=["espn_team_id", "player_id", "player_name", "position", "total_points", "avg_points"]
-    )
+    roster_df = _prep_roster(rosters)
     if not roster_df.empty:
         roster_df = _score_rosters(roster_df, draft_pick_by_player, total_picks)
-        roster_talent = roster_df.groupby("espn_team_id")["position_percentile"].mean()
-        draft_value_raw = roster_df.groupby("espn_team_id").apply(_weighted_value, include_groups=False)
+        # Summed (not averaged) so a team stacked with valuable talent at
+        # RB/WR/QB/TE outscores one that's merely average across the board -
+        # depth at the positions that matter is itself a real advantage.
+        roster_talent_raw = roster_df.groupby("espn_team_id")["weighted_value"].sum()
+        draft_value_raw = roster_df.groupby("espn_team_id").apply(_weighted_draft_value, include_groups=False)
     else:
-        roster_talent = pd.Series(dtype=float)
+        roster_talent_raw = pd.Series(dtype=float)
         draft_value_raw = pd.Series(dtype=float)
 
-    teams_df["roster_talent_score"] = teams_df["espn_team_id"].map(roster_talent).fillna(50.0)
+    teams_df["roster_talent_raw"] = teams_df["espn_team_id"].map(roster_talent_raw).fillna(0.0)
+    teams_df["roster_talent_score"] = _percentile(teams_df["roster_talent_raw"])
     # draft_value_raw is a -100..100 percentile-point swing; 50 = playing exactly to draft slot.
     teams_df["draft_value_score"] = (teams_df["espn_team_id"].map(draft_value_raw) / 2 + 50).fillna(50.0).clip(0, 100)
 
@@ -174,11 +255,10 @@ def team_highlights(rosters: list[dict], draft_picks: list[dict]) -> pd.DataFram
     """Per team: best player by position rank, and best value-over-ADP pick.
 
     Backs a "why this ranking" readout under the leaderboard - the
-    user-facing version of the 1.1-RB-vs-last-round-RB example.
+    user-facing version of the 1.1-RB-vs-last-round-RB example. Defense is
+    excluded (see EXCLUDED_POSITIONS), same as the score itself.
     """
-    roster_df = pd.DataFrame(
-        rosters, columns=["espn_team_id", "player_id", "player_name", "position", "total_points", "avg_points"]
-    )
+    roster_df = _prep_roster(rosters)
     if roster_df.empty:
         return pd.DataFrame(
             columns=[
@@ -193,7 +273,7 @@ def team_highlights(rosters: list[dict], draft_picks: list[dict]) -> pd.DataFram
 
     rows = []
     for team_id, group in roster_df.groupby("espn_team_id"):
-        best = group.loc[group["position_percentile"].idxmax()]
+        best = group.loc[group["position_value"].idxmax()]
         value = group.loc[group["value_over_adp"].idxmax()]
         rows.append(
             {
