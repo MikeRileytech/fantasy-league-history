@@ -234,11 +234,6 @@ with tab_power:
                 pr_bundle["current_week"],
                 pr_bundle["reg_season_weeks"],
             )
-            highlights = power_rankings.team_highlights(
-                pr_bundle["rosters"], pr_bundle["draft"],
-                pr_bundle["current_week"], pr_bundle["reg_season_weeks"],
-            )
-
             if rankings.empty:
                 st.info("No teams found for the current season yet.")
             else:
@@ -274,31 +269,6 @@ with tab_power:
                         "roster_talent_score": st.column_config.NumberColumn("Roster", format="%.0f"),
                     },
                 )
-
-                if not highlights.empty:
-                    st.divider()
-                    st.markdown("#### Roster highlights")
-                    merged = highlights.merge(
-                        rankings[["espn_team_id", "team_name"]], on="espn_team_id", how="left"
-                    )
-                    merged.insert(
-                        0,
-                        "manager",
-                        merged["espn_team_id"].map(manager_by_id).fillna(merged["team_name"]),
-                    )
-                    for _, row in merged.iterrows():
-                        pick = (
-                            f"pick #{int(row['value_player_pick'])}"
-                            if pd.notna(row["value_player_pick"])
-                            else "undrafted"
-                        )
-                        st.markdown(
-                            f"**{row['manager']}** - best player: {row['best_player_name']} "
-                            f"({row['best_player_position']}{row['best_player_rank']}) · "
-                            f"biggest steal: {row['value_player_name']} "
-                            f"({pick}, currently outperforming that draft slot by "
-                            f"{row['value_over_adp']:+.0f} percentile points at the position)"
-                        )
 
 with tab_alltime:
     st.subheader("Career records by manager")
