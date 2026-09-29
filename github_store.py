@@ -61,6 +61,53 @@ def put_file(token: str, repo: str, path: str, content: str, message: str, sha: 
     return resp.json()["content"]["sha"]
 
 
+def put_files(token: str, repo: str, files: dict, message: str, branch: str = "main", max_retries: int = 3) -> str:
+    """Write several files in ONE commit. files maps repo path -> text.
+
+    put_file makes a commit per file, and on main every commit is a Render
+    redeploy - a season update touches nine files. This builds the commit
+    through the Git Data API instead. Returns the new commit's sha.
+    """
+    git = f"{API_BASE}/repos/{repo}/git"
+    headers = _headers(token)
+
+    def check(resp, what, ok=(200, 201)):
+        if resp.status_code not in ok:
+            raise GitHubStoreError(f"GitHub API error {resp.status_code} {what}: {resp.text[:300]}")
+        return resp.json()
+
+    blobs = {}
+    for path, content in files.items():
+        resp = requests.post(f"{git}/blobs", headers=headers, timeout=60,
+                             json={"content": content, "encoding": "utf-8"})
+        blobs[path] = check(resp, f"uploading {path}")["sha"]
+
+    last_error = None
+    for attempt in range(max_retries):
+        try:
+            head = check(requests.get(f"{git}/ref/heads/{branch}", headers=headers, timeout=15),
+                         f"reading branch {branch}")["object"]["sha"]
+            base_tree = check(requests.get(f"{git}/commits/{head}", headers=headers, timeout=15),
+                              f"reading commit {head}")["tree"]["sha"]
+            tree = check(requests.post(f"{git}/trees", headers=headers, timeout=30, json={
+                "base_tree": base_tree,
+                "tree": [{"path": path, "mode": "100644", "type": "blob", "sha": sha}
+                         for path, sha in blobs.items()],
+            }), "building tree")["sha"]
+            commit = check(requests.post(f"{git}/commits", headers=headers, timeout=15, json={
+                "message": message, "tree": tree, "parents": [head],
+            }), "creating commit")["sha"]
+            # Not forced: if the app committed a trade or bet in between,
+            # this fails and the next attempt rebuilds on the new head.
+            check(requests.patch(f"{git}/refs/heads/{branch}", headers=headers, timeout=15,
+                                 json={"sha": commit, "force": False}), f"updating {branch}")
+            return commit
+        except GitHubStoreError as exc:
+            last_error = exc
+            time.sleep(0.5 * (attempt + 1))
+    raise last_error
+
+
 def read_csv_rows(token: str, repo: str, path: str) -> list:
     """Read a CSV file from the repo as a list of dicts. Empty list if it doesn't exist."""
     content, _ = get_file(token, repo, path)

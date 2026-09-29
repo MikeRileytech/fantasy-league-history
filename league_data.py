@@ -106,6 +106,9 @@ def load_teams() -> pd.DataFrame:
     """
     teams = _load_concat("*_teams.csv")
     teams = teams.merge(load_mapping(), on=["season", "espn_team_id"], how="left")
+    live_season = season_in_progress()
+    if live_season is not None:
+        teams = _records_from_matchups(teams, live_season)
 
     teams["season_final"] = teams.groupby("season")["final_standing"].transform(
         lambda s: bool((s != 0).all())
@@ -117,6 +120,52 @@ def load_teams() -> pd.DataFrame:
         axis=1,
     )
     teams["is_champion"] = teams["season_final"] & (teams["final_standing"] == 1)
+    return teams
+
+
+def _records_from_matchups(teams: pd.DataFrame, season: int) -> pd.DataFrame:
+    """The season in progress's records, counted from its saved scores.
+
+    ESPN's records (the W/L/T and points in *_teams.csv) can trail the
+    scores by hours after Monday night, so a week can be saved before ESPN
+    has counted it (season_refresh.py). When the matchups hold more games
+    than the records do, the records and regular-season order are rebuilt
+    from the matchups: most wins (a tie is half), then most points.
+    """
+    files = sorted(PROCESSED_DIR.glob(f"*_season_{season}_matchups.csv"))
+    this = teams["season"] == season
+    if not files or not this.any():
+        return teams
+    matchups = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
+    played = matchups[
+        (matchups["season"] == season)
+        & ~matchups["is_playoff_week"].astype(bool)
+        & matchups["outcome"].isin(["W", "L", "T"])
+    ]
+    if played.empty:
+        return teams
+    games = teams.loc[this, ["wins", "losses", "ties"]].sum(axis=1).max()
+    if played.groupby("espn_team_id").size().max() <= games:
+        return teams
+
+    records = played.groupby("espn_team_id").agg(
+        wins=("outcome", lambda s: int((s == "W").sum())),
+        losses=("outcome", lambda s: int((s == "L").sum())),
+        ties=("outcome", lambda s: int((s == "T").sum())),
+        points_for=("team_score", "sum"),
+        points_against=("opponent_score", "sum"),
+    )
+    teams = teams.copy()
+    ids = teams.loc[this, "espn_team_id"]
+    for col in records.columns:
+        teams.loc[this, col] = ids.map(records[col]).fillna(0).values
+    order = (
+        teams.loc[this]
+        .assign(score=lambda d: d["wins"] + 0.5 * d["ties"])
+        .sort_values(["score", "points_for"], ascending=False)
+        .index
+    )
+    teams.loc[order, "regular_season_standing"] = range(1, len(order) + 1)
     return teams
 
 
