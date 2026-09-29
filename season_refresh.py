@@ -92,6 +92,34 @@ def finished_week(league, counted: int) -> int:
     return counted
 
 
+def week_scores(league, week) -> dict:
+    """team_id -> (score, opponent's score) for `week`, from ESPN's box
+    scores. The season schedule the importer reads keeps a week's scores at
+    0 until ESPN finalizes it; box scores carry the live totals."""
+    scores = {}
+    for box in league.box_scores(week):
+        home, away = box.home_team, box.away_team
+        if not hasattr(home, "team_id") or not hasattr(away, "team_id"):
+            continue  # a bye
+        scores[home.team_id] = (box.home_score, box.away_score)
+        scores[away.team_id] = (box.away_score, box.home_score)
+    return scores
+
+
+def fill_scores(path: Path, league, first_week: int, last_week: int) -> None:
+    """Scores for weeks ESPN hasn't finalized, from the box scores."""
+    matchups = pd.read_csv(path)
+    for week in range(first_week, last_week + 1):
+        open_ = (matchups["week"] == week) & ~matchups["outcome"].isin(PLAYED)
+        if not open_.any():
+            continue
+        scores = week_scores(league, week)
+        ids = matchups.loc[open_, "espn_team_id"]
+        matchups.loc[open_, "team_score"] = ids.map(lambda i: scores.get(i, (None, None))[0]).values
+        matchups.loc[open_, "opponent_score"] = ids.map(lambda i: scores.get(i, (None, None))[1]).values
+    matchups.to_csv(path, index=False)
+
+
 def decide_from_scores(path: Path, through_week: int) -> None:
     """Outcomes ESPN hasn't decided yet (U) for weeks that are over, from
     the scores - the app only counts W, L and T."""
@@ -176,6 +204,7 @@ def refresh_once() -> str:
     before = _tracked_files()
     try:
         espn_history_importer.import_season(league, league_id, season)
+        fill_scores(_matchups_file(league_id, season), league, counted + 1, finished)
         decide_from_scores(_matchups_file(league_id, season), finished)
         generate_manager_mapping.main()
         propagate_manager_names.main()
