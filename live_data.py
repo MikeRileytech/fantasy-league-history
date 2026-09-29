@@ -62,18 +62,24 @@ def live_standings(league: League) -> list[dict]:
         finished = season_refresh.finished_week(league, counted)
     except Exception:
         finished = counted
+    # The schedule's scores stay 0 until ESPN finalizes a week; the box
+    # scores carry the live totals.
+    added = {}
+    for week in range(counted + 1, finished + 1):
+        try:
+            added[week] = season_refresh.week_scores(league, week)
+        except Exception:
+            added[week] = {}
     rows = []
     for team in league.teams:
         wins, losses, ties = team.wins, team.losses, team.ties
         points_for, points_against = team.points_for, team.points_against
-        for i in range(counted, min(finished, len(team.schedule))):
-            opponent = team.schedule[i]
-            if opponent is None or i >= len(team.scores) or i >= len(opponent.scores):
-                continue
+        for week, scores in added.items():
+            i = week - 1
             if i < len(team.outcomes) and team.outcomes[i] != "U":
                 continue
-            mine, theirs = team.scores[i] or 0, opponent.scores[i] or 0
-            if not (mine or theirs):
+            mine, theirs = scores.get(team.team_id, (None, None))
+            if mine is None or theirs is None or not (mine or theirs):
                 continue
             wins += mine > theirs
             losses += mine < theirs
