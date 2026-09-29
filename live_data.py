@@ -49,20 +49,58 @@ def fetch_live_league(league_id: int, season: int, espn_s2, swid) -> League:
 
 
 def live_standings(league: League) -> list[dict]:
-    """Current record for every team, sorted best to worst."""
-    return [
-        {
-            "espn_team_id": team.team_id,
-            "team_name": team.team_name,
-            "wins": team.wins,
-            "losses": team.losses,
-            "ties": team.ties,
-            "points_for": round(team.points_for, 1),
-            "points_against": round(team.points_against, 1),
-            "logo_url": team.logo_url or None,
-        }
-        for team in league.standings()
-    ]
+    """Current record for every team, sorted best to worst.
+
+    ESPN's records can trail Monday night's final by hours. Weeks whose NFL
+    games are all final but that ESPN hasn't counted yet are added from the
+    scores (season_refresh.finished_week decides which weeks those are).
+    """
+    import season_refresh
+
+    counted = max((t.wins + t.losses + t.ties for t in league.teams), default=0)
+    try:
+        finished = season_refresh.finished_week(league, counted)
+    except Exception:
+        finished = counted
+    rows = []
+    for team in league.teams:
+        wins, losses, ties = team.wins, team.losses, team.ties
+        points_for, points_against = team.points_for, team.points_against
+        for i in range(counted, min(finished, len(team.schedule))):
+            opponent = team.schedule[i]
+            if opponent is None or i >= len(team.scores) or i >= len(opponent.scores):
+                continue
+            if i < len(team.outcomes) and team.outcomes[i] != "U":
+                continue
+            mine, theirs = team.scores[i] or 0, opponent.scores[i] or 0
+            if not (mine or theirs):
+                continue
+            wins += mine > theirs
+            losses += mine < theirs
+            ties += mine == theirs
+            points_for += mine
+            points_against += theirs
+        rows.append(
+            {
+                "espn_team_id": team.team_id,
+                "team_name": team.team_name,
+                "wins": wins,
+                "losses": losses,
+                "ties": ties,
+                "points_for": round(points_for, 1),
+                "points_against": round(points_against, 1),
+                "logo_url": team.logo_url or None,
+            }
+        )
+    if finished == counted:
+        # Nothing added: keep ESPN's own order, which applies its tiebreakers.
+        order = {t.team_id: i for i, t in enumerate(league.standings())}
+        return sorted(rows, key=lambda r: order.get(r["espn_team_id"], 99))
+    return sorted(
+        rows,
+        key=lambda r: (r["wins"] + 0.5 * r["ties"], r["points_for"]),
+        reverse=True,
+    )
 
 
 def live_matchups(league: League, week: int) -> list[dict]:
