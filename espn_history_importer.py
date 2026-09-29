@@ -257,6 +257,21 @@ def main():
             "did not exist for that year."
         )
 
+    team_rows, matchup_rows, draft_rows = import_season(league, league_id, season)
+
+    print(f"Connected to '{league.settings.name}' - {season} season.")
+    print_summary(team_rows, matchup_rows, draft_rows)
+    print(f"\nRaw JSON saved to:       {RAW_DIR}")
+    print(f"Clean CSV/JSON saved to: {PROCESSED_DIR}")
+
+
+def import_season(league, league_id, season):
+    """Write one season's raw JSON and processed CSV/JSON files from a
+    connected League. Returns (team_rows, matchup_rows, draft_rows).
+
+    Split out of main() so the deployed app can run it with the credentials
+    from its own secrets (season_refresh.py).
+    """
     season_tag = f"league_{league_id}_season_{season}"
 
     raw_payloads = fetch_raw_payloads(league)
@@ -277,10 +292,7 @@ def main():
     save_json(draft_rows, PROCESSED_DIR / f"{season_tag}_draft.json")
     save_csv(draft_rows, PROCESSED_DIR / f"{season_tag}_draft.csv")
 
-    print(f"Connected to '{league.settings.name}' - {season} season.")
-    print_summary(team_rows, matchup_rows, draft_rows)
-    print(f"\nRaw JSON saved to:       {RAW_DIR}")
-    print(f"Clean CSV/JSON saved to: {PROCESSED_DIR}")
+    return team_rows, matchup_rows, draft_rows
 
 
 if __name__ == "__main__":

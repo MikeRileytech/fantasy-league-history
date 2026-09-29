@@ -38,6 +38,12 @@ except Exception:
 
 load_dotenv()
 
+# Saves each newly finished week of the season to the repo (Streamlit Cloud
+# only). Not reloaded above: its once-per-process thread lives in it.
+import season_refresh
+
+season_refresh.start()
+
 st.set_page_config(page_title="League History", page_icon="🏈", layout="wide")
 
 @st.cache_data(show_spinner="Loading league data...")
