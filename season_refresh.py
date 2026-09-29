@@ -92,17 +92,32 @@ def finished_week(league, counted: int) -> int:
     return counted
 
 
+def _starters_points(lineup) -> float:
+    return round(sum(
+        p.points or 0 for p in lineup if p.slot_position not in ("BE", "IR")
+    ), 2)
+
+
 def week_scores(league, week) -> dict:
     """team_id -> (score, opponent's score) for `week`, from ESPN's box
     scores. The season schedule the importer reads keeps a week's scores at
-    0 until ESPN finalizes it; box scores carry the live totals."""
+    0 until ESPN finalizes it. A box score carries the live total only while
+    its week is ESPN's current one; once ESPN has moved on but not yet
+    finalized, the total reads 0 too, so it's summed from the starters'
+    points instead."""
     scores = {}
     for box in league.box_scores(week):
         home, away = box.home_team, box.away_team
         if not hasattr(home, "team_id") or not hasattr(away, "team_id"):
             continue  # a bye
-        scores[home.team_id] = (box.home_score, box.away_score)
-        scores[away.team_id] = (box.away_score, box.home_score)
+        home_score, away_score = box.home_score, box.away_score
+        if not (home_score or away_score):
+            home_score = _starters_points(box.home_lineup)
+            away_score = _starters_points(box.away_lineup)
+        scores[home.team_id] = (home_score, away_score)
+        scores[away.team_id] = (away_score, home_score)
+    print(f"[season_refresh] week {week} box scores: {len(scores)} teams, "
+          f"{sum(1 for a, _ in scores.values() if a)} with points", flush=True)
     return scores
 
 
