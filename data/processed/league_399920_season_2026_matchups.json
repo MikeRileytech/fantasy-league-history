@@ -43,9 +43,9 @@
     "team_name": "The  Commish",
     "opponent_espn_team_id": 6,
     "opponent_team_name": "Love is Love",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 99.18,
+    "opponent_score": 109.2,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -211,9 +211,9 @@
     "team_name": "Brown and Down",
     "opponent_espn_team_id": 15,
     "opponent_team_name": "Kenneth Walker, Texas Ranger",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 117.4,
+    "opponent_score": 166.92,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -379,9 +379,9 @@
     "team_name": "PukaChew",
     "opponent_espn_team_id": 5,
     "opponent_team_name": "Frozen to First",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 153.98,
+    "opponent_score": 95.64,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -547,9 +547,9 @@
     "team_name": "I'm Ryan Keyser ",
     "opponent_espn_team_id": 7,
     "opponent_team_name": "No, I'm Ryan Keyser ",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 143.68,
+    "opponent_score": 144.66,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -715,9 +715,9 @@
     "team_name": "Frozen to First",
     "opponent_espn_team_id": 3,
     "opponent_team_name": "PukaChew",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 95.64,
+    "opponent_score": 153.98,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -883,9 +883,9 @@
     "team_name": "Love is Love",
     "opponent_espn_team_id": 1,
     "opponent_team_name": "The  Commish",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 109.2,
+    "opponent_score": 99.18,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1051,9 +1051,9 @@
     "team_name": "No, I'm Ryan Keyser ",
     "opponent_espn_team_id": 4,
     "opponent_team_name": "I'm Ryan Keyser ",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 144.66,
+    "opponent_score": 143.68,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1219,9 +1219,9 @@
     "team_name": "It's Always Sunny in Baltimore",
     "opponent_espn_team_id": 10,
     "opponent_team_name": "MAKE MARK ANDREWS GREAT AGAIN",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 104.42,
+    "opponent_score": 108.38,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -1387,9 +1387,9 @@
     "team_name": "MAKE MARK ANDREWS GREAT AGAIN",
     "opponent_espn_team_id": 8,
     "opponent_team_name": "It's Always Sunny in Baltimore",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 108.38,
+    "opponent_score": 104.42,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1555,9 +1555,9 @@
     "team_name": "The New York Cheezers",
     "opponent_espn_team_id": 14,
     "opponent_team_name": "Rage Against the Achane",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 146.4,
+    "opponent_score": 97.52,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1723,9 +1723,9 @@
     "team_name": "Rage Against the Achane",
     "opponent_espn_team_id": 13,
     "opponent_team_name": "The New York Cheezers",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 97.52,
+    "opponent_score": 146.4,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -1891,9 +1891,9 @@
     "team_name": "Kenneth Walker, Texas Ranger",
     "opponent_espn_team_id": 2,
     "opponent_team_name": "Brown and Down",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 166.92,
+    "opponent_score": 117.4,
+    "outcome": "W"
   },
   {
     "season": 2026,
