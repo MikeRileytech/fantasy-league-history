@@ -2,7 +2,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,1,The  Commish,14,Rage Against the Achane,83.92,106.76,L
 2026,2,False,1,The  Commish,10,MAKE MARK ANDREWS GREAT AGAIN,93.42,83.06,W
 2026,3,False,1,The  Commish,15,"Kenneth Walker, Texas Ranger",112.46,123.12,L
-2026,4,False,1,The  Commish,6,Love is Love,99.18,109.2,L
+2026,4,False,1,The  Commish,6,Love is Love,0.0,0.0,U
 2026,5,False,1,The  Commish,4,I'm Ryan Keyser ,0.0,0.0,U
 2026,6,False,1,The  Commish,2,Brown and Down,0.0,0.0,U
 2026,7,False,1,The  Commish,8,It's Always Sunny in Baltimore,0.0,0.0,U
@@ -16,7 +16,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,2,Brown and Down,5,Frozen to First,134.34,128.9,W
 2026,2,False,2,Brown and Down,14,Rage Against the Achane,127.68,151.02,L
 2026,3,False,2,Brown and Down,10,MAKE MARK ANDREWS GREAT AGAIN,111.64,141.88,L
-2026,4,False,2,Brown and Down,15,"Kenneth Walker, Texas Ranger",117.4,166.92,L
+2026,4,False,2,Brown and Down,15,"Kenneth Walker, Texas Ranger",0.0,0.0,U
 2026,5,False,2,Brown and Down,6,Love is Love,0.0,0.0,U
 2026,6,False,2,Brown and Down,1,The  Commish,0.0,0.0,U
 2026,7,False,2,Brown and Down,4,I'm Ryan Keyser ,0.0,0.0,U
@@ -30,7 +30,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,3,PukaChew,13,The New York Cheezers,126.4,110.76,W
 2026,2,False,3,PukaChew,4,I'm Ryan Keyser ,128.68,95.1,W
 2026,3,False,3,PukaChew,7,"No, I'm Ryan Keyser ",116.6,73.44,W
-2026,4,False,3,PukaChew,5,Frozen to First,153.98,95.64,W
+2026,4,False,3,PukaChew,5,Frozen to First,0.0,0.0,U
 2026,5,False,3,PukaChew,14,Rage Against the Achane,0.0,0.0,U
 2026,6,False,3,PukaChew,10,MAKE MARK ANDREWS GREAT AGAIN,0.0,0.0,U
 2026,7,False,3,PukaChew,15,"Kenneth Walker, Texas Ranger",0.0,0.0,U
@@ -44,7 +44,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,4,I'm Ryan Keyser ,15,"Kenneth Walker, Texas Ranger",109.36,169.02,L
 2026,2,False,4,I'm Ryan Keyser ,3,PukaChew,95.1,128.68,L
 2026,3,False,4,I'm Ryan Keyser ,6,Love is Love,84.34,122.24,L
-2026,4,False,4,I'm Ryan Keyser ,7,"No, I'm Ryan Keyser ",143.68,144.66,L
+2026,4,False,4,I'm Ryan Keyser ,7,"No, I'm Ryan Keyser ",0.0,0.0,U
 2026,5,False,4,I'm Ryan Keyser ,1,The  Commish,0.0,0.0,U
 2026,6,False,4,I'm Ryan Keyser ,5,Frozen to First,0.0,0.0,U
 2026,7,False,4,I'm Ryan Keyser ,2,Brown and Down,0.0,0.0,U
@@ -58,7 +58,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,5,Frozen to First,2,Brown and Down,128.9,134.34,L
 2026,2,False,5,Frozen to First,8,It's Always Sunny in Baltimore,95.1,140.88,L
 2026,3,False,5,Frozen to First,13,The New York Cheezers,144.6,89.14,W
-2026,4,False,5,Frozen to First,3,PukaChew,95.64,153.98,L
+2026,4,False,5,Frozen to First,3,PukaChew,0.0,0.0,U
 2026,5,False,5,Frozen to First,7,"No, I'm Ryan Keyser ",0.0,0.0,U
 2026,6,False,5,Frozen to First,4,I'm Ryan Keyser ,0.0,0.0,U
 2026,7,False,5,Frozen to First,14,Rage Against the Achane,0.0,0.0,U
@@ -72,7 +72,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,6,Love is Love,10,MAKE MARK ANDREWS GREAT AGAIN,100.66,162.4,L
 2026,2,False,6,Love is Love,15,"Kenneth Walker, Texas Ranger",107.94,99.66,W
 2026,3,False,6,Love is Love,4,I'm Ryan Keyser ,122.24,84.34,W
-2026,4,False,6,Love is Love,1,The  Commish,109.2,99.18,W
+2026,4,False,6,Love is Love,1,The  Commish,0.0,0.0,U
 2026,5,False,6,Love is Love,2,Brown and Down,0.0,0.0,U
 2026,6,False,6,Love is Love,8,It's Always Sunny in Baltimore,0.0,0.0,U
 2026,7,False,6,Love is Love,13,The New York Cheezers,0.0,0.0,U
@@ -86,7 +86,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,7,"No, I'm Ryan Keyser ",8,It's Always Sunny in Baltimore,161.36,112.86,W
 2026,2,False,7,"No, I'm Ryan Keyser ",13,The New York Cheezers,92.72,124.76,L
 2026,3,False,7,"No, I'm Ryan Keyser ",3,PukaChew,73.44,116.6,L
-2026,4,False,7,"No, I'm Ryan Keyser ",4,I'm Ryan Keyser ,144.66,143.68,W
+2026,4,False,7,"No, I'm Ryan Keyser ",4,I'm Ryan Keyser ,0.0,0.0,U
 2026,5,False,7,"No, I'm Ryan Keyser ",5,Frozen to First,0.0,0.0,U
 2026,6,False,7,"No, I'm Ryan Keyser ",14,Rage Against the Achane,0.0,0.0,U
 2026,7,False,7,"No, I'm Ryan Keyser ",10,MAKE MARK ANDREWS GREAT AGAIN,0.0,0.0,U
@@ -100,7 +100,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,8,It's Always Sunny in Baltimore,7,"No, I'm Ryan Keyser ",112.86,161.36,L
 2026,2,False,8,It's Always Sunny in Baltimore,5,Frozen to First,140.88,95.1,W
 2026,3,False,8,It's Always Sunny in Baltimore,14,Rage Against the Achane,131.58,123.46,W
-2026,4,False,8,It's Always Sunny in Baltimore,10,MAKE MARK ANDREWS GREAT AGAIN,104.42,108.38,L
+2026,4,False,8,It's Always Sunny in Baltimore,10,MAKE MARK ANDREWS GREAT AGAIN,0.0,0.0,U
 2026,5,False,8,It's Always Sunny in Baltimore,15,"Kenneth Walker, Texas Ranger",0.0,0.0,U
 2026,6,False,8,It's Always Sunny in Baltimore,6,Love is Love,0.0,0.0,U
 2026,7,False,8,It's Always Sunny in Baltimore,1,The  Commish,0.0,0.0,U
@@ -114,7 +114,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,10,MAKE MARK ANDREWS GREAT AGAIN,6,Love is Love,162.4,100.66,W
 2026,2,False,10,MAKE MARK ANDREWS GREAT AGAIN,1,The  Commish,83.06,93.42,L
 2026,3,False,10,MAKE MARK ANDREWS GREAT AGAIN,2,Brown and Down,141.88,111.64,W
-2026,4,False,10,MAKE MARK ANDREWS GREAT AGAIN,8,It's Always Sunny in Baltimore,108.38,104.42,W
+2026,4,False,10,MAKE MARK ANDREWS GREAT AGAIN,8,It's Always Sunny in Baltimore,0.0,0.0,U
 2026,5,False,10,MAKE MARK ANDREWS GREAT AGAIN,13,The New York Cheezers,0.0,0.0,U
 2026,6,False,10,MAKE MARK ANDREWS GREAT AGAIN,3,PukaChew,0.0,0.0,U
 2026,7,False,10,MAKE MARK ANDREWS GREAT AGAIN,7,"No, I'm Ryan Keyser ",0.0,0.0,U
@@ -128,7 +128,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,13,The New York Cheezers,3,PukaChew,110.76,126.4,L
 2026,2,False,13,The New York Cheezers,7,"No, I'm Ryan Keyser ",124.76,92.72,W
 2026,3,False,13,The New York Cheezers,5,Frozen to First,89.14,144.6,L
-2026,4,False,13,The New York Cheezers,14,Rage Against the Achane,146.4,97.52,W
+2026,4,False,13,The New York Cheezers,14,Rage Against the Achane,0.0,0.0,U
 2026,5,False,13,The New York Cheezers,10,MAKE MARK ANDREWS GREAT AGAIN,0.0,0.0,U
 2026,6,False,13,The New York Cheezers,15,"Kenneth Walker, Texas Ranger",0.0,0.0,U
 2026,7,False,13,The New York Cheezers,6,Love is Love,0.0,0.0,U
@@ -142,7 +142,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,14,Rage Against the Achane,1,The  Commish,106.76,83.92,W
 2026,2,False,14,Rage Against the Achane,2,Brown and Down,151.02,127.68,W
 2026,3,False,14,Rage Against the Achane,8,It's Always Sunny in Baltimore,123.46,131.58,L
-2026,4,False,14,Rage Against the Achane,13,The New York Cheezers,97.52,146.4,L
+2026,4,False,14,Rage Against the Achane,13,The New York Cheezers,0.0,0.0,U
 2026,5,False,14,Rage Against the Achane,3,PukaChew,0.0,0.0,U
 2026,6,False,14,Rage Against the Achane,7,"No, I'm Ryan Keyser ",0.0,0.0,U
 2026,7,False,14,Rage Against the Achane,5,Frozen to First,0.0,0.0,U
@@ -156,7 +156,7 @@ season,week,is_playoff_week,espn_team_id,team_name,opponent_espn_team_id,opponen
 2026,1,False,15,"Kenneth Walker, Texas Ranger",4,I'm Ryan Keyser ,169.02,109.36,W
 2026,2,False,15,"Kenneth Walker, Texas Ranger",6,Love is Love,99.66,107.94,L
 2026,3,False,15,"Kenneth Walker, Texas Ranger",1,The  Commish,123.12,112.46,W
-2026,4,False,15,"Kenneth Walker, Texas Ranger",2,Brown and Down,166.92,117.4,W
+2026,4,False,15,"Kenneth Walker, Texas Ranger",2,Brown and Down,0.0,0.0,U
 2026,5,False,15,"Kenneth Walker, Texas Ranger",8,It's Always Sunny in Baltimore,0.0,0.0,U
 2026,6,False,15,"Kenneth Walker, Texas Ranger",13,The New York Cheezers,0.0,0.0,U
 2026,7,False,15,"Kenneth Walker, Texas Ranger",3,PukaChew,0.0,0.0,U
