@@ -154,6 +154,17 @@ def _schedule_played(league: League) -> list[dict]:
     return rows
 
 
+def _bye_week(player) -> int | None:
+    """The player's NFL bye: the first regular-season week (1-18) his team
+    has no game in ESPN's pro schedule (espn_api's Player.schedule, keyed by
+    week). None when ESPN gave no schedule."""
+    schedule = getattr(player, "schedule", None) or {}
+    played = {int(week) for week in schedule if str(week).isdigit()}
+    if not played:
+        return None
+    return next((week for week in range(1, 19) if week not in played), None)
+
+
 def _rosters(league: League) -> list[dict]:
     """One row per currently-rostered player, league-wide.
 
@@ -161,10 +172,14 @@ def _rosters(league: League) -> list[dict]:
     reads these from ESPN's scoring-period-0 stat entry, which is the
     season total), reflecting whoever holds the player right now - a
     mid-season trade or waiver move moves their season total with them.
+
+    nfl_team, bye, status (ESPN's injury status) and slot (the lineup
+    spot: QB, BE, IR...) are for the Trade Tool's tiles (trade_grid.py).
     """
     rows = []
     for team in league.teams:
         for player in team.roster:
+            nfl_team = getattr(player, "proTeam", None)
             rows.append(
                 {
                     "espn_team_id": team.team_id,
@@ -173,6 +188,10 @@ def _rosters(league: League) -> list[dict]:
                     "position": player.position,
                     "total_points": round(player.total_points, 2),
                     "avg_points": round(player.avg_points, 2),
+                    "nfl_team": nfl_team if nfl_team not in (None, "None", "FA") else None,
+                    "bye": _bye_week(player),
+                    "status": getattr(player, "injuryStatus", None) or None,
+                    "slot": getattr(player, "lineupSlot", None) or None,
                 }
             )
     return rows
