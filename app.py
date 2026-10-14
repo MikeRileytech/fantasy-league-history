@@ -19,6 +19,7 @@ import league_data
 import live_data
 import power_rankings
 import setup_wizard
+import trade_grid
 
 # Streamlit hot-reloads app.py on redeploy but keeps imported modules cached
 # in the running process, which has repeatedly left league_data stale (both
@@ -33,6 +34,7 @@ try:
     live_data = importlib.reload(live_data)
     power_rankings = importlib.reload(power_rankings)
     setup_wizard = importlib.reload(setup_wizard)
+    trade_grid = importlib.reload(trade_grid)
 except Exception:
     pass
 
@@ -82,12 +84,106 @@ except FileNotFoundError as exc:
     st.error(str(exc))
     st.stop()
 
+def on_phone():
+    """Whether the viewer is on a phone, from the browser's user agent -
+    for the Trade Tool, which shows two teams there instead of all twelve."""
+    agent = st.context.headers.get("User-Agent", "") or ""
+    return "Mobi" in agent or "Android" in agent
+
+
+# The Power Rankings tab's fetch, at module level so the Trade Tool reads
+# the same rosters from this cache instead of asking ESPN again.
+@st.cache_data(ttl=90, show_spinner="Crunching power rankings from ESPN...")
+def load_power_bundle(season, refresh_token):
+    league_id, espn_s2, swid = live_data.espn_credentials()
+    league = live_data.fetch_live_league(league_id, season, espn_s2, swid)
+    return live_data.power_ranking_bundle(league)
+
+
+def _step_team(others, step):
+    """◀ / ▶ on a phone: the next team to compare with, round the league."""
+    current = st.session_state.get("vs")
+    index = others.index(current) if current in others else 0
+    st.session_state["vs"] = others[(index + step) % len(others)]
+
+
+def trade_tool():
+    """Every roster side by side (trade_grid.py), yours first."""
+    st.subheader("🤝 Trade Tool")
+    season = league_data.season_in_progress()
+    league_id, _, _ = live_data.espn_credentials()
+    if season is None:
+        st.info("This shows rosters while a season is being played.")
+        return
+    if league_id is None:
+        st.warning(
+            "No LEAGUE_ID found. Locally: add it to your .env file. On "
+            "Streamlit Community Cloud: add LEAGUE_ID (and SWID/ESPN_S2 for "
+            "a private league) under the app's Settings > Secrets."
+        )
+        return
+    try:
+        bundle = load_power_bundle(season, st.session_state.get("power_refresh_token", 0))
+    except Exception as exc:
+        st.error(f"Couldn't reach ESPN: {exc}")
+        return
+    if not bundle or not bundle.get("teams"):
+        st.warning("ESPN sent no rosters - try again in a minute.")
+        return
+
+    managers = live_data.latest_manager_by_team_id()
+    rankings, _weights = power_rankings.build_power_rankings(
+        bundle["teams"], bundle["schedule"], bundle["rosters"], bundle["draft"],
+        bundle["current_week"], bundle["reg_season_weeks"],
+    )
+    team_ranks = (dict(zip(rankings["espn_team_id"].astype(int), rankings["rank"].astype(int)))
+                  if not rankings.empty else {})
+    team_ids = sorted((int(t["espn_team_id"]) for t in bundle["teams"]),
+                      key=lambda t: str(managers.get(t, t)).lower())
+    ranks = trade_grid.roster_ranks(bundle["rosters"])
+
+    def name(team_id):
+        return managers.get(team_id, f"Team {team_id}")
+
+    st.caption(
+        "Each roster runs QB, RB, WR, TE, K, D/ST, best players first. "
+        + ("**PPG**: fantasy points per game. **RB12**: rank at the position by "
+           "season fantasy points, among players rostered in this league. "
+           "**(10)** after the NFL team: its bye week. Tap a player for more."
+           if on_phone() else
+           "Under each name: NFL team **(bye week)** · fantasy points per game · "
+           "rank at the position by season fantasy points, among players "
+           "rostered in this league (**RB12**). Point at a player for more.")
+    )
+    me = st.selectbox("Your team", team_ids, format_func=name, key="team",
+                      bind="query-params")
+    columns = trade_grid.team_columns(bundle["rosters"], bundle["teams"], managers,
+                                      team_ranks, me)
+    if not on_phone():
+        st.html(trade_grid.grid_html(columns, ranks))
+        return
+
+    # A phone shows yours beside one other team, both in full, with arrows
+    # to step through the rest.
+    others = [t for t in team_ids if t != me]
+    if st.session_state.get("vs") not in others:
+        st.session_state.pop("vs", None)
+    # A row, not columns: on a phone Streamlit gives columns equal widths.
+    with st.container(horizontal=True, vertical_alignment="bottom", gap="small"):
+        st.button("◀", key="vs_back", on_click=_step_team, args=(others, -1))
+        vs = st.selectbox("Compare with", others, format_func=name, key="vs",
+                          bind="query-params", width="stretch")
+        st.button("▶", key="vs_ahead", on_click=_step_team, args=(others, 1))
+    pair = [c for c in columns if c["team_id"] in (me, vs)]
+    st.html(trade_grid.grid_html(pair, ranks, fit=True))
+
+
 st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_live, tab_power, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
-    ["🔴 Live", "⚡ Power Rankings", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
+tab_live, tab_power, tab_trades, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
+    ["🔴 Live", "⚡ Power Rankings", "🤝 Trade Tool", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
 )
 
 with tab_live:
@@ -218,12 +314,6 @@ with tab_power:
         if st.button("🔄 Refresh power rankings"):
             st.session_state.power_refresh_token += 1
 
-        @st.cache_data(ttl=90, show_spinner="Crunching power rankings from ESPN...")
-        def load_power_bundle(season, refresh_token):
-            league_id, espn_s2, swid = live_data.espn_credentials()
-            league = live_data.fetch_live_league(league_id, season, espn_s2, swid)
-            return live_data.power_ranking_bundle(league)
-
         try:
             pr_bundle = load_power_bundle(pr_season, st.session_state.power_refresh_token)
         except Exception as exc:
@@ -275,6 +365,9 @@ with tab_power:
                         "roster_talent_score": st.column_config.NumberColumn("Roster", format="%.0f"),
                     },
                 )
+
+with tab_trades:
+    trade_tool()
 
 with tab_alltime:
     st.subheader("Career records by manager")

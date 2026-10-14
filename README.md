@@ -195,6 +195,12 @@ four tabs:
 - **Head-to-Head** — every manager's all-time record vs. every other manager
 - **Draft History** — all draft picks, filterable by season, searchable by
   player or manager
+- **🤝 Trade Tool** — while a season is on, every team's roster side by
+  side (`trade_grid.py`), the same tool as the Yahoo league's site. Each
+  column runs QB, RB, WR, TE, K, D/ST, best first by season points. On a
+  computer all the teams fit on one screen; on a phone it's your team next
+  to one other, with ◀ ▶ to step through the league. The rosters come from
+  the Power Rankings tab's ESPN fetch, so it asks ESPN for nothing extra.
 
 To stop the dashboard, go back to PowerShell and press `Ctrl+C`.
 
@@ -232,6 +238,8 @@ to GitHub to redeploy; no code changes needed.
 
 ```
 espn_history_importer.py   the importer script you run
+trade_grid.py              the Trade Tool's roster grid (HTML)
+tests/                     unit tests: python -m unittest discover -s tests
 requirements.txt           Python packages this project needs
 .env.example                template for your local .env (safe to commit)
 .env                        your real credentials (never committed; see .gitignore)
