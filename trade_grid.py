@@ -12,7 +12,13 @@ On a computer the whole league fits on one screen: the columns share the
 width, the rows share the window's height, and each tile is two lines.
 On a phone app.py passes just two columns - yours and the team you are
 comparing with - and asks for the fit layout, which splits the screen's
-width between them instead of scrolling sideways.
+width between them instead of scrolling sideways. Or, zoomed out, the
+whole league scaled down to the phone's width (zoom), to pinch in on.
+
+The grid is tappable: given picks, each player's cell carries
+data-pid/data-team, and app.py draws it through a small component
+(PICKER_JS) that sends each tap back to Python to add or drop that player
+from the drafted trade (trade_draft.py).
 
 Plain data in, HTML out - no Streamlit or ESPN calls - so it can be
 tested. app.py fetches the rosters (live_data.power_ranking_bundle) and
@@ -55,6 +61,13 @@ GRID_CSS = """
   background: rgba(0,0,0,0.35); border-radius: 3px; padding: 0 3px; }
 .tt-out { opacity: 0.55; }
 .tt-me .tt-tile { box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55); }
+/* Tap to pick (PICKER_JS): the players in the drafted trade. */
+.tt td[data-pid] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tt td[data-pid]:active .tt-tile { filter: brightness(1.15); }
+.tt td.tt-picked .tt-tile { box-shadow: inset 0 0 0 3px #ffd166; }
+.tt td.tt-picked .tt-tile::before { content: "✓"; position: absolute; bottom: 3px;
+  right: 4px; font-size: 0.62rem; font-weight: 900; line-height: 1.3;
+  background: #ffd166; color: #2a1d00; border-radius: 3px; padding: 0 3px; }
 /* A drafted trade's view: the players who change hands. */
 .tt .tt-tile.tt-new { box-shadow: inset 0 0 0 2px #6fdc9a; }
 .tt-new::after { content: "NEW"; position: absolute; bottom: 4px; right: 5px;
@@ -223,11 +236,35 @@ def _tile(player: dict, ranks: dict, compact: bool = False) -> str:
     )
 
 
-def grid_html(columns: list[dict], ranks: dict | None = None, fit: bool = False) -> str:
+# Phone widths the zoomed-out grid is scaled for: each step's narrowest
+# screen, so the whole league fits across any phone in that step.
+ZOOM_STEPS = [320, 360, 390, 412, 430, 480, 600, 768]
+
+
+def _zoom_css(cols: int) -> str:
+    """CSS zoom for the whole league on a phone: scaled so `cols` columns
+    of the narrowest whole-league tiles (98px) fit the screen, less
+    Streamlit's 1rem side margins. Worked out here per screen width,
+    because CSS can't divide one length by another."""
+    width = cols * 98 + 4
+    rules = [f"@media (max-width: {ZOOM_STEPS[0] - 1}px) "
+             f"{{ .tt-zoom .tt {{ zoom: {min(1.0, 256 / width):.3f}; }} }}"]
+    for low, high in zip(ZOOM_STEPS, ZOOM_STEPS[1:] + [None]):
+        media = f"(min-width: {low}px)" + (f" and (max-width: {high - 1}px)" if high else "")
+        rules.append(f"@media {media} {{ .tt-zoom .tt {{ zoom: {min(1.0, (low - 32) / width):.3f}; }} }}")
+    return "<style>" + "\n".join(rules) + "</style>"
+
+
+def grid_html(columns: list[dict], ranks: dict | None = None, fit: bool = False,
+              picks=None, zoom: bool = False) -> str:
     """The grid as one HTML block, styles included. ranks maps player_id ->
     rank at their position. fit is the phone layout: two columns sharing
     the width, full-size tiles, and the page scrolls. Otherwise every team
-    fits on one screen with two-line tiles."""
+    fits on one screen with two-line tiles; zoom scales that down to a
+    phone's width.
+
+    picks makes the grid tappable (see PICKER_JS): a set of player_ids in
+    the drafted trade, marked with a check. None draws a plain grid."""
     ranks = ranks or {}
     if not columns:
         return ""
@@ -255,14 +292,57 @@ def grid_html(columns: list[dict], ranks: dict | None = None, fit: bool = False)
     for i in range(rows):
         cells = []
         for c, stack in zip(columns, stacks):
-            me = " class=\"tt-me\"" if c["me"] else ""
-            cells.append(f"<td{me}>{_tile(stack[i], ranks, compact=not fit)}</td>"
-                         if i < len(stack) else "<td></td>")
+            if i >= len(stack):
+                cells.append("<td></td>")
+                continue
+            player = stack[i]
+            css = ["tt-me"] if c["me"] else []
+            attrs = ""
+            if picks is not None:
+                attrs = (f' data-pid="{escape(str(player["player_id"]))}"'
+                         f' data-team="{int(c["team_id"])}"')
+                if player["player_id"] in picks:
+                    css.append("tt-picked")
+            classes = f' class="{" ".join(css)}"' if css else ""
+            cells.append(f"<td{classes}{attrs}>{_tile(player, ranks, compact=not fit)}</td>")
         body.append("<tr>" + "".join(cells) + "</tr>")
 
+    zoomed = " tt-zoom" if zoom and not fit else ""
     layout = ('class="tt-scroll tt-fit"' if fit else
-              f'class="tt-scroll tt-all" style="--rows:{max(rows, 1)};--cols:{len(columns)}"')
+              f'class="tt-scroll tt-all{zoomed}" style="--rows:{max(rows, 1)};--cols:{len(columns)}"')
     return (
-        GRID_CSS + f'<div {layout}><table class="tt"><thead><tr>'
+        GRID_CSS + (_zoom_css(len(columns)) if zoomed else "")
+        + f'<div {layout}><table class="tt"><thead><tr>'
         + "".join(head) + "</tr></thead><tbody>" + "".join(body) + "</tbody></table></div>"
     )
+
+
+# The tappable grid's component (st.components.v2, mounted by app.py with
+# data={"html": grid_html(..., picks=...)}). It draws the grid into the app
+# page and sends each tapped player back as the "pick" trigger: {pid, team}
+# (at makes two taps on the same player two events). The tile's check
+# flips at once; the rerun then redraws from the trade Python keeps.
+PICKER_JS = """
+export default function (component) {
+  const { data, parentElement, setTriggerValue } = component;
+  let host = parentElement.querySelector(":scope > .tt-host");
+  if (!host) {
+    host = document.createElement("div");
+    host.className = "tt-host";
+    parentElement.appendChild(host);
+  }
+  const html = (data && data.html) || "";
+  if (host._ttHtml !== html) {
+    host.innerHTML = html;
+    host._ttHtml = html;
+  }
+  host.onclick = (event) => {
+    const cell = event.target.closest("td[data-pid]");
+    if (!cell || !host.contains(cell)) return;
+    cell.classList.toggle("tt-picked");
+    setTriggerValue("pick", {
+      pid: cell.dataset.pid, team: Number(cell.dataset.team), at: Date.now(),
+    });
+  };
+}
+"""

@@ -109,8 +109,48 @@ def _step_team(others, step):
     st.session_state["vs"] = others[(index + step) % len(others)]
 
 
+# The Trade Tool's tappable grid (trade_grid.PICKER_JS). Registering the
+# same definition on every rerun is a no-op.
+trade_picker = st.components.v2.component(
+    "trade_grid_picker", js=trade_grid.PICKER_JS, isolate_styles=False)
+
+
+def _draft_partner(me, team_ids):
+    """The drafted trade's other team ("Trade with"): the one last picked
+    from, else - on a phone - the team being compared with, else the first."""
+    others = [t for t in team_ids if t != me]
+    if st.session_state.get("draft_with") not in others:
+        vs = st.session_state.get("vs")
+        st.session_state["draft_with"] = vs if vs in others else others[0]
+    return st.session_state["draft_with"]
+
+
+def _apply_pick(me, ids):
+    """A tapped player (the grid's "pick" trigger) goes into the drafted
+    trade, or comes out if he was in it. Yours go in "You send"; another
+    team's go in "You get" and make that team the one you're trading with.
+    ids maps the tile's data-pid back to the player_id."""
+    pick = (st.session_state.get("trade_grid") or {}).get("pick") or {}
+    pid = ids.get(str(pick.get("pid")))
+    if pid is None:
+        return
+    team = int(pick.get("team"))
+    if team == me:
+        key = f"draft_send_{me}"
+    else:
+        st.session_state["draft_with"] = team
+        key = f"draft_get_{me}_{team}"
+    picked = list(st.session_state.get(key) or [])
+    if pid in picked:
+        picked.remove(pid)
+    else:
+        picked.append(pid)
+    st.session_state[key] = picked
+
+
 def trade_tool():
-    """Every roster side by side (trade_grid.py), yours first."""
+    """Every roster side by side (trade_grid.py), yours first. Tapping
+    players drafts a trade (draft_trade, below the grid)."""
     st.subheader("🤝 Trade Tool")
     season = league_data.season_in_progress()
     league_id, _, _ = live_data.espn_credentials()
@@ -147,25 +187,42 @@ def trade_tool():
     def name(team_id):
         return managers.get(team_id, f"Team {team_id}")
 
+    phone = on_phone()
     st.caption(
         "Each roster runs QB, RB, WR, TE, K, D/ST, best players first. "
         + ("**PPG**: fantasy points per game. **RB12**: rank at the position by "
            "season fantasy points, among players rostered in this league. "
-           "**(10)** after the NFL team: its bye week. Tap a player for more."
-           if on_phone() else
+           "**(10)** after the NFL team: its bye week. **Tap players** to draft a trade."
+           if phone else
            "Under each name: NFL team **(bye week)** · fantasy points per game · "
            "rank at the position by season fantasy points, among players "
-           "rostered in this league (**RB12**). Point at a player for more.")
+           "rostered in this league (**RB12**). Point at a player for more. "
+           "**Click players** to draft a trade.")
     )
     me = st.selectbox("Your team", team_ids, format_func=name, key="team",
                       bind="query-params")
     columns = trade_grid.team_columns(bundle["rosters"], bundle["teams"], managers,
                                       team_ranks, me)
-    if not on_phone():
-        st.html(trade_grid.grid_html(columns, ranks))
+    partner = _draft_partner(me, team_ids)
+    picks = set(st.session_state.get(f"draft_send_{me}") or []) | set(
+        st.session_state.get(f"draft_get_{me}_{partner}") or [])
+    ids = {str(p["player_id"]): p["player_id"] for p in bundle["rosters"]}
+
+    def draw(grid_html):
+        trade_picker(data={"html": grid_html}, key="trade_grid",
+                     on_pick_change=lambda: _apply_pick(me, ids))
+
+    if not phone:
+        draw(trade_grid.grid_html(columns, ranks, picks=picks))
+    elif st.segmented_control("Show", ["Two teams", "Whole league"], default="Two teams",
+                              key="tt_zoom") == "Whole league":
+        # Zoomed out: every team, scaled to the screen's width. Pinch to
+        # zoom in on a part of it.
+        st.caption("Every team, zoomed out to fit. Pinch to zoom in.")
+        draw(trade_grid.grid_html(columns, ranks, picks=picks, zoom=True))
     else:
-        # A phone shows yours beside one other team, both in full, with
-        # arrows to step through the rest.
+        # Yours beside one other team, both in full, with arrows to step
+        # through the rest.
         others = [t for t in team_ids if t != me]
         if st.session_state.get("vs") not in others:
             st.session_state.pop("vs", None)
@@ -176,7 +233,7 @@ def trade_tool():
                               bind="query-params", width="stretch")
             st.button("▶", key="vs_ahead", on_click=_step_team, args=(others, 1))
         pair = [c for c in columns if c["team_id"] in (me, vs)]
-        st.html(trade_grid.grid_html(pair, ranks, fit=True))
+        draw(trade_grid.grid_html(pair, ranks, fit=True, picks=picks))
     draft_trade(bundle, me, team_ids, name, managers, team_ranks, ranks)
 
 
@@ -203,26 +260,23 @@ def draft_trade(bundle, me, team_ids, name, managers, team_ranks, ranks):
     NFL schedule with the byes marked (trade_draft.py)."""
     st.divider()
     st.subheader("📝 Draft a trade")
-    st.caption("Pick players from both rosters, then see how they'd look if the trade "
-               "went through. Just a sketch - nothing is sent to ESPN.")
+    st.caption("Tap players in the rosters above, or pick them here, then see how "
+               "the two rosters would look if the trade went through. Just a sketch - "
+               "nothing is sent to ESPN.")
     others = [t for t in team_ids if t != me]
-    if st.session_state.get("draft_with") not in others:
-        st.session_state.pop("draft_with", None)
-    # On a phone, start with the team it's comparing with.
-    vs = st.session_state.get("vs")
-    partner = st.selectbox("Trade with", others, format_func=name, key="draft_with",
-                           index=others.index(vs) if vs in others else 0)
+    # trade_tool already settled draft_with (_draft_partner) for the grid.
+    partner = st.selectbox("Trade with", others, format_func=name, key="draft_with")
     rosters = bundle["rosters"]
     mine = trade_draft.team_players(rosters, me)
     theirs = trade_draft.team_players(rosters, partner)
     by_id = {p["player_id"]: p for p in mine + theirs}
 
-    # Keyed by the two teams, so changing either starts a fresh trade (and
-    # going back to a pair finds its players still picked).
+    # Yours are kept per team of yours, so changing who you trade with
+    # keeps them; theirs per pair of teams, so it starts that side afresh.
     left, right = st.columns(2)
     send = left.multiselect("You send", [p["player_id"] for p in mine],
                             format_func=lambda pid: _player_label(by_id[pid]),
-                            key=f"draft_send_{me}_{partner}",
+                            key=f"draft_send_{me}",
                             placeholder="Players from your roster")
     get = right.multiselect(f"You get from {name(partner)}", [p["player_id"] for p in theirs],
                             format_func=lambda pid: _player_label(by_id[pid]),

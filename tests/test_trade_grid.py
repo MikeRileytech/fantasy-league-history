@@ -96,6 +96,39 @@ class GridHtmlTests(unittest.TestCase):
         self.assertIn("A&amp;B", html)
 
 
+class PickableGridTests(unittest.TestCase):
+    def setUp(self):
+        self.columns = trade_grid.team_columns(ROSTERS, TEAMS, MANAGERS, {}, me=2)
+
+    def test_cells_carry_the_player_and_team_for_taps(self):
+        html = trade_grid.grid_html(self.columns, picks={"Josh Allen"})
+        body = html.split("<tbody>")[1]
+        self.assertEqual(body.count("data-pid="), len(ROSTERS))
+        self.assertIn('<td class="tt-picked" data-pid="Josh Allen" data-team="1">', body)
+        self.assertIn('<td class="tt-me" data-pid="Lamar Jackson" data-team="2">', body)
+        self.assertEqual(body.count("tt-picked"), 1)
+
+    def test_a_plain_grid_has_no_tap_targets(self):
+        html = trade_grid.grid_html(self.columns)
+        self.assertNotIn("data-pid=", html)
+        self.assertNotIn("tt-picked", html.split("</style>")[-1])
+
+    def test_zoomed_out_whole_league_fits_a_phone(self):
+        html = trade_grid.grid_html(self.columns, zoom=True)
+        self.assertIn('class="tt-scroll tt-all tt-zoom"', html)
+        # 3 columns of 98px fit a 375px phone without shrinking.
+        self.assertIn("@media (min-width: 360px) and (max-width: 389px) "
+                      "{ .tt-zoom .tt { zoom: 1.000; } }", html)
+        twelve = trade_grid._zoom_css(12)
+        self.assertIn("{ .tt-zoom .tt { zoom: 0.278; } }", twelve)  # 360-389px
+        # The two-team phone layout isn't zoomed.
+        self.assertNotIn("tt-zoom", trade_grid.grid_html(self.columns[:2], fit=True, zoom=True))
+
+    def test_the_picker_reports_taps(self):
+        self.assertIn('setTriggerValue("pick"', trade_grid.PICKER_JS)
+        self.assertIn('closest("td[data-pid]")', trade_grid.PICKER_JS)
+
+
 class RosterRowsTests(unittest.TestCase):
     def espn_player(self, **extra):
         base = dict(playerId=9, name="Josh Allen", position="QB", total_points=80.123,
