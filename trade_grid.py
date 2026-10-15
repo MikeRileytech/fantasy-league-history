@@ -55,6 +55,11 @@ GRID_CSS = """
   background: rgba(0,0,0,0.35); border-radius: 3px; padding: 0 3px; }
 .tt-out { opacity: 0.55; }
 .tt-me .tt-tile { box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55); }
+/* A drafted trade's view: the players who change hands. */
+.tt .tt-tile.tt-new { box-shadow: inset 0 0 0 2px #6fdc9a; }
+.tt-new::after { content: "NEW"; position: absolute; bottom: 4px; right: 5px;
+  font-size: 0.54rem; font-weight: 800; background: #6fdc9a; color: #0b2a17;
+  border-radius: 3px; padding: 0 3px; }
 .tt-QB { background: #c9405a; } .tt-RB { background: #0f8f7c; }
 .tt-WR { background: #2f72c0; } .tt-TE { background: #c87420; }
 .tt-K { background: #8257bd; } .tt-DST { background: #5f6472; }
@@ -175,7 +180,8 @@ def roster_ranks(rosters) -> dict:
 
 def _tile(player: dict, ranks: dict, compact: bool = False) -> str:
     """One player's tile: position, NFL team and bye; name; points per game
-    and rank. compact is two lines, for the whole league on one screen: the
+    and rank, marked NEW if a drafted trade moves him (trade_draft.py's
+    moved). compact is two lines, for the whole league on one screen: the
     name, then NFL team (bye), points per game and rank - the color and the
     rank say the position."""
     position = player.get("position") or ""
@@ -196,8 +202,10 @@ def _tile(player: dict, ranks: dict, compact: bool = False) -> str:
         f"{avg:.1f} per game" if avg is not None else "",
         f"status {player.get('status')}" if status else "",
         f"lineup slot {player.get('slot')}" if player.get("slot") else "",
+        "comes over in the trade" if player.get("moved") else "",
     ]))
     dim = " tt-out" if status in NOT_PLAYING else ""
+    dim += " tt-new" if player.get("moved") else ""
     badge = f'<b class="tt-st">{escape(status)}</b>' if status else ""
     name = f'<div class="tt-name">{escape(short_name(player.get("player_name"), position))}</div>'
     if compact:

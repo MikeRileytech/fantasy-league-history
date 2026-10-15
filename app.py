@@ -19,6 +19,7 @@ import league_data
 import live_data
 import power_rankings
 import setup_wizard
+import trade_draft
 import trade_grid
 
 # Streamlit hot-reloads app.py on redeploy but keeps imported modules cached
@@ -35,6 +36,7 @@ try:
     power_rankings = importlib.reload(power_rankings)
     setup_wizard = importlib.reload(setup_wizard)
     trade_grid = importlib.reload(trade_grid)
+    trade_draft = importlib.reload(trade_draft)
 except Exception:
     pass
 
@@ -161,21 +163,134 @@ def trade_tool():
                                       team_ranks, me)
     if not on_phone():
         st.html(trade_grid.grid_html(columns, ranks))
+    else:
+        # A phone shows yours beside one other team, both in full, with
+        # arrows to step through the rest.
+        others = [t for t in team_ids if t != me]
+        if st.session_state.get("vs") not in others:
+            st.session_state.pop("vs", None)
+        # A row, not columns: on a phone Streamlit gives columns equal widths.
+        with st.container(horizontal=True, vertical_alignment="bottom", gap="small"):
+            st.button("◀", key="vs_back", on_click=_step_team, args=(others, -1))
+            vs = st.selectbox("Compare with", others, format_func=name, key="vs",
+                              bind="query-params", width="stretch")
+            st.button("▶", key="vs_ahead", on_click=_step_team, args=(others, 1))
+        pair = [c for c in columns if c["team_id"] in (me, vs)]
+        st.html(trade_grid.grid_html(pair, ranks, fit=True))
+    draft_trade(bundle, me, team_ids, name, managers, team_ranks, ranks)
+
+
+def _player_label(player):
+    """'Bijan Robinson · RB · ATL · 18.2 PPG', for the trade pickers."""
+    avg = player.get("avg_points")
+    return " · ".join(filter(None, [
+        player.get("player_name"), player.get("position"),
+        (player.get("nfl_team") or "").upper(), f"{avg:.1f} PPG" if avg is not None else "",
+    ]))
+
+
+def _show_draft(pair):
+    st.session_state["draft_view"] = pair
+
+
+def _show_schedule(show):
+    st.session_state["ros_open"] = show
+
+
+def draft_trade(bundle, me, team_ids, name, managers, team_ranks, ranks):
+    """Pick players from both sides of a trade, see both rosters as they'd
+    stand if it went through, and slide out every player's rest-of-season
+    NFL schedule with the byes marked (trade_draft.py)."""
+    st.divider()
+    st.subheader("📝 Draft a trade")
+    st.caption("Pick players from both rosters, then see how they'd look if the trade "
+               "went through. Just a sketch - nothing is sent to ESPN.")
+    others = [t for t in team_ids if t != me]
+    if st.session_state.get("draft_with") not in others:
+        st.session_state.pop("draft_with", None)
+    # On a phone, start with the team it's comparing with.
+    vs = st.session_state.get("vs")
+    partner = st.selectbox("Trade with", others, format_func=name, key="draft_with",
+                           index=others.index(vs) if vs in others else 0)
+    rosters = bundle["rosters"]
+    mine = trade_draft.team_players(rosters, me)
+    theirs = trade_draft.team_players(rosters, partner)
+    by_id = {p["player_id"]: p for p in mine + theirs}
+
+    # Keyed by the two teams, so changing either starts a fresh trade (and
+    # going back to a pair finds its players still picked).
+    left, right = st.columns(2)
+    send = left.multiselect("You send", [p["player_id"] for p in mine],
+                            format_func=lambda pid: _player_label(by_id[pid]),
+                            key=f"draft_send_{me}_{partner}",
+                            placeholder="Players from your roster")
+    get = right.multiselect(f"You get from {name(partner)}", [p["player_id"] for p in theirs],
+                            format_func=lambda pid: _player_label(by_id[pid]),
+                            key=f"draft_get_{me}_{partner}",
+                            placeholder=f"Players from {name(partner)}'s roster")
+    pair = (me, partner)
+    st.button("🔍 Visualize this trade", type="primary", disabled=not (send or get),
+              on_click=_show_draft, args=(pair,))
+    if st.session_state.get("draft_view") != pair or not (send or get):
+        st.session_state["ros_open"] = False
         return
 
-    # A phone shows yours beside one other team, both in full, with arrows
-    # to step through the rest.
-    others = [t for t in team_ids if t != me]
-    if st.session_state.get("vs") not in others:
-        st.session_state.pop("vs", None)
-    # A row, not columns: on a phone Streamlit gives columns equal widths.
-    with st.container(horizontal=True, vertical_alignment="bottom", gap="small"):
-        st.button("◀", key="vs_back", on_click=_step_team, args=(others, -1))
-        vs = st.selectbox("Compare with", others, format_func=name, key="vs",
-                          bind="query-params", width="stretch")
-        st.button("▶", key="vs_ahead", on_click=_step_team, args=(others, 1))
-    pair = [c for c in columns if c["team_id"] in (me, vs)]
-    st.html(trade_grid.grid_html(pair, ranks, fit=True))
+    traded = trade_draft.apply_trade(rosters, me, partner, send, get)
+    rankings, _weights = power_rankings.build_power_rankings(
+        bundle["teams"], bundle["schedule"], traded, bundle["draft"],
+        bundle["current_week"], bundle["reg_season_weeks"],
+    )
+    after_ranks = (dict(zip(rankings["espn_team_id"].astype(int), rankings["rank"].astype(int)))
+                   if not rankings.empty else {})
+    slots = bundle.get("lineup_slots") or {}
+    roster_spots = sum(slots.values())
+
+    def listed(ids):
+        return ", ".join(f"{by_id[i]['player_name']} ({by_id[i].get('position')})"
+                         for i in ids) or "nobody"
+
+    st.markdown("#### If the trade goes through")
+    for column, team_id, gets, gives in zip(st.columns(2), pair, (get, send), (send, get)):
+        you = team_id == me
+        who = "You" if you else name(team_id)
+        notes = [trade_draft.depth_change(rosters, traded, team_id)]
+        before, after = team_ranks.get(team_id), after_ranks.get(team_id)
+        if before and after:
+            notes.append(f"power ranking stays #{after}" if before == after
+                         else f"power ranking #{before} → #{after}")
+        size = sum(int(p["espn_team_id"]) == team_id for p in traded)
+        with column:
+            st.markdown(f"**{who} get{'' if you else 's'}** {listed(gets)}  \n"
+                        f"**{who} give{'' if you else 's'}** {listed(gives)}")
+            st.caption(" · ".join(filter(None, notes)))
+            if roster_spots and size > roster_spots:
+                st.warning(f"That's {size} players for {roster_spots} roster spots - "
+                           f"{'you' if you else name(team_id)} would have to drop "
+                           f"{size - roster_spots} to make it work.")
+
+    teams = [t for t in bundle["teams"] if int(t["espn_team_id"]) in pair]
+    after_columns = trade_grid.team_columns(traded, teams, managers, after_ranks, me)
+    st.html('<div style="max-width:540px">'
+            + trade_grid.grid_html(after_columns, ranks, fit=True) + "</div>")
+
+    first = bundle["current_week"]
+    last = bundle.get("final_week") or bundle["reg_season_weeks"]
+    showing = st.session_state.get("ros_open", False)
+    st.button("📅 Hide the schedule" if showing else "📅 Rest-of-season schedule",
+              on_click=_show_schedule, args=(not showing,), disabled=first > last)
+    if not showing or first > last:
+        return
+    blocks = [(name(t), "after the trade" + (" (you)" if t == me else ""),
+               trade_draft.team_players(traded, t)) for t in pair]
+    with st.container(key="ros_drawer"):
+        with st.container(horizontal=True, vertical_alignment="center",
+                          horizontal_alignment="distribute"):
+            st.html(f'<div class="ros-title">📅 Rest of season · weeks {first}–{last}</div>',
+                    width="content")
+            st.button("✕ Close", key="ros_close", on_click=_show_schedule, args=(False,))
+        st.html(trade_draft.schedule_html(blocks, range(first, last + 1),
+                                          bundle["reg_season_weeks"],
+                                          bundle.get("pro_schedules") or {}, slots))
 
 
 st.title("🏈 Fantasy League History")

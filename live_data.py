@@ -14,6 +14,7 @@ from pathlib import Path
 import streamlit as st
 from dotenv import load_dotenv
 from espn_api.football import League
+from espn_api.football.constant import PRO_TEAM_MAP
 
 import league_data
 
@@ -197,6 +198,32 @@ def _rosters(league: League) -> list[dict]:
     return rows
 
 
+def _pro_schedules(league: League) -> dict:
+    """NFL team -> {week: opponent}, '@' before a road game ('@KC'), for the
+    Trade Tool's rest-of-season view. A week a team is missing is its bye.
+    Teams are named as on a roster row's nfl_team (espn_api's PRO_TEAM_MAP).
+    Empty if ESPN won't send the NFL schedule."""
+    try:
+        data = league.espn_request.get_pro_schedule()
+    except Exception:
+        return {}
+    schedules = {}
+    for team in data.get("settings", {}).get("proTeams", []):
+        team_id = team.get("id")
+        if not team_id:
+            continue
+        games = {}
+        for week, slate in (team.get("proGamesByScoringPeriod") or {}).items():
+            if not slate or not str(week).isdigit():
+                continue
+            game = slate[0]
+            home = game.get("homeProTeamId") == team_id
+            opponent = game.get("awayProTeamId") if home else game.get("homeProTeamId")
+            games[int(week)] = ("" if home else "@") + PRO_TEAM_MAP.get(opponent, "?")
+        schedules[PRO_TEAM_MAP.get(team_id, team.get("abbrev"))] = games
+    return schedules
+
+
 def _draft_picks(league: League) -> list[dict]:
     """This season's draft, in pick order - fetched live so it's available
     from week 1, before espn_history_importer.py has ever run for this
@@ -212,14 +239,22 @@ def _draft_picks(league: League) -> list[dict]:
 def power_ranking_bundle(league: League) -> dict:
     """Everything power_rankings.build_power_rankings() needs for one
     live snapshot of the league: current standings, games played so far,
-    current rosters, and this season's draft order."""
+    current rosters, and this season's draft order. Plus, for the Trade
+    Tool's drafted trades: the fantasy season's last week, the starting
+    lineup's slots ({"QB": 1, "RB/WR/TE": 2, "BE": 5...}) and every NFL
+    team's schedule."""
     return {
         "current_week": league.current_week,
         "reg_season_weeks": league.settings.reg_season_count,
+        "final_week": getattr(league, "finalScoringPeriod", None) or league.settings.reg_season_count,
+        "lineup_slots": {slot: count for slot, count in
+                         (getattr(league.settings, "position_slot_counts", None) or {}).items()
+                         if slot and count},
         "teams": live_standings(league),
         "schedule": _schedule_played(league),
         "rosters": _rosters(league),
         "draft": _draft_picks(league),
+        "pro_schedules": _pro_schedules(league),
     }
 
 
