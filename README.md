@@ -199,8 +199,13 @@ four tabs:
   side (`trade_grid.py`), the same tool as the Yahoo league's site. Each
   column runs QB, RB, WR, TE, K, D/ST, best first by season points. On a
   computer all the teams fit on one screen; on a phone it's your team next
-  to one other, with ◀ ▶ to step through the league. The rosters come from
-  the Power Rankings tab's ESPN fetch, so it asks ESPN for nothing extra.
+  to one other, with ◀ ▶ to step through the league, or "Whole league" to
+  see every roster zoomed out to the screen's width. Tap players in the
+  grid (or pick them below it) to draft a trade: "Visualize this trade"
+  shows both rosters afterward, and a rest-of-season schedule slides out
+  with every player's opponents and byes (`trade_draft.py`). The rosters
+  come from the Power Rankings tab's ESPN fetch, so it asks ESPN for
+  nothing extra.
 
 To stop the dashboard, go back to PowerShell and press `Ctrl+C`.
 
