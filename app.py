@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 
 import league_data
 import live_data
+import power_history
 import power_rankings
 import setup_wizard
 import trade_draft
@@ -34,6 +35,7 @@ try:
     league_data = importlib.reload(league_data)
     live_data = importlib.reload(live_data)
     power_rankings = importlib.reload(power_rankings)
+    power_history = importlib.reload(power_history)
     setup_wizard = importlib.reload(setup_wizard)
     trade_grid = importlib.reload(trade_grid)
     trade_draft = importlib.reload(trade_draft)
@@ -347,6 +349,73 @@ def draft_trade(bundle, me, team_ids, name, managers, team_ranks, ranks):
                                           bundle.get("pro_schedules") or {}, slots))
 
 
+# One color per manager, by name order - the Yahoo league's rank chart
+# colors. The first eight are the Charts tab's palette.
+RANK_CHART_COLORS = ["#2a78d6", "#1baf7a", "#eda100", "#008300", "#4a3aa7", "#e34948",
+                     "#e87ba4", "#eb6834", "#00a2b8", "#8a5a2b", "#7d8b99", "#b5179e"]
+
+
+def power_rank_chart(season):
+    """Each team's power ranking week by week, from power_history's
+    snapshots - one line per team, labelled at its latest week."""
+    import altair as alt
+
+    history = power_history.load_history(season)
+    if history.empty:
+        return
+    manager_by_id = live_data.latest_manager_by_team_id()
+    history = history.assign(
+        manager=history["espn_team_id"].map(manager_by_id).fillna(history["team_name"])
+    )
+    latest = history[history["week"] == history["week"].max()]
+    managers = sorted(history["manager"].unique())
+    colors = [RANK_CHART_COLORS[i % len(RANK_CHART_COLORS)] for i in range(len(managers))]
+    team_count = int(history["rank"].max())
+    phone = on_phone()
+
+    pick = alt.selection_point(fields=["manager"], on="pointerover", nearest=True,
+                               clear="pointerout")
+    faded = alt.condition(pick, alt.value(1.0), alt.value(0.15))
+    base = alt.Chart(history).encode(
+        x=alt.X("week:O", title="Week", axis=alt.Axis(labelAngle=0)),
+        y=alt.Y("rank:Q", title="Rank",
+                scale=alt.Scale(domain=[1, team_count], reverse=True, nice=False, padding=10),
+                axis=alt.Axis(values=list(range(1, team_count + 1)), grid=False)),
+        color=alt.Color("manager:N", legend=None,
+                        scale=alt.Scale(domain=managers, range=colors)),
+        opacity=faded,
+    )
+    lines = base.mark_line(strokeWidth=2.5)
+    points = base.mark_circle(size=70).encode(
+        tooltip=[
+            alt.Tooltip("manager:N", title="Manager"),
+            alt.Tooltip("team_name:N", title="Team"),
+            alt.Tooltip("week:O", title="Week"),
+            alt.Tooltip("rank:Q", title="Rank"),
+            alt.Tooltip("power_score:Q", title="Power", format=".1f"),
+        ],
+    ).add_params(pick)
+    labels = base.transform_filter(
+        alt.datum.week == int(latest["week"].iloc[0])
+    ).mark_text(align="left", dx=9, fontSize=11 if phone else 12, fontWeight="bold").encode(
+        text="manager:N"
+    )
+
+    st.markdown("#### Rank by week")
+    st.caption(
+        "Where each team ranked when that week's Monday night game ended: "
+        "records and points through that week, and each roster as it was "
+        "that week. A new week is added once its Monday night game is final."
+    )
+    st.altair_chart(
+        # Room on the right for the names, which sit past the last week.
+        alt.layer(lines, points, labels).properties(
+            height=340 if phone else 420, padding={"left": 5, "top": 5, "bottom": 5, "right": 30}
+        ),
+        width="stretch",
+    )
+
+
 st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
@@ -534,6 +603,9 @@ with tab_power:
                         "roster_talent_score": st.column_config.NumberColumn("Roster", format="%.0f"),
                     },
                 )
+
+        # Saved snapshots, so the chart shows even when ESPN can't be reached.
+        power_rank_chart(pr_season)
 
 with tab_trades:
     trade_tool()

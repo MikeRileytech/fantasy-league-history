@@ -195,6 +195,13 @@ four tabs:
 - **Head-to-Head** — every manager's all-time record vs. every other manager
 - **Draft History** — all draft picks, filterable by season, searchable by
   player or manager
+- **⚡ Power Rankings** — while a season is on, every team's power score,
+  live from ESPN (`power_rankings.py`). Under the table, **Rank by week**
+  charts where each team ranked at the end of every week so far, the same
+  chart as the Yahoo league's site. Point at a line to pick out one team.
+  Once a week's Monday night game is final, the app saves that week's
+  rankings to `data/processed/power_rankings_<season>.csv` on its own
+  (`power_history.py`), so the chart shows even when ESPN can't be reached.
 - **🤝 Trade Tool** — while a season is on, every team's roster side by
   side (`trade_grid.py`), the same tool as the Yahoo league's site. Each
   column runs QB, RB, WR, TE, K, D/ST, best first by season points. On a
@@ -244,6 +251,7 @@ to GitHub to redeploy; no code changes needed.
 ```
 espn_history_importer.py   the importer script you run
 trade_grid.py              the Trade Tool's roster grid (HTML)
+power_history.py           the Power Rankings tab's week-by-week rank chart data
 tests/                     unit tests: python -m unittest discover -s tests
 requirements.txt           Python packages this project needs
 .env.example                template for your local .env (safe to commit)
