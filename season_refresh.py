@@ -8,6 +8,8 @@ holds the league's credentials (LEAGUE_ID, ESPN_S2, SWID) and a GitHub token
 weeks are finished, and when that is more than data/processed/ holds, it
 imports the season through ESPN, then commits the files to main in one
 commit. Streamlit Cloud pulls that commit and the app shows the new data.
+Each finished week's power rankings (power_history.py) are saved the same
+way, in that commit when there is one.
 
 A week counts as finished once ESPN's NFL scoreboard has every game of it
 final - ESPN's own fantasy records can trail Monday night's final by hours,
@@ -39,10 +41,12 @@ CHECK_INTERVAL = 1800  # seconds; a finished week is news once a week
 FIRST_WEEK_TO_SAVE = 2  # as update_current_season.py: one week is too noisy
 PLAYED = ("W", "L", "T")
 
-# (season, finished, counted) last committed by this process. Streamlit
-# Cloud pulls the commit into this folder a little later; until then the
-# files here are the old ones, and this stops the same update going twice.
+# (season, finished, counted) last committed by this process, and the
+# (season, week) power rankings it committed. Streamlit Cloud pulls the
+# commit into this folder a little later; until then the files here are
+# the old ones, and this stops the same update going twice.
 _pushed = set()
+_ranked = set()
 
 
 def _matchups_file(league_id, season) -> Path:
@@ -189,6 +193,7 @@ def refresh_once() -> str:
     """One check. Returns what happened, for the log."""
     import league_data
     import live_data
+    import power_history
 
     season = league_data.season_in_progress()
     if season is None:
@@ -202,9 +207,13 @@ def refresh_once() -> str:
     counted = max(t.wins + t.losses + t.ties for t in league.teams)
     finished = finished_week(league, counted)
     saved = saved_through_week(league_id, season)
-    if (finished < FIRST_WEEK_TO_SAVE
-            or (season, finished, counted) in _pushed
-            or (saved >= finished and saved_games(league_id, season) >= counted)):
+    import_due = not (finished < FIRST_WEEK_TO_SAVE
+                      or (season, finished, counted) in _pushed
+                      or (saved >= finished and saved_games(league_id, season) >= counted))
+    # The Power Rankings tab's rank chart: one snapshot per finished week.
+    rankings_due = [week for week in power_history.missing_weeks(season, finished)
+                    if (season, week) not in _ranked]
+    if not import_due and not rankings_due:
         return f"{season}: saved through week {saved}, {finished} finished - nothing to do"
 
     token = _secret("GITHUB_TOKEN")
@@ -218,14 +227,25 @@ def refresh_once() -> str:
 
     before = _tracked_files()
     try:
-        espn_history_importer.import_season(league, league_id, season)
-        fill_scores(_matchups_file(league_id, season), league, counted + 1, finished)
-        decide_from_scores(_matchups_file(league_id, season), finished)
-        generate_manager_mapping.main()
-        propagate_manager_names.main()
+        if import_due:
+            espn_history_importer.import_season(league, league_id, season)
+            fill_scores(_matchups_file(league_id, season), league, counted + 1, finished)
+            decide_from_scores(_matchups_file(league_id, season), finished)
+            generate_manager_mapping.main()
+            propagate_manager_names.main()
 
-        if saved_through_week(league_id, season) < finished:
-            return f"{season}: ESPN's week {finished} scores aren't in yet"
+            if saved_through_week(league_id, season) < finished:
+                return f"{season}: ESPN's week {finished} scores aren't in yet"
+
+        ranked, skipped = [], []
+        if rankings_due:
+            # Never at the season data's expense: a week that fails is left
+            # for the next check, and the season data is committed anyway.
+            try:
+                ranked, skipped = power_history.save_weeks(league, season, rankings_due)
+            except Exception as exc:
+                skipped = [f"{type(exc).__name__}: {exc}"]
+        notes = f" (power rankings not saved: {'; '.join(skipped)})" if skipped else ""
 
         changed = {
             path.relative_to(PROJECT_DIR).as_posix(): content.decode("utf-8")
@@ -233,12 +253,17 @@ def refresh_once() -> str:
             if before.get(path) != content
         }
         if not changed:
-            return f"{season}: already up to date through week {finished}"
-        github_store.put_files(
-            token, REPO, changed, f"Update {season} season data through week {finished}"
-        )
-        _pushed.add((season, finished, counted))
-        return f"{season}: saved through week {finished} ({len(changed)} files)"
+            return f"{season}: already up to date through week {finished}{notes}"
+        if import_due:
+            message = f"Update {season} season data through week {finished}"
+        else:
+            weeks = "week" + ("s" if len(ranked) > 1 else "")
+            message = f"Save {season} power rankings for {weeks} {', '.join(map(str, ranked))}"
+        github_store.put_files(token, REPO, changed, message)
+        if import_due:
+            _pushed.add((season, finished, counted))
+        _ranked.update((season, week) for week in ranked)
+        return f"{season}: {message} ({len(changed)} files){notes}"
     finally:
         _put_back(before)
 
