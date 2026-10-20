@@ -19,10 +19,16 @@ stat corrections replace those.
 
 Only runs on Streamlit Cloud (the app lives under /mount/src there), so a
 local `streamlit run` never commits on your behalf.
+
+Streamlit Cloud doesn't restart the app when a commit lands, so app.py
+reloads this module on every run, like the others, and the background
+check always calls the newest copy: a deploy's changes reach it without a
+reboot. start() never runs a second check.
 """
 
 import json
 import os
+import sys
 import threading
 import time
 import traceback
@@ -44,9 +50,10 @@ PLAYED = ("W", "L", "T")
 # (season, finished, counted) last committed by this process, and the
 # (season, week) power rankings it committed. Streamlit Cloud pulls the
 # commit into this folder a little later; until then the files here are
-# the old ones, and this stops the same update going twice.
-_pushed = set()
-_ranked = set()
+# the old ones, and this stops the same update going twice. Both survive
+# app.py's reloads of this module.
+_pushed = globals().get("_pushed", set())
+_ranked = globals().get("_ranked", set())
 
 
 def _matchups_file(league_id, season) -> Path:
@@ -268,25 +275,38 @@ def refresh_once() -> str:
         _put_back(before)
 
 
+THREAD_NAME = "season_refresh"
+
+
 def _run_forever():
     while True:
+        # The newest copy of this module, so a deploy's changes reach this
+        # thread: app.py reloads it on every run, and Streamlit re-imports
+        # it as a new copy when a deploy changes it while the app is open.
+        refresh = getattr(sys.modules.get(__name__), "refresh_once", refresh_once)
         try:
-            print(f"[season_refresh] {refresh_once()}", flush=True)
+            print(f"[season_refresh] {refresh()}", flush=True)
         except BaseException:  # the importer sys.exit()s on ESPN errors
             print("[season_refresh] failed:\n" + traceback.format_exc(), flush=True)
         time.sleep(CHECK_INTERVAL)
 
 
-_lock = threading.Lock()
-_started = False
+_lock = globals().get("_lock") or threading.Lock()
+
+
+def _running() -> bool:
+    """Whether this process already runs the check, whichever copy of this
+    module started it. One started before the thread was named (it lasts
+    until the app's next restart) has Python's default name."""
+    return any(t.name == THREAD_NAME or t.name.endswith("(_run_forever)")
+               for t in threading.enumerate())
 
 
 def start() -> None:
-    """Start the background check once per process, on Streamlit Cloud only."""
-    global _started
+    """Start the background check once per process, on Streamlit Cloud only.
+    Safe on every run, and after this module is reloaded or re-imported."""
     if not str(PROJECT_DIR).startswith("/mount/src"):
         return
     with _lock:
-        if not _started:
-            threading.Thread(target=_run_forever, daemon=True).start()
-            _started = True
+        if not _running():
+            threading.Thread(target=_run_forever, name=THREAD_NAME, daemon=True).start()
