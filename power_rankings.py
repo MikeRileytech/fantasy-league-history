@@ -18,7 +18,7 @@ on equal footing:
 
 Player evaluation
 ------------------
-Three things shape how much a rostered player counts toward roster_talent:
+Four things shape how much a rostered player counts toward roster_talent:
 
 1. POSITION_WEIGHTS - RB and WR are weighted highest (the positions that
    most reliably decide who wins a week), then QB, then TE. D/ST is
@@ -54,6 +54,13 @@ Three things shape how much a rostered player counts toward roster_talent:
    discount fades - a 12th-round WR who is still the WR1 in week 14 has
    proven it, and gets full credit for the actual performance rather than
    a shrunk version of it.
+
+4. Availability - a player who can't play doesn't count at all: ruled
+   out, on injured reserve or suspended (his ESPN injury status), or
+   sitting in a fantasy IR slot (can_play). Otherwise a star who's out for
+   the season would keep propping his team up on the points he scored
+   before, and - since below-average players count against a team -
+   cutting a hurt player who'd stopped scoring would move a team up.
 """
 
 import pandas as pd
@@ -67,6 +74,11 @@ ROSTER_WEIGHT = 40
 # math happens, so it can't influence roster_talent or the "best player" /
 # "best value" highlights.
 EXCLUDED_POSITIONS = {"D/ST"}
+
+# Players who can't play don't count toward roster_talent either (see
+# "Player evaluation" above): these ESPN injury statuses and lineup slots.
+OUT_STATUSES = {"OUT", "INJURY_RESERVE", "SUSPENSION"}
+OUT_SLOTS = {"IR"}
 
 # How much each position counts toward roster_talent: RB/WR most valuable
 # (they decide the most games), then QB, then TE. This league doesn't
@@ -151,10 +163,18 @@ def draft_confidence_weight(current_week: int, reg_season_weeks: int) -> float:
     return DRAFT_CONFIDENCE_MAX * max(0.0, min(1.0, decay))
 
 
+def can_play(player: dict) -> bool:
+    """False for a player who's ruled out, on injured reserve, suspended, or
+    in a fantasy IR slot. A row that doesn't say counts as able to play."""
+    return player.get("status") not in OUT_STATUSES and player.get("slot") not in OUT_SLOTS
+
+
 def _prep_roster(rosters: list[dict]) -> pd.DataFrame:
-    """Roster rows as a DataFrame, with excluded positions (defense) dropped."""
+    """Roster rows as a DataFrame, without excluded positions (defense) or
+    players who can't play."""
     roster_df = pd.DataFrame(
-        rosters, columns=["espn_team_id", "player_id", "player_name", "position", "total_points", "avg_points"]
+        [p for p in rosters if can_play(p)],
+        columns=["espn_team_id", "player_id", "player_name", "position", "total_points", "avg_points"],
     )
     if roster_df.empty:
         return roster_df
@@ -207,7 +227,8 @@ def build_power_rankings(
         actually played so far (byes and future weeks excluded)
     rosters: espn_team_id, player_id, player_name, position, total_points,
         avg_points - one row per currently-rostered player (D/ST rows are
-        ignored - see EXCLUDED_POSITIONS)
+        ignored - see EXCLUDED_POSITIONS), plus status and slot: players
+        who can't play are left out (can_play)
     draft_picks: player_id, overall_pick - this season's draft, in pick order
     """
     teams_df = pd.DataFrame(teams)

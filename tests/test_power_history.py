@@ -23,27 +23,32 @@ POINTS = {1: {11: 20.0, 12: 5.0, 21: 10.0, 22: 0.0, 23: 6.0},
 DRAFT = [SimpleNamespace(playerId=pid) for pid in (11, 21, 22, 12)]
 
 
-def lineup(ids, week, bench=(), scored=True):
+def lineup(ids, week, bench=(), scored=True, injured=None):
+    injured = injured or {}
     return [SimpleNamespace(playerId=pid, name=PLAYERS[pid][0], position=PLAYERS[pid][1],
                             slot_position="BE" if pid in bench else PLAYERS[pid][1],
+                            injuryStatus=injured.get(pid, "ACTIVE"),
                             points=POINTS[week][pid] if scored else 0)
             for pid in ids]
 
 
-def box(week, home_score, away_score, away_ids=(21, 22), bench=(), scored=True):
+def box(week, home_score, away_score, away_ids=(21, 22), bench=(), scored=True, injured=None):
     return SimpleNamespace(
         home_team=TEAMS[1], away_team=TEAMS[2], home_score=home_score, away_score=away_score,
-        home_lineup=lineup((11, 12), week, bench, scored),
-        away_lineup=lineup(away_ids, week, bench, scored),
+        home_lineup=lineup((11, 12), week, bench, scored, injured),
+        away_lineup=lineup(away_ids, week, bench, scored, injured),
     )
 
 
 class FakeLeague:
     """Two teams' box scores and player cards by week, shaped as espn_api
-    returns them."""
+    returns them. ESPN has moved on to week 4; `injured` maps player ids to
+    their injury status today, which every week's box score reports."""
 
-    def __init__(self, unscored=(), reg_season_count=14, draft=DRAFT):
+    def __init__(self, unscored=(), reg_season_count=14, draft=DRAFT, injured=None, current_week=4):
         self.unscored = set(unscored)
+        self.injured = injured
+        self.current_week = current_week
         self.teams = list(TEAMS.values())
         self.settings = SimpleNamespace(reg_season_count=reg_season_count)
         self.draft = draft
@@ -53,7 +58,8 @@ class FakeLeague:
         if week in self.unscored:
             return [box(week, 0.0, 0.0, scored=False)]
         scores = {1: (120.0, 90.0), 2: (80.0, 130.0), 3: (100.0, 100.0)}[week]
-        return [box(week, *scores, away_ids=(21, 22, 23) if week >= 3 else (21, 22))]
+        return [box(week, *scores, away_ids=(21, 22, 23) if week >= 3 else (21, 22),
+                    injured=self.injured)]
 
     def player_info(self, playerId):
         self.card_calls.append(list(playerId))
@@ -114,6 +120,14 @@ class RostersAsOfTests(unittest.TestCase):
         self.assertEqual(by_name["Gamma Receiver"]["espn_team_id"], 2)
         self.assertEqual(by_name["Gamma Receiver"]["total_points"], 31.0)
 
+    def test_rows_carry_the_weeks_slot_and_todays_injury(self):
+        league = FakeLeague(injured={11: "OUT"})
+        rows = power_history.rosters_as_of(league, league.box_scores(2), 2, {})
+        back = {r["player_name"]: r for r in rows}["Alpha Back"]
+        self.assertEqual((back["slot"], back["status"]), ("RB", "OUT"))
+        rows = power_history.rosters_as_of(league, league.box_scores(2), 2, {}, statuses=False)
+        self.assertIsNone({r["player_name"]: r for r in rows}["Alpha Back"]["status"])
+
     def test_rows_follow_the_leagues_team_order(self):
         # As the live table's rosters do: ties are broken by row order.
         league = FakeLeague()
@@ -153,6 +167,40 @@ class SaveWeeksTests(unittest.TestCase):
     def test_playoff_weeks_are_not_saved(self):
         saved, notes = power_history.save_weeks(FakeLeague(reg_season_count=1), 2026, [1, 2])
         self.assertEqual((saved, notes), ([1], []))
+
+    def test_injuries_count_only_for_the_week_that_just_finished(self):
+        calls = []
+        real = power_history.rosters_as_of
+
+        def spy(league, boxes, week, points, statuses=True):
+            calls.append((week, statuses))
+            return real(league, boxes, week, points, statuses)
+
+        with patch.object(power_history, "rosters_as_of", spy):
+            power_history.save_weeks(FakeLeague(), 2026, [1, 2, 3])
+            # A week retried long after it was played.
+            power_history.save_weeks(FakeLeague(current_week=6), 2027, [2])
+        self.assertEqual(calls, [(1, False), (2, False), (3, True), (2, False)])
+
+    def test_an_injured_star_counts_from_the_week_that_just_finished(self):
+        power_history.save_weeks(FakeLeague(), 2026, [1, 2, 3])
+        power_history.save_weeks(FakeLeague(injured={11: "OUT"}), 2027, [1, 2, 3])
+        healthy, hurt = (power_history.load_history(season).set_index(["week", "espn_team_id"])
+                         ["roster_talent_score"] for season in (2026, 2027))
+        self.assertEqual(healthy.loc[[1, 2]].tolist(), hurt.loc[[1, 2]].tolist())
+        self.assertLess(hurt.loc[(3, 1)], healthy.loc[(3, 1)])
+
+    def test_weeks_saved_under_an_older_rule_are_rebuilt(self):
+        power_history.save_weeks(FakeLeague(), 2026, [1, 2])
+        path = power_history.history_file(2026)
+        pd.read_csv(path).drop(columns="rule").to_csv(path, index=False)  # as saved before rules
+        self.assertEqual(power_history.missing_weeks(2026, 3), [1, 2, 3])
+        # A saver still running older code asks only for the week it hasn't saved.
+        saved, notes = power_history.save_weeks(FakeLeague(), 2026, [3])
+        self.assertEqual((saved, notes), ([1, 2, 3], []))
+        history = power_history.load_history(2026)
+        self.assertEqual((len(history), set(history["rule"])), (6, {power_history.RULE}))
+        self.assertEqual(power_history.missing_weeks(2026, 3), [])
 
     def test_nothing_is_saved_without_the_draft(self):
         saved, notes = power_history.save_weeks(FakeLeague(draft=[]), 2026, [1])
@@ -242,6 +290,19 @@ class RefreshOnceTests(unittest.TestCase):
         self.assertEqual(list(files), ["data/processed/league_1_season_2026_matchups.csv"])
         self.assertEqual(message, "Update 2026 season data through week 3")
         self.assertIn("ESPN fell over", result)
+
+    def test_a_new_rule_gets_weeks_already_committed_rebuilt(self):
+        # Weeks this process committed under the old rule don't hold back
+        # the rebuild.
+        season_refresh._ranked.update({(2026, 1), (2026, 2), (2026, 3)})
+        calls = []
+
+        def save_weeks(league, season, weeks):
+            calls.append(weeks)
+            return weeks, []
+
+        self.run_refresh(False, save_weeks, True)
+        self.assertEqual(calls, [[1, 2, 3]])
 
     def test_rankings_are_not_committed_twice_before_the_pull(self):
         # The folder is put back after a commit, so until Streamlit Cloud

@@ -13,6 +13,11 @@ is taken: an app asleep on Monday night catches up later, and waiver moves
 made later in the week don't leak in. That also means small differences
 from the live table are expected - there, rosters are today's.
 
+Players who can't play don't count (power_rankings.can_play). Box scores
+keep each week's lineup slots, so a player in an IR slot is left out of
+that week; but ESPN only says who is hurt today, so injury statuses count
+only for the week that just finished.
+
 season_refresh.py takes the snapshots on Streamlit Cloud and commits them
 with the season data. history_file() holds them, one row per team per week.
 """
@@ -25,8 +30,13 @@ import power_rankings
 
 COLUMNS = [
     "season", "week", "espn_team_id", "team_name", "rank", "power_score",
-    "record_score", "points_score", "sos_score", "roster_talent_score",
+    "record_score", "points_score", "sos_score", "roster_talent_score", "rule",
 ]
+
+# The ranking rule a snapshot was made under. Bump it when the ranking
+# changes, and the weeks saved under the old one are rebuilt. 2: players
+# who can't play don't count.
+RULE = 2
 
 # Players per ESPN player-card request. A week's rosters are about 200
 # players, each sent with every week's stats.
@@ -45,9 +55,15 @@ def load_history(season: int) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+def saved_weeks(history: pd.DataFrame) -> set[int]:
+    """The weeks in history saved under the current RULE."""
+    rule = history["rule"] if "rule" in history else pd.Series(index=history.index, dtype=float)
+    return set(history.loc[rule == RULE, "week"].astype(int))
+
+
 def missing_weeks(season: int, finished: int) -> list[int]:
-    """Weeks 1..finished that have no snapshot yet."""
-    saved = set(load_history(season)["week"].astype(int))
+    """Weeks 1..finished with no snapshot under the current RULE yet."""
+    saved = saved_weeks(load_history(season))
     return [week for week in range(1, finished + 1) if week not in saved]
 
 
@@ -124,10 +140,11 @@ def records_through(matchups_by_week: dict) -> tuple[list[dict], list[dict]]:
     return sorted(teams.values(), key=lambda r: r["espn_team_id"]), schedule
 
 
-def rosters_as_of(league, boxes, week: int, points: dict) -> list[dict]:
+def rosters_as_of(league, boxes, week: int, points: dict, statuses: bool = True) -> list[dict]:
     """Every team's week-`week` roster (from that week's box scores), with
     each player's points through that week - the rows
-    build_power_rankings() takes as `rosters`.
+    build_power_rankings() takes as `rosters`. Each row has that week's
+    lineup slot, and the player's injury status (today's) when `statuses`.
 
     Points come from the players' cards, not the box scores, so a player
     picked up off waivers keeps what he scored as a free agent, as in the
@@ -176,6 +193,8 @@ def rosters_as_of(league, boxes, week: int, points: dict) -> list[dict]:
             "position": p.position,
             "total_points": round(sum(weekly), 2),
             "avg_points": round(sum(played) / len(played), 2) if played else None,
+            "slot": p.slot_position,
+            "status": p.injuryStatus if statuses else None,
         })
     return rows
 
@@ -190,6 +209,7 @@ def snapshot_rows(season: int, week: int, teams, schedule, rosters, draft,
     )
     rankings["season"] = season
     rankings["week"] = week
+    rankings["rule"] = RULE
     scores = ["power_score", "record_score", "points_score", "sos_score", "roster_talent_score"]
     rankings[scores] = rankings[scores].round(2)
     return rankings[COLUMNS]
@@ -198,13 +218,17 @@ def snapshot_rows(season: int, week: int, teams, schedule, rosters, draft,
 def save_weeks(league, season: int, weeks: list[int]) -> tuple[list[int], list[str]]:
     """Build each week's snapshot and add it to history_file().
 
-    Weeks from the playoffs on are skipped: the standings stop there. A
-    week whose scores aren't in, or that fails to build, is left out and
-    comes back from missing_weeks() on the next check. Returns (weeks
-    saved, notes on the ones left out).
+    Weeks saved under an older RULE are rebuilt too, whichever weeks were
+    asked for: a saver thread still running older code asks only for the
+    weeks it hasn't saved. Weeks from the playoffs on are skipped: the
+    standings stop there. A week whose scores aren't in, or that fails to
+    build, is left out and comes back from missing_weeks() on the next
+    check. Returns (weeks saved, notes on the ones left out).
     """
     reg_season_weeks = league.settings.reg_season_count
-    weeks = [week for week in weeks if week <= reg_season_weeks]
+    history = load_history(season)
+    outdated = set(history["week"].astype(int)) - saved_weeks(history)
+    weeks = sorted(week for week in set(weeks) | outdated if week <= reg_season_weeks)
     if not weeks:
         return [], []
 
@@ -215,7 +239,10 @@ def save_weeks(league, season: int, weeks: list[int]) -> tuple[list[int], list[s
         return [], [f"ESPN sent no {season} draft"]
     scoreboards, boxes, points = {}, {}, {}
     built, notes = [], []
-    for week in sorted(weeks):
+    for week in weeks:
+        # ESPN's injury statuses are today's: they count only for the week
+        # that just finished. Older weeks go by that week's IR slots alone.
+        statuses = week == weeks[-1] and week >= league.current_week - 1
         try:
             for w in range(1, week + 1):
                 if w not in scoreboards:
@@ -225,13 +252,13 @@ def save_weeks(league, season: int, weeks: list[int]) -> tuple[list[int], list[s
                         raise RuntimeError(f"ESPN's week {w} scores aren't in yet")
                     scoreboards[w], boxes[w] = final, week_boxes
             teams, schedule = records_through({w: scoreboards[w] for w in range(1, week + 1)})
-            rosters = rosters_as_of(league, boxes[week], week, points)
+            rosters = rosters_as_of(league, boxes[week], week, points, statuses)
             built.append(snapshot_rows(season, week, teams, schedule, rosters, draft, reg_season_weeks))
         except Exception as exc:
             notes.append(f"week {week}: {exc}")
 
     if built:
-        history = pd.concat([load_history(season), *built], ignore_index=True)
+        history = pd.concat([history, *built], ignore_index=True)
         history = history.drop_duplicates(["week", "espn_team_id"], keep="last")
         history.sort_values(["week", "rank"]).to_csv(history_file(season), index=False)
     return [int(frame["week"].iloc[0]) for frame in built], notes

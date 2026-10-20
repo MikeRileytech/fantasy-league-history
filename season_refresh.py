@@ -48,7 +48,8 @@ FIRST_WEEK_TO_SAVE = 2  # as update_current_season.py: one week is too noisy
 PLAYED = ("W", "L", "T")
 
 # (season, finished, counted) last committed by this process, and the
-# (season, week) power rankings it committed. Streamlit Cloud pulls the
+# (season, week, power_history.RULE) power rankings it committed - with the
+# rule, so a new one gets the weeks rebuilt. Streamlit Cloud pulls the
 # commit into this folder a little later; until then the files here are
 # the old ones, and this stops the same update going twice. Both survive
 # app.py's reloads of this module.
@@ -219,7 +220,7 @@ def refresh_once() -> str:
                       or (saved >= finished and saved_games(league_id, season) >= counted))
     # The Power Rankings tab's rank chart: one snapshot per finished week.
     rankings_due = [week for week in power_history.missing_weeks(season, finished)
-                    if (season, week) not in _ranked]
+                    if (season, week, power_history.RULE) not in _ranked]
     if not import_due and not rankings_due:
         return f"{season}: saved through week {saved}, {finished} finished - nothing to do"
 
@@ -269,7 +270,7 @@ def refresh_once() -> str:
         github_store.put_files(token, REPO, changed, message)
         if import_due:
             _pushed.add((season, finished, counted))
-        _ranked.update((season, week) for week in ranked)
+        _ranked.update((season, week, power_history.RULE) for week in ranked)
         return f"{season}: {message} ({len(changed)} files){notes}"
     finally:
         _put_back(before)

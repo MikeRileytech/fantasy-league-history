@@ -196,7 +196,8 @@ four tabs:
 - **Draft History** — all draft picks, filterable by season, searchable by
   player or manager
 - **⚡ Power Rankings** — while a season is on, every team's power score,
-  live from ESPN (`power_rankings.py`). Under the table, **Rank by week**
+  live from ESPN (`power_rankings.py`). Players who can't play (ruled out,
+  on IR or suspended) don't count toward it. Under the table, **Rank by week**
   charts where each team ranked at the end of every week so far, the same
   chart as the Yahoo league's site. It ends at **Now**, the table itself
   (dashed), so roster moves since the last game show up there first.
