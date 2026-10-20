@@ -198,7 +198,9 @@ four tabs:
 - **⚡ Power Rankings** — while a season is on, every team's power score,
   live from ESPN (`power_rankings.py`). Under the table, **Rank by week**
   charts where each team ranked at the end of every week so far, the same
-  chart as the Yahoo league's site. Point at a line to pick out one team.
+  chart as the Yahoo league's site. It ends at **Now**, the table itself
+  (dashed), so roster moves since the last game show up there first.
+  Point at a line to pick out one team.
   Once a week's Monday night game is final, the app saves that week's
   rankings to `data/processed/power_rankings_<season>.csv` on its own
   (`power_history.py`), so the chart shows even when ESPN can't be reached.

@@ -51,6 +51,23 @@ def missing_weeks(season: int, finished: int) -> list[int]:
     return [week for week in range(1, finished + 1) if week not in saved]
 
 
+# The rank chart's last point: the live table's ranks.
+NOW = "Now"
+
+
+def chart_rows(history: pd.DataFrame, live: pd.DataFrame | None = None) -> tuple[pd.DataFrame, list[str]]:
+    """The rank chart's rows and its x-axis order: the saved weeks, then
+    NOW - the live table's ranks - when given. Weeks become text, kept in
+    week order (10 after 9)."""
+    rows = history.assign(week=history["week"].astype(int).astype(str))
+    order = [str(week) for week in sorted(history["week"].astype(int).unique())]
+    if live is not None and not live.empty:
+        now = live[["espn_team_id", "team_name", "rank", "power_score"]].assign(week=NOW)
+        rows = pd.concat([rows, now], ignore_index=True)
+        order.append(NOW)
+    return rows, order
+
+
 def scoreboard(boxes) -> list[dict]:
     """One week's box scores as matchup rows, byes left out.
 
