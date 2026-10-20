@@ -360,29 +360,31 @@ RANK_CHART_COLORS = ["#2a78d6", "#1baf7a", "#eda100", "#008300", "#4a3aa7", "#e3
                      "#e87ba4", "#eb6834", "#00a2b8", "#8a5a2b", "#7d8b99", "#b5179e"]
 
 
-def power_rank_chart(season):
+def power_rank_chart(season, live=None):
     """Each team's power ranking week by week, from power_history's
-    snapshots - one line per team, labelled at its latest week."""
+    snapshots, ending at Now - the live table, when ESPN could be reached.
+    One line per team, labelled at its last point."""
     import altair as alt
 
-    history = power_history.load_history(season)
-    if history.empty:
+    saved = power_history.load_history(season)
+    if saved.empty:
         return
+    history, order = power_history.chart_rows(saved, live)
     manager_by_id = live_data.latest_manager_by_team_id()
     history = history.assign(
         manager=history["espn_team_id"].map(manager_by_id).fillna(history["team_name"])
     )
-    latest = history[history["week"] == history["week"].max()]
     managers = sorted(history["manager"].unique())
     colors = [RANK_CHART_COLORS[i % len(RANK_CHART_COLORS)] for i in range(len(managers))]
     team_count = int(history["rank"].max())
     phone = on_phone()
+    now = order[-1] == power_history.NOW
 
     pick = alt.selection_point(fields=["manager"], on="pointerover", nearest=True,
                                clear="pointerout")
     faded = alt.condition(pick, alt.value(1.0), alt.value(0.15))
     base = alt.Chart(history).encode(
-        x=alt.X("week:O", title="Week", axis=alt.Axis(labelAngle=0)),
+        x=alt.X("week:O", title="Week", sort=order, axis=alt.Axis(labelAngle=0)),
         y=alt.Y("rank:Q", title="Rank",
                 scale=alt.Scale(domain=[1, team_count], reverse=True, nice=False, padding=10),
                 axis=alt.Axis(values=list(range(1, team_count + 1)), grid=False)),
@@ -390,7 +392,13 @@ def power_rank_chart(season):
                         scale=alt.Scale(domain=managers, range=colors)),
         opacity=faded,
     )
-    lines = base.mark_line(strokeWidth=2.5)
+    lines = [base.transform_filter(alt.datum.week != power_history.NOW).mark_line(strokeWidth=2.5)]
+    if now:
+        # Dashed from the last saved week to Now, which moves with the table
+        # until the next week is saved.
+        lines.append(base.transform_filter(
+            alt.FieldOneOfPredicate(field="week", oneOf=order[-2:])
+        ).mark_line(strokeWidth=2.5, strokeDash=[5, 4]))
     points = base.mark_circle(size=70).encode(
         tooltip=[
             alt.Tooltip("manager:N", title="Manager"),
@@ -401,7 +409,7 @@ def power_rank_chart(season):
         ],
     ).add_params(pick)
     labels = base.transform_filter(
-        alt.datum.week == int(latest["week"].iloc[0])
+        alt.datum.week == order[-1]
     ).mark_text(align="left", dx=9, fontSize=11 if phone else 12, fontWeight="bold").encode(
         text="manager:N"
     )
@@ -411,10 +419,12 @@ def power_rank_chart(season):
         "Where each team ranked when that week's Monday night game ended: "
         "records and points through that week, and each roster as it was "
         "that week. A new week is added once its Monday night game is final."
+        + (" **Now** is the table above, so roster moves since the last game "
+           "show up there first." if now else "")
     )
     st.altair_chart(
-        # Room on the right for the names, which sit past the last week.
-        alt.layer(lines, points, labels).properties(
+        # Room on the right for the names, which sit past the last point.
+        alt.layer(*lines, points, labels).properties(
             height=340 if phone else 420, padding={"left": 5, "top": 5, "bottom": 5, "right": 30}
         ),
         width="stretch",
@@ -563,6 +573,7 @@ with tab_power:
             pr_bundle = None
             st.error(f"Couldn't reach ESPN: {exc}")
 
+        live_rankings = None
         if pr_bundle:
             manager_by_id = live_data.latest_manager_by_team_id()
             rankings, _weights = power_rankings.build_power_rankings(
@@ -576,6 +587,7 @@ with tab_power:
             if rankings.empty:
                 st.info("No teams found for the current season yet.")
             else:
+                live_rankings = rankings
                 display = rankings.copy()
                 display.insert(
                     1,
@@ -609,8 +621,9 @@ with tab_power:
                     },
                 )
 
-        # Saved snapshots, so the chart shows even when ESPN can't be reached.
-        power_rank_chart(pr_season)
+        # Saved snapshots, so the chart shows even when ESPN can't be
+        # reached; when it can, the chart ends at the table above.
+        power_rank_chart(pr_season, live_rankings)
 
 with tab_trades:
     trade_tool()

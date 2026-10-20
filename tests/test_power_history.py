@@ -4,6 +4,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+import pandas as pd
+
 import league_data
 import live_data
 import power_history
@@ -157,6 +159,26 @@ class SaveWeeksTests(unittest.TestCase):
         self.assertEqual(saved, [])
         self.assertIn("draft", notes[0])
         self.assertEqual(power_history.missing_weeks(2026, 1), [1])
+
+
+class ChartRowsTests(unittest.TestCase):
+    HISTORY = pd.DataFrame({"week": [10, 2, 9], "espn_team_id": [1, 1, 1], "team_name": "Team 1",
+                            "rank": [1, 2, 3], "power_score": [50.0, 40.0, 30.0]})
+
+    def test_weeks_in_order_then_the_live_table(self):
+        live = pd.DataFrame({"espn_team_id": [1], "team_name": ["Team 1"], "rank": [4],
+                             "power_score": [20.0], "wins": [3]})
+        rows, order = power_history.chart_rows(self.HISTORY, live)
+        self.assertEqual(order, ["2", "9", "10", "Now"])
+        now = rows[rows["week"] == "Now"]
+        self.assertEqual((now["rank"].tolist(), now["power_score"].tolist()), ([4], [20.0]))
+        self.assertNotIn("wins", rows.columns)
+
+    def test_no_now_without_the_live_table(self):
+        for live in (None, pd.DataFrame()):
+            rows, order = power_history.chart_rows(self.HISTORY, live)
+            self.assertEqual(order, ["2", "9", "10"])
+            self.assertEqual(sorted(rows["week"]), ["10", "2", "9"])
 
 
 class RefreshOnceTests(unittest.TestCase):
