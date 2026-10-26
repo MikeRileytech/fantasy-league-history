@@ -20,6 +20,7 @@ import live_data
 import power_history
 import power_rankings
 import setup_wizard
+import survivor
 import trade_draft
 import trade_grid
 
@@ -37,6 +38,7 @@ try:
     power_rankings = importlib.reload(power_rankings)
     power_history = importlib.reload(power_history)
     setup_wizard = importlib.reload(setup_wizard)
+    survivor = importlib.reload(survivor)
     trade_grid = importlib.reload(trade_grid)
     trade_draft = importlib.reload(trade_draft)
 except Exception:
@@ -434,6 +436,13 @@ def power_rank_chart(season, live=None):
 st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
+
+# The survivor contest floats over the page until it's swiped away or dismissed.
+survivor_season = league_data.season_in_progress()
+if survivor_season is not None:
+    survivor_card = survivor.card_html(survivor.standings(matchups, survivor_season), survivor_season)
+    if survivor_card:
+        st.html(survivor_card, unsafe_allow_javascript=True)
 
 tab_live, tab_power, tab_trades, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
     ["🔴 Live", "⚡ Power Rankings", "🤝 Trade Tool", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
