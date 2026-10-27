@@ -79,9 +79,9 @@
     "team_name": "The  Commish",
     "opponent_espn_team_id": 8,
     "opponent_team_name": "It's Always Sunny in Baltimore",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 114.62,
+    "opponent_score": 110.34,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -247,9 +247,9 @@
     "team_name": "Brown and Down",
     "opponent_espn_team_id": 4,
     "opponent_team_name": "I'm Ryan Keyser ",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 105.46,
+    "opponent_score": 108.5,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -415,9 +415,9 @@
     "team_name": "PukaChew",
     "opponent_espn_team_id": 15,
     "opponent_team_name": "Kenneth Walker, Texas Ranger",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 115.42,
+    "opponent_score": 120.82,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -583,9 +583,9 @@
     "team_name": "I'm Ryan Keyser ",
     "opponent_espn_team_id": 2,
     "opponent_team_name": "Brown and Down",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 108.5,
+    "opponent_score": 105.46,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -751,9 +751,9 @@
     "team_name": "Frozen to First",
     "opponent_espn_team_id": 14,
     "opponent_team_name": "Rage Against the Achane",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 73.92,
+    "opponent_score": 114.78,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -919,9 +919,9 @@
     "team_name": "Keep Doubting (again)",
     "opponent_espn_team_id": 13,
     "opponent_team_name": "The New York Cheezers",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 119.62,
+    "opponent_score": 120.08,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -1087,9 +1087,9 @@
     "team_name": "Son of a Commish ",
     "opponent_espn_team_id": 10,
     "opponent_team_name": "Riley",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 101.12,
+    "opponent_score": 147.7,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -1255,9 +1255,9 @@
     "team_name": "It's Always Sunny in Baltimore",
     "opponent_espn_team_id": 1,
     "opponent_team_name": "The  Commish",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 110.34,
+    "opponent_score": 114.62,
+    "outcome": "L"
   },
   {
     "season": 2026,
@@ -1423,9 +1423,9 @@
     "team_name": "Riley",
     "opponent_espn_team_id": 7,
     "opponent_team_name": "Son of a Commish ",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 147.7,
+    "opponent_score": 101.12,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1591,9 +1591,9 @@
     "team_name": "The New York Cheezers",
     "opponent_espn_team_id": 6,
     "opponent_team_name": "Keep Doubting (again)",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 120.08,
+    "opponent_score": 119.62,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1759,9 +1759,9 @@
     "team_name": "Rage Against the Achane",
     "opponent_espn_team_id": 5,
     "opponent_team_name": "Frozen to First",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 114.78,
+    "opponent_score": 73.92,
+    "outcome": "W"
   },
   {
     "season": 2026,
@@ -1927,9 +1927,9 @@
     "team_name": "Kenneth Walker, Texas Ranger",
     "opponent_espn_team_id": 3,
     "opponent_team_name": "PukaChew",
-    "team_score": 0.0,
-    "opponent_score": 0.0,
-    "outcome": "U"
+    "team_score": 120.82,
+    "opponent_score": 115.42,
+    "outcome": "W"
   },
   {
     "season": 2026,

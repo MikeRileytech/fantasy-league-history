@@ -2693,7 +2693,7 @@
   },
   "gameId": 1,
   "id": 399920,
-  "scoringPeriodId": 7,
+  "scoringPeriodId": 8,
   "seasonId": 2026,
   "segmentId": 0,
   "settings": {
@@ -2729,7 +2729,7 @@
     "activatedDate": 1782510630047,
     "createdAsLeagueType": 0,
     "currentLeagueType": 0,
-    "currentMatchupPeriod": 7,
+    "currentMatchupPeriod": 8,
     "finalScoringPeriod": 17,
     "firstScoringPeriod": 1,
     "isActive": true,
@@ -2739,7 +2739,7 @@
     "isToBeDeleted": false,
     "isViewable": true,
     "isWaiverOrderEdited": false,
-    "latestScoringPeriod": 7,
+    "latestScoringPeriod": 8,
     "previousSeasons": [
       2014,
       2015,
@@ -2754,9 +2754,9 @@
       2024,
       2025
     ],
-    "standingsUpdateDate": 1792999958672,
+    "standingsUpdateDate": 1793084584634,
     "teamsJoined": 12,
-    "transactionScoringPeriod": 7,
+    "transactionScoringPeriod": 8,
     "waiverLastExecutionDate": 1792999958383,
     "waiverProcessStatus": {
       "2026-09-09T07:04:51.740+00:00": 4,

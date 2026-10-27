@@ -1,13 +1,13 @@
 season,espn_team_id,team_name,division_name,owner_names,owner_ids,wins,losses,ties,points_for,points_against,regular_season_standing,final_standing,logo_url
-2026,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},2,4,0,613.9,655.86,11,0,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
-2026,2,Brown and Down,East,Mlinker9,{6AC115FA-3A0D-4948-8115-FA3A0DD94826},3,3,0,782.5799999999999,772.94,4,0,https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-05.svg
-2026,3,PukaChew,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},6,0,0,810.78,582.58,1,0,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/c39ffbe0-aaf4-11f1-8623-4f919cfbc4d9
-2026,4,I'm Ryan Keyser ,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},1,5,0,611.78,761.44,12,0,https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
-2026,5,Frozen to First,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},2,4,0,650.0600000000001,718.04,10,0,https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-02.svg
-2026,6,Keep Doubting (again),East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},3,3,0,638.0999999999999,739.26,8,0,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/1935f9d0-c286-11f1-9206-6539c6b70126
-2026,7,Son of a Commish ,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},2,4,0,680.5999999999999,741.34,9,0,https://pbs.twimg.com/media/BxRCn90CEAAh1YE.jpg
-2026,8,It's Always Sunny in Baltimore,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},4,2,0,783.5400000000001,700.8,2,0,https://i.redd.it/sjuwd4svl4x11.jpg
-2026,10,Riley,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},4,2,0,764.1000000000001,608.06,3,0,https://g.espncdn.com/lm-static/logo-packs/ffl/1stStringAllStars-SportsManias-RB/henry-01.svg
-2026,13,The New York Cheezers,East,larrysschwartz,{523D9B8F-8A3C-4523-BD9B-8F8A3C852321},3,3,0,640.82,717.48,7,0,https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-N.svg
-2026,14,Rage Against the Achane,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},3,3,0,707.1600000000001,759.56,6,0,https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg
-2026,15,"Kenneth Walker, Texas Ranger",East,maxlikessports,{CAEE0654-F1F5-4231-8116-255B1F893B85},3,3,0,754.02,680.08,5,0,https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_hot-dog.svg
+2026,1,The  Commish,East,bschwa8,{C1E09685-96D1-4750-BA21-8BE16D3BF7CA},3,4,0,728.52,766.2,9,0,https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_01.svg
+2026,2,Brown and Down,East,Mlinker9,{6AC115FA-3A0D-4948-8115-FA3A0DD94826},3,4,0,888.04,881.44,7,0,https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2026,3,PukaChew,East,kvizzle321,{C52D799E-6C1C-44B9-8371-9B6AF857D8E8},6,1,0,926.1999999999999,703.4,1,0,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/c39ffbe0-aaf4-11f1-8623-4f919cfbc4d9
+2026,4,I'm Ryan Keyser ,East,iamurfather69,{8242D4C8-FCD1-4A28-9373-CD282687A8E7},2,5,0,720.28,866.9,12,0,https://g.espncdn.com/s/ffllm/logos/TeamKinny-MartinLaksman/TeamKinny-05.svg
+2026,5,Frozen to First,East,JMarcellino87,{77F704CF-0C76-4984-9A71-8BD39511C19F},2,5,0,723.98,832.82,11,0,https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-02.svg
+2026,6,Keep Doubting (again),East,flatcheese,{FE8F6865-8A47-4C3A-8D66-0780982B48DD},3,4,0,757.7199999999999,859.34,8,0,https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/1935f9d0-c286-11f1-9206-6539c6b70126
+2026,7,Son of a Commish ,East,bschwa1439,{430447A7-381F-4E40-AD53-6A9C1F157A25},2,5,0,781.7199999999999,889.04,10,0,https://pbs.twimg.com/media/BxRCn90CEAAh1YE.jpg
+2026,8,It's Always Sunny in Baltimore,East,Zach71732,{00408013-39CF-40FC-8080-1339CFD0FC06},4,3,0,893.8800000000001,815.42,3,0,https://i.redd.it/sjuwd4svl4x11.jpg
+2026,10,Riley,East,Mike Riley Bread,{2C8A1B87-268B-45A5-A0E5-C4A3F61C9BC2},5,2,0,911.8000000000002,709.18,2,0,https://g.espncdn.com/lm-static/logo-packs/ffl/1stStringAllStars-SportsManias-RB/henry-01.svg
+2026,13,The New York Cheezers,East,larrysschwartz,{523D9B8F-8A3C-4523-BD9B-8F8A3C852321},4,3,0,760.9000000000001,837.1,6,0,https://g.espncdn.com/lm-static/logo-packs/ffl/HelmetAlphabet-ESPN/Helmet-N.svg
+2026,14,Rage Against the Achane,East,yb_schwartz,{C2BAB8A3-9ED5-425C-BAB8-A39ED5B25CC2},4,3,0,821.94,833.48,5,0,https://g.espncdn.com/lm-static/logo-packs/ffl/CreepShow-ToddDetwiler/CreepShow-01.svg
+2026,15,"Kenneth Walker, Texas Ranger",East,maxlikessports,{CAEE0654-F1F5-4231-8116-255B1F893B85},4,3,0,874.8399999999999,795.5,4,0,https://g.espncdn.com/lm-static/logo-packs/core/StadiumFoods-ESPN/stadium-foods_hot-dog.svg
