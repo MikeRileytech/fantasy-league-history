@@ -19,6 +19,7 @@ import league_data
 import live_data
 import power_history
 import power_rankings
+import schedule_swap
 import setup_wizard
 import trade_draft
 import trade_grid
@@ -36,6 +37,7 @@ try:
     live_data = importlib.reload(live_data)
     power_rankings = importlib.reload(power_rankings)
     power_history = importlib.reload(power_history)
+    schedule_swap = importlib.reload(schedule_swap)
     setup_wizard = importlib.reload(setup_wizard)
     trade_grid = importlib.reload(trade_grid)
     trade_draft = importlib.reload(trade_draft)
@@ -809,6 +811,29 @@ with tab_seasons:
                 "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
             },
         )
+
+        # Every team's record with every other team's schedule
+        # (schedule_swap.py), from the season's saved regular-season games.
+        swap_games = matchups[(matchups["season"] == season) & (matchups["game_type"] == "regular")]
+        swap_records = schedule_swap.swap_records(swap_games)
+        if swap_records:
+            swap_teams = teams[teams["season"] == season].sort_values("regular_season_standing")
+            swap_weeks = int(swap_games["week"].max())
+            st.divider()
+            st.subheader("🔀 Schedule swap")
+            st.caption(
+                "What each manager's record would be with another team's schedule: their "
+                "own score each week, against whoever that team played. Read across a row "
+                "for one manager with every schedule; their real record is outlined. In the "
+                "week they'd play themselves, they play that schedule's team instead. "
+                + (f"All {swap_weeks} weeks of the regular season." if season_final
+                   else f"Through week {swap_weeks}.")
+            )
+            st.html(schedule_swap.matrix_html(
+                swap_records,
+                dict(zip(swap_teams["espn_team_id"].astype(int),
+                         swap_teams["manager"].fillna(swap_teams["team_name"]))),
+            ))
     else:
         history = league_data.manager_season_history(teams, browser_manager)
         championships = int(history["is_champion"].sum())
