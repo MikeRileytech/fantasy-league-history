@@ -92,12 +92,13 @@ def short_names(managers: dict) -> dict:
 
 
 # The fills (.ss-f1-3, .ss-m1-3) say how a schedule changes a team's record,
-# against the panel (#222834, the Trade Tool's): blue for more wins, red for
+# against the panel (#222834, the Trade Tool's): green for more wins, red for
 # fewer, a step per win up to 3. Each arm steps up in lightness from the
-# panel by the same amounts (the blue ramp's 600, 500 and 400; red at the
-# same lightness), and every step keeps white text readable. The same record
-# is left unfilled, so it reads as nothing: a red or blue fill stays clear of
-# it under red-green color blindness, which a gray tile didn't.
+# panel by about the same amounts, and every step keeps white text readable.
+# The greens lean blue (emerald) and sit a little lighter than the reds, so
+# red-green color blind viewers can still tell the two apart. The same record
+# is left unfilled, so it reads as nothing - a gray tile didn't, under
+# red-green color blindness.
 MATRIX_CSS = """
 <style>
 /* Its own dark colors, like the Trade Tool's grid, whatever Streamlit's
@@ -125,7 +126,7 @@ MATRIX_CSS = """
   min-width: 52px; height: 32px; padding: 0 6px; border-radius: 5px; font-size: 0.82rem;
   font-weight: 700; color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10); }
 .ss-f1 { background: #892c2a; } .ss-f2 { background: #b13f3c; } .ss-f3 { background: #e34948; }
-.ss-m1 { background: #184f95; } .ss-m2 { background: #256abf; } .ss-m3 { background: #3987e5; }
+.ss-m1 { background: #057050; } .ss-m2 { background: #068f67; } .ss-m3 { background: #15ac7d; }
 .ss-f1, .ss-f2, .ss-f3, .ss-m1, .ss-m2, .ss-m3 { box-shadow: none; }
 .ss-real { box-shadow: inset 0 0 0 2px rgba(255,255,255,0.85); }
 /* Pointing at a record - tapping one, on a phone - lights up its team and
@@ -190,7 +191,7 @@ def matrix_html(records: dict, managers: dict) -> str:
     """The matrix as one HTML block, styles included: a row per team and a
     column per schedule, both in managers' order (team id -> manager, best
     record first). Each cell is the row's record with the column's schedule,
-    filled by how many more (blue) or fewer (red) wins it has than the real
+    filled by how many more (green) or fewer (red) wins it has than the real
     record, which runs down the diagonal, outlined."""
     teams = [team for team in managers if (team, team) in records]
     if not teams:

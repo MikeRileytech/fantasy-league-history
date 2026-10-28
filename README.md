@@ -219,7 +219,7 @@ four tabs:
 - **📅 2026 Schedule Matrix** — what each manager's record would be with
   every other team's schedule (`schedule_swap.py`): their own score each
   week, against whoever that team played. Each record is colored by how many
-  more (blue) or fewer (red) wins it is than their real record; the real
+  more (green) or fewer (red) wins it is than their real record; the real
   records run down the diagonal, outlined. It shows the latest season,
   through its last finished week.
 
