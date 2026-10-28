@@ -191,13 +191,7 @@ Your browser opens automatically at http://localhost:8501. The dashboard has
 four tabs:
 - **All-Time Standings** — career records per real manager (championships,
   win %, points), using your manager mapping
-- **Season Browser** — final standings for any single season. Under them,
-  a **Schedule swap** matrix (`schedule_swap.py`): what each manager's record
-  would be with every other team's schedule, their own score each week
-  against whoever that team played. Each record is colored by how many more
-  (blue) or fewer (red) wins it is than their real record; the real records
-  run down the diagonal, outlined. It opens on the season being played,
-  through its last finished week.
+- **Season Browser** — final standings for any single season
 - **Head-to-Head** — every manager's all-time record vs. every other manager
 - **Draft History** — all draft picks, filterable by season, searchable by
   player or manager
@@ -222,6 +216,12 @@ four tabs:
   with every player's opponents and byes (`trade_draft.py`). The rosters
   come from the Power Rankings tab's ESPN fetch, so it asks ESPN for
   nothing extra.
+- **📅 2026 Schedule Matrix** — what each manager's record would be with
+  every other team's schedule (`schedule_swap.py`): their own score each
+  week, against whoever that team played. Each record is colored by how many
+  more (blue) or fewer (red) wins it is than their real record; the real
+  records run down the diagonal, outlined. It shows the latest season,
+  through its last finished week.
 
 To stop the dashboard, go back to PowerShell and press `Ctrl+C`.
 
@@ -261,7 +261,7 @@ to GitHub to redeploy; no code changes needed.
 espn_history_importer.py   the importer script you run
 trade_grid.py              the Trade Tool's roster grid (HTML)
 power_history.py           the Power Rankings tab's week-by-week rank chart data
-schedule_swap.py           the Season Browser's schedule swap matrix (HTML)
+schedule_swap.py           the Schedule Matrix tab's matrix (HTML)
 tests/                     unit tests: python -m unittest discover -s tests
 requirements.txt           Python packages this project needs
 .env.example                template for your local .env (safe to commit)

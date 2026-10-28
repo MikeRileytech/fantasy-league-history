@@ -1,6 +1,6 @@
 """
-The Season Browser's schedule swap: what every team's record would be had
-it played another team's schedule. Each week the team keeps its own score
+The Schedule Matrix tab: what every team's record would be had it played
+another team's schedule. Each week the team keeps its own score
 and plays whoever the other team played that week, so a row of the matrix
 is one team's scores run against each schedule in the league.
 
@@ -11,7 +11,7 @@ pairing goes to the higher score, and equal scores tie: the league breaks
 no ties (ESPN's matchupTieRule is NONE).
 
 Plain data in, HTML out, like trade_grid.py, so it can be tested. app.py
-draws it under the season's standings, from the saved regular-season games.
+draws it for the latest season, from the saved regular-season games.
 """
 
 import math

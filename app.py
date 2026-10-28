@@ -437,8 +437,8 @@ st.title("🏈 Fantasy League History")
 seasons = sorted(teams["season"].unique())
 st.caption(f"{seasons[0]}–{seasons[-1]} · {teams['manager'].nunique()} managers")
 
-tab_live, tab_power, tab_trades, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
-    ["🔴 Live", "⚡ Power Rankings", "🤝 Trade Tool", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
+tab_live, tab_power, tab_trades, tab_matrix, tab_alltime, tab_trophies, tab_seasons, tab_h2h, tab_tx, tab_draft, tab_charts, tab_rules, tab_ask, tab_settings = st.tabs(
+    ["🔴 Live", "⚡ Power Rankings", "🤝 Trade Tool", f"📅 {seasons[-1]} Schedule Matrix", "All-Time Standings", "Trophies", "Season Browser", "Head-to-Head", "Transactions", "Draft History", "Charts", "2026 Proposed Rule Changes", "Ask the League", "Settings"]
 )
 
 with tab_live:
@@ -630,6 +630,32 @@ with tab_power:
 with tab_trades:
     trade_tool()
 
+with tab_matrix:
+    # Every team's record with every other team's schedule
+    # (schedule_swap.py), from the latest season's saved regular-season games.
+    matrix_season = seasons[-1]
+    st.subheader(f"📅 {matrix_season} Schedule Matrix")
+    matrix_games = matchups[(matchups["season"] == matrix_season) & (matchups["game_type"] == "regular")]
+    matrix_records = schedule_swap.swap_records(matrix_games)
+    if not matrix_records:
+        st.info(f"No {matrix_season} games have been played yet.")
+    else:
+        matrix_teams = teams[teams["season"] == matrix_season].sort_values("regular_season_standing")
+        matrix_weeks = int(matrix_games["week"].max())
+        st.caption(
+            "What each manager's record would be with another team's schedule: their "
+            "own score each week, against whoever that team played. Read across a row "
+            "for one manager with every schedule; their real record is outlined. In the "
+            "week they'd play themselves, they play that schedule's team instead. "
+            + (f"All {matrix_weeks} weeks of the regular season."
+               if bool(matrix_teams["season_final"].iloc[0]) else f"Through week {matrix_weeks}.")
+        )
+        st.html(schedule_swap.matrix_html(
+            matrix_records,
+            dict(zip(matrix_teams["espn_team_id"].astype(int),
+                     matrix_teams["manager"].fillna(matrix_teams["team_name"]))),
+        ))
+
 with tab_alltime:
     st.subheader("Career records by manager")
     st.caption(
@@ -811,29 +837,6 @@ with tab_seasons:
                 "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
             },
         )
-
-        # Every team's record with every other team's schedule
-        # (schedule_swap.py), from the season's saved regular-season games.
-        swap_games = matchups[(matchups["season"] == season) & (matchups["game_type"] == "regular")]
-        swap_records = schedule_swap.swap_records(swap_games)
-        if swap_records:
-            swap_teams = teams[teams["season"] == season].sort_values("regular_season_standing")
-            swap_weeks = int(swap_games["week"].max())
-            st.divider()
-            st.subheader("🔀 Schedule swap")
-            st.caption(
-                "What each manager's record would be with another team's schedule: their "
-                "own score each week, against whoever that team played. Read across a row "
-                "for one manager with every schedule; their real record is outlined. In the "
-                "week they'd play themselves, they play that schedule's team instead. "
-                + (f"All {swap_weeks} weeks of the regular season." if season_final
-                   else f"Through week {swap_weeks}.")
-            )
-            st.html(schedule_swap.matrix_html(
-                swap_records,
-                dict(zip(swap_teams["espn_team_id"].astype(int),
-                         swap_teams["manager"].fillna(swap_teams["team_name"]))),
-            ))
     else:
         history = league_data.manager_season_history(teams, browser_manager)
         championships = int(history["is_champion"].sum())
