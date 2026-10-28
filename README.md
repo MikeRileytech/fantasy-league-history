@@ -216,6 +216,12 @@ four tabs:
   with every player's opponents and byes (`trade_draft.py`). The rosters
   come from the Power Rankings tab's ESPN fetch, so it asks ESPN for
   nothing extra.
+- **📅 2026 Schedule Matrix** — what each manager's record would be with
+  every other team's schedule (`schedule_swap.py`): their own score each
+  week, against whoever that team played. Each record is colored by how many
+  more (green) or fewer (red) wins it is than their real record; the real
+  records run down the diagonal, outlined. It shows the latest season,
+  through its last finished week.
 
 To stop the dashboard, go back to PowerShell and press `Ctrl+C`.
 
@@ -255,6 +261,7 @@ to GitHub to redeploy; no code changes needed.
 espn_history_importer.py   the importer script you run
 trade_grid.py              the Trade Tool's roster grid (HTML)
 power_history.py           the Power Rankings tab's week-by-week rank chart data
+schedule_swap.py           the Schedule Matrix tab's matrix (HTML)
 tests/                     unit tests: python -m unittest discover -s tests
 requirements.txt           Python packages this project needs
 .env.example                template for your local .env (safe to commit)
