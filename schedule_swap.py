@@ -10,6 +10,11 @@ happened. A game that really happened keeps its real result. Any other
 pairing goes to the higher score, and equal scores tie: the league breaks
 no ties (ESPN's matchupTieRule is NONE).
 
+Under the matrix, all_play() takes schedules out entirely: each team's score
+against every other team's score, every week, gives the record its scores
+earned against the whole league, and so how many wins its schedule handed
+it (or took away).
+
 Plain data in, HTML out, like trade_grid.py, so it can be tested. app.py
 draws it for the latest season, from the saved regular-season games.
 """
@@ -17,6 +22,8 @@ draws it for the latest season, from the saved regular-season games.
 import math
 from collections import Counter
 from html import escape
+
+import pandas as pd
 
 
 def swap_records(games) -> dict:
@@ -65,6 +72,50 @@ def record_text(record) -> str:
 def win_count(record) -> float:
     """Wins, a tie counting as half."""
     return record[0] + record[2] / 2
+
+
+ALL_PLAY_COLUMNS = ["espn_team_id", "record", "all_play", "expected_wins", "luck",
+                    "points_against"]
+
+
+def all_play(games) -> pd.DataFrame:
+    """Each team's all-play record - its score against every other team's
+    score each week, as if it played the whole league - one row per ESPN
+    team id, luckiest first:
+
+    record          its real record, '5-2'
+    all_play        its all-play record, '50-27' ('27-49-1' when two teams
+                    score the same in a week, played or not)
+    expected_wins   its all-play winning rate, over the games it played
+    luck            real wins minus expected wins (a tie counts half)
+    points_against  its opponents' points
+
+    games: as swap_records() takes them.
+    """
+    scores = games.assign(team_score=games["team_score"].astype(float).round(2))
+    rows = []
+    for team, mine in scores.groupby("espn_team_id"):
+        tally = Counter()
+        for week, score in zip(mine["week"], mine["team_score"]):
+            others = scores.loc[(scores["week"] == week) & (scores["espn_team_id"] != team),
+                                "team_score"]
+            tally["W"] += int((score > others).sum())
+            tally["L"] += int((score < others).sum())
+            tally["T"] += int((score == others).sum())
+        field = (tally["W"], tally["L"], tally["T"])
+        expected = win_count(field) / sum(field) * len(mine) if sum(field) else 0.0
+        real = Counter(mine["outcome"])
+        record = (real["W"], real["L"], real["T"])
+        rows.append({
+            "espn_team_id": int(team),
+            "record": record_text(record),
+            "all_play": record_text(field),
+            "expected_wins": expected,
+            "luck": win_count(record) - expected,
+            "points_against": float(mine["opponent_score"].sum()),
+        })
+    table = pd.DataFrame(rows, columns=ALL_PLAY_COLUMNS)
+    return table.sort_values("luck", ascending=False, kind="stable").reset_index(drop=True)
 
 
 def step(delta: float) -> int:

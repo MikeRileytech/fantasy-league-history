@@ -221,7 +221,9 @@ four tabs:
   week, against whoever that team played. Each record is colored by how many
   more (green) or fewer (red) wins it is than their real record; the real
   records run down the diagonal, outlined. It shows the latest season,
-  through its last finished week.
+  through its last finished week. Under it, the **all-play record**: each
+  manager's score against every other team's score every week, the wins
+  that earns (expected wins), and luck — real wins minus expected wins.
 
 To stop the dashboard, go back to PowerShell and press `Ctrl+C`.
 

@@ -99,6 +99,53 @@ class SwapRecordsTests(unittest.TestCase):
         self.assertEqual(schedule_swap.swap_records(games().iloc[0:0]), {})
 
 
+class AllPlayTests(unittest.TestCase):
+    def setUp(self):
+        self.table = schedule_swap.all_play(games()).set_index("espn_team_id")
+
+    def test_every_score_against_every_other_score_that_week(self):
+        # Week 2: teams 3 and 4 both score 95 - a tie here, though they
+        # didn't play each other.
+        self.assertEqual(self.table["all_play"].to_dict(),
+                         {1: "2-7", 2: "5-4", 3: "4-4-1", 4: "6-2-1"})
+
+    def test_expected_wins_and_luck(self):
+        # Team 3 wins 4.5 of its 9 all-play games - 1.5 of its 3 real
+        # games - but really won 2.
+        expected = {1: 2 / 3, 2: 5 / 3, 3: 1.5, 4: 6.5 / 3}
+        real = {1: 1, 2: 1, 3: 2, 4: 2}
+        for team, wins in expected.items():
+            self.assertAlmostEqual(self.table.loc[team, "expected_wins"], wins)
+            self.assertAlmostEqual(self.table.loc[team, "luck"], real[team] - wins)
+
+    def test_luckiest_first(self):
+        self.assertEqual(list(self.table.index), [3, 1, 4, 2])
+
+    def test_real_records_and_points_against(self):
+        self.assertEqual(self.table["record"].to_dict(), {1: "1-2", 2: "1-2", 3: "2-1", 4: "2-1"})
+        self.assertEqual(self.table["points_against"].to_dict(),
+                         {1: 285.0, 2: 300.0, 3: 265.0, 4: 260.0})
+
+    def test_a_real_tie_counts_half(self):
+        scores = {week: dict(row) for week, row in SCORES.items()}
+        scores[1][2] = 100.0  # week 1: 1 v 2 ties at 100
+        table = schedule_swap.all_play(games(scores)).set_index("espn_team_id")
+        self.assertEqual(table.loc[1, "record"], "0-2-1")
+        self.assertEqual(table.loc[1, "all_play"], "1-7-1")
+        self.assertAlmostEqual(table.loc[1, "luck"], 0.0)
+
+    def test_scores_are_compared_to_the_hundredth(self):
+        scores = {week: dict(row) for week, row in SCORES.items()}
+        scores[2][4] = 95.00000000000001
+        table = schedule_swap.all_play(games(scores)).set_index("espn_team_id")
+        self.assertEqual(table.loc[3, "all_play"], "4-4-1")
+
+    def test_no_games(self):
+        table = schedule_swap.all_play(games().iloc[0:0])
+        self.assertTrue(table.empty)
+        self.assertEqual(list(table.columns), schedule_swap.ALL_PLAY_COLUMNS)
+
+
 class FormattingTests(unittest.TestCase):
     def test_record_text(self):
         self.assertEqual(schedule_swap.record_text((5, 2, 0)), "5-2")

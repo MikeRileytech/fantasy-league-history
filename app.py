@@ -641,6 +641,8 @@ with tab_matrix:
         st.info(f"No {matrix_season} games have been played yet.")
     else:
         matrix_teams = teams[teams["season"] == matrix_season].sort_values("regular_season_standing")
+        matrix_managers = dict(zip(matrix_teams["espn_team_id"].astype(int),
+                                   matrix_teams["manager"].fillna(matrix_teams["team_name"])))
         matrix_weeks = int(matrix_games["week"].max())
         st.caption(
             "What each manager's record would be with another team's schedule: their "
@@ -650,11 +652,37 @@ with tab_matrix:
             + (f"All {matrix_weeks} weeks of the regular season."
                if bool(matrix_teams["season_final"].iloc[0]) else f"Through week {matrix_weeks}.")
         )
-        st.html(schedule_swap.matrix_html(
-            matrix_records,
-            dict(zip(matrix_teams["espn_team_id"].astype(int),
-                     matrix_teams["manager"].fillna(matrix_teams["team_name"]))),
-        ))
+        st.html(schedule_swap.matrix_html(matrix_records, matrix_managers))
+
+        st.divider()
+        st.subheader("🍀 All-play record")
+        st.caption(
+            "Each manager's score against every other team's score, every week, as if "
+            "they played the whole league: the record their scores earned with no "
+            "schedule at all. Expected wins are that winning rate over their games, and "
+            "luck is real wins minus expected wins - plus means the schedule has handed "
+            "them wins. Two teams scoring the same in a week count as a tie here, even "
+            "though they didn't play each other."
+        )
+        matrix_luck = schedule_swap.all_play(matrix_games)
+        matrix_luck.insert(0, "manager", matrix_luck["espn_team_id"].map(matrix_managers))
+        st.dataframe(
+            matrix_luck,
+            width='stretch',
+            height="content",
+            hide_index=True,
+            # Luck next to the names, so a phone shows it without scrolling.
+            column_order=["manager", "luck", "record", "all_play", "expected_wins",
+                          "points_against"],
+            column_config={
+                "manager": st.column_config.TextColumn("Manager", pinned=True),
+                "record": "Record",
+                "all_play": "All-play",
+                "expected_wins": st.column_config.NumberColumn("Expected wins", format="%.1f"),
+                "luck": st.column_config.NumberColumn("Luck", format="%+.1f"),
+                "points_against": st.column_config.NumberColumn("PA", format="%.1f"),
+            },
+        )
 
 with tab_alltime:
     st.subheader("Career records by manager")
